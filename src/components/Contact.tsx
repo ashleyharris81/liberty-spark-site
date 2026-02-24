@@ -61,13 +61,13 @@ const Contact = () => {
                 </div>
               </div>
 
-              <a href="https://libertyguard.co.uk/wp-content/uploads/2025/10/Brochure.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+              <a href="https://libertyguard.co.uk/wp-content/uploads/2025/10/Brochure.pdf" download="Liberty-Guard-Brochure.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                 <div className="w-14 h-14 bg-secondary/20 rounded-lg flex items-center justify-center group-hover:bg-secondary/30 transition-colors">
                   <FileText className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
                   <p className="text-primary-foreground/60 text-sm font-medium">Downloads</p>
-                  <p className="text-primary-foreground font-heading font-bold">Request a Brochure</p>
+                  <p className="text-primary-foreground font-heading font-bold">Download a Brochure</p>
                 </div>
               </a>
             </div>
