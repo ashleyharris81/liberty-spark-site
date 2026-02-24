@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "@/assets/liberty-guard-logo.png";
 
 const Footer = () => {
@@ -12,6 +13,10 @@ const Footer = () => {
             <span>sales@libertyguard.co.uk</span>
             <span className="hidden md:inline">•</span>
             <span>The Old Airfield, Belton Road, Sandtoft DN8 5SX</span>
+            <span className="hidden md:inline">•</span>
+            <Link to="/new-account" className="text-secondary hover:underline font-semibold">
+              Open a New Account
+            </Link>
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-navy-light text-center text-primary-foreground/40 text-sm">
