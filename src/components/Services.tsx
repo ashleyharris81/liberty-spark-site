@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Building, Sun, Home, Presentation, Droplets } from "lucide-react";
 
 const services = [
@@ -27,7 +28,7 @@ const services = [
     title: "Marketing Suites",
     description:
       "Premium marketing suite solutions designed to impress, perfect for property developments and show homes.",
-    link: "#",
+    link: "/marketing-suites",
   },
   {
     icon: Droplets,
@@ -64,12 +65,21 @@ const Services = () => {
               <p className="text-primary-foreground/70 leading-relaxed text-sm">
                 {service.description}
               </p>
-              <a
-                href={service.link}
-                className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider hover:underline"
-              >
-                Take a Look →
-              </a>
+              {service.link.startsWith("/") ? (
+                <Link
+                  to={service.link}
+                  className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider hover:underline"
+                >
+                  Take a Look →
+                </Link>
+              ) : (
+                <a
+                  href={service.link}
+                  className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider hover:underline"
+                >
+                  Take a Look →
+                </a>
+              )}
             </div>
           ))}
         </div>
