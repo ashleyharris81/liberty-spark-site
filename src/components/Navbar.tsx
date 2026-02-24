@@ -9,6 +9,7 @@ const navLinks = [
   { label: "MARKETING SUITES", href: "/marketing-suites", isRoute: true },
   { label: "PORTABLE BUILDINGS", href: "/portable-buildings", isRoute: true },
   { label: "NEWS", href: "/news", isRoute: true },
+  { label: "ABOUT", href: "/about", isRoute: true },
   { label: "CONTACT", href: "#contact", isRoute: false },
 ];
 
