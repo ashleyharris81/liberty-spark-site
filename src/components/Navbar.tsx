@@ -7,7 +7,7 @@ const navLinks = [
   { label: "WELFARE", href: "#services", isRoute: false },
   { label: "SOLAR", href: "#solar", isRoute: false },
   { label: "MARKETING SUITES", href: "/marketing-suites", isRoute: true },
-  { label: "PORTABLE BUILDINGS", href: "#services", isRoute: false },
+  { label: "PORTABLE BUILDINGS", href: "/portable-buildings", isRoute: true },
   { label: "CONTACT", href: "#contact", isRoute: false },
 ];
 

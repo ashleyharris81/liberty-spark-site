@@ -21,7 +21,7 @@ const services = [
     title: "Portable Buildings",
     description:
       "Versatile portable accommodation solutions for a wide range of applications, built to the highest standards.",
-    link: "#",
+    link: "/portable-buildings",
   },
   {
     icon: Presentation,
