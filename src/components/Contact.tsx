@@ -61,7 +61,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <a href="#" className="flex items-center gap-4 group">
+              <a href="https://libertyguard.co.uk/wp-content/uploads/2025/10/Brochure.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                 <div className="w-14 h-14 bg-secondary/20 rounded-lg flex items-center justify-center group-hover:bg-secondary/30 transition-colors">
                   <FileText className="w-6 h-6 text-secondary" />
                 </div>
