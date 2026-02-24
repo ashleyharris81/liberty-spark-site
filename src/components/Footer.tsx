@@ -14,7 +14,7 @@ const Footer = () => {
             <span className="hidden md:inline">•</span>
             <span>The Old Airfield, Belton Road, Sandtoft DN8 5SX</span>
             <span className="hidden md:inline">•</span>
-            <Link to="/new-account" className="text-secondary hover:underline font-semibold">
+            <Link to="/new-account" onClick={() => window.scrollTo(0, 0)} className="text-secondary hover:underline font-semibold">
               Open a New Account
             </Link>
           </div>
