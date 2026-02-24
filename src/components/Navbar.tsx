@@ -40,6 +40,7 @@ const Navbar = () => {
                 <Link
                   key={link.label}
                   to={link.href}
+                  onClick={() => window.scrollTo(0, 0)}
                   className="text-primary-foreground/80 hover:text-secondary font-heading text-sm font-semibold tracking-wider transition-colors duration-300"
                 >
                   {link.label}
@@ -74,7 +75,7 @@ const Navbar = () => {
                 <Link
                   key={link.label}
                   to={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}
                   className="block py-3 text-primary-foreground/80 hover:text-secondary font-heading text-sm font-semibold tracking-wider transition-colors"
                 >
                   {link.label}
