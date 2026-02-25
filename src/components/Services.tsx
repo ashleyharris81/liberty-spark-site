@@ -7,14 +7,14 @@ const services = [
     title: "Mobile & Static Welfare",
     description:
       "Self-contained welfare cabins for construction, civil engineering, and remote sites with toilet, canteen, dry room, kitchen and office facilities.",
-    link: "#",
+    link: "/welfare",
   },
   {
     icon: Sun,
     title: "Solar Welfare",
     description:
       "State-of-the-art solar-powered welfare units with low emissions, reduced CO₂, silent running and rainwater harvesting.",
-    link: "#",
+    link: "/solar",
   },
   {
     icon: Home,
@@ -35,7 +35,7 @@ const services = [
     title: "Solar Loo",
     description:
       "Eco-friendly solar-powered portable toilet facilities, combining sustainability with essential hygiene on any site.",
-    link: "#",
+    link: "/solar",
   },
 ];
 
@@ -65,21 +65,13 @@ const Services = () => {
               <p className="text-primary-foreground/70 leading-relaxed text-sm">
                 {service.description}
               </p>
-              {service.link.startsWith("/") ? (
-                <Link
+              <Link
                   to={service.link}
+                  onClick={() => window.scrollTo(0, 0)}
                   className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider hover:underline"
                 >
                   Take a Look →
                 </Link>
-              ) : (
-                <a
-                  href={service.link}
-                  className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider hover:underline"
-                >
-                  Take a Look →
-                </a>
-              )}
             </div>
           ))}
         </div>
