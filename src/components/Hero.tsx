@@ -3,10 +3,17 @@ import heroBg from "@/assets/hero-bg.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster={heroBg}
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="https://libertyguard.co.uk/wp-content/uploads/2025/09/Home-Page-Video.mov" type="video/quicktime" />
+      </video>
       <div className="absolute inset-0 bg-primary/70" />
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-tight animate-fade-in-up max-w-5xl mx-auto">
