@@ -3,22 +3,23 @@ import heroBg from "@/assets/hero-bg.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Static fallback background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
       {/* Vimeo Video Background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden">
+      <div className="absolute inset-0 w-full h-full overflow-hidden z-[1]">
         <iframe
-          src="https://player.vimeo.com/video/1168093045?background=1&autoplay=1&loop=1&muted=1&quality=1080p"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto"
-          style={{ aspectRatio: '16/9' }}
+          src="https://player.vimeo.com/video/1168093045?background=1&autoplay=1&loop=1&muted=1"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          style={{ width: '177.78vh', height: '100vh', minWidth: '100%', minHeight: '100%' }}
           frameBorder="0"
           allow="autoplay; fullscreen"
           title="Hero background video"
         />
       </div>
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
-      <div className="absolute inset-0 bg-primary/70" />
+      <div className="absolute inset-0 bg-primary/70 z-[2]" />
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-tight animate-fade-in-up max-w-5xl mx-auto">
           Leaders in Modular &{" "}
