@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-navy-light text-center text-primary-foreground/40 text-sm">
-          ©2025 Liberty Guard, Inc. All rights reserved.
+          ©2026 Liberty Guard, Inc. All rights reserved.
         </div>
       </div>
     </footer>
