@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/liberty-guard-logo.png";
+import logo from "@/assets/liberty-white-logo.png";
 
 const navLinks = [
   { label: "WELFARE", href: "/welfare", isRoute: true },
