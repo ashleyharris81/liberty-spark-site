@@ -19,7 +19,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="mt-4 text-center text-primary-foreground/40 text-sm">
+        <div className="mt-4 text-right text-primary-foreground/40 text-sm">
           ©2026 LIBERTY GUARD (U.K.) LIMITED
         </div>
       </div>
