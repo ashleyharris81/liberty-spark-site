@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/liberty-guard-logo.png";
+import logo from "@/assets/liberty-white-logo.png";
 
 const Footer = () => {
   return (
