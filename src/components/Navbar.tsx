@@ -4,12 +4,12 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/liberty-white-logo.png";
 
 const navLinks = [
+  { label: "ABOUT", href: "/about", isRoute: true },
   { label: "WELFARE", href: "/welfare", isRoute: true },
   { label: "SOLAR", href: "/solar", isRoute: true },
   { label: "MARKETING SUITES", href: "/marketing-suites", isRoute: true },
   { label: "PORTABLE BUILDINGS", href: "/portable-buildings", isRoute: true },
   { label: "NEWS", href: "/news", isRoute: true },
-  { label: "ABOUT", href: "/about", isRoute: true },
   { label: "CONTACT", href: "/contact", isRoute: true },
 ];
 
