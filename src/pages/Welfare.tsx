@@ -3,7 +3,7 @@ import { Building, Truck, ShieldCheck, Utensils, DoorOpen, Wrench } from "lucide
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/welfare-hero.jpg";
 
 const welfareTypes = [
   {
