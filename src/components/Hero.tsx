@@ -2,7 +2,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[55vh] min-h-[380px] max-h-[600px] flex items-center overflow-hidden">
       {/* Static fallback background */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
@@ -19,9 +19,9 @@ const Hero = () => {
           title="Hero background video"
         />
       </div>
-      <div className="absolute inset-0 bg-primary/20 z-[2]" />
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-black text-primary-foreground uppercase tracking-tight leading-tight max-w-5xl mx-auto drop-shadow-lg">
+      <div className="absolute inset-0 bg-primary/30 z-[2]" />
+      <div className="relative z-10 container mx-auto px-6 lg:px-12">
+        <h1 className="font-heading text-2xl md:text-4xl lg:text-5xl font-black text-primary-foreground uppercase tracking-tight leading-tight max-w-3xl drop-shadow-lg">
           Leaders in Modular &<br />Portable Accommodation
         </h1>
       </div>
