@@ -18,33 +18,25 @@ const CloudflareVideo = ({
   const src = `https://${CLOUDFLARE_SUBDOMAIN}/${uid}/iframe?${IFRAME_PARAMS}`;
 
   if (variant === "hero") {
-    const heroWrapperStyle: CSSProperties = {
-      pointerEvents: "none",
-    };
-    const heroIframeStyle: CSSProperties = {
-      pointerEvents: "none",
-      border: "none",
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translate(-50%, -50%)",
-      // Cover behaviour for a 16:9 iframe: size it to be at least as
-      // large as the container in both dimensions while preserving 16:9.
-      width: "max(100%, calc(var(--cf-h, 100%) * 16 / 9))",
-      height: "max(100%, calc(var(--cf-w, 100%) * 9 / 16))",
-      minWidth: "100%",
-      minHeight: "100%",
-      aspectRatio: "16 / 9",
-    };
     return (
-      <div className={`absolute inset-0 w-full h-full overflow-hidden ${className}`} style={heroWrapperStyle}>
+      <div
+        className={`absolute inset-0 w-full h-full overflow-hidden pointer-events-none ${className}`}
+      >
         <iframe
           src={src}
           title="Background video"
           allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
           allowFullScreen
           loading="eager"
-          style={heroIframeStyle}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0"
+          style={{
+            // Cover the container with a 16:9 video. Whichever dimension is
+            // larger (width vs height * 16/9) wins, scaling the other up.
+            width: "max(100%, 177.78vh)",
+            height: "max(100%, 56.25vw)",
+            minWidth: "100%",
+            minHeight: "100%",
+          }}
         />
       </div>
     );
