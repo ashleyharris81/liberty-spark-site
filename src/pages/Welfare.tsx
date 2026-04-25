@@ -10,11 +10,13 @@ const welfareTypes = [
     title: "Mobile Welfare",
     description: "Towable welfare units that can be easily transported between sites. Fully self-contained with all essential facilities for your workforce.",
     icon: Truck,
+    link: "/mobile-welfare",
   },
   {
     title: "Static Welfare",
     description: "Fixed welfare cabins for longer-term projects. Robust, spacious and fully equipped for construction, infrastructure and remote sites.",
     icon: Building,
+    link: "/static-welfare",
   },
 ];
 
@@ -90,9 +92,11 @@ const Welfare = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {welfareTypes.map((type) => (
-              <div
+              <Link
                 key={type.title}
-                className="group relative overflow-hidden rounded-xl bg-navy-light p-10 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
+                to={type.link}
+                onClick={() => window.scrollTo(0, 0)}
+                className="group relative overflow-hidden rounded-xl bg-navy-light p-10 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 block"
               >
                 <div className="w-16 h-16 bg-secondary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary/30 transition-colors">
                   <type.icon className="w-8 h-8 text-secondary" />
@@ -103,7 +107,10 @@ const Welfare = () => {
                 <p className="text-primary-foreground/70 leading-relaxed">
                   {type.description}
                 </p>
-              </div>
+                <span className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider group-hover:underline">
+                  Take a Look →
+                </span>
+              </Link>
             ))}
           </div>
         </div>
