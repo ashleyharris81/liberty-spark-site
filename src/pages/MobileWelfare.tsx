@@ -12,6 +12,7 @@ interface SpecCategory {
 
 interface Product {
   title: string;
+  subtitle?: string;
   uid: string;
   specs: SpecCategory[];
 }
