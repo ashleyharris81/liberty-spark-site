@@ -18,20 +18,36 @@ const CloudflareVideo = ({
   const src = `https://${CLOUDFLARE_SUBDOMAIN}/${uid}/iframe?${IFRAME_PARAMS}`;
 
   if (variant === "hero") {
-    const heroStyle: CSSProperties = {
+    const heroWrapperStyle: CSSProperties = {
+      pointerEvents: "none",
+    };
+    const heroIframeStyle: CSSProperties = {
       pointerEvents: "none",
       border: "none",
+      // Ensure the video covers the container regardless of aspect ratio.
+      // 177.78vh = 16/9 of viewport height; 56.25vw = 9/16 of viewport width.
+      // Using min-w/min-h with aspect-ratio achieves cover behaviour for iframes.
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: "max(100%, calc(100% * 16 / 9))",
+      height: "max(100%, calc(100% * 9 / 16))",
+      minWidth: "100%",
+      minHeight: "100%",
+      aspectRatio: "16 / 9",
     };
     return (
-      <iframe
-        src={src}
-        title="Background video"
-        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-        allowFullScreen
-        loading="eager"
-        style={heroStyle}
-        className={`absolute inset-0 w-full h-full object-cover ${className}`}
-      />
+      <div className={`absolute inset-0 w-full h-full overflow-hidden ${className}`} style={heroWrapperStyle}>
+        <iframe
+          src={src}
+          title="Background video"
+          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+          allowFullScreen
+          loading="eager"
+          style={heroIframeStyle}
+        />
+      </div>
     );
   }
 
