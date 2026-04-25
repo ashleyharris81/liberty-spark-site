@@ -1,11 +1,11 @@
 import sustainabilityBg from "@/assets/sustainability-bg.jpg";
-import { Leaf, Zap, Droplets, Volume2 } from "lucide-react";
+import { Leaf, Zap, Droplets, VolumeX } from "lucide-react";
 
-const features = [
+const stats = [
   { icon: Leaf, label: "Low Emissions" },
   { icon: Zap, label: "Reduced CO₂" },
   { icon: Droplets, label: "Rainwater Harvesting" },
-  { icon: Volume2, label: "Silent Running" },
+  { icon: VolumeX, label: "Silent Running" },
 ];
 
 const Sustainability = () => {
@@ -29,14 +29,16 @@ const Sustainability = () => {
             Our goal is to help our customers save energy, cut costs, reduce emissions and protect the planet together. Over the next few years, we're transforming our entire welfare fleet with cutting-edge solar technology. By regularly reviewing and upgrading our eco-efficient systems, we ensure our operations meet the highest environmental standards and lead the way in a sustainable future.
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {features.map((feature) => (
-              <div key={feature.label} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-3 bg-secondary/20 rounded-full flex items-center justify-center">
-                  <feature.icon className="w-8 h-8 text-secondary" />
+          <div className="w-full h-px bg-primary-foreground/15 mb-12" />
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat) => (
+              <div key={stat.label} className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 mb-4 rounded-full bg-secondary/20 flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-secondary" />
                 </div>
                 <p className="text-primary-foreground font-heading font-semibold text-sm uppercase tracking-wider">
-                  {feature.label}
+                  {stat.label}
                 </p>
               </div>
             ))}

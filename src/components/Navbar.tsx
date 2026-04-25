@@ -1,28 +1,45 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/liberty-white-logo.png";
 
 const navLinks = [
-  { label: "ABOUT", href: "/about", isRoute: true },
-  { label: "WELFARE", href: "/welfare", isRoute: true },
+  { label: "MOBILE", href: "/mobile-welfare", isRoute: true },
+  { label: "STATIC", href: "/static-welfare", isRoute: true },
   { label: "SOLAR", href: "/solar", isRoute: true },
+  { label: "SOLAR LOO", href: "/solar-loos", isRoute: true },
+  { label: "HYBRID", href: "/mobile-welfare#hybrid-range", isRoute: true },
   { label: "MARKETING SUITES", href: "/marketing-suites", isRoute: true },
   { label: "PORTABLE BUILDINGS", href: "/portable-buildings", isRoute: true },
-  { label: "NEWS", href: "/news", isRoute: true },
-  { label: "CONTACT", href: "/contact", isRoute: true },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === "/";
+  const navigate = useNavigate();
 
-  const getHref = (link: typeof navLinks[0]) => {
-    if (link.isRoute) return link.href;
-    // If not on home page, anchor links should go to home page first
-    if (!isHome) return `/${link.href}`;
-    return link.href;
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (href.includes("#")) {
+      e.preventDefault();
+      const [path, hash] = href.split("#");
+      const scrollToHash = () => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+      if (location.pathname === path) {
+        scrollToHash();
+      } else {
+        navigate(path);
+        setTimeout(scrollToHash, 250);
+      }
+      setIsOpen(false);
+      return;
+    }
+    window.scrollTo(0, 0);
+    setIsOpen(false);
   };
 
   return (
@@ -35,26 +52,16 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) =>
-              link.isRoute ? (
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  onClick={() => window.scrollTo(0, 0)}
-                  className="text-primary-foreground/80 hover:text-secondary font-heading text-sm font-semibold tracking-wider transition-colors duration-300"
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.label}
-                  href={getHref(link)}
-                  className="text-primary-foreground/80 hover:text-secondary font-heading text-sm font-semibold tracking-wider transition-colors duration-300"
-                >
-                  {link.label}
-                </a>
-              )
-            )}
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-primary-foreground/80 hover:text-secondary font-heading text-sm font-semibold tracking-wider transition-colors duration-300"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile Toggle */}
@@ -70,27 +77,16 @@ const Navbar = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden pb-6 animate-fade-in">
-            {navLinks.map((link) =>
-              link.isRoute ? (
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}
-                  className="block py-3 text-primary-foreground/80 hover:text-secondary font-heading text-sm font-semibold tracking-wider transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.label}
-                  href={getHref(link)}
-                  onClick={() => setIsOpen(false)}
-                  className="block py-3 text-primary-foreground/80 hover:text-secondary font-heading text-sm font-semibold tracking-wider transition-colors"
-                >
-                  {link.label}
-                </a>
-              )
-            )}
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                to={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="block py-3 text-primary-foreground/80 hover:text-secondary font-heading text-sm font-semibold tracking-wider transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         )}
       </div>
