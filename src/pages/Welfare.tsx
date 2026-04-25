@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
-import { Building, Truck, ShieldCheck, Utensils, DoorOpen, Wrench } from "lucide-react";
+import { Building, ShieldCheck, Utensils, DoorOpen, Wrench } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import heroBg from "@/assets/hero-bg.jpg";
+import CloudflareVideo from "@/components/CloudflareVideo";
+import welfareMobileCard from "@/assets/welfare-mobile-card.jpg";
+import welfareStaticCard from "@/assets/welfare-static-card.jpg";
 
 const welfareTypes = [
   {
     title: "Mobile Welfare",
-    description: "Towable welfare units that can be easily transported between sites. Fully self-contained with all essential facilities for your workforce.",
-    icon: Truck,
+    image: welfareMobileCard,
     link: "/mobile-welfare",
   },
   {
     title: "Static Welfare",
-    description: "Fixed welfare cabins for longer-term projects. Robust, spacious and fully equipped for construction, infrastructure and remote sites.",
-    icon: Building,
+    image: welfareStaticCard,
     link: "/static-welfare",
   },
 ];
