@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import CloudflareVideo from "./CloudflareVideo";
 
 const Hero = () => {
   return (
@@ -8,16 +9,9 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Vimeo Video Background */}
+      {/* Cloudflare Stream Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-[1]">
-        <iframe
-          src="https://player.vimeo.com/video/1168093045?background=1&autoplay=1&loop=1&muted=1"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          style={{ width: '177.78vh', height: '100vh', minWidth: '100%', minHeight: '100%' }}
-          frameBorder="0"
-          allow="autoplay; fullscreen"
-          title="Hero background video"
-        />
+        <CloudflareVideo uid="8f4ff233528f86183d2c5740e0c9b7c9" variant="hero" />
       </div>
       <div className="absolute inset-0 bg-primary/70 z-[2]" />
       <div className="relative z-10 container mx-auto px-4 text-center">
