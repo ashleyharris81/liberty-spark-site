@@ -16,11 +16,11 @@ const Hero = () => {
       <div className="absolute inset-0 bg-primary/70 z-[2]" />
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-tight animate-fade-in-up max-w-5xl mx-auto">
-          Leaders in Modular &{" "}
-          <span className="text-secondary">Portable Accommodation</span>
+          <span className="block font-normal text-3xl md:text-5xl lg:text-6xl">Leaders in</span>
+          <span className="text-secondary block">Modular & Portable Accommodation</span>
         </h1>
         <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-          Over 40 years of trusted service delivering welfare cabins, solar solutions and portable buildings nationwide.
+          Founded in 1981. Over 40 years of trusted service delivering welfare cabins, solar solutions and portable buildings nationwide.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
           <a

@@ -25,8 +25,14 @@ const About = () => {
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
             We started small, with a big vision and we have expanded into a nationwide business with a diverse fleet of mobile and static welfare cabins, modular buildings, portable accommodation, marketing suites and our state-of-the-art solar fleet.
           </p>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            We specialise in the hire of welfare units for construction, civil engineering, and remote sites. Each unit provides essential on-site facilities such as toilet, canteen, dry room, kitchen and office, in one secure, portable solution. Our entire fleet is supported by our experienced team of responsive aftercare and on-call engineers, we deliver a seamless service from start to finish.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            Our sizeable investment in our solar range, promotes sustainable welfare, low emissions, reduced CO₂, low fuel, silent running and rainwater harvesting. Helping our customers to save money, reduce their environmental impact and reach their net zero goals.
+          </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            We specialise in the hire of welfare units for construction, civil engineering, and remote sites. Each unit provides essential on-site facilities such as toilet, canteen, dry room, kitchen and office, in one secure, portable solution.
+            At Liberty Guard we're looking forward to a brighter, cleaner future for the welfare industry.
           </p>
         </div>
 

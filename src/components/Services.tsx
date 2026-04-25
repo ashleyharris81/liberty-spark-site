@@ -18,14 +18,14 @@ const services = [
   },
   {
     icon: Home,
-    title: "Portable Buildings",
+    title: "Portable Accommodation",
     description:
       "Versatile portable accommodation solutions for a wide range of applications, built to the highest standards.",
     link: "/portable-buildings",
   },
   {
     icon: Presentation,
-    title: "Marketing Suites",
+    title: "Marketing Suite",
     description:
       "Premium marketing suite solutions designed to impress, perfect for property developments and show homes.",
     link: "/marketing-suites",
@@ -35,7 +35,7 @@ const services = [
     title: "Solar Loo",
     description:
       "Eco-friendly solar-powered portable toilet facilities, combining sustainability with essential hygiene on any site.",
-    link: "/solar",
+    link: "/solar-loos",
   },
 ];
 
