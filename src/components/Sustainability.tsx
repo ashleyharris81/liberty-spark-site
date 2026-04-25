@@ -26,7 +26,7 @@ const Sustainability = () => {
             We are dedicated to reducing our environmental impact and helping our customers achieve the same. We continuously invest in the latest solar-powered technology delivering sustainable and low-emission solutions.
           </p>
           <p className="text-primary-foreground/80 text-lg leading-relaxed mb-12">
-            Our goal is to help our customers save energy, cut costs, reduce emissions and protect the planet together. Over the next few years, we're transforming our entire welfare fleet with cutting-edge solar technology.
+            Our goal is to help our customers save energy, cut costs, reduce emissions and protect the planet together. Over the next few years, we're transforming our entire welfare fleet with cutting-edge solar technology. By regularly reviewing and upgrading our eco-efficient systems, we ensure our operations meet the highest environmental standards and lead the way in a sustainable future.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
