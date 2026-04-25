@@ -2,7 +2,114 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import CloudflareVideo from "@/components/CloudflareVideo";
 import heroBg from "@/assets/hero-bg.jpg";
+
+interface SpecCategory {
+  title: string;
+  items: string[];
+}
+
+interface Product {
+  title: string;
+  uid: string;
+  specs: SpecCategory[];
+}
+
+const POWER_SINGLE: SpecCategory = {
+  title: "Power",
+  items: [
+    "3 x 150W Solar panels with inverter",
+    "3 x 150AH Deep cycle batteries",
+    "240v Backup battery",
+    "Integrated diesel/electric power",
+  ],
+};
+
+const POWER_TWIN: SpecCategory = {
+  title: "Power",
+  items: [
+    "3 x 185W Solar panels with inverter",
+    "3 x 150AH Deep cycle batteries",
+    "240v Backup battery",
+    "Integrated diesel/electric power",
+  ],
+};
+
+const EXTERIOR: SpecCategory = {
+  title: "Exterior",
+  items: [
+    "Secure locking system",
+    "Suitable for any location",
+    "PIR LED outdoor lighting",
+    "Waste tank indicator",
+  ],
+};
+
+const products: Product[] = [
+  {
+    title: "Single Solar Loo",
+    uid: "72c99cace1b5f8642fab7ab476c7c65c",
+    specs: [
+      {
+        title: "Specifications",
+        items: [
+          "Size (mm): 2670 L x 1780 W x 2625 H",
+          "500L Waste tank",
+          "Drop through toilet",
+          "Stainless steel sink",
+          "400L Fresh water tank",
+          "53L Diesel tank",
+        ],
+      },
+      {
+        title: "Interior",
+        items: [
+          "Single toilet interior",
+          "Quality fittings",
+          "12v Diesel Webasto water heating system",
+          "On demand hot water",
+          "Hot & cold freshwater taps",
+          "Feminine hygiene bins",
+          "Unisex facility",
+        ],
+      },
+      POWER_SINGLE,
+      EXTERIOR,
+    ],
+  },
+  {
+    title: "Twin Solar Loo",
+    uid: "8ab52ab4ab0dbb598cf1c432526e5b39",
+    specs: [
+      {
+        title: "Specifications",
+        items: [
+          "Size (mm): 2670 L x 2560 W x 2625 H",
+          "800L Waste tank",
+          "Drop through toilet",
+          "Stainless steel sink",
+          "400L Fresh water tank",
+          "53L Diesel tank",
+        ],
+      },
+      {
+        title: "Interior",
+        items: [
+          "Two single toilets with external access",
+          "Quality fittings",
+          "12v Diesel Webasto water heating system",
+          "On demand hot water",
+          "Hot & cold freshwater taps",
+          "Feminine hygiene bins",
+          "Unisex facility",
+        ],
+      },
+      POWER_TWIN,
+      EXTERIOR,
+    ],
+  },
+];
 
 const SolarLoos = () => {
   return (
@@ -14,7 +121,7 @@ const SolarLoos = () => {
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
           <img
             src={heroBg}
-            alt="Solar Loos"
+            alt="Liberty Guard solar loo"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-primary/60" />
@@ -27,29 +134,63 @@ const SolarLoos = () => {
                 ← Back to Home
               </Link>
               <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-tight animate-fade-in-up">
-                Solar{" "}
-                <span className="text-secondary">Loos</span>
+                Solar <span className="text-secondary">Loos</span>
               </h1>
               <p
-                className="mt-4 text-lg md:text-xl text-primary-foreground/80 max-w-2xl animate-fade-in-up"
+                className="mt-4 text-lg md:text-xl text-primary-foreground/80 max-w-3xl animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                Self-contained solar-powered toilet units.
+                Self-contained solar-powered portable toilets. Suitable for any location with no mains hook-up required - secure, eco-friendly, and ready for unisex use with on-demand hot water and PIR LED outdoor lighting.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Coming Soon */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-6">
-            Coming <span className="text-secondary">Soon</span>
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            We're putting the finishing touches on this page. Check back shortly for full details on our solar loos solutions, or get in touch with our team for immediate enquiries.
-          </p>
+      {/* Product Cards */}
+      <section className="py-20 bg-primary">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="space-y-10 max-w-7xl mx-auto">
+            {products.map((product) => (
+              <article
+                key={product.title}
+                className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
+              >
+                <div className="p-6 md:p-10">
+                  <h2 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground uppercase tracking-tight mb-6">
+                    {product.title}
+                  </h2>
+
+                  <div className="mb-8 mx-auto w-full max-w-[800px]">
+                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10">
+                      <CloudflareVideo uid={product.uid} variant="card" />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                    {product.specs.map((spec) => (
+                      <div key={spec.title}>
+                        <h3 className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
+                          {spec.title}
+                        </h3>
+                        <ul className="space-y-2">
+                          {spec.items.map((item) => (
+                            <li
+                              key={item}
+                              className="text-sm text-primary-foreground/70 leading-relaxed flex gap-2"
+                            >
+                              <span className="text-secondary mt-1">•</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -10,21 +10,25 @@ const solarProducts = [
     title: "Solar Mobile Welfare",
     description: "Fully solar-powered mobile welfare units with low emissions, silent running and smart monitoring.",
     icon: Sun,
+    link: "/solar-mobile-welfare",
   },
   {
     title: "Solar Static Welfare",
     description: "Static welfare cabins powered by solar technology, ideal for longer-term sites requiring sustainable facilities.",
     icon: ShieldCheck,
+    link: "/solar-static-welfare",
   },
   {
     title: "Solar Drying Room",
     description: "Eco-friendly solar drying rooms — generator-free, silent operation, and zero-emission drying for workwear and PPE.",
     icon: Gauge,
+    link: "/solar-drying-room",
   },
   {
     title: "Solar Loos",
     description: "Solar-powered portable toilet facilities combining sustainability with essential hygiene on any site.",
     icon: Droplets,
+    link: "/solar-loos",
   },
 ];
 
@@ -123,9 +127,11 @@ const Solar = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {solarProducts.map((product) => (
-              <div
+              <Link
                 key={product.title}
-                className="group bg-navy-light rounded-xl p-8 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 text-center"
+                to={product.link}
+                onClick={() => window.scrollTo(0, 0)}
+                className="group bg-navy-light rounded-xl p-8 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 text-center block"
               >
                 <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-secondary/30 transition-colors">
                   <product.icon className="w-8 h-8 text-secondary" />
@@ -136,7 +142,10 @@ const Solar = () => {
                 <p className="text-primary-foreground/70 text-sm leading-relaxed">
                   {product.description}
                 </p>
-              </div>
+                <span className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider group-hover:underline">
+                  Take a Look →
+                </span>
+              </Link>
             ))}
           </div>
         </div>
