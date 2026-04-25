@@ -12,6 +12,7 @@ interface SpecCategory {
 
 interface Product {
   title: string;
+  subtitle?: string;
   uid: string;
   specs: SpecCategory[];
 }
@@ -245,6 +246,176 @@ const products: Product[] = [
   },
 ];
 
+const HYBRID_TOWING: SpecCategory = {
+  title: "Towing & Setup",
+  items: [
+    "Standard ball-socket type towbar",
+    "Integrated rear lighting",
+    "Anti-vandal lockable steel tow bar cover",
+    "Hydraulic jack allows wheels to be retracted",
+    "Road towable",
+  ],
+};
+
+const HYBRID_RUNNING: SpecCategory = {
+  title: "Hybrid Running",
+  items: [
+    "600W roof-mounted solar panel",
+    "6kVA generator",
+    "50L fuel tank",
+    "Diesel container & funnel supplied",
+  ],
+};
+
+const HYBRID_DRY_ROOM: SpecCategory = {
+  title: "Walk-in Dry Room",
+  items: ["12v HVO heater", "Clothes hooks", "Cushioned bench seating"],
+};
+
+const HYBRID_KITCHEN: SpecCategory = {
+  title: "Kitchen",
+  items: [
+    "Fitted kitchen - sink, cupboards & worktop",
+    "Appliances - microwave & kettle",
+    "Bin",
+    "Notice board",
+  ],
+};
+
+const HYBRID_OFFICE: SpecCategory = {
+  title: "Office",
+  items: [
+    "Office desk",
+    "x1 chair",
+    "Notice board",
+    "12v LED lighting",
+    "Low energy plug sockets",
+    "12v USB power outlets",
+  ],
+};
+
+const HYBRID_TOILET_SINGLE: SpecCategory = {
+  title: "Toilet",
+  items: [
+    "x1 toilet cubicle with external access",
+    "Hand washing / drying station",
+    "No-mains required water flush toilet",
+    "Safety lock door",
+  ],
+};
+
+const HYBRID_TOILET_TWIN: SpecCategory = {
+  title: "Toilet",
+  items: [
+    "x2 toilet cubicle with external access",
+    "Urinal",
+    "Hand washing / drying station",
+    "No-mains required water flush toilet",
+    "Safety lock door",
+  ],
+};
+
+const hybridCanteen = (seats: number): SpecCategory => ({
+  title: "Canteen",
+  items: [
+    `Seating for up to ${seats}`,
+    "Under-bench storage space",
+    "12v LED lighting",
+    "Low energy plug sockets",
+    "12v USB power outlets",
+    "12v HVO heater",
+  ],
+});
+
+const hybridProducts: Product[] = [
+  {
+    title: "12ft Hybrid Mobi",
+    subtitle: "7 Person",
+    uid: "926eed1261b29291590f8366862e09d4",
+    specs: [
+      hybridCanteen(7),
+      HYBRID_KITCHEN,
+      HYBRID_RUNNING,
+      HYBRID_DRY_ROOM,
+      HYBRID_TOILET_SINGLE,
+      HYBRID_TOWING,
+    ],
+  },
+  {
+    title: "16ft Hybrid Mobi",
+    subtitle: "10 Person",
+    uid: "3c7277a73a0a7a47c4a6cffb8d599f41",
+    specs: [
+      hybridCanteen(10),
+      HYBRID_KITCHEN,
+      HYBRID_RUNNING,
+      HYBRID_DRY_ROOM,
+      HYBRID_OFFICE,
+      HYBRID_TOILET_SINGLE,
+      HYBRID_TOWING,
+    ],
+  },
+  {
+    title: "24ft Hybrid Mobi Twin Toilet",
+    subtitle: "14 Person",
+    uid: "c81707904798153c440f08d063fa3017",
+    specs: [
+      hybridCanteen(14),
+      HYBRID_RUNNING,
+      HYBRID_DRY_ROOM,
+      HYBRID_OFFICE,
+      HYBRID_TOILET_TWIN,
+      HYBRID_TOWING,
+    ],
+  },
+];
+
+const renderProductCard = (product: Product) => (
+  <article
+    key={product.title}
+    className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
+  >
+    <div className="p-6 md:p-10">
+      <h2 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground uppercase tracking-tight mb-2">
+        {product.title}
+      </h2>
+      {product.subtitle && (
+        <p className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-6">
+          {product.subtitle}
+        </p>
+      )}
+      {!product.subtitle && <div className="mb-4" />}
+
+      <div className="mb-8 mx-auto w-full max-w-[800px]">
+        <div className="rounded-lg overflow-hidden border border-primary-foreground/10">
+          <CloudflareVideo uid={product.uid} variant="card" />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        {product.specs.map((spec) => (
+          <div key={spec.title}>
+            <h3 className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
+              {spec.title}
+            </h3>
+            <ul className="space-y-2">
+              {spec.items.map((item) => (
+                <li
+                  key={item}
+                  className="text-sm text-primary-foreground/70 leading-relaxed flex gap-2"
+                >
+                  <span className="text-secondary mt-1">•</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </article>
+);
+
 const MobileWelfare = () => {
   return (
     <div className="min-h-screen">
@@ -274,7 +445,7 @@ const MobileWelfare = () => {
                 className="mt-4 text-lg md:text-xl text-primary-foreground/80 max-w-3xl animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                Towable welfare units that can be easily transported between sites. Fully self-contained with all essential facilities for your workforce, ideal for construction, civil engineering and remote projects.
+                Towable welfare units that can be easily transported between sites. Choose from our standard mobile welfare range with reliable generator power, or our new hybrid range featuring solar-assisted running for reduced fuel costs and lower emissions. All units are fully self-contained with essential facilities for your workforce.
               </p>
             </div>
           </div>
@@ -285,45 +456,24 @@ const MobileWelfare = () => {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="space-y-10 max-w-7xl mx-auto">
-            {products.map((product) => (
-              <article
-                key={product.title}
-                className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
-              >
-                <div className="p-6 md:p-10">
-                  <h2 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground uppercase tracking-tight mb-6">
-                    {product.title}
-                  </h2>
+            <div className="text-center mb-4">
+              <h2 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground/90 uppercase tracking-tight">
+                Standard <span className="text-secondary">Range</span>
+              </h2>
+            </div>
 
-                  <div className="mb-8 mx-auto w-full max-w-[800px]">
-                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10">
-                      <CloudflareVideo uid={product.uid} variant="card" />
-                    </div>
-                  </div>
+            {products.map((product) => renderProductCard(product))}
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                    {product.specs.map((spec) => (
-                      <div key={spec.title}>
-                        <h3 className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
-                          {spec.title}
-                        </h3>
-                        <ul className="space-y-2">
-                          {spec.items.map((item) => (
-                            <li
-                              key={item}
-                              className="text-sm text-primary-foreground/70 leading-relaxed flex gap-2"
-                            >
-                              <span className="text-secondary mt-1">•</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            ))}
+            <div id="hybrid-range" className="text-center mb-12 mt-20 scroll-mt-24">
+              <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
+                Hybrid <span className="text-secondary">Range</span>
+              </h2>
+              <p className="mt-4 text-primary-foreground/70 max-w-2xl mx-auto">
+                Solar-assisted mobile welfare - combining a roof-mounted solar panel with a back-up generator for sustainable, reliable power on any site.
+              </p>
+            </div>
+
+            {hybridProducts.map((product) => renderProductCard(product))}
           </div>
         </div>
       </section>

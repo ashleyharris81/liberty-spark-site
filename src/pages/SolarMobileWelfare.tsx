@@ -255,6 +255,23 @@ const SolarMobileWelfare = () => {
       {/* Product Cards */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-7xl mx-auto mb-10 rounded-xl bg-muted/10 border border-primary-foreground/10 p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <h3 className="font-heading text-xl md:text-2xl font-black text-primary-foreground uppercase tracking-tight">
+                Looking for solar without going full electric?
+              </h3>
+              <p className="mt-2 text-primary-foreground/70 max-w-2xl">
+                Our new Hybrid Mobi range combines a 600W solar panel with a back-up generator - the eco benefits of solar with the reliability of a traditional generator.
+              </p>
+            </div>
+            <Link
+              to="/mobile-welfare#hybrid-range"
+              onClick={() => window.scrollTo(0, 0)}
+              className="shrink-0 inline-flex items-center text-secondary font-heading text-sm font-bold uppercase tracking-wider hover:underline"
+            >
+              View Hybrid Range →
+            </Link>
+          </div>
           <div className="space-y-10 max-w-7xl mx-auto">
             {products.map((product) => (
               <article
