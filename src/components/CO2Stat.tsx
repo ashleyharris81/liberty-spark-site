@@ -10,39 +10,50 @@ const metrics = [
 
 const CO2Stat = () => {
   return (
-    <section className="relative py-28 overflow-hidden bg-gradient-to-b from-sky-400 to-sky-600">
-      <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-primary/20" />
+    <section className="relative py-28 overflow-hidden bg-primary">
+      {/* Decorative accents */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_hsl(var(--secondary)/0.15),_transparent_60%)]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/40 to-transparent" />
+
       <div className="relative z-10 container mx-auto px-4 lg:px-8">
-        <div className="max-w-5xl mx-auto text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-6xl font-black text-primary uppercase tracking-tight drop-shadow-sm">
-            Solar — A <span className="text-secondary">Brighter Future</span>
+        <div className="max-w-5xl mx-auto text-center mb-20">
+          <span className="inline-block font-heading text-xs font-bold tracking-[0.3em] text-secondary uppercase mb-6">
+            ◆ A Brighter Future
+          </span>
+          <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-[0.95]">
+            Switch to solar &<br />
+            <span className="text-secondary">save £11,281</span> a year
           </h2>
-          <div className="w-20 h-1 bg-secondary mx-auto mt-6 mb-6" />
-          <p className="font-heading text-lg md:text-2xl font-bold text-secondary uppercase tracking-wide">
-            Switch to solar welfare & save £11,281 a year
+          <p className="mt-8 text-primary-foreground/60 text-base md:text-lg max-w-2xl mx-auto">
+            Real annual savings from upgrading a traditional welfare unit to our solar-powered fleet.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 max-w-6xl mx-auto">
-          {metrics.map((m) => (
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 max-w-6xl mx-auto">
+          {metrics.map((m, i) => (
             <div
               key={m.label}
-              className="flex flex-col items-center text-center bg-white/15 backdrop-blur-sm rounded-2xl p-6 border border-white/30"
+              className="group relative bg-navy-light rounded-2xl p-6 md:p-8 border border-primary-foreground/10 hover:border-secondary/50 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-16 h-16 mb-4 rounded-full border-2 border-secondary bg-white/20 flex items-center justify-center">
-                <m.icon className="w-8 h-8 text-primary" />
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center group-hover:bg-secondary/25 transition-colors">
+                  <m.icon className="w-6 h-6 text-secondary" strokeWidth={2} />
+                </div>
+                <span className="font-heading text-xs font-bold text-primary-foreground/30 tabular-nums">
+                  0{i + 1}
+                </span>
               </div>
-              <div className="font-heading text-2xl md:text-3xl font-black text-primary tracking-tight">
+              <div className="font-heading text-3xl md:text-4xl font-black text-primary-foreground tracking-tight leading-none">
                 {m.stat}
               </div>
-              <div className="mt-2 text-primary/80 font-heading text-xs font-bold uppercase tracking-wider">
+              <div className="mt-3 text-primary-foreground/60 font-heading text-[11px] font-bold uppercase tracking-[0.15em]">
                 {m.label}
               </div>
             </div>
           ))}
         </div>
 
-        <p className="text-center text-primary/60 text-xs italic mt-10">
+        <p className="text-center text-primary-foreground/40 text-xs italic mt-12">
           *Annual savings based on the 24ft Ultimate Eco Plus
         </p>
       </div>
