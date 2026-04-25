@@ -8,6 +8,14 @@ import MarketingSuites from "./pages/MarketingSuites";
 import PortableBuildings from "./pages/PortableBuildings";
 import Solar from "./pages/Solar";
 import Welfare from "./pages/Welfare";
+import MobileWelfare from "./pages/MobileWelfare";
+import StaticWelfare from "./pages/StaticWelfare";
+import SolarMobileWelfare from "./pages/SolarMobileWelfare";
+import SolarStaticWelfare from "./pages/SolarStaticWelfare";
+import SolarDryingRoom from "./pages/SolarDryingRoom";
+import SolarLoos from "./pages/SolarLoos";
+import PortableAccommodation from "./pages/PortableAccommodation";
+import ModularBuildings from "./pages/ModularBuildings";
 import News from "./pages/News";
 import AboutPage from "./pages/AboutPage";
 import NewAccount from "./pages/NewAccount";
@@ -28,6 +36,14 @@ const App = () => (
           <Route path="/portable-buildings" element={<PortableBuildings />} />
           <Route path="/solar" element={<Solar />} />
           <Route path="/welfare" element={<Welfare />} />
+          <Route path="/mobile-welfare" element={<MobileWelfare />} />
+          <Route path="/static-welfare" element={<StaticWelfare />} />
+          <Route path="/solar-mobile-welfare" element={<SolarMobileWelfare />} />
+          <Route path="/solar-static-welfare" element={<SolarStaticWelfare />} />
+          <Route path="/solar-drying-room" element={<SolarDryingRoom />} />
+          <Route path="/solar-loos" element={<SolarLoos />} />
+          <Route path="/portable-accommodation" element={<PortableAccommodation />} />
+          <Route path="/modular-buildings" element={<ModularBuildings />} />
           <Route path="/news" element={<News />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/new-account" element={<NewAccount />} />
