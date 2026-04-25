@@ -92,20 +92,22 @@ const Welfare = () => {
                 key={type.title}
                 to={type.link}
                 onClick={() => window.scrollTo(0, 0)}
-                className="group relative overflow-hidden rounded-xl bg-navy-light p-10 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 block"
+                className="group relative overflow-hidden rounded-xl border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 block aspect-[4/3]"
               >
-                <div className="w-16 h-16 bg-secondary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary/30 transition-colors">
-                  <type.icon className="w-8 h-8 text-secondary" />
+                <img
+                  src={type.image}
+                  alt={type.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10" />
+                <div className="relative z-10 h-full flex flex-col justify-end p-8 md:p-10">
+                  <h3 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground uppercase tracking-wide mb-3">
+                    {type.title}
+                  </h3>
+                  <span className="inline-block text-secondary font-heading font-semibold text-sm uppercase tracking-wider group-hover:underline">
+                    Take a Look →
+                  </span>
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-primary-foreground uppercase tracking-wide mb-4">
-                  {type.title}
-                </h3>
-                <p className="text-primary-foreground/70 leading-relaxed">
-                  {type.description}
-                </p>
-                <span className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider group-hover:underline">
-                  Take a Look →
-                </span>
               </Link>
             ))}
           </div>
