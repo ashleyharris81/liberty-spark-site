@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div className="flex flex-col gap-4">
-            <img src={logo} alt="Liberty Guard" className="h-12 w-auto" />
+            <img src={logo} alt="Liberty Guard" className="h-12 w-auto object-contain" />
             <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-xs">
               The Old Airfield, Belton Road, Sandtoft DN8 5SX
             </p>
