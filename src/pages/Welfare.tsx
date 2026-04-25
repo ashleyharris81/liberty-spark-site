@@ -37,12 +37,8 @@ const Welfare = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <img
-            src={heroBg}
-            alt="Liberty Guard welfare cabin"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-primary/60" />
+          <CloudflareVideo uid="8f4ff233528f86183d2c5740e0c9b7c9" variant="hero" />
+          <div className="absolute inset-0 bg-primary/60 z-[5]" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
               <Link
