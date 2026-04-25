@@ -15,13 +15,10 @@ const SolarSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="font-heading text-3xl md:text-5xl font-black text-foreground uppercase tracking-tight">
-              Solar — A <span className="text-secondary">Brighter</span> Future
+              Remote Monitoring & <span className="text-secondary">Track-and-Trace</span>
             </h2>
             <div className="w-20 h-1 bg-secondary mt-4 mb-8" />
 
-            <h3 className="font-heading text-xl font-bold text-foreground uppercase tracking-wide mb-6">
-              Remote Monitoring
-            </h3>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Our Solar Fleet feature intelligent track-and-trace technology that monitors energy production, usage, and battery levels 24/7 via Wi-Fi or 5G. Real-time data includes cabin location, weather, fuel usage, waste and water levels.
             </p>
@@ -51,16 +48,6 @@ const SolarSection = () => {
               alt="Solar welfare cabin with solar panels"
               className="rounded-xl shadow-2xl w-full"
             />
-            <div className="absolute -bottom-6 -left-6 bg-primary rounded-xl p-6 shadow-xl">
-              <div className="text-center">
-                <div className="font-heading text-4xl font-black text-secondary">
-                  10,201kg
-                </div>
-                <div className="text-primary-foreground text-sm font-heading font-semibold uppercase tracking-wider mt-1">
-                  CO₂ Emissions Avoided
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
