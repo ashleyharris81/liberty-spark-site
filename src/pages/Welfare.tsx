@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
-import { Building, Truck, ShieldCheck, Utensils, DoorOpen, Wrench } from "lucide-react";
+import { Building, ShieldCheck, Utensils, DoorOpen, Wrench } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import heroBg from "@/assets/hero-bg.jpg";
+import CloudflareVideo from "@/components/CloudflareVideo";
+import welfareMobileCard from "@/assets/welfare-mobile-card.jpg";
+import welfareStaticCard from "@/assets/welfare-static-card.jpg";
 
 const welfareTypes = [
   {
     title: "Mobile Welfare",
-    description: "Towable welfare units that can be easily transported between sites. Fully self-contained with all essential facilities for your workforce.",
-    icon: Truck,
+    image: welfareMobileCard,
     link: "/mobile-welfare",
   },
   {
     title: "Static Welfare",
-    description: "Fixed welfare cabins for longer-term projects. Robust, spacious and fully equipped for construction, infrastructure and remote sites.",
-    icon: Building,
+    image: welfareStaticCard,
     link: "/static-welfare",
   },
 ];
@@ -37,12 +37,8 @@ const Welfare = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <img
-            src={heroBg}
-            alt="Liberty Guard welfare cabin"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-primary/60" />
+          <CloudflareVideo uid="8f4ff233528f86183d2c5740e0c9b7c9" variant="hero" />
+          <div className="absolute inset-0 bg-primary/60 z-[5]" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
               <Link
@@ -96,20 +92,22 @@ const Welfare = () => {
                 key={type.title}
                 to={type.link}
                 onClick={() => window.scrollTo(0, 0)}
-                className="group relative overflow-hidden rounded-xl bg-navy-light p-10 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 block"
+                className="group relative overflow-hidden rounded-xl border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 block aspect-[4/3]"
               >
-                <div className="w-16 h-16 bg-secondary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary/30 transition-colors">
-                  <type.icon className="w-8 h-8 text-secondary" />
+                <img
+                  src={type.image}
+                  alt={type.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10" />
+                <div className="relative z-10 h-full flex flex-col justify-end p-8 md:p-10">
+                  <h3 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground uppercase tracking-wide mb-3">
+                    {type.title}
+                  </h3>
+                  <span className="inline-block text-secondary font-heading font-semibold text-sm uppercase tracking-wider group-hover:underline">
+                    Take a Look →
+                  </span>
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-primary-foreground uppercase tracking-wide mb-4">
-                  {type.title}
-                </h3>
-                <p className="text-primary-foreground/70 leading-relaxed">
-                  {type.description}
-                </p>
-                <span className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider group-hover:underline">
-                  Take a Look →
-                </span>
               </Link>
             ))}
           </div>
