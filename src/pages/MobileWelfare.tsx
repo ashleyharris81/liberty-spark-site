@@ -456,45 +456,24 @@ const MobileWelfare = () => {
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="space-y-10 max-w-7xl mx-auto">
-            {products.map((product) => (
-              <article
-                key={product.title}
-                className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
-              >
-                <div className="p-6 md:p-10">
-                  <h2 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground uppercase tracking-tight mb-6">
-                    {product.title}
-                  </h2>
+            <div className="text-center mb-4">
+              <h2 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground/90 uppercase tracking-tight">
+                Standard <span className="text-secondary">Range</span>
+              </h2>
+            </div>
 
-                  <div className="mb-8 mx-auto w-full max-w-[800px]">
-                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10">
-                      <CloudflareVideo uid={product.uid} variant="card" />
-                    </div>
-                  </div>
+            {products.map((product) => renderProductCard(product))}
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                    {product.specs.map((spec) => (
-                      <div key={spec.title}>
-                        <h3 className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
-                          {spec.title}
-                        </h3>
-                        <ul className="space-y-2">
-                          {spec.items.map((item) => (
-                            <li
-                              key={item}
-                              className="text-sm text-primary-foreground/70 leading-relaxed flex gap-2"
-                            >
-                              <span className="text-secondary mt-1">•</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            ))}
+            <div id="hybrid-range" className="text-center mb-12 mt-20 scroll-mt-24">
+              <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
+                Hybrid <span className="text-secondary">Range</span>
+              </h2>
+              <p className="mt-4 text-primary-foreground/70 max-w-2xl mx-auto">
+                Solar-assisted mobile welfare - combining a roof-mounted solar panel with a back-up generator for sustainable, reliable power on any site.
+              </p>
+            </div>
+
+            {hybridProducts.map((product) => renderProductCard(product))}
           </div>
         </div>
       </section>
