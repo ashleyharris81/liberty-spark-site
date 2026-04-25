@@ -24,15 +24,14 @@ const CloudflareVideo = ({
     const heroIframeStyle: CSSProperties = {
       pointerEvents: "none",
       border: "none",
-      // Ensure the video covers the container regardless of aspect ratio.
-      // 177.78vh = 16/9 of viewport height; 56.25vw = 9/16 of viewport width.
-      // Using min-w/min-h with aspect-ratio achieves cover behaviour for iframes.
       position: "absolute",
       top: "50%",
       left: "50%",
       transform: "translate(-50%, -50%)",
-      width: "max(100%, calc(100% * 16 / 9))",
-      height: "max(100%, calc(100% * 9 / 16))",
+      // Cover behaviour for a 16:9 iframe: size it to be at least as
+      // large as the container in both dimensions while preserving 16:9.
+      width: "max(100%, calc(var(--cf-h, 100%) * 16 / 9))",
+      height: "max(100%, calc(var(--cf-w, 100%) * 9 / 16))",
       minWidth: "100%",
       minHeight: "100%",
       aspectRatio: "16 / 9",
