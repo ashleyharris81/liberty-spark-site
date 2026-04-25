@@ -11,12 +11,14 @@ const categories = [
     description:
       "Anti-vandal cabins offering a secure, robust solution for high-risk or remote sites with steel construction, secure windows, and reinforced doors.",
     icon: Shield,
+    link: "/portable-accommodation",
   },
   {
     title: "Modular Buildings",
     description:
       "Greater flexibility and scalability, perfect for larger projects requiring office space, accommodation, training facilities or meeting rooms.",
     icon: Building,
+    link: "/modular-buildings",
   },
 ];
 
@@ -88,9 +90,11 @@ const PortableBuildings = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {categories.map((cat) => (
-              <div
+              <Link
                 key={cat.title}
-                className="group relative overflow-hidden rounded-xl bg-primary p-10 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
+                to={cat.link}
+                onClick={() => window.scrollTo(0, 0)}
+                className="group relative overflow-hidden rounded-xl bg-primary p-10 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 block"
               >
                 <div className="w-16 h-16 bg-secondary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary/30 transition-colors">
                   <cat.icon className="w-8 h-8 text-secondary" />
@@ -101,7 +105,10 @@ const PortableBuildings = () => {
                 <p className="text-primary-foreground/70 leading-relaxed">
                   {cat.description}
                 </p>
-              </div>
+                <span className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider group-hover:underline">
+                  Take a Look →
+                </span>
+              </Link>
             ))}
           </div>
         </div>
