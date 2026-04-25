@@ -94,7 +94,7 @@ const ContactPage = () => {
                 </div>
 
                 <a
-                  href="https://libertyguard.co.uk/wp-content/uploads/2025/10/Brochure.pdf"
+                  href="/Liberty-Guard-Brochure.pdf"
                   download="Liberty-Guard-Brochure.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
