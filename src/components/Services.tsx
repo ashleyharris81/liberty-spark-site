@@ -1,41 +1,48 @@
 import { Link } from "react-router-dom";
-import { Building, Sun, Home, Presentation, Droplets } from "lucide-react";
+import { Building, Sun, Home, Presentation, Truck, Zap } from "lucide-react";
 
 const services = [
   {
-    icon: Building,
-    title: "Mobile & Static Welfare",
+    icon: Truck,
+    title: "Mobile Welfare",
     description:
-      "Self-contained welfare cabins for construction, civil engineering, and remote sites with toilet, canteen, dry room, kitchen and office facilities.",
-    link: "/welfare",
+      "Towable welfare cabins for sites that move. Generator-powered, road-towable, fully self-contained.",
+    link: "/mobile-welfare",
+  },
+  {
+    icon: Building,
+    title: "Static Welfare",
+    description:
+      "Fixed welfare cabins for longer projects. Robust, spacious, fully equipped for construction and infrastructure.",
+    link: "/static-welfare",
   },
   {
     icon: Sun,
     title: "Solar Welfare",
     description:
-      "State-of-the-art solar-powered welfare units with low emissions, reduced CO₂, silent running and rainwater harvesting.",
+      "Solar-powered welfare with low emissions, silent running, and rainwater harvesting.",
     link: "/solar",
+  },
+  {
+    icon: Zap,
+    title: "Hybrid Welfare",
+    description:
+      "The best of both - solar-assisted with back-up generator for sustainable, reliable site power.",
+    link: "/mobile-welfare#hybrid-range",
+  },
+  {
+    icon: Presentation,
+    title: "Marketing Suites",
+    description:
+      "Premium marketing suites for housebuilders. Bespoke, secure, fully equipped.",
+    link: "/marketing-suites",
   },
   {
     icon: Home,
     title: "Portable Accommodation",
     description:
-      "Versatile portable accommodation solutions for a wide range of applications, built to the highest standards.",
+      "Anti-vandal cabins and modular buildings for hire or purchase.",
     link: "/portable-buildings",
-  },
-  {
-    icon: Presentation,
-    title: "Marketing Suite",
-    description:
-      "Premium marketing suite solutions designed to impress, perfect for property developments and show homes.",
-    link: "/marketing-suites",
-  },
-  {
-    icon: Droplets,
-    title: "Solar Loo",
-    description:
-      "Eco-friendly solar-powered portable toilet facilities, combining sustainability with essential hygiene on any site.",
-    link: "/solar-loos",
   },
 ];
 
@@ -66,12 +73,12 @@ const Services = () => {
                 {service.description}
               </p>
               <Link
-                  to={service.link}
-                  onClick={() => window.scrollTo(0, 0)}
-                  className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider hover:underline"
-                >
-                  Take a Look →
-                </Link>
+                to={service.link}
+                onClick={() => window.scrollTo(0, 0)}
+                className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider hover:underline"
+              >
+                Take a Look →
+              </Link>
             </div>
           ))}
         </div>
