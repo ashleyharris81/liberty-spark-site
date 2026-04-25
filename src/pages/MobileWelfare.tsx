@@ -445,7 +445,7 @@ const MobileWelfare = () => {
                 className="mt-4 text-lg md:text-xl text-primary-foreground/80 max-w-3xl animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                Towable welfare units that can be easily transported between sites. Fully self-contained with all essential facilities for your workforce, ideal for construction, civil engineering and remote projects.
+                Towable welfare units that can be easily transported between sites. Choose from our standard mobile welfare range with reliable generator power, or our new hybrid range featuring solar-assisted running for reduced fuel costs and lower emissions. All units are fully self-contained with essential facilities for your workforce.
               </p>
             </div>
           </div>
