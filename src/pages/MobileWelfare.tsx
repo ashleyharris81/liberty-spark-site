@@ -4,7 +4,7 @@ import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
+
 import heroBg from "@/assets/hero-bg.jpg";
 import { mobiModels, type MobiModel } from "@/data/mobiModels";
 
@@ -91,12 +91,7 @@ const MobileWelfare = () => {
                   onClick={() => window.scrollTo(0, 0)}
                   className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/60 transition-all duration-300 aspect-[4/3]"
                 >
-                  <img
-                    src={thumb(model.uid)}
-                    alt={model.title}
-                    loading="lazy"
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <ModelCardMedia model={model} />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
                   {model.isHybrid && (
                     <span className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-secondary text-secondary-foreground font-heading text-[10px] font-bold uppercase tracking-wider shadow-lg">
