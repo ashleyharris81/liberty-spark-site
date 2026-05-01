@@ -6,37 +6,61 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 
 import heroBg from "@/assets/hero-bg.jpg";
+import hybrid16ftCard from "@/assets/hybrid-16ft-card.png";
+import hybrid24ftTwinCard from "@/assets/hybrid-24ft-twin-card.png";
 import { mobiModels, type MobiModel } from "@/data/mobiModels";
 
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
-const thumb = (uid: string) =>
-  `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=2s&height=600`;
+const IFRAME_PARAMS =
+  "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
+const thumb = (uid: string, time = "0s") =>
+  `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&height=600`;
+
+const fallbackImages: Partial<Record<MobiModel["slug"], string>> = {
+  "16ft-hybrid-mobi": hybrid16ftCard,
+  "24ft-hybrid-mobi-twin-toilet": hybrid24ftTwinCard,
+};
 
 const ModelCardMedia = ({ model }: { model: MobiModel }) => {
-  const [errored, setErrored] = useState(false);
-  if (errored) {
+  const [thumbAttempt, setThumbAttempt] = useState<0 | 1 | 2>(0);
+  const fallbackImage = fallbackImages[model.slug];
+
+  if (thumbAttempt === 2) {
+    if (fallbackImage) {
+      return (
+        <img
+          src={fallbackImage}
+          alt={model.title}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+      );
+    }
+
     return (
       <iframe
-        src={`https://${CF_SUBDOMAIN}/${model.uid}/iframe?autoplay=true&loop=true&muted=true&controls=false&preload=auto`}
+        src={`https://${CF_SUBDOMAIN}/${model.uid}/iframe?${IFRAME_PARAMS}`}
         title={model.title}
         allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        allowFullScreen
         loading="lazy"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0"
         style={{
-          width: "max(100%, calc((4/3) * 100% * (16/9) / (16/9)))",
-          height: "max(100%, calc((100% * 9) / 16))",
-          minWidth: "177.78%",
+          width: "calc(100% + 6rem)",
+          height: "calc(100% + 6rem)",
+          minWidth: "100%",
           minHeight: "100%",
         }}
       />
     );
   }
+
   return (
     <img
-      src={thumb(model.uid)}
+      src={thumb(model.uid, thumbAttempt === 0 ? "0s" : "2s")}
       alt={model.title}
       loading="lazy"
-      onError={() => setErrored(true)}
+      onError={() => setThumbAttempt((current) => (current === 0 ? 1 : 2))}
       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
     />
   );
