@@ -16,9 +16,19 @@ const ModelCardMedia = ({ model }: { model: MobiModel }) => {
   const [errored, setErrored] = useState(false);
   if (errored) {
     return (
-      <div className="absolute inset-0">
-        <CloudflareVideo uid={model.uid} variant="card" className="!aspect-auto h-full" />
-      </div>
+      <iframe
+        src={`https://${CF_SUBDOMAIN}/${model.uid}/iframe?autoplay=true&loop=true&muted=true&controls=false&preload=auto`}
+        title={model.title}
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        loading="lazy"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0"
+        style={{
+          width: "max(100%, calc((4/3) * 100% * (16/9) / (16/9)))",
+          height: "max(100%, calc((100% * 9) / 16))",
+          minWidth: "177.78%",
+          minHeight: "100%",
+        }}
+      />
     );
   }
   return (
