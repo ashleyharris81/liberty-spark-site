@@ -1,14 +1,36 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import CloudflareVideo from "@/components/CloudflareVideo";
 import heroBg from "@/assets/hero-bg.jpg";
-import { mobiModels } from "@/data/mobiModels";
+import { mobiModels, type MobiModel } from "@/data/mobiModels";
 
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
 const thumb = (uid: string) =>
   `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=2s&height=600`;
+
+const ModelCardMedia = ({ model }: { model: MobiModel }) => {
+  const [errored, setErrored] = useState(false);
+  if (errored) {
+    return (
+      <div className="absolute inset-0">
+        <CloudflareVideo uid={model.uid} variant="card" className="!aspect-auto h-full" />
+      </div>
+    );
+  }
+  return (
+    <img
+      src={thumb(model.uid)}
+      alt={model.title}
+      loading="lazy"
+      onError={() => setErrored(true)}
+      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+    />
+  );
+};
 
 const MobileWelfare = () => {
   return (
