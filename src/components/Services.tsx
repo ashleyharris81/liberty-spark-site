@@ -28,7 +28,7 @@ const services = [
     title: "Hybrid Welfare",
     description:
       "The best of both - solar-assisted with back-up generator for sustainable, reliable site power.",
-    link: "/mobile-welfare#hybrid-range",
+    link: "/mobile-welfare/12ft-hybrid-mobi",
   },
   {
     icon: Presentation,
