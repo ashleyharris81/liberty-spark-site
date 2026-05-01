@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 
 import heroBg from "@/assets/hero-bg.jpg";
+import hybrid16ftCard from "@/assets/hybrid-16ft-card.png";
+import hybrid24ftTwinCard from "@/assets/hybrid-24ft-twin-card.png";
 import { mobiModels, type MobiModel } from "@/data/mobiModels";
 
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
@@ -14,10 +16,27 @@ const IFRAME_PARAMS =
 const thumb = (uid: string, time = "0s") =>
   `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&height=600`;
 
+const fallbackImages: Partial<Record<MobiModel["slug"], string>> = {
+  "16ft-hybrid-mobi": hybrid16ftCard,
+  "24ft-hybrid-mobi-twin-toilet": hybrid24ftTwinCard,
+};
+
 const ModelCardMedia = ({ model }: { model: MobiModel }) => {
   const [thumbAttempt, setThumbAttempt] = useState<0 | 1 | 2>(0);
+  const fallbackImage = fallbackImages[model.slug];
 
   if (thumbAttempt === 2) {
+    if (fallbackImage) {
+      return (
+        <img
+          src={fallbackImage}
+          alt={model.title}
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+      );
+    }
+
     return (
       <iframe
         src={`https://${CF_SUBDOMAIN}/${model.uid}/iframe?${IFRAME_PARAMS}`}
