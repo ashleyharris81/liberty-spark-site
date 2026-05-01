@@ -1,14 +1,46 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+
 import heroBg from "@/assets/hero-bg.jpg";
-import { mobiModels } from "@/data/mobiModels";
+import { mobiModels, type MobiModel } from "@/data/mobiModels";
 
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
 const thumb = (uid: string) =>
   `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=2s&height=600`;
+
+const ModelCardMedia = ({ model }: { model: MobiModel }) => {
+  const [errored, setErrored] = useState(false);
+  if (errored) {
+    return (
+      <iframe
+        src={`https://${CF_SUBDOMAIN}/${model.uid}/iframe?autoplay=true&loop=true&muted=true&controls=false&preload=auto`}
+        title={model.title}
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        loading="lazy"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0"
+        style={{
+          width: "max(100%, calc((4/3) * 100% * (16/9) / (16/9)))",
+          height: "max(100%, calc((100% * 9) / 16))",
+          minWidth: "177.78%",
+          minHeight: "100%",
+        }}
+      />
+    );
+  }
+  return (
+    <img
+      src={thumb(model.uid)}
+      alt={model.title}
+      loading="lazy"
+      onError={() => setErrored(true)}
+      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+    />
+  );
+};
 
 const MobileWelfare = () => {
   return (
@@ -59,12 +91,7 @@ const MobileWelfare = () => {
                   onClick={() => window.scrollTo(0, 0)}
                   className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/60 transition-all duration-300 aspect-[4/3]"
                 >
-                  <img
-                    src={thumb(model.uid)}
-                    alt={model.title}
-                    loading="lazy"
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <ModelCardMedia model={model} />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
                   {model.isHybrid && (
                     <span className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-secondary text-secondary-foreground font-heading text-[10px] font-bold uppercase tracking-wider shadow-lg">
