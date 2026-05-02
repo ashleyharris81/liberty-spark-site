@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 
 import heroBg from "@/assets/hero-bg.jpg";
+import hybrid12ftCard from "@/assets/hybrid-12ft-card.png";
 import hybrid16ftCard from "@/assets/hybrid-16ft-card.png";
 import hybrid24ftTwinCard from "@/assets/hybrid-24ft-twin-card.png";
 import { mobiModels, type MobiModel } from "@/data/mobiModels";
@@ -17,6 +18,7 @@ const thumb = (uid: string, time = "0s") =>
   `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&height=600`;
 
 const fallbackImages: Partial<Record<MobiModel["slug"], string>> = {
+  "12ft-hybrid-mobi": hybrid12ftCard,
   "16ft-hybrid-mobi": hybrid16ftCard,
   "24ft-hybrid-mobi-twin-toilet": hybrid24ftTwinCard,
 };
