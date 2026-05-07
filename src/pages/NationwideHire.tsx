@@ -232,7 +232,7 @@ const NationwideHire = () => {
         <div className="relative z-10 container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
-              Our UK <span className="text-secondary">Depot Network</span>
+              Nationwide <span className="text-secondary">Hire</span>
             </h2>
             <div className="w-20 h-1 bg-secondary mx-auto mt-4" />
           </div>
