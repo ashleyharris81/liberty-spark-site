@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
-import nationwideMap from "@/assets/nationwide-map.jpg";
+
 
 const features = [
   { icon: MapPin, title: "UK Coverage", text: "Nationwide reach across mainland UK" },
@@ -69,40 +69,29 @@ const NationwideHire = () => {
 
       {/* Our Business */}
       <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-4 lg:px-8 max-w-5xl text-center">
+          <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
+            Our <span className="text-secondary">Business</span>
+          </h2>
+          <div className="w-20 h-1 bg-secondary mt-4 mb-6 mx-auto" />
+          <p className="text-primary-foreground/80 text-lg leading-relaxed">
+            At Liberty Group we provide welfare units nationwide, supported by 20 reliable distribution depots. With over 40 years of industry experience, we bring expert product knowledge to every project.
+          </p>
+          <p className="text-primary-foreground/80 text-lg leading-relaxed mt-4">
+            Our fleet of 1,500+ units enables fast, flexible solutions with a quick 24-hour turnaround — backed by our trusted aftercare team, delivering high-quality service and rapid support.
+          </p>
+          <div className="grid grid-cols-3 gap-6 mt-10 max-w-2xl mx-auto">
             <div>
-              <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
-                Our <span className="text-secondary">Business</span>
-              </h2>
-              <div className="w-20 h-1 bg-secondary mt-4 mb-6" />
-              <p className="text-primary-foreground/80 text-lg leading-relaxed">
-                At Liberty Group we provide welfare units nationwide, supported by 20 reliable distribution depots. With over 40 years of industry experience, we bring expert product knowledge to every project.
-              </p>
-              <p className="text-primary-foreground/80 text-lg leading-relaxed mt-4">
-                Our fleet of 1,500+ units enables fast, flexible solutions with a quick 24-hour turnaround — backed by our trusted aftercare team, delivering high-quality service and rapid support.
-              </p>
-              <div className="grid grid-cols-3 gap-6 mt-10">
-                <div>
-                  <p className="font-heading text-4xl font-black text-secondary">40+</p>
-                  <p className="text-primary-foreground/70 text-sm uppercase tracking-wider mt-1">Years experience</p>
-                </div>
-                <div>
-                  <p className="font-heading text-4xl font-black text-secondary">1,500+</p>
-                  <p className="text-primary-foreground/70 text-sm uppercase tracking-wider mt-1">Fleet size</p>
-                </div>
-                <div>
-                  <p className="font-heading text-4xl font-black text-secondary">20</p>
-                  <p className="text-primary-foreground/70 text-sm uppercase tracking-wider mt-1">UK Depots</p>
-                </div>
-              </div>
+              <p className="font-heading text-4xl font-black text-secondary">40+</p>
+              <p className="text-primary-foreground/70 text-sm uppercase tracking-wider mt-1">Years experience</p>
             </div>
-            <div className="relative rounded-xl overflow-hidden border border-primary-foreground/10 bg-navy-light">
-              <img
-                src={nationwideMap}
-                alt="Map of Liberty Guard UK depot coverage"
-                className="w-full h-full object-cover"
-              />
+            <div>
+              <p className="font-heading text-4xl font-black text-secondary">1,500+</p>
+              <p className="text-primary-foreground/70 text-sm uppercase tracking-wider mt-1">Fleet size</p>
+            </div>
+            <div>
+              <p className="font-heading text-4xl font-black text-secondary">20</p>
+              <p className="text-primary-foreground/70 text-sm uppercase tracking-wider mt-1">UK Depots</p>
             </div>
           </div>
         </div>
