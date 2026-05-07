@@ -1,11 +1,26 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/liberty-white-logo.png";
+import risqs from "@/assets/accreditations/risqs.png";
+import constructionline from "@/assets/accreditations/constructionline.png";
+import ssip from "@/assets/accreditations/ssip.jpg";
+import safecontractor from "@/assets/accreditations/safecontractor.jpeg";
+import iso9001 from "@/assets/accreditations/iso9001.jpg";
+import chas from "@/assets/accreditations/chas.png";
 
 const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "News", href: "/news" },
   { label: "Contact Us", href: "/contact" },
   { label: "Open New Account", href: "/new-account" },
+];
+
+const accreditations = [
+  { src: chas, alt: "CHAS Accreditation Advanced" },
+  { src: constructionline, alt: "Constructionline Gold Member" },
+  { src: ssip, alt: "SSIP Accredited" },
+  { src: safecontractor, alt: "SafeContractor SafePQQ Verified" },
+  { src: iso9001, alt: "NQA ISO 9001 Quality Management" },
+  { src: risqs, alt: "RISQS Verified" },
 ];
 
 const Footer = () => {
@@ -50,8 +65,30 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between gap-3 text-primary-foreground/40 text-xs">
-          <span>©2026 LIBERTY GUARD (U.K.) LIMITED</span>
+        {/* Accreditations */}
+        <div className="pt-8 mt-2 border-t border-primary-foreground/10">
+          <h4 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-6 text-center md:text-left">
+            Accreditations
+          </h4>
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+            {accreditations.map((a) => (
+              <div
+                key={a.alt}
+                className="bg-white rounded-md px-3 py-2 flex items-center justify-center h-16 w-28 shadow-sm"
+              >
+                <img
+                  src={a.src}
+                  alt={a.alt}
+                  loading="lazy"
+                  className="max-h-12 max-w-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="pt-6 mt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between gap-3 text-primary-foreground/40 text-xs">
+          <span className="md:ml-auto">©2026 LIBERTY GUARD (U.K.) LIMITED</span>
         </div>
       </div>
     </footer>
