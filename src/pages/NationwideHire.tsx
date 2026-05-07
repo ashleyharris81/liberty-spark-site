@@ -94,6 +94,18 @@ const NationwideHire = () => {
               <p className="text-primary/70 text-sm uppercase tracking-wider mt-1">UK Depots</p>
             </div>
           </div>
+
+          <div className="mt-14 flex justify-center">
+            <a
+              href="tel:03333443833"
+              className="group inline-flex items-center gap-4 bg-primary text-primary-foreground font-heading font-black text-2xl md:text-3xl uppercase tracking-tight px-8 py-5 rounded-full shadow-lg hover:bg-primary/90 transition-all"
+            >
+              Book a Demo
+              <span className="w-12 h-12 rounded-full border-2 border-secondary flex items-center justify-center group-hover:bg-secondary transition-colors">
+                <Phone className="w-5 h-5 text-secondary group-hover:text-secondary-foreground transition-colors" />
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 
