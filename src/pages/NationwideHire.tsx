@@ -190,12 +190,15 @@ const NationwideHire = () => {
           </h2>
           <div className="w-16 h-1 bg-secondary mx-auto mt-3 mb-12" />
         </div>
-        <div className="overflow-x-auto scrollbar-hide">
-          <div className="flex items-center gap-12 md:gap-20 px-6 md:px-12 min-w-max">
-            {customers.map((c) => (
+        <div
+          className="group relative overflow-hidden"
+          style={{ maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)" }}
+        >
+          <div className="flex items-center gap-16 md:gap-20 w-max animate-marquee group-hover:[animation-play-state:paused]">
+            {[...customers, ...customers].map((c, i) => (
               <div
-                key={c.name}
-                className="flex items-center justify-center h-32 md:h-40 shrink-0"
+                key={`${c.name}-${i}`}
+                className="flex items-center justify-center h-20 md:h-24 shrink-0"
               >
                 <img
                   src={c.logo}
