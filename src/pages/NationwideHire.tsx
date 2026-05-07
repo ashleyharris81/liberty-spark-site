@@ -240,7 +240,7 @@ const NationwideHire = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-10 items-center">
-            <div className="bg-primary/40 backdrop-blur-sm border border-secondary/30 rounded-2xl p-4 md:p-6">
+            <div>
               <UKDepotMap depots={depots} />
             </div>
             <ul className="space-y-4">
