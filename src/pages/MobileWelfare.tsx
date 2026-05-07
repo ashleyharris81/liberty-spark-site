@@ -169,6 +169,8 @@ const MobileWelfare = () => {
                 </span>
               </Link>
 
+              {lastModel && renderModel(lastModel)}
+
               {/* CTA: Email Us */}
               <Link
                 to="/contact"
@@ -186,6 +188,9 @@ const MobileWelfare = () => {
                   Contact →
                 </span>
               </Link>
+                  </>
+                );
+              })()}
             </div>
           </div>
         </div>
