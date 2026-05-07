@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -63,6 +64,13 @@ const promises = [
 ];
 
 const NationwideHire = () => {
+  const [promiseIndex, setPromiseIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setPromiseIndex((i) => (i + 1) % promises.length);
+    }, 2500);
+    return () => clearInterval(id);
+  }, []);
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -88,12 +96,17 @@ const NationwideHire = () => {
               <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-tight animate-fade-in-up">
                 Liberty Group <span className="text-secondary">Welfare Hire</span>
               </h1>
-              <p
-                className="mt-4 text-lg md:text-xl text-primary-foreground/80 max-w-3xl animate-fade-in-up"
+              <div
+                className="mt-6 h-10 md:h-12 overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                Depots throughout the UK / Sustainable site solutions / Specialists in the industry / Dedicated aftercare department / Site compliant facilities / Lowering carbon emissions / Money saving solar range / High specification marketing suites / Save water with rainwater harvesting technology / Nationwide coverage /
-              </p>
+                <p
+                  key={promiseIndex}
+                  className="text-xl md:text-2xl font-heading font-bold text-secondary animate-fade-in-up"
+                >
+                  {promises[promiseIndex]}
+                </p>
+              </div>
             </div>
           </div>
         </div>
