@@ -27,7 +27,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary border-t border-navy-light py-16">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <div className="flex flex-col gap-4">
             <img src={logo} alt="Liberty Guard" className="h-12 w-auto object-contain self-start" />
             <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-xs">
@@ -63,32 +63,31 @@ const Footer = () => {
               <li>sales@libertyguard.co.uk</li>
             </ul>
           </div>
-        </div>
 
-        {/* Accreditations */}
-        <div className="pt-8 mt-2 border-t border-primary-foreground/10">
-          <h4 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-6 text-center md:text-left">
-            Accreditations
-          </h4>
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
-            {accreditations.map((a) => (
-              <div
-                key={a.alt}
-                className="bg-white rounded-md px-3 py-2 flex items-center justify-center h-16 w-28 shadow-sm"
-              >
-                <img
-                  src={a.src}
-                  alt={a.alt}
-                  loading="lazy"
-                  className="max-h-12 max-w-full object-contain"
-                />
-              </div>
-            ))}
+          <div>
+            <h4 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-4">
+              Accreditations
+            </h4>
+            <div className="grid grid-cols-3 gap-2">
+              {accreditations.map((a) => (
+                <div
+                  key={a.alt}
+                  className="bg-white rounded-md p-1.5 flex items-center justify-center h-14"
+                >
+                  <img
+                    src={a.src}
+                    alt={a.alt}
+                    loading="lazy"
+                    className="max-h-10 max-w-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        <div className="pt-6 mt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between gap-3 text-primary-foreground/40 text-xs">
-          <span className="md:ml-auto">©2026 LIBERTY GUARD (U.K.) LIMITED</span>
+        <div className="pt-6 border-t border-primary-foreground/10 flex justify-end text-primary-foreground/40 text-xs">
+          <span>©2026 LIBERTY GUARD (U.K.) LIMITED</span>
         </div>
       </div>
     </footer>
