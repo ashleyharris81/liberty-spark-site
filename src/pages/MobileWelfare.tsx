@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hybrid-24ft-twin-card.png";
 import hybrid12ftCard from "@/assets/hybrid-12ft-card.png";
 import hybrid16ftCard from "@/assets/hybrid-16ft-card.png";
 import hybrid24ftTwinCard from "@/assets/hybrid-24ft-twin-card.png";
