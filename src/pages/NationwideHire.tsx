@@ -85,9 +85,12 @@ const NationwideHire = () => {
           <img
             src={nationwideHero}
             alt="Liberty Guard welfare unit on site"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover z-0"
           />
-          <div className="absolute inset-0 bg-primary/70" />
+          <div className="absolute inset-0 w-full h-full overflow-hidden z-[1]">
+            <CloudflareVideo uid="8f4ff233528f86183d2c5740e0c9b7c9" variant="hero" />
+          </div>
+          <div className="absolute inset-0 bg-primary/70 z-[2]" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
               <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-tight animate-fade-in-up">
