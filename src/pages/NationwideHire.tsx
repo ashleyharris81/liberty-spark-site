@@ -183,23 +183,25 @@ const NationwideHire = () => {
       </section>
 
       {/* Trusted by */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 lg:px-8 max-w-6xl text-center">
+      <section className="py-16 bg-white overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl text-center">
           <h2 className="font-heading text-2xl md:text-3xl font-black text-primary uppercase tracking-tight">
             Trusted by our valued customers
           </h2>
           <div className="w-16 h-1 bg-secondary mx-auto mt-3 mb-12" />
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 items-center">
+        </div>
+        <div className="overflow-x-auto scrollbar-hide">
+          <div className="flex items-center gap-12 md:gap-20 px-6 md:px-12 min-w-max">
             {customers.map((c) => (
               <div
                 key={c.name}
-                className="flex items-center justify-center h-28 md:h-32"
+                className="flex items-center justify-center h-32 md:h-40 shrink-0"
               >
                 <img
                   src={c.logo}
                   alt={`${c.name} logo`}
                   loading="lazy"
-                  className="max-h-full max-w-full object-contain"
+                  className="max-h-full w-auto object-contain"
                 />
               </div>
             ))}
