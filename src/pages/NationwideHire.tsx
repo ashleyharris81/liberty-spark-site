@@ -82,7 +82,7 @@ const NationwideHire = () => {
 
       {/* Hero */}
       <section className="relative pt-20">
-        <div className="relative h-[60vh] min-h-[420px] overflow-hidden">
+        <div className="relative h-[80vh] min-h-[560px] overflow-hidden">
           <img
             src={nationwideHero}
             alt="Liberty Guard welfare unit on site"
@@ -91,11 +91,15 @@ const NationwideHire = () => {
           <div className="absolute inset-0 w-full h-full overflow-hidden z-[1]">
             <CloudflareVideo uid="8f4ff233528f86183d2c5740e0c9b7c9" variant="hero" />
           </div>
-          <div className="absolute inset-0 bg-primary/70 z-[2]" />
+          <div className="absolute inset-0 bg-primary/75 z-[2]" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
-              <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-tight animate-fade-in-up">
-                Liberty Group <span className="text-secondary">Welfare Hire</span>
+              <span className="inline-block font-heading text-xs md:text-sm font-bold uppercase tracking-[0.3em] text-secondary border border-secondary/40 rounded-full px-4 py-1.5 animate-fade-in-up">
+                Nationwide Hire
+              </span>
+              <h1 className="mt-6 font-heading text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground uppercase tracking-tight leading-[0.95] animate-fade-in-up max-w-5xl">
+                Liberty Group
+                <span className="block text-secondary">Welfare Hire</span>
               </h1>
               <div
                 className="mt-6 h-10 md:h-12 overflow-hidden animate-fade-in-up"
@@ -107,6 +111,24 @@ const NationwideHire = () => {
                 >
                   {promises[promiseIndex]}
                 </p>
+              </div>
+              <div
+                className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-in-up"
+                style={{ animationDelay: "0.4s" }}
+              >
+                <a
+                  href="tel:03333443833"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider rounded-md hover:brightness-110 transition-all"
+                >
+                  <Phone className="w-4 h-4" /> Get a Quote
+                </a>
+                <Link
+                  to="/new-account"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary-foreground/40 text-primary-foreground font-heading font-bold text-sm uppercase tracking-wider rounded-md hover:border-secondary hover:text-secondary transition-all"
+                >
+                  Open an Account
+                </Link>
               </div>
             </div>
           </div>
