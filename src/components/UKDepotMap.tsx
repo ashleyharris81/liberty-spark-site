@@ -107,32 +107,6 @@ const UKDepotMap = ({ depots }: { depots: Depot[] }) => {
           <p className="text-sm text-primary-foreground/85 mt-2 leading-relaxed">
             {activeDepot.address}
           </p>
-          {activeDepot.contact && (
-            <p className="text-sm mt-2">
-              <span className="text-primary-foreground/60">Contact: </span>
-              {activeDepot.contact}
-            </p>
-          )}
-          {activeDepot.phone && (
-            <p className="text-sm">
-              <a
-                href={`tel:${activeDepot.phone.replace(/\s/g, "")}`}
-                className="text-secondary hover:underline"
-              >
-                {activeDepot.phone}
-              </a>
-            </p>
-          )}
-          {activeDepot.email && (
-            <p className="text-sm truncate">
-              <a
-                href={`mailto:${activeDepot.email}`}
-                className="text-secondary hover:underline"
-              >
-                {activeDepot.email}
-              </a>
-            </p>
-          )}
         </div>
       )}
     </div>
