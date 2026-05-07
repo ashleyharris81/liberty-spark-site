@@ -234,10 +234,7 @@ const NationwideHire = () => {
             <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
               Our UK <span className="text-secondary">Depot Network</span>
             </h2>
-            <div className="w-20 h-1 bg-secondary mx-auto mt-4 mb-4" />
-            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
-              {depots.length} strategically located depots covering the whole of mainland UK. Tap a pin for depot details.
-            </p>
+            <div className="w-20 h-1 bg-secondary mx-auto mt-4" />
           </div>
           <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-10 items-center">
             <div>
