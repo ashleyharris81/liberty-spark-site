@@ -9,6 +9,7 @@ import staticCard from "@/assets/welfare-static-card.jpg";
 import hybridCard from "@/assets/hybrid-24ft-twin-card.png";
 import msExterior from "@/assets/ms-exterior.jpg";
 import portableHero from "@/assets/portable-buildings-hero.jpg";
+import trustedCustomers from "@/assets/trusted-customers.png";
 
 const showcase = [
   { title: "Mobile Welfare", image: mobileCard, link: "/mobile-welfare" },
