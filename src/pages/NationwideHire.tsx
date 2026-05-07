@@ -4,6 +4,7 @@ import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf } from "lucide-r
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import Sustainability from "@/components/Sustainability";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
 import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
