@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf } from "lucide-react";
+import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf, Download } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
