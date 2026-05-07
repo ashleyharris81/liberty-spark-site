@@ -86,13 +86,6 @@ const NationwideHire = () => {
           <div className="absolute inset-0 bg-primary/70" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
-              <Link
-                to="/"
-                onClick={() => window.scrollTo(0, 0)}
-                className="inline-flex items-center text-primary-foreground/70 hover:text-secondary font-heading text-sm uppercase tracking-wider mb-6 transition-colors"
-              >
-                ← Back to Home
-              </Link>
               <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-tight animate-fade-in-up">
                 Liberty Group <span className="text-secondary">Welfare Hire</span>
               </h1>
