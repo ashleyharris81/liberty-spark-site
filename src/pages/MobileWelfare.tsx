@@ -110,37 +110,48 @@ const MobileWelfare = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {mobiModels.map((model) => (
-                <Link
-                  key={model.slug}
-                  to={`/mobile-welfare/${model.slug}`}
-                  onClick={() => window.scrollTo(0, 0)}
-                  className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/60 transition-all duration-300 aspect-[4/3]"
-                >
-                  <ModelCardMedia model={model} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
-                  {model.isHybrid && (
-                    <span className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-secondary text-secondary-foreground font-heading text-[10px] font-bold uppercase tracking-wider shadow-lg">
-                      Hybrid
-                    </span>
-                  )}
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <h2 className="font-heading text-xl md:text-2xl font-black text-primary-foreground uppercase tracking-tight">
-                      {model.title}
-                    </h2>
-                    {model.subtitle && (
-                      <p className="mt-1 font-heading text-xs font-bold text-secondary uppercase tracking-wider">
-                        {model.subtitle}
-                      </p>
-                    )}
-                    <span className="mt-2 inline-block text-secondary font-heading text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
-                      View Details →
-                    </span>
-                  </div>
-                </Link>
-              ))}
+              {(() => {
+                const lastSlug = "24ft-hybrid-mobi-twin-toilet";
+                const ordered = [
+                  ...mobiModels.filter((m) => m.slug !== lastSlug),
+                ];
+                const lastModel = mobiModels.find((m) => m.slug === lastSlug);
 
-              {/* CTA: New Customer */}
+                const renderModel = (model: MobiModel) => (
+                  <Link
+                    key={model.slug}
+                    to={`/mobile-welfare/${model.slug}`}
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/60 transition-all duration-300 aspect-[4/3]"
+                  >
+                    <ModelCardMedia model={model} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
+                    {model.isHybrid && (
+                      <span className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-secondary text-secondary-foreground font-heading text-[10px] font-bold uppercase tracking-wider shadow-lg">
+                        Hybrid
+                      </span>
+                    )}
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <h2 className="font-heading text-xl md:text-2xl font-black text-primary-foreground uppercase tracking-tight">
+                        {model.title}
+                      </h2>
+                      {model.subtitle && (
+                        <p className="mt-1 font-heading text-xs font-bold text-secondary uppercase tracking-wider">
+                          {model.subtitle}
+                        </p>
+                      )}
+                      <span className="mt-2 inline-block text-secondary font-heading text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+                        View Details →
+                      </span>
+                    </div>
+                  </Link>
+                );
+
+                return (
+                  <>
+                    {ordered.map(renderModel)}
+
+                    {/* CTA: New Customer */}
               <Link
                 to="/new-account"
                 onClick={() => window.scrollTo(0, 0)}
