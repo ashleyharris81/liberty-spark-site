@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+
+<html
+    lang="en"
+    class="no-js cookies-is-active">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Page Not Found - Story Homes</title>
+
+    <link rel="icon" href="https://www.storyhomes.co.uk/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/2b5e2ab1-8e84-4396-8e74-d9e4a2980aa4.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/gwr2eip.css">
+
+    <meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v22.7 - https://yoast.com/wordpress/plugins/seo/ -->
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Page Not Found - Story Homes" />
+	<meta property="og:site_name" content="Story Homes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.storyhomes.co.uk/#website","url":"https://www.storyhomes.co.uk/","name":"Story Homes","description":"Houses for sale in Cumbria, Lancashire, the North East and Scotland","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.storyhomes.co.uk/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='parent-style-css' href='https://www.storyhomes.co.uk/wp-content/themes/story/css/global.css?ver=1.0.0.12' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/jquery-3.1.0.min.js?ver=6.5.8" id="jquery-js"></script>
+<meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@storyhomes">
+  <meta name="twitter:creator" content="@storyhomes">    <script type="text/javascript">
+        var site_url = 'https://www.storyhomes.co.uk';
+        var current_url = 'https://www.storyhomes.co.uk/story-homes-raises-over-26000-for-charity-partners-the-great-north-air-ambulance-service-and-north-west-air-ambulance-charity/';
+        var theme_url = 'https://www.storyhomes.co.uk/wp-content/themes/story';
+    </script>
+
+    <script>
+        dataLayer = [{
+            'postType': 'post'
+        }];
+    </script>
+
+    <!-- Google Tag Manager within <head> section-->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MLJJQT9');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    </head>
+
+
+<body class="error404">
+    <!-- Google Tag Manager below opening <body> tag (noscript) -->
+    <noscript>
+        <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MLJJQT9"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="cookies js-cookies u-align-center"
+        >
+        <div class="cookies-body">
+            <div class="cookies-body-inner cms-content u-align-left">
+                <div class="cookies-content js-cookies-content"
+                    >
+                    <div class="nano js-nano">
+                        <article class="nano-content">
+                            <h3>Cookie Preference Centre</h3>
+                            <p>We use cookies to enhance your website experience and help us identify any issues and areas for improvement. You can either "accept all" cookies or "manage preferences" to control the use of cookies. If you choose not to accept some cookies, please note you may experience a more limited functionality on our website. You can change your cookie preferences at any time.</p>
+                        </article>
+                    </div>
+                    <div class="modal-btns inline-btns">
+                        <button class="btn btn--wild-ginger js-cookies-accept">Accept all</button>
+                        <button class="btn btn--wild-ginger js-cookies-decline">Decline all</button>
+                        <button class="btn btn--wild-ginger js-cookies-preferences-toggle">Manage Preferences</button>
+                    </div>
+                </div>
+
+                <div class="cookies-preferences-content js-cookies-preferences">
+                    <div class="cookies-preferences-content-inner">
+                        <h3>Manage Cookie Preferences</h3>
+
+                        <div class="nano js-nano">
+                            <article class="nano-content">
+                                <div class="cookies-summary">
+                                    <p>A cookie is a small file containing just text, downloaded on to a device when a user accesses certain web sites. Cookies are useful because they allow a web site to recognise a user's device. Cookies allow us to store information related to your website visit which enables you to be shown relevant content to you while you’re browsing.</p>
+                                    <p>Cookies can also help us identify issues and improve the website, enhancing the experience for all users. We cannot identify individual users from these cookies. As well as the functionality below, you may be able to block the use of Cookies through your browser, please refer to our cookies policy for further information.</p>
+                                </div>
+                                <div class="cookie-preference">
+                                    <header class="cookie-preference-header">
+                                        <h4 class="cookie-preference-title">Strictly necessary cookies.</h4>
+                                        <span>Always active</span>
+                                    </header>
+                                    <p>These are cookies that are required for the operation of our website. They include, for example, cookies that enable you to log into secure areas of our website, use our designer tools and save preferences for plots. It is not currently possible to turn these cookies off.</p>
+                                </div>
+
+                                <div class="cookie-preference">
+                                    <header class="cookie-preference-header">
+                                        <h4 class="cookie-preference-title">Analytical or performance cookies.</h4>
+                                        <button class="btn btn--toggle js-btn-toggle js-btn-cookie-preference" data-type="analytical" data-status="inactive">
+                                            <span class="btn-text btn-text--left">Inactive</span>
+                                            <div class="toggle ">
+                                                <span class="toggle-slider"></span>
+                                            </div>
+                                        </button>
+                                    </header>
+                                    <p>These allow us to recognise and count the number of visitors and to see how visitors move around our website when they are using it. This helps us to improve the way our website works, for example, by ensuring that users are finding what they are looking for easily. It is not possible to gain any personal information from these cookies. You can also opt-out of having your site activity available to Google Analytics by installing the Google Analytics opt-out browser add-on, for further information and guidance, please read the article here: <a href="https://support.google.com/analytics/answer/181881?hl=en&ref_topic=2919631" target="_blank">https://support.google.com/analytics/answer/181881?hl=en&ref_topic=2919631</a></p>
+                                </div>
+
+                                <div class="cookie-preference">
+                                    <header class="cookie-preference-header">
+                                        <h4 class="cookie-preference-title">Functionality cookies.</h4>
+                                        <span>Always active</span>
+                                    </header>
+                                    <p>These are used to recognise you when you return to our website. This enables us to personalise our content for you, greet you by name, favourite plots and remember your preferences. It is not currently possible to turn these cookies off.</p>
+                                </div>
+
+                                <div class="cookie-preference">
+                                    <header class="cookie-preference-header">
+                                        <h4 class="cookie-preference-title">Targeting cookies.</h4>
+                                        <button class="btn btn--toggle js-btn-toggle js-btn-cookie-preference" data-type="targetting" data-status="inactive">
+                                            <span class="btn-text btn-text--left">Inactive</span>
+                                            <div class="toggle ">
+                                                <span class="toggle-slider"></span>
+                                            </div>
+                                        </button>
+                                    </header>
+                                    <p>These cookies record your visit to our website, the pages you have visited and the links you have followed. We will use this information to make our website and the advertising displayed on it more relevant to your interests. We may also share this information with third parties for this purpose, and details of the third parties can be accessed through our Cookie Policy: <a href="https://www.storyhomes.co.uk/cookies-privacy/" target="_blank">https://www.storyhomes.co.uk/cookies-privacy/</a>.</p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <button class="btn btn--wild-ginger js-cookies-accept-preferences">Confirm Choices</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Site Wrapper -->
+    <div class="site-wrapper">
+
+        <!-- Header -->
+        <header class="header header--transparent header--no-hero">
+
+            
+            <div class="header-body">
+
+                <!-- Header Logo -->
+                <a
+                    class="header-logo"
+                    href="/">
+                    <figure class="header-logo-figure">
+                        <i class="header-logo-wordmark svg"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.12 99.21">
+	<g class="logo-wordmark">
+		<path class="logo-wordmark-bg" d="M176.76,86a52.28,52.28,0,0,1-7.89,13.25h5.46A49,49,0,0,0,185.86,75.5c-.55,9.71-2.82,17.94-6.1,23.71h3.5c11-18.9-2.23-41.62-2.23-41.62,12.78,16.67,12.69,32.32,7.77,41.62h3c12.15-23.89-7.53-44.08-17.09-57.93C164,25.75,176,15.77,176,15.77c-9.88,15.61,3.67,26.33,19.72,48.41,9.38,12.91,4.85,27.61-1.3,35h60.75V0H0V99.21H163C173.2,93.75,176.76,86,176.76,86Z" fill="#003a5d"/>
+		<path class="logo-wordmark-primary" d="M176.76,86S173.2,93.75,163,99.21h5.9A52.28,52.28,0,0,0,176.76,86Z" fill="#fff"/>
+		<path class="logo-wordmark-secondary" d="M195.67,64.18c-16-22.08-29.6-32.8-19.72-48.41,0,0-12,10-1.27,25.51,9.56,13.85,29.24,34,17.09,57.93h2.6C200.52,91.79,205.05,77.09,195.67,64.18Z" fill="#9d9fa2"/>
+		<path class="logo-wordmark-primary" d="M181,57.59s13.26,22.72,2.23,41.62h5.54C193.72,89.91,193.81,74.26,181,57.59Z" fill="#fff"/>
+		<path class="logo-wordmark-secondary" d="M185.86,75.5a49,49,0,0,1-11.53,23.71h5.43C183,93.44,185.31,85.21,185.86,75.5Z" fill="#9d9fa2"/>
+		<path class="logo-wordmark-primary" d="M244.79,34.57C227.54,24,201.43,18,201.43,18c-8.54-12.71-21.13-5.37-21.64-5.1.49-.32,5.16.53,4.29,2-1.61,2.7,1.72.25,7.08,1.12,3.87.63,5.16,6.07.2,7.48-.7.19-2.36,1.2,3.24,2,3.49.5,3.66,3.71-.58,4.21-1.07.13-.35.22-3.34,1.24,0,0,23.61-2.24,53.77,3.76Z" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M19.25,44.9h1c0,10.5,6.19,15.43,13.69,15.43,6,0,10.31-3.81,10.31-9.43,0-6.5-3.38-8.44-10.56-9.56-9.81-1.56-14.44-3.19-14.44-13.69,0-7.12,4.69-12.31,11.69-12.31,6.43,0,8.87,3.81,11,3.81,1.43,0,1.62-1.56,1.81-2.37h1V29.9h-1c-.56-7.12-4.44-13.56-12.81-13.56-5.31,0-9.06,3.5-9.06,9.25s2.12,6.87,12.5,8.75C43.5,36,47.25,38.9,47.25,47s-4.5,14.31-13.56,14.31c-6.25,0-9.56-3.25-11.87-3.25-1.5,0-1.57,1.57-1.57,2.63h-1Z" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M54.56,35.71H49.12v-1c6.5.13,8.87-2.62,9.93-8.74h.75v8.74h8.63v1H59.8v21c0,2.56,1.07,3.37,3.07,3.37,3.12,0,4.49-2.87,4.87-3.93l.94.19a6.83,6.83,0,0,1-6.88,4.74c-4.37,0-7.24-1.43-7.24-5.56Z" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M90.67,44.77c0-5.43-.25-10.43-7.25-10.43s-7.24,5-7.24,10.43v4.88c0,5.43.25,10.43,7.24,10.43s7.25-5,7.25-10.43ZM83.42,33.34c8.07,0,13.25,6.68,13.25,13.87S91.49,61.08,83.42,61.08,70.18,54.4,70.18,47.21s5.18-13.87,13.24-13.87" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M102.88,35.71H97.63v-1h5.25c2,0,4-.12,5.25-1.37v7.37h.12c.75-2.81,2.94-7.37,8.07-7.37,2.31,0,4.12,1.5,4.12,3.69A2.74,2.74,0,0,1,117.91,40h-.35c-2.06,0-2.75-1.06-2.75-2.75a3,3,0,0,1,1.38-2.68,1.35,1.35,0,0,0-.88-.19c-2.56,0-7.18,4.06-7.18,12.18V59.34h5.68v1H97.63v-1h5.25Z" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M141.31,55.27l5.87-14.93a9.49,9.49,0,0,0,.82-3c0-1.25-1.07-1.63-3.63-1.63h-2.56v-1H154v1c-4,0-4.25.82-5.68,4.32l-5.56,14c-1.75,4.38-3.32,8.44-3.56,9.44-2.44,9.81-3.57,13.74-7.94,13.74a3.14,3.14,0,0,1-3.43-2.81c0-.14,0-.29,0-.43a2.85,2.85,0,0,1,2.7-3h.3a2.52,2.52,0,0,1,2.63,2.37c0,.44-.07.69-.07,1s.13.62.5.62c2.19,0,4.19-10.62,4.69-12.62L127,35.71h-3.37v-1h13.93v1h-4.5Z" fill="#fff"/>
+		<polygon class="logo-wordmark-secondary" points="50.03 71.36 52.14 71.36 52.14 76.16 58.54 76.16 58.54 71.36 60.65 71.36 60.65 84.37 58.54 84.37 58.54 78.06 52.14 78.06 52.14 84.37 50.03 84.37 50.03 71.36" fill="#9d9fa2"/>
+		<path class="logo-wordmark-secondary" d="M75.56,74.44a4.67,4.67,0,0,0-6.71,0,5,5,0,0,0,0,6.89,4.68,4.68,0,0,0,6.61.1.47.47,0,0,1,.1-.1,5,5,0,0,0,0-6.89m1.56,8.27a7,7,0,0,1-9.84,0,6.78,6.78,0,0,1,0-9.66,7.1,7.1,0,0,1,9.84,0,6.74,6.74,0,0,1,0,9.66" fill="#9d9fa2"/>
+		<path class="logo-wordmark-secondary" d="M93.94,76.16a6.76,6.76,0,0,1-.6,1.81l-3.4,6.92-3.4-7.07a9.82,9.82,0,0,1-.64-1.66A10.07,10.07,0,0,1,85.67,78l-1.4,6.4h-2l3.07-13.52L89.23,79c.11.23.35.82.71,1.76A17.49,17.49,0,0,1,90.69,79l3.74-8.17,3.15,13.52h-2L94.18,78c-.06-.24-.11-.82-.24-1.79" fill="#9d9fa2"/>
+		<polygon class="logo-wordmark-secondary" points="101.59 71.36 108.85 71.36 108.85 73.16 103.7 73.16 103.7 76.42 108.85 76.42 108.85 78.27 103.7 78.27 103.7 82.47 108.85 82.47 108.85 84.37 101.59 84.37 101.59 71.36" fill="#9d9fa2"/>
+		<path class="logo-wordmark-secondary" d="M114.36,81a2.33,2.33,0,0,0,2.51,1.78,1.86,1.86,0,0,0,2-1.65,1.22,1.22,0,0,0,0-.27c0-1.27-1-1.59-2.3-2.24-2.31-1.13-3.59-2-3.59-4s1.55-3.57,3.91-3.57c1.93,0,3.26.78,3.75,2.15l-1.66.85a2.16,2.16,0,0,0-1.92-1.18,1.64,1.64,0,0,0-1.84,1.41,1.79,1.79,0,0,0,0,.23c0,1.25,1,1.63,2.47,2.31,2.3,1,3.37,2,3.37,3.85,0,2.42-1.62,4-4.31,4-2.22,0-3.67-1-4.11-2.94Z" fill="#9d9fa2"/>
+		<circle class="logo-wordmark-primary" cx="190.62" cy="19.87" r="2.09" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M194.09,29.72c-1.75.23-5.68.14-8.36,3.34-3,3.54-2.66,8.14,6.91,20.79,9.45,12.49,12.09,18.09,10.6,29.64,2.86-7.1,2.16-12.91-.17-18.7-3.64-9.06-17.43-22-17.43-27.18,0-6,5.72-6.71,8-6.82C200.32,30.47,194.09,29.72,194.09,29.72Z" fill="#fff"/>
+		<path class="logo-wordmark-bg" d="M205.46,22.2c-3-1.45-5.41-1.87-5.54-1.33C199.59,22.25,205,22.31,205.46,22.2Z" fill="#003a5d"/>
+	</g>
+</svg></i>
+                    </figure>
+                </a>
+                <!--// End of Header Logo -->
+
+                <!-- Header Nav Toggle -->
+                <button class="header-nav-toggle js-nav-toggle">
+                    <div class="header-nav-toggle-icon">
+                        <span class="header-nav-toggle-icon-line"></span>
+                        <span class="header-nav-toggle-icon-line"></span>
+                    </div>
+                </button>
+
+                <!-- Header - Portal -->
+                                    <button
+                        class="header-portal js-pop-out-open"
+                        data-pop-out="portal">
+                        <i class="icon icon-header-portal svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+	<path class="icon-fill" d="M10 10a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm3.333-5a3.333 3.333 0 1 1-6.667 0 3.333 3.333 0 0 1 6.667 0ZM20 18.333C20 20 18.333 20 18.333 20H1.667S0 20 0 18.333c0-1.666 1.667-6.666 10-6.666s10 5 10 6.666Zm-1.667-.006c-.001-.41-.256-1.644-1.386-2.774-1.087-1.086-3.132-2.22-6.947-2.22-3.817 0-5.86 1.134-6.947 2.22-1.13 1.13-1.383 2.364-1.386 2.774h16.666Z" fill="#fff"/>
+</svg>                        </i>
+                    </button>
+                
+                <!-- Header Nav -->
+                <nav class="header-nav">
+                    <div class="header-nav-scroll">
+
+                        <!-- Header Nav - Body -->
+                        <div class="header-nav-body">
+
+                            <!-- Header Nav - Menu -->
+                            <ul class="header-nav-menu menu">
+
+                                <!-- Header Nav - Menu - Home -->
+                                <li class="menu-item menu-item--desktop"><a href="/">
+                                        <i class="icon icon-home svg"><svg viewBox="0 0 78 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="icon-stroke" d="M10.0967 42.958C10.0967 41.4114 9.08379 40.0653 7.63281 39.6162L3.86133 35.3779L39.1211 3.78223C56.8756 19.6671 60.2583 22.7043 74.1436 35.1143L70.3428 39.3584C68.7526 39.9462 67.8092 41.6006 68.1182 43.2725V70.8994C68.1182 72.2537 67.0105 73.3613 65.6562 73.3613H12.5576C11.1862 73.3612 10.0967 72.2643 10.0967 70.8994V42.958Z" stroke="#003B5C" stroke-width="7" stroke-linejoin="round"/>
+</svg>
+</i></a>
+                                </li>
+
+                                <!-- Header Nav - Menu - Developments -->
+                                <li class="menu-item menu-item-has-children is-open is-active">
+                                    <a class="menu-item-parent-sub-toggle" href="#0">Developments</a>
+
+                                    <!-- Header Nav - Menu - Developments - Sub Menu -->
+                                    <!-- TEMP -->
+                                    <div class="sub-menu-wrapper parent-sub-menu parent-sub-menu--developments parent-sub-menu--has-promo">
+                                        <!-- TEMP -->
+
+                                        <ul class="sub-menu sub-menu--developments">
+                                            <!-- Header Nav - Menu - Developments - Sub Menu - Lists -->
+                                            <li class="sub-menu-lists sub-menu-lists--25">
+                                                <div class="developments-nav">
+            <ul class="sub-menu-list">
+            <li class="menu-item menu-item-has-children">
+                <a
+                    class="menu-item-child-sub-toggle js-menu-item-child-sub-toggle is-active"
+                    href="https://www.storyhomes.co.uk/cumbria-scotland/">
+                        Cumbria & Scotland                </a>
+                <div class="sub-menu-wrapper child-sub-menu js-child-sub-menu is-active">
+                    <button class="sub-menu-return js-sub-menu-return">
+                        <i class="sub-nav-return-icon icon svg">
+                            <svg viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M6.96425 0.3994C6.43171 -0.133133 5.56831 -0.133133 5.03577 0.3994L0.399411 5.03576C-0.133122 5.5683 -0.133122 6.4317 0.399411 6.96424L5.03577 11.6006C5.56831 12.1331 6.43171 12.1331 6.96425 11.6006C7.49678 11.0681 7.49678 10.2047 6.96425 9.67213L3.29212 6L6.96425 2.32787C7.49678 1.79534 7.49678 0.931933 6.96425 0.3994Z" fill="#003B5C" fill-rule="evenodd" clip-rule="evenodd"/>
+</svg>
+                        </i>
+                        <span class="sub-nav-return-text">
+                            Cumbria & Scotland                        </span>
+                    </button>
+                    <div class="sub-menu-scroll">
+                        <div class="sub-menu-body">
+
+                                                            <div class="sub-menu-body--flex">
+                                    <!-- Cumbria -->
+                                    <ul class="sub-menu sub-menu--cumbria">
+                                        <li class="menu-item">
+                                            <a href="https://www.storyhomes.co.uk/cumbria/">
+                                                Cumbria Overview
+                                            </a>
+                                        </li>
+                                                                                    <li class="menu-item">
+                                                <a href="https://www.storyhomes.co.uk/developments/brigsteer-rise/">
+                                                    Brigsteer Rise*,  Kendal                                                </a>
+                                            </li>
+                                                                                    <li class="menu-item">
+                                                <a href="https://www.storyhomes.co.uk/developments/edgehill-park/">
+                                                    Edgehill Park, Whitehaven                                                </a>
+                                            </li>
+                                                                                    <li class="menu-item">
+                                                <a href="https://www.storyhomes.co.uk/developments/foxbridge-rise/">
+                                                    Foxbridge Rise, Seaton                                                 </a>
+                                            </li>
+                                                                                    <li class="menu-item">
+                                                <a href="https://www.storyhomes.co.uk/developments/millfields/">
+                                                    Millfields*, Ulverston                                                </a>
+                                            </li>
+                                                                                    <li class="menu-item">
+                                                <a href="https://www.storyhomes.co.uk/developments/scotby-grove/">
+                                                    Scotby Grove, Scotby, Carlisle                                                </a>
+                                            </li>
+                                                                                    <li class="menu-item">
+                                                <a href="https://www.storyhomes.co.uk/developments/the-fairways/">
+                                                    The Fairways, Penrith                                                </a>
+                                            </li>
+                                                                            </ul>
+
+                                    <!-- Scotland -->
+                                    <ul class="sub-menu sub-menu--scotland">
+                                        <li class="menu-item menu-item--column-break">
+                                            <a href="https://www.storyhomes.co.uk/scotland/">
+                                                Scotland Overview
+                                            </a>
+                                        </li>
+                                                                                    <li class="menu-item">
+                                                <a href="https://www.storyhomes.co.uk/developments/summerpark/">
+                                                    Summerpark, Dumfries                                                </a>
+                                            </li>
+                                                                            </ul>
+                                </div>
+                                                        <span class="menu-item-coming-soon"><small>* Coming soon</small></span>
+                        </div>
+                    </div>
+                </div>
+      
+            </li>
+        </ul>
+            <ul class="sub-menu-list">
+            <li class="menu-item menu-item-has-children">
+                <a
+                    class="menu-item-child-sub-toggle js-menu-item-child-sub-toggle"
+                    href="https://www.storyhomes.co.uk/north-east/">
+                        North East                </a>
+                <div class="sub-menu-wrapper child-sub-menu js-child-sub-menu">
+                    <button class="sub-menu-return js-sub-menu-return">
+                        <i class="sub-nav-return-icon icon svg">
+                            <svg viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M6.96425 0.3994C6.43171 -0.133133 5.56831 -0.133133 5.03577 0.3994L0.399411 5.03576C-0.133122 5.5683 -0.133122 6.4317 0.399411 6.96424L5.03577 11.6006C5.56831 12.1331 6.43171 12.1331 6.96425 11.6006C7.49678 11.0681 7.49678 10.2047 6.96425 9.67213L3.29212 6L6.96425 2.32787C7.49678 1.79534 7.49678 0.931933 6.96425 0.3994Z" fill="#003B5C" fill-rule="evenodd" clip-rule="evenodd"/>
+</svg>
+                        </i>
+                        <span class="sub-nav-return-text">
+                            North East                        </span>
+                    </button>
+                    <div class="sub-menu-scroll">
+                        <div class="sub-menu-body">
+
+                                                            <!-- Other regions -->
+                                <ul class="sub-menu sub-menu--3">
+                                    <li class="menu-item">
+                                        <a href="https://www.storyhomes.co.uk/north-east/">
+                                            North East Overview
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/ashwood-grange/">Ashwood Grange, Middleton St George, Darlington</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/beaumont-grange/">Beaumont Grange, Beaumont Hill, Darlington</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/hawksley-rise/">Hawksley Rise, Ryhope, Sunderland</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/heritage-fields/">Heritage Fields, Tanfield, County Durham</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/killingworth-gate/">Killingworth Gate*, Killingworth, North Tyneside</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/newlands-hurst/">Newlands Hurst*, Newlands, Northumberland</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/nunthorpe-gate/">Nunthorpe Gate*, Nunthorpe, Middlesbrough</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/riverbrook-gardens/">Riverbrook Gardens, Alnwick </a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/robinson-fields/">Robinson Fields, North Tyneside</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/sadlerwoods/">Sadler Woods, Eaglescliffe</a>
+                                                </li>                                </ul>
+                                                        <span class="menu-item-coming-soon"><small>* Coming soon</small></span>
+                        </div>
+                    </div>
+                </div>
+      
+            </li>
+        </ul>
+            <ul class="sub-menu-list">
+            <li class="menu-item menu-item-has-children">
+                <a
+                    class="menu-item-child-sub-toggle js-menu-item-child-sub-toggle"
+                    href="https://www.storyhomes.co.uk/north-west/">
+                        North West                </a>
+                <div class="sub-menu-wrapper child-sub-menu js-child-sub-menu">
+                    <button class="sub-menu-return js-sub-menu-return">
+                        <i class="sub-nav-return-icon icon svg">
+                            <svg viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M6.96425 0.3994C6.43171 -0.133133 5.56831 -0.133133 5.03577 0.3994L0.399411 5.03576C-0.133122 5.5683 -0.133122 6.4317 0.399411 6.96424L5.03577 11.6006C5.56831 12.1331 6.43171 12.1331 6.96425 11.6006C7.49678 11.0681 7.49678 10.2047 6.96425 9.67213L3.29212 6L6.96425 2.32787C7.49678 1.79534 7.49678 0.931933 6.96425 0.3994Z" fill="#003B5C" fill-rule="evenodd" clip-rule="evenodd"/>
+</svg>
+                        </i>
+                        <span class="sub-nav-return-text">
+                            North West                        </span>
+                    </button>
+                    <div class="sub-menu-scroll">
+                        <div class="sub-menu-body">
+
+                                                            <!-- Other regions -->
+                                <ul class="sub-menu sub-menu--3">
+                                    <li class="menu-item">
+                                        <a href="https://www.storyhomes.co.uk/north-west/">
+                                            North West Overview
+                                        </a>
+                                    </li>
+                                    <li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/elmbrook-park/">Elmbrook Park, Coppull, Chorley</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/fulshaw-manor/">Fulshaw Manor, Wilmslow, Cheshire</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/holcroft-gardens/">Holcroft Gardens, Culcheth, Warrington</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/stonebrook-meadows/">Stonebrook Meadows, Garstang, Preston</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/tithe-gardens/">Tithe Gardens, Poulton-le-Fylde</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/tithe-meadow/">Tithe Meadow, Poulton-le-Fylde</a>
+                                                </li><li class="menu-item">
+                                                    <a href="https://www.storyhomes.co.uk/developments/woodbridge-green/">Woodbridge Green, Lea, Preston </a>
+                                                </li>                                </ul>
+                                                        <span class="menu-item-coming-soon"><small>* Coming soon</small></span>
+                        </div>
+                    </div>
+                </div>
+      
+            </li>
+        </ul>
+    </div>                                            </li>
+                                            <!--// End of Header Nav - Menu - Developments - Sub Menu - Lists -->
+                                        </ul>
+
+                                        
+                                    </div>
+                                    <!--// End of Header Nav - Menu - Developments - Sub Menu -->
+
+                                    <!-- Header Nav - Menu - Move in for summer -->
+                                    
+                                    <!-- Header Nav - Menu - Move in for summer -->
+                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/move-in-for-summer/">Move in for Summer</a></li>
+
+                                    
+                                <!-- Header Nav - Menu - Discover -->
+                                <li class="menu-item menu-item-has-children">
+                                    <a class="menu-item-parent-sub-toggle" href="#0">Discover</a>
+
+                                    <!-- Header Nav - Menu - Discover - Sub Menu -->
+                                    <div class="sub-menu-wrapper parent-sub-menu parent-sub-menu--has-promo">
+                                        <ul class="sub-menu">
+
+                                            <!-- Header Nav - Menu - Discover - Sub Menu - Lists -->
+                                            <li class="sub-menu-lists sub-menu-lists--33">
+
+                                                <!-- House types, Inform & inspire and buying with story -->
+                                                <ul class="sub-menu-list">
+                                                    <li class="menu-item"><a href="https://www.storyhomes.co.uk/specification/">Specification</a></li>
+                                                    <li class="menu-item"><a href="https://www.storyhomes.co.uk/our-house-types/">Our house types</a></li>
+                                                    <li class="menu-item"><a href="https://www.storyhomes.co.uk/inform-and-inspire/">Inform &amp; Inspire</a></li>
+                                                    <li class="menu-item"><a href="https://www.storyhomes.co.uk/customer-testimonials/">Customer testimonials</a></li>
+                                                    <li class="menu-item menu-item--disabled-desktop menu-item-has-children">
+                                                        <a class="menu-item-child-sub-toggle" href="https://www.storyhomes.co.uk/buying-with-story/">Buying with Story</a>
+                                                        <div class="sub-menu-wrapper child-sub-menu">
+                                                            <button class="sub-menu-return js-sub-menu-return">
+                                                                <i class="sub-nav-return-icon icon svg"><svg viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M6.96425 0.3994C6.43171 -0.133133 5.56831 -0.133133 5.03577 0.3994L0.399411 5.03576C-0.133122 5.5683 -0.133122 6.4317 0.399411 6.96424L5.03577 11.6006C5.56831 12.1331 6.43171 12.1331 6.96425 11.6006C7.49678 11.0681 7.49678 10.2047 6.96425 9.67213L3.29212 6L6.96425 2.32787C7.49678 1.79534 7.49678 0.931933 6.96425 0.3994Z" fill="#003B5C" fill-rule="evenodd" clip-rule="evenodd"/>
+</svg>
+</i>
+                                                                <span class="sub-nav-return-text">Buying with Story</span>
+                                                            </button>
+                                                            <div class="sub-menu-scroll">
+                                                                <div class="sub-menu-body">
+                                                                    <ul class="sub-menu">
+                                                                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/buying-with-story/ways-to-buy/">Ways to buy</a></li>
+                                                                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/buying-with-story/buying-guide/">Buying guide</a></li>
+                                                                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/why-buy-new/">Why buy new</a></li>
+                                                                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/buying-with-story/aftercare/">Aftercare</a></li>
+                                                                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/buying-with-story/consumer-code/">Consumer Code</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                                <!-- About Story and Land & planning -->
+                                                <ul class="sub-menu-list">
+                                                    <li class="menu-item menu-item--disabled-desktop menu-item-has-children">
+                                                        <a class="menu-item-child-sub-toggle" href="#0">About Story Homes</a>
+                                                        <div class="sub-menu-wrapper child-sub-menu">
+                                                            <button class="sub-menu-return js-sub-menu-return">
+                                                                <i class="sub-nav-return-icon icon svg"><svg viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M6.96425 0.3994C6.43171 -0.133133 5.56831 -0.133133 5.03577 0.3994L0.399411 5.03576C-0.133122 5.5683 -0.133122 6.4317 0.399411 6.96424L5.03577 11.6006C5.56831 12.1331 6.43171 12.1331 6.96425 11.6006C7.49678 11.0681 7.49678 10.2047 6.96425 9.67213L3.29212 6L6.96425 2.32787C7.49678 1.79534 7.49678 0.931933 6.96425 0.3994Z" fill="#003B5C" fill-rule="evenodd" clip-rule="evenodd"/>
+</svg>
+</i>
+                                                                <span class="sub-nav-return-text">About Story Homes</span>
+                                                            </button>
+                                                            <div class="sub-menu-scroll">
+                                                                <div class="sub-menu-body">
+                                                                    <ul class="sub-menu">
+                                                                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/about-story-homes/our-story/">Our Story</a></li>
+                                                                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/about-story-homes/sustainable-story/">Sustainable Story</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="menu-item menu-item--disabled-desktop menu-item-has-children">
+                                                        <a class="menu-item-child-sub-toggle" href="#0">Land &amp; planning</a>
+                                                        <div class="sub-menu-wrapper child-sub-menu">
+                                                            <button class="sub-menu-return js-sub-menu-return">
+                                                                <i class="sub-nav-return-icon icon svg"><svg viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M6.96425 0.3994C6.43171 -0.133133 5.56831 -0.133133 5.03577 0.3994L0.399411 5.03576C-0.133122 5.5683 -0.133122 6.4317 0.399411 6.96424L5.03577 11.6006C5.56831 12.1331 6.43171 12.1331 6.96425 11.6006C7.49678 11.0681 7.49678 10.2047 6.96425 9.67213L3.29212 6L6.96425 2.32787C7.49678 1.79534 7.49678 0.931933 6.96425 0.3994Z" fill="#003B5C" fill-rule="evenodd" clip-rule="evenodd"/>
+</svg>
+</i>
+                                                                <span class="sub-nav-return-text">Land &amp; planning</span>
+                                                            </button>
+                                                            <div class="sub-menu-scroll">
+                                                                <div class="sub-menu-body">
+                                                                    <ul class="sub-menu">
+                                                                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/land-and-planning/strategic-land/">Strategic land</a></li>
+                                                                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/land-and-planning/planning-applications/">Planning applications</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                                <!-- Careers, Contact & Social -->
+                                                <ul class="sub-menu-list">
+                                                    <li class="menu-item"><a href="/careers/">Careers</a></li>
+                                                    <li class="menu-item menu-item--small-desktop"><a href="/subcontractors/">Subcontractors</a></li>
+                                                    <li class="menu-item menu-item--small-desktop"><a href="/apprenticeships/">Apprenticeships</a></li>
+                                                    <li class="menu-item"><a href="https://www.storyhomes.co.uk/contact-us/">Contact us</a></li>
+
+                                                                                                            <!-- Header Nav - Social -->
+                                                        <nav class="social social--header-nav social--header-nav--desktop u-align-left">
+                                                            <h3 class="social-title">Follow us online</h3>
+                                                            <ul class="social-items">
+                                                                                                                                    <li class="social-item">
+                                                                        <a href="https://www.facebook.com/StoryHomes" target="_blank">
+                                                                            <i class="icon-social">
+                                                                                <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="icon-fill" d="M19.2336 0H0.833569C0.391069 0 0.0335693 0.3575 0.0335693 0.8V19.2C0.0335693 19.6425 0.391069 20 0.833569 20H19.2336C19.6761 20 20.0336 19.6425 20.0336 19.2V0.8C20.0336 0.3575 19.6761 0 19.2336 0ZM16.9236 5.8375H15.3261C14.0736 5.8375 13.8311 6.4325 13.8311 7.3075V9.235H16.8211L16.4311 12.2525H13.8311V20H10.7136V12.255H8.10607V9.235H10.7136V7.01C10.7136 4.4275 12.2911 3.02 14.5961 3.02C15.7011 3.02 16.6486 3.1025 16.9261 3.14V5.8375H16.9236Z" fill="#003B5C"/>
+</svg>
+</i>
+                                                                        </a>
+                                                                    </li>
+                                                                                                                                    <li class="social-item">
+                                                                        <a href="https://www.tiktok.com/@story_homes" target="_blank">
+                                                                            <i class="icon-social">
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+    <path class="icon-fill" d="M19.87 1.03a1.65 1.65 0 0 0-.9-.9c-.21-.09-.42-.13-.64-.13H1.67C1.23 0 .8.18.49.49.18.8 0 1.23 0 1.67v16.66c0 .22.04.44.13.64a1.65 1.65 0 0 0 .9.9c.2.08.42.13.64.13h16.66c.22 0 .44-.04.64-.13a1.65 1.65 0 0 0 .9-.9c.08-.2.13-.42.13-.64V1.67c0-.22-.04-.44-.13-.64Zm-3.7 7.68c-1.22 0-2.42-.39-3.4-1.09v5.25c-.28 3.97-5.27 5.71-7.91 2.64-2.69-3.13-.03-7.92 4-7.38v2.5c-.83-.25-1.77.05-2.26.77-1.26 1.85.81 4.06 2.71 2.95.42-.24.99-.93.99-1.43V2.89h2.46c-.02 1.54 1.17 3.02 2.69 3.31.21.04.44.02.61.05.04 0 .07.02.1.06v2.4Z" fill="#003b5c" fill-rule="evenodd"/>
+</svg>                                                                            </i>
+                                                                        </a>
+                                                                    </li>
+                                                                                                                                    <li class="social-item">
+                                                                        <a href="https://www.instagram.com/storyhomes/" target="_blank">
+                                                                            <i class="icon-social"><svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M5.91084 0.06C6.97721 0.0109091 7.31721 0 10.0336 0C12.7499 0 13.0899 0.0118182 14.1554 0.06C15.2208 0.108182 15.9481 0.278182 16.5845 0.524545C17.2508 0.776364 17.8554 1.17 18.3554 1.67909C18.8645 2.17818 19.2572 2.78182 19.5081 3.44909C19.7554 4.08545 19.9245 4.81273 19.9736 5.87636C20.0227 6.94455 20.0336 7.28455 20.0336 10C20.0336 12.7164 20.0218 13.0564 19.9736 14.1227C19.9254 15.1864 19.7554 15.9136 19.5081 16.55C19.2572 17.2174 18.8638 17.822 18.3554 18.3218C17.8554 18.8309 17.2508 19.2236 16.5845 19.4745C15.9481 19.7218 15.2208 19.8909 14.1572 19.94C13.0899 19.9891 12.7499 20 10.0336 20C7.31721 20 6.97721 19.9882 5.91084 19.94C4.84721 19.8918 4.11993 19.7218 3.48357 19.4745C2.81622 19.2236 2.21159 18.8302 1.71175 18.3218C1.20301 17.8224 0.80931 17.2181 0.558115 16.5509C0.311751 15.9145 0.14266 15.1873 0.0935693 14.1236C0.0444784 13.0555 0.0335693 12.7155 0.0335693 10C0.0335693 7.28364 0.0453875 6.94364 0.0935693 5.87818C0.141751 4.81273 0.311751 4.08545 0.558115 3.44909C0.809681 2.78189 1.20368 2.17756 1.71266 1.67818C2.21179 1.16955 2.81582 0.775858 3.48266 0.524545C4.11902 0.278182 4.84721 0.109091 5.91084 0.06ZM14.0745 1.86C13.0199 1.81182 12.7036 1.80182 10.0336 1.80182C7.36357 1.80182 7.04721 1.81182 5.99266 1.86C5.01721 1.90455 4.48811 2.06727 4.13539 2.20455C3.66902 2.38636 3.33539 2.60182 2.98539 2.95182C2.65361 3.27459 2.39828 3.66753 2.23811 4.10182C2.10084 4.45455 1.93811 4.98364 1.89357 5.95909C1.84539 7.01364 1.83539 7.33 1.83539 10C1.83539 12.67 1.84539 12.9864 1.89357 14.0409C1.93811 15.0164 2.10084 15.5455 2.23811 15.8982C2.39811 16.3318 2.65357 16.7255 2.98539 17.0482C3.30812 17.38 3.70175 17.6355 4.13539 17.7955C4.48811 17.9327 5.01721 18.0955 5.99266 18.14C7.04721 18.1882 7.36266 18.1982 10.0336 18.1982C12.7045 18.1982 13.0199 18.1882 14.0745 18.14C15.0499 18.0955 15.579 17.9327 15.9318 17.7955C16.3981 17.6136 16.7318 17.3982 17.0818 17.0482C17.4136 16.7255 17.669 16.3318 17.829 15.8982C17.9663 15.5455 18.129 15.0164 18.1736 14.0409C18.2218 12.9864 18.2318 12.67 18.2318 10C18.2318 7.33 18.2218 7.01364 18.1736 5.95909C18.129 4.98364 17.9663 4.45455 17.829 4.10182C17.6472 3.63545 17.4318 3.30182 17.0818 2.95182C16.759 2.62006 16.366 2.36474 15.9318 2.20455C15.579 2.06727 15.0499 1.90455 14.0745 1.86ZM8.7563 13.0827C9.46962 13.3797 10.2639 13.4197 11.0035 13.1961C11.7431 12.9725 12.3821 12.499 12.8114 11.8566C13.2407 11.2142 13.4336 10.4426 13.3572 9.67373C13.2809 8.90485 12.9399 8.18634 12.3927 7.64091C12.0438 7.29225 11.6219 7.02528 11.1575 6.85922C10.6931 6.69317 10.1976 6.63215 9.70675 6.68056C9.2159 6.72897 8.74189 6.88562 8.31885 7.13921C7.8958 7.3928 7.53425 7.73704 7.26021 8.14714C6.98617 8.55723 6.80647 9.02299 6.73404 9.51087C6.66161 9.99876 6.69825 10.4966 6.84133 10.9687C6.98441 11.4407 7.23037 11.8751 7.5615 12.2407C7.89262 12.6062 8.30068 12.8938 8.7563 13.0827ZM6.39902 6.36545C6.87632 5.88816 7.44295 5.50955 8.06657 5.25124C8.69018 4.99293 9.35857 4.85998 10.0336 4.85998C10.7086 4.85998 11.377 4.99293 12.0006 5.25124C12.6242 5.50955 13.1908 5.88816 13.6681 6.36545C14.1454 6.84275 14.524 7.40938 14.7823 8.033C15.0406 8.65662 15.1736 9.325 15.1736 10C15.1736 10.675 15.0406 11.3434 14.7823 11.967C14.524 12.5906 14.1454 13.1573 13.6681 13.6345C12.7042 14.5985 11.3968 15.14 10.0336 15.14C8.67035 15.14 7.36297 14.5985 6.39902 13.6345C5.43508 12.6706 4.89355 11.3632 4.89355 10C4.89355 8.63678 5.43508 7.3294 6.39902 6.36545ZM16.3136 5.62545C16.4318 5.51388 16.5265 5.37971 16.592 5.23089C16.6575 5.08206 16.6925 4.92161 16.6949 4.75903C16.6972 4.59645 16.667 4.43504 16.6058 4.28437C16.5447 4.1337 16.454 3.99683 16.339 3.88185C16.224 3.76688 16.0871 3.67614 15.9365 3.61502C15.7858 3.55389 15.6244 3.52361 15.4618 3.52598C15.2992 3.52835 15.1388 3.56332 14.99 3.62881C14.8411 3.69431 14.707 3.789 14.5954 3.90727C14.3784 4.1373 14.2596 4.44284 14.2642 4.75903C14.2688 5.07522 14.3965 5.37716 14.6201 5.60077C14.8437 5.82437 15.1456 5.95203 15.4618 5.95664C15.778 5.96125 16.0835 5.84245 16.3136 5.62545Z" fill="#003B5C" fill-rule="evenodd" clip-rule="evenodd"/>
+</svg>
+</i>
+                                                                        </a>
+                                                                    </li>
+                                                                                                                                    <li class="social-item">
+                                                                        <a href="https://www.youtube.com/channel/UCDke-3RLH_O1-r9_S7UioHg" target="_blank">
+                                                                            <i class="icon-social"><svg width="29" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M27.9731 3.1242C27.8106 2.51923 27.4921 1.96753 27.0495 1.52432C26.6068 1.08111 26.0555 0.761928 25.4508 0.598726C23.2247 1.21487e-07 14.3011 0 14.3011 0C14.3011 0 5.37752 -1.21487e-07 3.1514 0.595541C2.54637 0.758213 1.99479 1.07721 1.55206 1.52051C1.10932 1.9638 0.791019 2.51578 0.629111 3.12102C0.0335692 5.35032 0.0335693 10 0.0335693 10C0.0335693 10 0.0335692 14.6497 0.629111 16.8758C0.957136 18.1051 1.92529 19.0732 3.1514 19.4013C5.37752 20 14.3011 20 14.3011 20C14.3011 20 23.2247 20 25.4508 19.4013C26.6801 19.0732 27.645 18.1051 27.9731 16.8758C28.5686 14.6497 28.5686 10 28.5686 10C28.5686 10 28.5686 5.35032 27.9731 3.1242ZM11.4667 14.2675V5.73248L18.8552 9.96815L11.4667 14.2675Z" fill="#003B5C"/>
+</svg>
+</i>
+                                                                        </a>
+                                                                    </li>
+                                                                                                                                    <li class="social-item">
+                                                                        <a href="https://www.linkedin.com/company/story-homes" target="_blank">
+                                                                            <i class="icon-social"><svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" fill-rule="evenodd" clip-rule="evenodd" d="M0.5 2.17091C0.5 1.72776 0.676042 1.30276 0.989398 0.9894C1.30275 0.676044 1.72776 0.500002 2.17091 0.500002H18.8273C19.0469 0.499644 19.2644 0.542605 19.4674 0.626426C19.6704 0.710248 19.8548 0.833284 20.0102 0.98849C20.1656 1.1437 20.2888 1.32802 20.3729 1.53092C20.4569 1.73382 20.5001 1.9513 20.5 2.17091V18.8273C20.5002 19.0469 20.4572 19.2645 20.3732 19.4675C20.2893 19.6705 20.1662 19.8549 20.0109 20.0103C19.8556 20.1656 19.6713 20.2889 19.4683 20.3729C19.2654 20.4569 19.0478 20.5001 18.8282 20.5H2.17091C1.95141 20.5 1.73405 20.4568 1.53127 20.3727C1.32849 20.2887 1.14425 20.1655 0.989077 20.0103C0.833906 19.855 0.710847 19.6707 0.62693 19.4679C0.543012 19.2651 0.499881 19.0477 0.5 18.8282V2.17091ZM8.41636 8.12546H11.1245V9.48546C11.5155 8.70364 12.5155 8 14.0182 8C16.8991 8 17.5818 9.55727 17.5818 12.4145V17.7073H14.6664V13.0655C14.6664 11.4382 14.2755 10.52 13.2827 10.52C11.9055 10.52 11.3327 11.51 11.3327 13.0655V17.7073H8.41636V8.12546ZM3.41636 17.5827H6.33273V8H3.41636V17.5827ZM6.75 4.87455C6.7555 5.12425 6.71107 5.37254 6.61931 5.60483C6.52755 5.83713 6.39032 6.04876 6.21566 6.2273C6.04101 6.40585 5.83245 6.5477 5.60223 6.64455C5.37201 6.7414 5.12476 6.79129 4.875 6.79129C4.62524 6.79129 4.37799 6.7414 4.14777 6.64455C3.91755 6.5477 3.70899 6.40585 3.53433 6.2273C3.35968 6.04876 3.22245 5.83713 3.13069 5.60483C3.03893 5.37254 2.9945 5.12425 3 4.87455C3.01079 4.38441 3.21308 3.91799 3.56353 3.57517C3.91399 3.23235 4.38475 3.04038 4.875 3.04038C5.36525 3.04038 5.83601 3.23235 6.18647 3.57517C6.53692 3.91799 6.73921 4.38441 6.75 4.87455Z" fill="#003B5C"/>
+</svg>
+</i>
+                                                                        </a>
+                                                                    </li>
+                                                                                                                            </ul>
+                                                        </nav>
+                                                    
+                                                </ul>
+
+                                            </li>
+                                            <!--// End of Header Nav - Menu - Discover - Sub Menu - Lists -->
+
+                                        </ul>
+
+                                                                                    <div class="sub-menu-promo-slider-wrapper sub-menu-promo-slider-wrapper--desktop">
+                                                <div
+                                                    class="sub-menu-promo-slider js-slider swiper"
+                                                    data-js-var="slider_sub_menu_promo_desktop"
+                                                    data-slides-per-view="1"
+                                                    data-slides-per-group="1"
+                                                    data-loop="false"
+                                                    data-centered="false"
+                                                    data-pagination-type="bullets"
+                                                    data-space-between="0"
+                                                    data-free-mode="false"
+                                                    data-drag="true"
+                                                    data-autoplay="false"
+                                                    data-breakpoints="0=1,1&480=1,1">
+                                                    <div class="swiper-wrapper flex-wrapper">
+
+                                                                                                                    <div class="swiper-slide">
+                                                                <aside class="sub-menu-promo sub-menu-promo--desktop">
+                                                                                                                                            <figure class="sub-menu-promo-media">
+                                                                            <img
+                                                                                class="sub-menu-promo-img"
+                                                                                src="https://www.storyhomes.co.uk/wp-content/uploads/2026/05/640.jpg"
+                                                                                alt="The Dawson">
+                                                                        </figure>
+                                                                                                                                        <article class="sub-menu-promo-content">
+                                                                        <div class="sub-menu-promo-body">
+                                                                                                                                                            <header class="sub-menu-promo-header">
+                                                                                    <h4 class="sub-menu-promo-kicker">Home of The Month</h4>                                                                                    <h3 class="sub-menu-promo-title">The Dawson</h3>                                                                                </header>
+                                                                                                                                                                                                                                        <div class="sub-menu-promo-link u-link-arrow u-link--oil-green"><span class="u-link-arrow-text u-link-arrow-text--left">Find out more</span><i class="icon svg"><svg viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M1.03575 0.3994C1.56829 -0.133133 2.43169 -0.133133 2.96423 0.3994L7.60059 5.03576C8.13312 5.5683 8.13312 6.4317 7.60059 6.96424L2.96423 11.6006C2.43169 12.1331 1.56829 12.1331 1.03575 11.6006C0.503219 11.0681 0.503219 10.2047 1.03575 9.67213L4.70788 6L1.03575 2.32787C0.503219 1.79534 0.503219 0.931933 1.03575 0.3994Z" fill="#003B5C" fill-rule="evenodd" clip-rule="evenodd"/>
+</svg>
+</i></div>
+                                                                                                                                                    </div>
+                                                                    </article>
+                                                                    <a class="u-link-cover" href="https://www.storyhomes.co.uk/property-types/dawson-6/"></a>                                                                </aside>
+                                                            </div>
+                                                        
+                                                    </div>
+                                                    <div class="swiper-buttons swiper-buttons--white">
+                                                        <div class="swiper-button swiper-button-prev swiper-button-prev-slider_sub_menu_promo_desktop"></div>
+                                                        <div class="swiper-button swiper-button-next swiper-button-next-slider_sub_menu_promo_desktop"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                    <!--// End of Header Nav - Menu - Discover - Sub Menu -->
+
+                                </li>
+
+                                <!-- Header Nav - Menu - My Account -->
+                                <li class="menu-item menu-item--desktop menu-item--icon">
+                                                                            <button
+                                            class="js-pop-out-open"
+                                            data-pop-out="portal">
+                                            <i class="svg icon menu-item-icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+	<path class="icon-fill" d="M10 10a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm3.333-5a3.333 3.333 0 1 1-6.667 0 3.333 3.333 0 0 1 6.667 0ZM20 18.333C20 20 18.333 20 18.333 20H1.667S0 20 0 18.333c0-1.666 1.667-6.666 10-6.666s10 5 10 6.666Zm-1.667-.006c-.001-.41-.256-1.644-1.386-2.774-1.087-1.086-3.132-2.22-6.947-2.22-3.817 0-5.86 1.134-6.947 2.22-1.13 1.13-1.383 2.364-1.386 2.774h16.666Z" fill="#fff"/>
+</svg>                                            </i>
+                                            <span class="menu-item-text">My Account</span>
+                                        </button>
+                                                                    </li>
+
+                            </ul>
+
+                                                            <div class="sub-menu-promo-slider-wrapper sub-menu-promo-slider-wrapper--mobile">
+                                    <div
+                                        class="sub-menu-promo-slider js-slider swiper"
+                                        data-js-var="slider_sub_menu_promo_mobile"
+                                        data-slides-per-view="1"
+                                        data-slides-per-group="1"
+                                        data-loop="false"
+                                        data-centered="false"
+                                        data-pagination-type="bullets"
+                                        data-space-between="0"
+                                        data-free-mode="false"
+                                        data-drag="true"
+                                        data-autoplay="false"
+                                        data-init-mobile="1023"
+                                        data-breakpoints="0=1,1&480=1,1">
+                                        <div class="swiper-wrapper flex-wrapper">
+                                                                                            <div class="swiper-slide">
+                                                    <aside class="sub-menu-promo sub-menu-promo--mobile">
+                                                                                                                    <figure class="sub-menu-promo-media">
+                                                                <img
+                                                                    class="sub-menu-promo-img"
+                                                                    src="https://www.storyhomes.co.uk/wp-content/uploads/2026/05/1280.jpg"
+                                                                    alt="The Dawson">
+                                                            </figure>
+                                                                                                                <article class="sub-menu-promo-content">
+                                                            <div class="sub-menu-promo-body">
+                                                                                                                                    <header class="sub-menu-promo-header">
+                                                                        <h4 class="sub-menu-promo-kicker">Home of The Month</h4>                                                                        <h3 class="sub-menu-promo-title">The Dawson</h3>                                                                    </header>
+                                                                                                                                                                                                    <a
+                                                                        class="sub-menu-promo-link btn btn--oil-green"
+                                                                        href="https://www.storyhomes.co.uk/property-types/dawson-6/">
+                                                                        <span class="btn-text btn-text--left">Find out more</span>
+                                                                        <i class="icon icon-arrow svg"><svg viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M1.03575 0.3994C1.56829 -0.133133 2.43169 -0.133133 2.96423 0.3994L7.60059 5.03576C8.13312 5.5683 8.13312 6.4317 7.60059 6.96424L2.96423 11.6006C2.43169 12.1331 1.56829 12.1331 1.03575 11.6006C0.503219 11.0681 0.503219 10.2047 1.03575 9.67213L4.70788 6L1.03575 2.32787C0.503219 1.79534 0.503219 0.931933 1.03575 0.3994Z" fill="#003B5C" fill-rule="evenodd" clip-rule="evenodd"/>
+</svg>
+</i>
+                                                                    </a>
+                                                                                                                            </div>
+                                                        </article>
+                                                    </aside>
+                                                </div>
+                                                                                    </div>
+                                        <div class="swiper-buttons">
+                                            <div class="swiper-button swiper-button-prev swiper-button-prev-slider_sub_menu_promo_mobile"></div>
+                                            <div class="swiper-button swiper-button-next swiper-button-next-slider_sub_menu_promo_mobile"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+
+                    </div>
+                </nav>
+                <!--// End of Header Nav -->
+
+            </div>
+        </header>
+        <!--// End of Header -->
+
+        <!-- Site Content -->
+        <main class="site-content">
+<!-- Text block -->
+<section class="row row--text-block u-align-center u-bg-grey">
+    <div class="container container--sm">
+
+        <!-- Summary -->
+        <article class="cms-content cms-content--lg row-summary">
+            <h1>Oops, you seem to be lost!</h1>
+            <p>The page you've requested doesn't exist.</p>
+            <p>This may have been caused by typing an incorrect url, loading an old page from a search engine or trying to view a page that has been removed. Please see below for some helpful links instead.</p>
+
+            <div class="inline-btns inline-btns--sm">
+                <a class="btn btn--oil-green" href="/">Back to Home Page</a>
+                <a class="btn btn--wild-ginger" href="/contact/">Get in touch</a>
+            </div>
+
+        </article>
+        <!--// End of Summary -->
+
+    </div>
+</section>
+<!--// End of Text block -->
+
+
+</main>
+<!--// End of Site Content -->
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container container--xl">
+
+            <div
+                class="footer-accordion js-accordion-new"
+                data-js-var="accordion_footer"
+                data-init="767">
+                <div class="footer-accordion-item">
+                    <button
+                        class="footer-accordion-toggle js-accordion-toggle"
+                        data-target="useful-links">
+                        <p class="footer-accordion-toggle-text">Useful Links</p>
+                        <i class="footer-accordion-toggle-icon svg icon"><svg viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" fill-rule="evenodd" clip-rule="evenodd" d="M0.432683 7.55596C-0.144228 6.97905 -0.144228 6.0437 0.432683 5.46678L5.45541 0.444057C6.03232 -0.132854 6.96768 -0.132854 7.54459 0.444057L12.5673 5.46678C13.1442 6.0437 13.1442 6.97905 12.5673 7.55596C11.9904 8.13288 11.055 8.13288 10.4781 7.55596L6.5 3.57783L2.52186 7.55596C1.94495 8.13288 1.00959 8.13288 0.432683 7.55596Z" fill="#003B5C"/>
+</svg>
+</i>
+                    </button>
+
+                    <div
+                        id="useful-links"
+                        class="footer-accordion-content js-accordion-content">
+
+                        <!-- Footer info -->
+                        <div class="footer-info">
+                            <div class="footer-info-wrapper">
+
+                                <!-- Footer nav -->
+                                <nav class="footer-nav footer-nav-lists">
+                                    <ul class="footer-nav-menu footer-nav-lists-menu">
+
+                                        <!-- Discover -->
+                                        <div class="menu-wrapper menu-wrapper--1">
+                                            <h3 class="footer-title">Discover Story Homes</h3>
+                                            <ul class="menu menu--columns">
+                                                <li class="menu-item"><a href="/specification/">Specification</a></li>
+                                                <li class="menu-item"><a href="/our-house-types/">Our house types</a></li>
+                                                <li class="menu-item"><a href="/inform-and-inspire/">Inform &amp; Inspire</a></li>
+                                                <li class="menu-item"><a href="/land-and-planning/planning-applications/">Planning applications</a></li>
+                                                <li class="menu-item"><a href="/about-story-homes/our-story/">Our Story</a></li>
+                                                <li class="menu-item"><a href="/contact-us/">Contact</a></li>
+                                                <li class="menu-item"><a href="/careers/">Careers</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Buying with Story -->
+                                        <div class="menu-wrapper menu-wrapper--2">
+                                            <h3 class="footer-title">Buying with Story</h3>
+                                            <ul class="menu">
+                                                <li class="menu-item"><a href="/buying-with-story/ways-to-buy/">Ways to buy</a></li>
+                                                <li class="menu-item"><a href="/buying-with-story/buying-guide/">Buying guide</a></li>
+                                                <li class="menu-item"><a href="/buying-with-story/aftercare/">Aftercare</a></li>
+                                                <li class="menu-item"><a href="/buying-with-story/consumer-code/">Consumer Code</a></li>
+                                            </ul>
+                                        </div>
+
+                                    </ul>
+                                </nav>
+
+                                                                    <!-- Footer address -->
+                                    <div class="footer-social footer-content">
+
+                                        <h3 class="footer-title">Follow us online</h3>
+
+                                        <p>Keep up to date by following us on
+                                            <a href="https://www.facebook.com/StoryHomes" target="_blank">Facebook</a>, <a href="https://www.linkedin.com/company/story-homes" target="_blank">LinkedIn</a>, <a href="https://www.tiktok.com/@story_homes" target="_blank">TikTok</a>, <a href="https://www.instagram.com/storyhomes/" target="_blank">Instagram</a> and <a href="https://www.youtube.com/channel/UCDke-3RLH_O1-r9_S7UioHg" target="_blank">YouTube</a>                                        </p>
+
+                                        <!-- Social icons -->
+                                        <nav class="social social--footer u-align-center">
+                                            <ul class="social-items">
+                                                                                                    <li class="social-item">
+                                                        <a href="https://www.facebook.com/StoryHomes" target="_blank">
+                                                            <i class="icon-social">
+                                                                <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="icon-fill" d="M19.2336 0H0.833569C0.391069 0 0.0335693 0.3575 0.0335693 0.8V19.2C0.0335693 19.6425 0.391069 20 0.833569 20H19.2336C19.6761 20 20.0336 19.6425 20.0336 19.2V0.8C20.0336 0.3575 19.6761 0 19.2336 0ZM16.9236 5.8375H15.3261C14.0736 5.8375 13.8311 6.4325 13.8311 7.3075V9.235H16.8211L16.4311 12.2525H13.8311V20H10.7136V12.255H8.10607V9.235H10.7136V7.01C10.7136 4.4275 12.2911 3.02 14.5961 3.02C15.7011 3.02 16.6486 3.1025 16.9261 3.14V5.8375H16.9236Z" fill="#003B5C"/>
+</svg>
+                                                            </i>
+                                                        </a>
+                                                    </li>
+                                                                                                    <li class="social-item">
+                                                        <a href="https://www.linkedin.com/company/story-homes" target="_blank">
+                                                            <i class="icon-social">
+                                                                <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" fill-rule="evenodd" clip-rule="evenodd" d="M0.5 2.17091C0.5 1.72776 0.676042 1.30276 0.989398 0.9894C1.30275 0.676044 1.72776 0.500002 2.17091 0.500002H18.8273C19.0469 0.499644 19.2644 0.542605 19.4674 0.626426C19.6704 0.710248 19.8548 0.833284 20.0102 0.98849C20.1656 1.1437 20.2888 1.32802 20.3729 1.53092C20.4569 1.73382 20.5001 1.9513 20.5 2.17091V18.8273C20.5002 19.0469 20.4572 19.2645 20.3732 19.4675C20.2893 19.6705 20.1662 19.8549 20.0109 20.0103C19.8556 20.1656 19.6713 20.2889 19.4683 20.3729C19.2654 20.4569 19.0478 20.5001 18.8282 20.5H2.17091C1.95141 20.5 1.73405 20.4568 1.53127 20.3727C1.32849 20.2887 1.14425 20.1655 0.989077 20.0103C0.833906 19.855 0.710847 19.6707 0.62693 19.4679C0.543012 19.2651 0.499881 19.0477 0.5 18.8282V2.17091ZM8.41636 8.12546H11.1245V9.48546C11.5155 8.70364 12.5155 8 14.0182 8C16.8991 8 17.5818 9.55727 17.5818 12.4145V17.7073H14.6664V13.0655C14.6664 11.4382 14.2755 10.52 13.2827 10.52C11.9055 10.52 11.3327 11.51 11.3327 13.0655V17.7073H8.41636V8.12546ZM3.41636 17.5827H6.33273V8H3.41636V17.5827ZM6.75 4.87455C6.7555 5.12425 6.71107 5.37254 6.61931 5.60483C6.52755 5.83713 6.39032 6.04876 6.21566 6.2273C6.04101 6.40585 5.83245 6.5477 5.60223 6.64455C5.37201 6.7414 5.12476 6.79129 4.875 6.79129C4.62524 6.79129 4.37799 6.7414 4.14777 6.64455C3.91755 6.5477 3.70899 6.40585 3.53433 6.2273C3.35968 6.04876 3.22245 5.83713 3.13069 5.60483C3.03893 5.37254 2.9945 5.12425 3 4.87455C3.01079 4.38441 3.21308 3.91799 3.56353 3.57517C3.91399 3.23235 4.38475 3.04038 4.875 3.04038C5.36525 3.04038 5.83601 3.23235 6.18647 3.57517C6.53692 3.91799 6.73921 4.38441 6.75 4.87455Z" fill="#003B5C"/>
+</svg>
+                                                            </i>
+                                                        </a>
+                                                    </li>
+                                                                                                    <li class="social-item">
+                                                        <a href="https://www.tiktok.com/@story_homes" target="_blank">
+                                                            <i class="icon-social">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+    <path class="icon-fill" d="M19.87 1.03a1.65 1.65 0 0 0-.9-.9c-.21-.09-.42-.13-.64-.13H1.67C1.23 0 .8.18.49.49.18.8 0 1.23 0 1.67v16.66c0 .22.04.44.13.64a1.65 1.65 0 0 0 .9.9c.2.08.42.13.64.13h16.66c.22 0 .44-.04.64-.13a1.65 1.65 0 0 0 .9-.9c.08-.2.13-.42.13-.64V1.67c0-.22-.04-.44-.13-.64Zm-3.7 7.68c-1.22 0-2.42-.39-3.4-1.09v5.25c-.28 3.97-5.27 5.71-7.91 2.64-2.69-3.13-.03-7.92 4-7.38v2.5c-.83-.25-1.77.05-2.26.77-1.26 1.85.81 4.06 2.71 2.95.42-.24.99-.93.99-1.43V2.89h2.46c-.02 1.54 1.17 3.02 2.69 3.31.21.04.44.02.61.05.04 0 .07.02.1.06v2.4Z" fill="#003b5c" fill-rule="evenodd"/>
+</svg>                                                            </i>
+                                                        </a>
+                                                    </li>
+                                                                                                    <li class="social-item">
+                                                        <a href="https://www.instagram.com/storyhomes/" target="_blank">
+                                                            <i class="icon-social">
+                                                                <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M5.91084 0.06C6.97721 0.0109091 7.31721 0 10.0336 0C12.7499 0 13.0899 0.0118182 14.1554 0.06C15.2208 0.108182 15.9481 0.278182 16.5845 0.524545C17.2508 0.776364 17.8554 1.17 18.3554 1.67909C18.8645 2.17818 19.2572 2.78182 19.5081 3.44909C19.7554 4.08545 19.9245 4.81273 19.9736 5.87636C20.0227 6.94455 20.0336 7.28455 20.0336 10C20.0336 12.7164 20.0218 13.0564 19.9736 14.1227C19.9254 15.1864 19.7554 15.9136 19.5081 16.55C19.2572 17.2174 18.8638 17.822 18.3554 18.3218C17.8554 18.8309 17.2508 19.2236 16.5845 19.4745C15.9481 19.7218 15.2208 19.8909 14.1572 19.94C13.0899 19.9891 12.7499 20 10.0336 20C7.31721 20 6.97721 19.9882 5.91084 19.94C4.84721 19.8918 4.11993 19.7218 3.48357 19.4745C2.81622 19.2236 2.21159 18.8302 1.71175 18.3218C1.20301 17.8224 0.80931 17.2181 0.558115 16.5509C0.311751 15.9145 0.14266 15.1873 0.0935693 14.1236C0.0444784 13.0555 0.0335693 12.7155 0.0335693 10C0.0335693 7.28364 0.0453875 6.94364 0.0935693 5.87818C0.141751 4.81273 0.311751 4.08545 0.558115 3.44909C0.809681 2.78189 1.20368 2.17756 1.71266 1.67818C2.21179 1.16955 2.81582 0.775858 3.48266 0.524545C4.11902 0.278182 4.84721 0.109091 5.91084 0.06ZM14.0745 1.86C13.0199 1.81182 12.7036 1.80182 10.0336 1.80182C7.36357 1.80182 7.04721 1.81182 5.99266 1.86C5.01721 1.90455 4.48811 2.06727 4.13539 2.20455C3.66902 2.38636 3.33539 2.60182 2.98539 2.95182C2.65361 3.27459 2.39828 3.66753 2.23811 4.10182C2.10084 4.45455 1.93811 4.98364 1.89357 5.95909C1.84539 7.01364 1.83539 7.33 1.83539 10C1.83539 12.67 1.84539 12.9864 1.89357 14.0409C1.93811 15.0164 2.10084 15.5455 2.23811 15.8982C2.39811 16.3318 2.65357 16.7255 2.98539 17.0482C3.30812 17.38 3.70175 17.6355 4.13539 17.7955C4.48811 17.9327 5.01721 18.0955 5.99266 18.14C7.04721 18.1882 7.36266 18.1982 10.0336 18.1982C12.7045 18.1982 13.0199 18.1882 14.0745 18.14C15.0499 18.0955 15.579 17.9327 15.9318 17.7955C16.3981 17.6136 16.7318 17.3982 17.0818 17.0482C17.4136 16.7255 17.669 16.3318 17.829 15.8982C17.9663 15.5455 18.129 15.0164 18.1736 14.0409C18.2218 12.9864 18.2318 12.67 18.2318 10C18.2318 7.33 18.2218 7.01364 18.1736 5.95909C18.129 4.98364 17.9663 4.45455 17.829 4.10182C17.6472 3.63545 17.4318 3.30182 17.0818 2.95182C16.759 2.62006 16.366 2.36474 15.9318 2.20455C15.579 2.06727 15.0499 1.90455 14.0745 1.86ZM8.7563 13.0827C9.46962 13.3797 10.2639 13.4197 11.0035 13.1961C11.7431 12.9725 12.3821 12.499 12.8114 11.8566C13.2407 11.2142 13.4336 10.4426 13.3572 9.67373C13.2809 8.90485 12.9399 8.18634 12.3927 7.64091C12.0438 7.29225 11.6219 7.02528 11.1575 6.85922C10.6931 6.69317 10.1976 6.63215 9.70675 6.68056C9.2159 6.72897 8.74189 6.88562 8.31885 7.13921C7.8958 7.3928 7.53425 7.73704 7.26021 8.14714C6.98617 8.55723 6.80647 9.02299 6.73404 9.51087C6.66161 9.99876 6.69825 10.4966 6.84133 10.9687C6.98441 11.4407 7.23037 11.8751 7.5615 12.2407C7.89262 12.6062 8.30068 12.8938 8.7563 13.0827ZM6.39902 6.36545C6.87632 5.88816 7.44295 5.50955 8.06657 5.25124C8.69018 4.99293 9.35857 4.85998 10.0336 4.85998C10.7086 4.85998 11.377 4.99293 12.0006 5.25124C12.6242 5.50955 13.1908 5.88816 13.6681 6.36545C14.1454 6.84275 14.524 7.40938 14.7823 8.033C15.0406 8.65662 15.1736 9.325 15.1736 10C15.1736 10.675 15.0406 11.3434 14.7823 11.967C14.524 12.5906 14.1454 13.1573 13.6681 13.6345C12.7042 14.5985 11.3968 15.14 10.0336 15.14C8.67035 15.14 7.36297 14.5985 6.39902 13.6345C5.43508 12.6706 4.89355 11.3632 4.89355 10C4.89355 8.63678 5.43508 7.3294 6.39902 6.36545ZM16.3136 5.62545C16.4318 5.51388 16.5265 5.37971 16.592 5.23089C16.6575 5.08206 16.6925 4.92161 16.6949 4.75903C16.6972 4.59645 16.667 4.43504 16.6058 4.28437C16.5447 4.1337 16.454 3.99683 16.339 3.88185C16.224 3.76688 16.0871 3.67614 15.9365 3.61502C15.7858 3.55389 15.6244 3.52361 15.4618 3.52598C15.2992 3.52835 15.1388 3.56332 14.99 3.62881C14.8411 3.69431 14.707 3.789 14.5954 3.90727C14.3784 4.1373 14.2596 4.44284 14.2642 4.75903C14.2688 5.07522 14.3965 5.37716 14.6201 5.60077C14.8437 5.82437 15.1456 5.95203 15.4618 5.95664C15.778 5.96125 16.0835 5.84245 16.3136 5.62545Z" fill="#003B5C" fill-rule="evenodd" clip-rule="evenodd"/>
+</svg>
+                                                            </i>
+                                                        </a>
+                                                    </li>
+                                                                                                    <li class="social-item">
+                                                        <a href="https://www.youtube.com/channel/UCDke-3RLH_O1-r9_S7UioHg" target="_blank">
+                                                            <i class="icon-social">
+                                                                <svg width="29" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M27.9731 3.1242C27.8106 2.51923 27.4921 1.96753 27.0495 1.52432C26.6068 1.08111 26.0555 0.761928 25.4508 0.598726C23.2247 1.21487e-07 14.3011 0 14.3011 0C14.3011 0 5.37752 -1.21487e-07 3.1514 0.595541C2.54637 0.758213 1.99479 1.07721 1.55206 1.52051C1.10932 1.9638 0.791019 2.51578 0.629111 3.12102C0.0335692 5.35032 0.0335693 10 0.0335693 10C0.0335693 10 0.0335692 14.6497 0.629111 16.8758C0.957136 18.1051 1.92529 19.0732 3.1514 19.4013C5.37752 20 14.3011 20 14.3011 20C14.3011 20 23.2247 20 25.4508 19.4013C26.6801 19.0732 27.645 18.1051 27.9731 16.8758C28.5686 14.6497 28.5686 10 28.5686 10C28.5686 10 28.5686 5.35032 27.9731 3.1242ZM11.4667 14.2675V5.73248L18.8552 9.96815L11.4667 14.2675Z" fill="#003B5C"/>
+</svg>
+                                                            </i>
+                                                        </a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </nav>
+                                        <!--// End of Social icons -->
+                                    </div>
+                                
+                                <!-- Footer address -->
+                                <address class="footer-address footer-content">
+                                    <h3 class="footer-title">Find us</h3>
+
+                                    <p>Story House, Lords Way<br />
+Kingmoor Business Park<br />
+Carlisle<br />
+CA6 4SL</p>
+
+                                    <p>
+                                        <a
+                                            class="js-directions-link"
+                                            data-address="54.933934,-2.964031"
+                                            href="https://www.google.com/maps/dir/?api=1&destination=54.933934,-2.964031"
+                                            target="_blank">
+                                            Get directions
+                                        </a>
+                                    </p>
+                                </address>
+
+                            </div>
+                        </div>
+                        <!--// End of Footer info -->
+
+                        <!-- Footer logos -->
+                        <div class="footer-logos">
+                            <div class="footer-logos-wrapper">
+
+                                <!-- Footer logos - Left -->
+                                <div class="footer-logos-item footer-logos-item--left">
+
+                                    <!-- Union Room -->
+                                    <figure>
+                                        <a
+                                            class="footer-logo-author"
+                                            href="https://www.unionroom.com"
+                                            target="_blank"  rel="nofollow"                                            title="Website by Union Room">
+                                            <i class="footer-logo-author-img svg"><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141 31"><path d="M41.73,16.71c0,2.95,1.71,5,5.38,5s5.35-2.03,5.35-5.02v-7.2h-2.59v7.13c0,1.67-.92,2.83-2.75,2.83s-2.79-1.15-2.79-2.83v-7.13h-2.59v7.22Zm18.91,4.79h2.29v-6.14c0-1.69-.92-2.77-2.83-2.77-1.42,0-2.48,.68-3.04,1.35v-1.13h-2.29v8.69h2.29v-5.85c.38-.52,1.08-1.03,1.98-1.03,.97,0,1.6,.41,1.6,1.62v5.26Zm5.69-9.97c.76,0,1.37-.61,1.37-1.37s-.61-1.37-1.37-1.37-1.37,.61-1.37,1.37,.63,1.37,1.37,1.37Zm-1.13,9.97h2.29V12.81h-2.29v8.69Zm8.58,.22c2.88,0,4.61-2.09,4.61-4.57s-1.73-4.55-4.61-4.55-4.59,2.09-4.59,4.55,1.73,4.57,4.59,4.57Zm0-2.03c-1.42,0-2.21-1.17-2.21-2.54s.79-2.52,2.21-2.52,2.23,1.17,2.23,2.52-.81,2.54-2.23,2.54Zm12.17,1.82h2.29v-6.14c0-1.69-.92-2.77-2.83-2.77-1.42,0-2.48,.68-3.04,1.35v-1.13h-2.29v8.69h2.29v-5.85c.38-.52,1.08-1.03,1.98-1.03,.97,0,1.6,.41,1.6,1.62v5.26Zm16,0h2.93l-2.7-4.57c1.3-.31,2.63-1.44,2.63-3.56,0-2.23-1.53-3.87-4.03-3.87h-5.62v12.01h2.56v-4.3h1.87l2.36,4.3Zm.25-8.15c0,1.01-.77,1.66-1.8,1.66h-2.68v-3.31h2.68c1.03,0,1.8,.65,1.8,1.66Zm7.96,8.37c2.88,0,4.61-2.09,4.61-4.57s-1.73-4.55-4.61-4.55-4.59,2.09-4.59,4.55,1.73,4.57,4.59,4.57Zm0-2.03c-1.42,0-2.21-1.17-2.21-2.54s.79-2.52,2.21-2.52,2.23,1.17,2.23,2.52-.81,2.54-2.23,2.54Zm10.34,2.03c2.88,0,4.61-2.09,4.61-4.57s-1.73-4.55-4.61-4.55-4.59,2.09-4.59,4.55,1.73,4.57,4.59,4.57Zm0-2.03c-1.42,0-2.21-1.17-2.21-2.54s.79-2.52,2.21-2.52,2.23,1.17,2.23,2.52-.81,2.54-2.23,2.54Zm17.09,1.82h2.3v-6.28c0-1.78-.95-2.63-2.56-2.63-1.33,0-2.48,.79-2.99,1.58-.32-.99-1.13-1.58-2.41-1.58s-2.48,.83-2.84,1.35v-1.13h-2.29v8.69h2.29v-5.85c.34-.49,1.01-1.03,1.8-1.03,.94,0,1.3,.58,1.3,1.39v5.49h2.3v-5.87c.32-.47,.99-1.01,1.8-1.01,.94,0,1.3,.58,1.3,1.39v5.49Z" fill="#003b5c"/><path d="M15,.5c-2.97,0-5.87,.88-8.33,2.53-2.47,1.65-4.39,3.99-5.52,6.73C0,12.5-.29,15.52,.29,18.43c.58,2.91,2.01,5.58,4.11,7.68,2.1,2.1,4.77,3.53,7.68,4.11,2.91,.58,5.92,.28,8.67-.85,2.74-1.14,5.08-3.06,6.73-5.52,1.65-2.47,2.53-5.37,2.53-8.33,0-3.98-1.59-7.79-4.4-10.6C22.79,2.09,18.98,.51,15,.5Zm0,28.52c-2.68,0-5.3-.8-7.52-2.3-2.23-1.49-3.96-3.61-4.98-6.09-1.02-2.48-1.28-5.2-.76-7.83,.53-2.63,1.82-5.04,3.72-6.93,1.9-1.89,4.32-3.18,6.94-3.7,2.63-.52,5.35-.24,7.83,.79,2.47,1.03,4.59,2.77,6.07,5,1.49,2.23,2.27,4.85,2.27,7.53,0,1.78-.35,3.54-1.04,5.19-.68,1.64-1.68,3.14-2.94,4.39s-2.76,2.25-4.4,2.93-3.41,1.02-5.19,1.02Zm0-4.77c-3.84,0-6.39-2.46-6.39-6.1v-7.43h-1.48v-2.95h3.15c1.23,0,1.77,.64,1.77,1.82v8.46c0,1.87,1.08,2.95,2.95,2.95s2.95-1.13,2.95-3V9.6c0-1.23,.64-1.82,1.87-1.82h3.05v2.95h-1.48v7.43c0,3.59-2.65,6.1-6.39,6.1Z" fill="#003b5c"/></svg></i>
+                                        </a>
+                                    </figure>
+
+                                </div>
+                                <!--// End of Author logo -->
+
+
+                                
+                                <!-- Footer logos - Right -->
+                                <div class="footer-logos-item footer-logos-item--right">
+
+                                    <!-- Trustpilot -->
+                                    <figure>
+                                        <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+                                        <div
+                                            class="trustpilot-widget"
+                                            data-locale="en-GB"
+                                            data-template-id="53aa8807dec7e10d38f59f32"
+                                            data-businessunit-id="5b6482798dc3e0000125b129"
+                                            data-style-height="77"
+                                            data-style-width="154"
+                                            data-theme="light">
+                                            <a href="https://uk.trustpilot.com/review/www.storyhomes.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+                                        </div>
+                                    </figure>
+
+                                    <!-- Property awards -->
+                                    <figure>
+                                        <img
+                                            class="footer-logo-property-awards"
+                                            src="https://www.storyhomes.co.uk/wp-content/themes/story/img/logos/affiliates/logo-property-awards-25-26.png"
+                                            loading="lazy">
+                                    </figure>
+
+                                    <!-- Property awards -->
+                                    <figure>
+                                        <a class="footer-logo-company" href="/">
+                                            <i class="footer-logo-company-wordmark svg"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.12 99.21">
+	<g class="logo-wordmark">
+		<path class="logo-wordmark-bg" d="M176.76,86a52.28,52.28,0,0,1-7.89,13.25h5.46A49,49,0,0,0,185.86,75.5c-.55,9.71-2.82,17.94-6.1,23.71h3.5c11-18.9-2.23-41.62-2.23-41.62,12.78,16.67,12.69,32.32,7.77,41.62h3c12.15-23.89-7.53-44.08-17.09-57.93C164,25.75,176,15.77,176,15.77c-9.88,15.61,3.67,26.33,19.72,48.41,9.38,12.91,4.85,27.61-1.3,35h60.75V0H0V99.21H163C173.2,93.75,176.76,86,176.76,86Z" fill="#003a5d"/>
+		<path class="logo-wordmark-primary" d="M176.76,86S173.2,93.75,163,99.21h5.9A52.28,52.28,0,0,0,176.76,86Z" fill="#fff"/>
+		<path class="logo-wordmark-secondary" d="M195.67,64.18c-16-22.08-29.6-32.8-19.72-48.41,0,0-12,10-1.27,25.51,9.56,13.85,29.24,34,17.09,57.93h2.6C200.52,91.79,205.05,77.09,195.67,64.18Z" fill="#9d9fa2"/>
+		<path class="logo-wordmark-primary" d="M181,57.59s13.26,22.72,2.23,41.62h5.54C193.72,89.91,193.81,74.26,181,57.59Z" fill="#fff"/>
+		<path class="logo-wordmark-secondary" d="M185.86,75.5a49,49,0,0,1-11.53,23.71h5.43C183,93.44,185.31,85.21,185.86,75.5Z" fill="#9d9fa2"/>
+		<path class="logo-wordmark-primary" d="M244.79,34.57C227.54,24,201.43,18,201.43,18c-8.54-12.71-21.13-5.37-21.64-5.1.49-.32,5.16.53,4.29,2-1.61,2.7,1.72.25,7.08,1.12,3.87.63,5.16,6.07.2,7.48-.7.19-2.36,1.2,3.24,2,3.49.5,3.66,3.71-.58,4.21-1.07.13-.35.22-3.34,1.24,0,0,23.61-2.24,53.77,3.76Z" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M19.25,44.9h1c0,10.5,6.19,15.43,13.69,15.43,6,0,10.31-3.81,10.31-9.43,0-6.5-3.38-8.44-10.56-9.56-9.81-1.56-14.44-3.19-14.44-13.69,0-7.12,4.69-12.31,11.69-12.31,6.43,0,8.87,3.81,11,3.81,1.43,0,1.62-1.56,1.81-2.37h1V29.9h-1c-.56-7.12-4.44-13.56-12.81-13.56-5.31,0-9.06,3.5-9.06,9.25s2.12,6.87,12.5,8.75C43.5,36,47.25,38.9,47.25,47s-4.5,14.31-13.56,14.31c-6.25,0-9.56-3.25-11.87-3.25-1.5,0-1.57,1.57-1.57,2.63h-1Z" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M54.56,35.71H49.12v-1c6.5.13,8.87-2.62,9.93-8.74h.75v8.74h8.63v1H59.8v21c0,2.56,1.07,3.37,3.07,3.37,3.12,0,4.49-2.87,4.87-3.93l.94.19a6.83,6.83,0,0,1-6.88,4.74c-4.37,0-7.24-1.43-7.24-5.56Z" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M90.67,44.77c0-5.43-.25-10.43-7.25-10.43s-7.24,5-7.24,10.43v4.88c0,5.43.25,10.43,7.24,10.43s7.25-5,7.25-10.43ZM83.42,33.34c8.07,0,13.25,6.68,13.25,13.87S91.49,61.08,83.42,61.08,70.18,54.4,70.18,47.21s5.18-13.87,13.24-13.87" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M102.88,35.71H97.63v-1h5.25c2,0,4-.12,5.25-1.37v7.37h.12c.75-2.81,2.94-7.37,8.07-7.37,2.31,0,4.12,1.5,4.12,3.69A2.74,2.74,0,0,1,117.91,40h-.35c-2.06,0-2.75-1.06-2.75-2.75a3,3,0,0,1,1.38-2.68,1.35,1.35,0,0,0-.88-.19c-2.56,0-7.18,4.06-7.18,12.18V59.34h5.68v1H97.63v-1h5.25Z" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M141.31,55.27l5.87-14.93a9.49,9.49,0,0,0,.82-3c0-1.25-1.07-1.63-3.63-1.63h-2.56v-1H154v1c-4,0-4.25.82-5.68,4.32l-5.56,14c-1.75,4.38-3.32,8.44-3.56,9.44-2.44,9.81-3.57,13.74-7.94,13.74a3.14,3.14,0,0,1-3.43-2.81c0-.14,0-.29,0-.43a2.85,2.85,0,0,1,2.7-3h.3a2.52,2.52,0,0,1,2.63,2.37c0,.44-.07.69-.07,1s.13.62.5.62c2.19,0,4.19-10.62,4.69-12.62L127,35.71h-3.37v-1h13.93v1h-4.5Z" fill="#fff"/>
+		<polygon class="logo-wordmark-secondary" points="50.03 71.36 52.14 71.36 52.14 76.16 58.54 76.16 58.54 71.36 60.65 71.36 60.65 84.37 58.54 84.37 58.54 78.06 52.14 78.06 52.14 84.37 50.03 84.37 50.03 71.36" fill="#9d9fa2"/>
+		<path class="logo-wordmark-secondary" d="M75.56,74.44a4.67,4.67,0,0,0-6.71,0,5,5,0,0,0,0,6.89,4.68,4.68,0,0,0,6.61.1.47.47,0,0,1,.1-.1,5,5,0,0,0,0-6.89m1.56,8.27a7,7,0,0,1-9.84,0,6.78,6.78,0,0,1,0-9.66,7.1,7.1,0,0,1,9.84,0,6.74,6.74,0,0,1,0,9.66" fill="#9d9fa2"/>
+		<path class="logo-wordmark-secondary" d="M93.94,76.16a6.76,6.76,0,0,1-.6,1.81l-3.4,6.92-3.4-7.07a9.82,9.82,0,0,1-.64-1.66A10.07,10.07,0,0,1,85.67,78l-1.4,6.4h-2l3.07-13.52L89.23,79c.11.23.35.82.71,1.76A17.49,17.49,0,0,1,90.69,79l3.74-8.17,3.15,13.52h-2L94.18,78c-.06-.24-.11-.82-.24-1.79" fill="#9d9fa2"/>
+		<polygon class="logo-wordmark-secondary" points="101.59 71.36 108.85 71.36 108.85 73.16 103.7 73.16 103.7 76.42 108.85 76.42 108.85 78.27 103.7 78.27 103.7 82.47 108.85 82.47 108.85 84.37 101.59 84.37 101.59 71.36" fill="#9d9fa2"/>
+		<path class="logo-wordmark-secondary" d="M114.36,81a2.33,2.33,0,0,0,2.51,1.78,1.86,1.86,0,0,0,2-1.65,1.22,1.22,0,0,0,0-.27c0-1.27-1-1.59-2.3-2.24-2.31-1.13-3.59-2-3.59-4s1.55-3.57,3.91-3.57c1.93,0,3.26.78,3.75,2.15l-1.66.85a2.16,2.16,0,0,0-1.92-1.18,1.64,1.64,0,0,0-1.84,1.41,1.79,1.79,0,0,0,0,.23c0,1.25,1,1.63,2.47,2.31,2.3,1,3.37,2,3.37,3.85,0,2.42-1.62,4-4.31,4-2.22,0-3.67-1-4.11-2.94Z" fill="#9d9fa2"/>
+		<circle class="logo-wordmark-primary" cx="190.62" cy="19.87" r="2.09" fill="#fff"/>
+		<path class="logo-wordmark-primary" d="M194.09,29.72c-1.75.23-5.68.14-8.36,3.34-3,3.54-2.66,8.14,6.91,20.79,9.45,12.49,12.09,18.09,10.6,29.64,2.86-7.1,2.16-12.91-.17-18.7-3.64-9.06-17.43-22-17.43-27.18,0-6,5.72-6.71,8-6.82C200.32,30.47,194.09,29.72,194.09,29.72Z" fill="#fff"/>
+		<path class="logo-wordmark-bg" d="M205.46,22.2c-3-1.45-5.41-1.87-5.54-1.33C199.59,22.25,205,22.31,205.46,22.2Z" fill="#003a5d"/>
+	</g>
+</svg></i>
+                                        </a>
+                                    </figure>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--// End of Footer logos -->
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer copyright -->
+    <div class="footer-copyright">
+        <div class="container container--xl">
+
+            <div class="footer-copyright-wrapper">
+
+                <div
+                    class="footer-copyright-accordion js-accordion-new"
+                    data-js-var="accordion_footer_copyright"
+                    data-init="767">
+                    <div class="footer-accordion-item">
+                        <button
+                            class="footer-accordion-toggle js-accordion-toggle"
+                            data-target="privacy-legal">
+                            <p class="footer-accordion-toggle-text">Privacy &amp; Legal</p>
+                            <i class="footer-accordion-toggle-icon svg icon"><svg viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" fill-rule="evenodd" clip-rule="evenodd" d="M0.432683 7.55596C-0.144228 6.97905 -0.144228 6.0437 0.432683 5.46678L5.45541 0.444057C6.03232 -0.132854 6.96768 -0.132854 7.54459 0.444057L12.5673 5.46678C13.1442 6.0437 13.1442 6.97905 12.5673 7.55596C11.9904 8.13288 11.055 8.13288 10.4781 7.55596L6.5 3.57783L2.52186 7.55596C1.94495 8.13288 1.00959 8.13288 0.432683 7.55596Z" fill="#003B5C"/>
+</svg>
+</i>
+                        </button>
+                        <div
+                            id="privacy-legal"
+                            class="footer-accordion-content js-accordion-content">
+                            <!-- Footer terms nav -->
+                            <nav class="footer-copyright-item footer-terms-nav">
+                                <div class="menu-wrapper">
+                                    <ul class="footer-nav-menu footer-terms-nav-menu menu">
+                                        <li class="menu-item"><button class="js-cookies-toggle js-cookies-configure">Manage Cookie Preferences</button></li>
+                                                                                <li class="menu-item"><a href="/policies-and-statements/">Policies &amp; Statements</a></li>
+                                        <li class="menu-item"><a href="https://www.storyhomes.co.uk/wp-content/uploads/2025/09/Modern-Slavery-Statement-YE-31-March-2025.pdf" target="_blank">Modern Slavery Statement</a></li>                                        <li class="menu-item"><a href="/terms-conditions/">T&amp;Cs</a></li>
+                                        <li class="menu-item"><a href="/cookies-privacy/">Cookie Policy</a></li>
+                                        <li class="menu-item"><a href="/privacy-policy/">Privacy Policy</a></li>
+                                        <li class="menu-item"><a href="/careers/recruitment-privacy-policy/">Recruitment Privacy Notice</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer smallprint -->
+                <div class="footer-copyright-item footer-smallprint">
+                    <p>&copy; 2026 Story Homes. All rights reserved.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--// End of Footer copyright -->
+
+</footer>
+<!--// End of Footer -->
+
+
+
+
+
+<!-- Pop Outs -->
+<aside
+    class="pop-out pop-out--bottom pop-out--center-desktop pop-out--portal js-pop-out"
+    data-pop-out="portal">
+    <div class="pop-out-overlay js-pop-out-overlay"></div>
+
+    <div class="pop-out-panels">
+        <div class="pop-out-panel pop-out-panel--white">
+
+            <figure class="pop-out-media">
+                <img
+                    class="pop-out-img"
+                    src="https://www.storyhomes.co.uk/wp-content/themes/story/img/img-modal-portal.png"
+                    alt="Portal"
+                    width="398"
+                    height="487"
+                    loading="lazy">
+            </figure>
+
+            <div class="pop-out-panel-inner">
+
+                <button
+                    class="pop-out-close js-pop-out-close"
+                    data-pop-out="portal">
+                    <i class="icon svg"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M0.363961 1.63604L1.77817 0.221826L15.9203 14.364L14.5061 15.7782L0.363961 1.63604Z" fill="#ffffff"/>
+	<path class="icon-fill" d="M1.77817 15.7782L0.363961 14.364L14.5061 0.221825L15.9203 1.63604L1.77817 15.7782Z" fill="#ffffff"/>
+</svg>
+</i>
+                </button>
+
+                <div class="pop-out-panel-inner-scroll">
+
+                    <header class="pop-out-header pop-out-header--20 u-align-left">
+                        <h3 class="pop-out-title">Sign in to your account</h3>
+                    </header>
+
+                    <div class="pop-out-content">
+                        <div class="portal-login-form-wrapper">
+    <form class="portal-login-form">
+
+        <div class="form-fields">
+            <div class="form-field">
+                <label
+                    class="form-field-label"
+                    for="email">
+                    Email Address
+                </label>
+                <input
+                    class="form-field-input"
+                    type="email"
+                    name="email">
+            </div>
+            <div class="form-field">
+                <label
+                    class="form-field-label"
+                    for="password">
+                    Password
+                </label>
+                <input
+                    class="form-field-input"
+                    type="password"
+                    name="password">
+
+                                    <p class="form-error"></p>
+                
+            </div>
+            <div class="form-field">
+                <button
+                    class="btn  btn--wild-ginger"
+                    type="submit">
+                    Login
+                </button>
+            </div>
+            <div class="form-field u-margin-0">
+                <p><a href="https://www.storyhomes.co.uk/portal/password-reset">Forgot your password?</a></p>
+                <p>New user? <a href="/create-account/">Create an account</a></p>
+                <p>Reserved a home? <a href="/create-reservation-account/">Access your home portal here</a></p>
+            </div>
+        </div>
+    </form>
+</div>                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</aside><aside
+    class="pop-out pop-out--bottom pop-out--trustpilot js-pop-out"
+    data-pop-out="trustpilot">
+    <div class="pop-out-overlay js-pop-out-overlay"></div>
+
+    <div class="pop-out-panels">
+        <div class="pop-out-panel pop-out-panel--blue">
+            <div class="pop-out-panel-inner">
+
+                <button
+                    class="pop-out-close js-pop-out-close"
+                    data-pop-out="trustpilot">
+                    <i class="icon svg"><svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path class="icon-fill" d="M0.363961 1.63604L1.77817 0.221826L15.9203 14.364L14.5061 15.7782L0.363961 1.63604Z" fill="#ffffff"/>
+	<path class="icon-fill" d="M1.77817 15.7782L0.363961 14.364L14.5061 0.221825L15.9203 1.63604L1.77817 15.7782Z" fill="#ffffff"/>
+</svg>
+</i>
+                </button>
+
+                <div class="pop-out-panel-inner-scroll">
+
+                    <div class="pop-out-content">
+                        <div class="trustpilot-slider">
+
+                            <div
+                                class="trustpilot-swiper swiper js-slider"
+                                data-js-var="slider_trustpilot_pop_out"
+                                data-slides-per-view="1"
+                                data-slides-per-group="1"
+                                data-loop="false"
+                                data-nested="false"
+                                data-centered="false"
+                                data-pagination-type="progressbar"
+                                data-space-between="20"
+                                data-free-mode="false"
+                                data-drag="true"
+                                data-autoplay="false">
+                                <div class="swiper-wrapper swiper-wrapper--stretch">
+                                                                            <div class="swiper-slide trustpilot-slider-item">
+                                            <figure class="trustpilot-slider-item-content">
+                                                <blockquote class="trustpilot-slider-item-quote trustpilot-slider-item-quote--full js-read-more">
+                                                    <div class="quote-wrapper">
+                                                        <div class="quote-text">Buying a Story house has been a very positive experience. Fiona was exceptional in giving us any information we required and went above and beyond in customer care. It has been a pleasure and we are looking forward to moving to Summerpark and being near our family who have also purchased Story homes. Louise Gordon</div>                                                    </div>
+                                                </blockquote>
+                                                <figcaption class="trustpilot-slider-item-caption">
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-name js-trustpilot-item-name">
+                                                        Louise Gordon                                                    </span>
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-date js-trustpilot-item-date">
+                                                        May 4, 2026                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                                                            <div class="swiper-slide trustpilot-slider-item">
+                                            <figure class="trustpilot-slider-item-content">
+                                                <blockquote class="trustpilot-slider-item-quote trustpilot-slider-item-quote--full js-read-more">
+                                                    <div class="quote-wrapper">
+                                                        <div class="quote-text">Had a great experience so far with going through buying a new build home from Fiona Ure @ Story Homes.</div>                                                    </div>
+                                                </blockquote>
+                                                <figcaption class="trustpilot-slider-item-caption">
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-name js-trustpilot-item-name">
+                                                        Jordan                                                    </span>
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-date js-trustpilot-item-date">
+                                                        May 3, 2026                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                                                            <div class="swiper-slide trustpilot-slider-item">
+                                            <figure class="trustpilot-slider-item-content">
+                                                <blockquote class="trustpilot-slider-item-quote trustpilot-slider-item-quote--full js-read-more">
+                                                    <div class="quote-wrapper">
+                                                        <div class="quote-text">Fiona was very welcoming when we entered the show home. Expert knowledge</div>                                                    </div>
+                                                </blockquote>
+                                                <figcaption class="trustpilot-slider-item-caption">
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-name js-trustpilot-item-name">
+                                                        Jade                                                    </span>
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-date js-trustpilot-item-date">
+                                                        May 3, 2026                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                                                            <div class="swiper-slide trustpilot-slider-item">
+                                            <figure class="trustpilot-slider-item-content">
+                                                <blockquote class="trustpilot-slider-item-quote trustpilot-slider-item-quote--full js-read-more">
+                                                    <div class="quote-wrapper">
+                                                        <div class="quote-text">Deborah made the whole experience a delight. She thought of everything we needed and sorted it all out. We are delighted with our new home and would recommend your company to anyone.</div>                                                    </div>
+                                                </blockquote>
+                                                <figcaption class="trustpilot-slider-item-caption">
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-name js-trustpilot-item-name">
+                                                        Robert Blacas                                                    </span>
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-date js-trustpilot-item-date">
+                                                        May 2, 2026                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                                                            <div class="swiper-slide trustpilot-slider-item">
+                                            <figure class="trustpilot-slider-item-content">
+                                                <blockquote class="trustpilot-slider-item-quote trustpilot-slider-item-quote--full js-read-more">
+                                                    <div class="quote-wrapper">
+                                                        <div class="quote-text">Over multiple visits to view the show home, Fiona at Story Dumfries made sure we had all the information wr needed to help with our decision. She was able to answer any questions we had and always returned email queries quickly.</div>                                                    </div>
+                                                </blockquote>
+                                                <figcaption class="trustpilot-slider-item-caption">
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-name js-trustpilot-item-name">
+                                                        Frankie Bowman                                                    </span>
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-date js-trustpilot-item-date">
+                                                        May 2, 2026                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                                                            <div class="swiper-slide trustpilot-slider-item">
+                                            <figure class="trustpilot-slider-item-content">
+                                                <blockquote class="trustpilot-slider-item-quote trustpilot-slider-item-quote--full js-read-more">
+                                                    <div class="quote-wrapper">
+                                                        <div class="quote-text">Zara made the process of putting our reservation down so easy, she explained everything to us clearly about our next steps and what we needed to do! She was able to answer all of our questions and made us feel at ease about the whole process</div>                                                    </div>
+                                                </blockquote>
+                                                <figcaption class="trustpilot-slider-item-caption">
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-name js-trustpilot-item-name">
+                                                        Rachel Adamson                                                    </span>
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-date js-trustpilot-item-date">
+                                                        May 2, 2026                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                                                            <div class="swiper-slide trustpilot-slider-item">
+                                            <figure class="trustpilot-slider-item-content">
+                                                <blockquote class="trustpilot-slider-item-quote trustpilot-slider-item-quote--full js-read-more">
+                                                    <div class="quote-wrapper">
+                                                        <div class="quote-text">Had a meeting with Wendy at the Foxbridge Rise site today and she was fab! Explained everything we needed to know and was more than happy to answer any of my random questions. Can’t fault the service so far ️</div>                                                    </div>
+                                                </blockquote>
+                                                <figcaption class="trustpilot-slider-item-caption">
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-name js-trustpilot-item-name">
+                                                        Consumer                                                    </span>
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-date js-trustpilot-item-date">
+                                                        May 1, 2026                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                                                            <div class="swiper-slide trustpilot-slider-item">
+                                            <figure class="trustpilot-slider-item-content">
+                                                <blockquote class="trustpilot-slider-item-quote trustpilot-slider-item-quote--full js-read-more">
+                                                    <div class="quote-wrapper">
+                                                        <div class="quote-text">Sam has been amazing with providing us with information about the property we are buying and also the site as a whole. She keeps in contact regularly and is always more than happy to answer any questions we have in timely manner. She has been amazing in helping us secure the plot we wanted. I couldn’t fault the service so far that has been provided. It’s always a pleasure to go and speak to the staff in the Story Homes marketing suite.</div>                                                    </div>
+                                                </blockquote>
+                                                <figcaption class="trustpilot-slider-item-caption">
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-name js-trustpilot-item-name">
+                                                        Jade Collier                                                    </span>
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-date js-trustpilot-item-date">
+                                                        April 30, 2026                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                                                            <div class="swiper-slide trustpilot-slider-item">
+                                            <figure class="trustpilot-slider-item-content">
+                                                <blockquote class="trustpilot-slider-item-quote trustpilot-slider-item-quote--full js-read-more">
+                                                    <div class="quote-wrapper">
+                                                        <div class="quote-text">We are in the process of buying our new home and everything has been such a smooth process from early birding our home back in February 2025 to selecting our upgrades and choices. Wendy at Foxbridge Rise has been fantastic and a consistent point of contact. She has answered all of our queries with no hesitation and has been so helpful. We are very much looking forward to moving into our new home early next year!</div>                                                    </div>
+                                                </blockquote>
+                                                <figcaption class="trustpilot-slider-item-caption">
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-name js-trustpilot-item-name">
+                                                        Kathryn Lloyd                                                    </span>
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-date js-trustpilot-item-date">
+                                                        April 30, 2026                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                                                            <div class="swiper-slide trustpilot-slider-item">
+                                            <figure class="trustpilot-slider-item-content">
+                                                <blockquote class="trustpilot-slider-item-quote trustpilot-slider-item-quote--full js-read-more">
+                                                    <div class="quote-wrapper">
+                                                        <div class="quote-text">Quick response from Michael with the information we needed. I have contacted Storyhomes in the past and always get a quick and helpful response.</div>                                                    </div>
+                                                </blockquote>
+                                                <figcaption class="trustpilot-slider-item-caption">
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-name js-trustpilot-item-name">
+                                                        Craig                                                    </span>
+                                                    <span class="trustpilot-slider-item-caption-item trustpilot-slider-item-date js-trustpilot-item-date">
+                                                        April 29, 2026                                                    </span>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                                                    </div>
+
+                                <div class="swiper-footer">
+                                    <div class="swiper-pagination swiper-pagination--slider_trustpilot_pop_out swiper-pagination--progress swiper-pagination--white trustpilot-slider-pagination"></div>
+                                    <div class="swiper-buttons swiper-buttons--white">
+                                        <div class="swiper-button swiper-button-prev swiper-button-prev-slider_trustpilot_pop_out"></div>
+                                        <div class="swiper-button swiper-button-next swiper-button-next-slider_trustpilot_pop_out"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</aside><!--// End of Pop Outs -->
+
+
+
+
+
+<!-- Modals -->
+<!--// End of Modals -->
+
+
+
+
+
+</div>
+<!--// End of Site Wrapper -->
+
+
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/nano.min.js?ver=1.0" id="nano-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/siteplan.js?ver=1.0.0" id="siteplanjs-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/nouislider.min.js?ver=1.0.0" id="nouislider-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/player.min.js?ver=1.0.0" id="player-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/lightgallery.min.js?ver=1.0.0" id="lightgallery-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/lightgallery-video.min.js?ver=1.0.0" id="lightgallery-video-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/components.lightgallery.js?ver=1.0.0" id="components-lightgallery-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/components.dropdowns.js?ver=1.0.0" id="components-dropdowns-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/swiper.min.js?ver=1.0.0" id="swiper-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/waypoints.min.js?ver=1.0.0" id="waypoints-js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTv3yNDT48i3-Nkhuhffv42Njb2RnmdSk" id="gmaps-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/components.panzoom.js?ver=1.0.4" id="components-panzoom-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/global-debug.js?ver=2.0.0.6" id="globaljs-js"></script>
+<script type="text/javascript" src="https://www.storyhomes.co.uk/wp-content/themes/story/js/portal.js"></script>
+
+</body>
+
+</html>
