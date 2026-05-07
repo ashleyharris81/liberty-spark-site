@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf } from "lucide-react";
+import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf, Download } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
@@ -266,6 +266,30 @@ const NationwideHire = () => {
       </section>
 
       <Sustainability />
+
+      {/* Request a Brochure */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+          <div className="rounded-2xl bg-primary border-2 border-secondary/40 p-10 md:p-14 text-center">
+            <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
+              Request a <span className="text-secondary">Brochure</span>
+            </h2>
+            <div className="w-20 h-1 bg-secondary mx-auto mt-4 mb-6" />
+            <p className="text-primary-foreground/75 text-lg max-w-2xl mx-auto">
+              Download our latest brochure for a complete overview of our welfare units, portable buildings and solar solutions.
+            </p>
+            <a
+              href="https://libertyguard.co.uk/wp-content/uploads/2025/10/Brochure.pdf"
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-3 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
+            >
+              <Download className="w-4 h-4" /> Download Brochure
+            </a>
+          </div>
+        </div>
+      </section>
       <section className="py-20 bg-navy-light">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="text-center mb-14">
