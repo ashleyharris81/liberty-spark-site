@@ -143,7 +143,7 @@ const NationwideHire = () => {
 
       {/* Range Showcase */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+        <div className="w-full px-3 md:px-4">
           <div className="grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-4 md:h-[420px]">
             {showcase.map((item) => (
               <Link
