@@ -409,7 +409,7 @@ const NationwideHire = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-navy-light">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
           <div className="rounded-2xl border-2 border-secondary/40 bg-primary p-10 md:p-14 text-center">
             <h2 className="font-heading text-3xl md:text-4xl font-black text-primary-foreground uppercase tracking-tight">
