@@ -9,6 +9,7 @@ import staticCard from "@/assets/welfare-static-card.jpg";
 import hybridCard from "@/assets/hybrid-24ft-twin-card.png";
 import msExterior from "@/assets/ms-exterior.jpg";
 import portableHero from "@/assets/portable-buildings-hero.jpg";
+import trustedCustomers from "@/assets/trusted-customers.png";
 
 const showcase = [
   { title: "Mobile Welfare", image: mobileCard, link: "/mobile-welfare" },
@@ -160,6 +161,21 @@ const NationwideHire = () => {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Trusted by */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8 max-w-6xl text-center">
+          <h2 className="font-heading text-2xl md:text-3xl font-black text-primary uppercase tracking-tight">
+            Trusted by our valued customers
+          </h2>
+          <div className="w-16 h-1 bg-secondary mx-auto mt-3 mb-10" />
+          <img
+            src={trustedCustomers}
+            alt="Trusted customers including HSS ProService, Miller Homes, Persimmon, MNDA, Story Homes, Taylor Wimpey, Kelling Group and Keepmoat Homes"
+            className="w-full h-auto max-w-5xl mx-auto"
+          />
         </div>
       </section>
 
