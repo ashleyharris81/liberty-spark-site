@@ -382,22 +382,6 @@ const NationwideHire = () => {
         </div>
       </section>
 
-      {/* Promises strip */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <div className="flex flex-wrap justify-center gap-3">
-            {promises.map((p) => (
-              <span
-                key={p}
-                className="px-4 py-2 rounded-full border border-secondary/40 text-secondary font-heading text-xs uppercase tracking-wider"
-              >
-                {p}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 bg-navy-light">
         <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
