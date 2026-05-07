@@ -292,11 +292,11 @@ const NationwideHire = () => {
         </div>
       </section>
 
-      <div className="h-12 md:h-16 bg-white" />
+      <div className="h-4 md:h-6 bg-white" />
 
       <Sustainability />
 
-      <div className="h-12 md:h-16 bg-white" />
+      <div className="h-4 md:h-6 bg-white" />
 
       {/* Solar Savings */}
       <section className="relative overflow-hidden">
@@ -353,7 +353,7 @@ const NationwideHire = () => {
         </div>
       </section>
 
-      <div className="h-12 md:h-16 bg-white" />
+      <div className="h-4 md:h-6 bg-white" />
 
       {/* Request a Brochure */}
       <section className="py-20 bg-white">
@@ -380,7 +380,7 @@ const NationwideHire = () => {
         </div>
       </section>
 
-      <div className="h-12 md:h-16 bg-white" />
+      <div className="h-4 md:h-6 bg-white" />
 
       <section className="py-20 bg-navy-light">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
