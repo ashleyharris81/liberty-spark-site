@@ -193,7 +193,7 @@ const NationwideHire = () => {
             {customers.map((c) => (
               <div
                 key={c.name}
-                className={`flex items-center justify-center h-16 ${c.dark ? "bg-primary rounded-md p-2" : ""}`}
+                className="flex items-center justify-center h-16"
               >
                 <img
                   src={c.logo}
