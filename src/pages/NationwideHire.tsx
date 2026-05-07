@@ -219,6 +219,18 @@ const NationwideHire = () => {
         </div>
       </section>
 
+      {/* Banner */}
+      <section className="bg-white">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <img
+            src={nationwideBanner}
+            alt="Nationwide Hire — UK coverage, 1500 fleet, 20 depots, 24/7 breakdown assistance"
+            className="w-full h-auto rounded-xl"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
       {/* Features Grid */}
       <section className="py-20 bg-navy-light">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
