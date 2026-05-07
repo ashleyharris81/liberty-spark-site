@@ -4,6 +4,7 @@ import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf } from "lucide-r
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import Sustainability from "@/components/Sustainability";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
 import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
@@ -264,7 +265,7 @@ const NationwideHire = () => {
         </div>
       </section>
 
-      {/* Features Grid */}
+      <Sustainability />
       <section className="py-20 bg-navy-light">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="text-center mb-14">
