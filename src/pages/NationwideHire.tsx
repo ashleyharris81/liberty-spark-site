@@ -5,7 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
-import nationwideBanner from "@/assets/nationwide-hire-banner.png";
+import UKDepotMap from "@/components/UKDepotMap";
+import { depots } from "@/data/depots";
 import mobileCard from "@/assets/welfare-mobile-card.jpg";
 import staticCard from "@/assets/welfare-static-card.jpg";
 import hybridCard from "@/assets/hybrid-24ft-twin-card.png";
@@ -219,15 +220,49 @@ const NationwideHire = () => {
         </div>
       </section>
 
-      {/* Banner */}
-      <section className="bg-white">
+      {/* Depot Map */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <img
-            src={nationwideBanner}
-            alt="Nationwide Hire — UK coverage, 1500 fleet, 20 depots, 24/7 breakdown assistance"
-            className="w-full h-auto rounded-xl"
-            loading="lazy"
-          />
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-5xl font-black text-primary uppercase tracking-tight">
+              Our UK <span className="text-secondary">Depot Network</span>
+            </h2>
+            <div className="w-20 h-1 bg-secondary mx-auto mt-4 mb-4" />
+            <p className="text-primary/70 max-w-2xl mx-auto">
+              {depots.length} strategically located depots covering the whole of mainland UK. Tap a pin for depot details.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 items-start">
+            <div className="bg-navy-light rounded-2xl p-4 md:p-6">
+              <UKDepotMap depots={depots} />
+            </div>
+            <div>
+              <div className="grid sm:grid-cols-2 gap-3 max-h-[640px] overflow-y-auto pr-2">
+                {depots.map((d) => (
+                  <a
+                    key={d.code}
+                    href={`tel:${(d.phone || "").replace(/\s/g, "")}`}
+                    className="block bg-white border border-primary/10 hover:border-secondary rounded-lg p-4 transition-colors"
+                  >
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4 text-secondary shrink-0" />
+                      <h3 className="font-heading font-black text-primary uppercase tracking-tight text-sm">
+                        {d.name}
+                      </h3>
+                    </div>
+                    <p className="text-primary/70 text-xs mt-2 leading-relaxed">
+                      {d.address}
+                    </p>
+                    {d.phone && (
+                      <p className="text-secondary text-xs font-bold mt-2">
+                        {d.phone}
+                      </p>
+                    )}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
