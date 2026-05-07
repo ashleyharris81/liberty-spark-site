@@ -189,11 +189,11 @@ const NationwideHire = () => {
             Trusted by our valued customers
           </h2>
           <div className="w-16 h-1 bg-secondary mx-auto mt-3 mb-12" />
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 items-center">
             {customers.map((c) => (
               <div
                 key={c.name}
-                className="flex items-center justify-center h-16"
+                className="flex items-center justify-center h-28 md:h-32"
               >
                 <img
                   src={c.logo}
