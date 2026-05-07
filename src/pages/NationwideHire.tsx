@@ -221,47 +221,48 @@ const NationwideHire = () => {
       </section>
 
       {/* Depot Map */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+      <section className="relative py-20 overflow-hidden">
+        <img
+          src={nationwideHero}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-5xl font-black text-primary uppercase tracking-tight">
+            <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
               Our UK <span className="text-secondary">Depot Network</span>
             </h2>
             <div className="w-20 h-1 bg-secondary mx-auto mt-4 mb-4" />
-            <p className="text-primary/70 max-w-2xl mx-auto">
+            <p className="text-primary-foreground/80 max-w-2xl mx-auto">
               {depots.length} strategically located depots covering the whole of mainland UK. Tap a pin for depot details.
             </p>
           </div>
-          <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 items-start">
-            <div className="bg-navy-light rounded-2xl p-4 md:p-6">
+          <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-10 items-center">
+            <div className="bg-primary/40 backdrop-blur-sm border border-secondary/30 rounded-2xl p-4 md:p-6">
               <UKDepotMap depots={depots} />
             </div>
-            <div>
-              <div className="grid sm:grid-cols-2 gap-3 max-h-[640px] overflow-y-auto pr-2">
-                {depots.map((d) => (
-                  <a
-                    key={d.code}
-                    href={`tel:${(d.phone || "").replace(/\s/g, "")}`}
-                    className="block bg-white border border-primary/10 hover:border-secondary rounded-lg p-4 transition-colors"
-                  >
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-secondary shrink-0" />
-                      <h3 className="font-heading font-black text-primary uppercase tracking-tight text-sm">
-                        {d.name}
-                      </h3>
-                    </div>
-                    <p className="text-primary/70 text-xs mt-2 leading-relaxed">
-                      {d.address}
-                    </p>
-                    {d.phone && (
-                      <p className="text-secondary text-xs font-bold mt-2">
-                        {d.phone}
-                      </p>
-                    )}
-                  </a>
-                ))}
-              </div>
-            </div>
+            <ul className="space-y-4">
+              {[
+                "UK coverage",
+                "Over 1500 fleet size",
+                "20 distribution depots",
+                "24/7 breakdown assistance",
+                "Toilet servicing available",
+                "24-hour turnaround",
+                "Short-term & long-term hire",
+                "Extensive product range",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-3 font-heading font-black text-xl md:text-2xl text-primary-foreground uppercase tracking-tight"
+                >
+                  <MapPin className="w-6 h-6 text-secondary shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
