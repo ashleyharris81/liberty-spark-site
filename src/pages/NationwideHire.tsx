@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import Sustainability from "@/components/Sustainability";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
+import solarSavingsBg from "@/assets/solar-savings-bg.jpg";
 import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
 import mobileCard from "@/assets/welfare-mobile-card.jpg";
