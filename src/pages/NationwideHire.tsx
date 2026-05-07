@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
+import nationwideBanner from "@/assets/nationwide-hire-banner.png";
 import mobileCard from "@/assets/welfare-mobile-card.jpg";
 import staticCard from "@/assets/welfare-static-card.jpg";
 import hybridCard from "@/assets/hybrid-24ft-twin-card.png";
