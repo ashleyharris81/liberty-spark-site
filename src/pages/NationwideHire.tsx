@@ -60,7 +60,7 @@ const NationwideHire = () => {
                 className="mt-4 text-lg md:text-xl text-primary-foreground/80 max-w-3xl animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                Welfare units delivered nationwide, supported by 20 distribution depots, a 1,500+ strong fleet and 40+ years of industry experience.
+                Depots throughout the UK / Sustainable site solutions / Specialists in the industry / Dedicated aftercare department / Site compliant facilities / Lowering carbon emissions / Money saving solar range / High specification marketing suites / Save water with rainwater harvesting technology / Nationwide coverage /
               </p>
             </div>
           </div>
