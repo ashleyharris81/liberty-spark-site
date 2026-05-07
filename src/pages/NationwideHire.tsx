@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
+import nationwideBanner from "@/assets/nationwide-hire-banner.png";
 import mobileCard from "@/assets/welfare-mobile-card.jpg";
 import staticCard from "@/assets/welfare-static-card.jpg";
 import hybridCard from "@/assets/hybrid-24ft-twin-card.png";
@@ -215,6 +216,18 @@ const NationwideHire = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Banner */}
+      <section className="bg-white">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <img
+            src={nationwideBanner}
+            alt="Nationwide Hire — UK coverage, 1500 fleet, 20 depots, 24/7 breakdown assistance"
+            className="w-full h-auto rounded-xl"
+            loading="lazy"
+          />
         </div>
       </section>
 
