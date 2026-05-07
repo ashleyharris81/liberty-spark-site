@@ -9,7 +9,25 @@ import staticCard from "@/assets/welfare-static-card.jpg";
 import hybridCard from "@/assets/hybrid-24ft-twin-card.png";
 import msExterior from "@/assets/ms-exterior.jpg";
 import portableHero from "@/assets/portable-buildings-hero.jpg";
-import trustedCustomers from "@/assets/trusted-customers.png";
+import logoHss from "@/assets/customers/hss.png";
+import logoMiller from "@/assets/customers/miller-homes.png";
+import logoPersimmon from "@/assets/customers/persimmon.png";
+import logoMnda from "@/assets/customers/mnda.svg";
+import logoStory from "@/assets/customers/story-homes.png";
+import logoTaylor from "@/assets/customers/taylor-wimpey.svg";
+import logoKelling from "@/assets/customers/kelling.svg";
+import logoKeepmoat from "@/assets/customers/keepmoat.svg";
+
+const customers = [
+  { name: "HSS ProService", logo: logoHss },
+  { name: "Miller Homes", logo: logoMiller },
+  { name: "Persimmon", logo: logoPersimmon },
+  { name: "MND Association", logo: logoMnda },
+  { name: "Story Homes", logo: logoStory, dark: true },
+  { name: "Taylor Wimpey", logo: logoTaylor },
+  { name: "Kelling Group", logo: logoKelling },
+  { name: "Keepmoat Homes", logo: logoKeepmoat },
+];
 
 const showcase = [
   { title: "Mobile Welfare", image: mobileCard, link: "/mobile-welfare" },
@@ -170,12 +188,22 @@ const NationwideHire = () => {
           <h2 className="font-heading text-2xl md:text-3xl font-black text-primary uppercase tracking-tight">
             Trusted by our valued customers
           </h2>
-          <div className="w-16 h-1 bg-secondary mx-auto mt-3 mb-10" />
-          <img
-            src={trustedCustomers}
-            alt="Trusted customers including HSS ProService, Miller Homes, Persimmon, MNDA, Story Homes, Taylor Wimpey, Kelling Group and Keepmoat Homes"
-            className="w-full h-auto max-w-5xl mx-auto"
-          />
+          <div className="w-16 h-1 bg-secondary mx-auto mt-3 mb-12" />
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8 items-center">
+            {customers.map((c) => (
+              <div
+                key={c.name}
+                className={`flex items-center justify-center h-16 ${c.dark ? "bg-primary rounded-md p-2" : ""}`}
+              >
+                <img
+                  src={c.logo}
+                  alt={`${c.name} logo`}
+                  loading="lazy"
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
