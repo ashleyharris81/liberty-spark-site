@@ -294,6 +294,9 @@ const NationwideHire = () => {
           </div>
         </div>
       </section>
+
+      <div className="h-12 md:h-16 bg-white" />
+
       <section className="py-20 bg-navy-light">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="text-center mb-14">
