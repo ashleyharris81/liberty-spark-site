@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
-import nationwideMap from "@/assets/nationwide-map.jpg";
+
 
 const features = [
   { icon: MapPin, title: "UK Coverage", text: "Nationwide reach across mainland UK" },
