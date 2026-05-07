@@ -54,7 +54,7 @@ const NationwideHire = () => {
                 ← Back to Home
               </Link>
               <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-tight animate-fade-in-up">
-                Nationwide <span className="text-secondary">Hire</span>
+                Liberty Group <span className="text-secondary">Welfare Hire</span>
               </h1>
               <p
                 className="mt-4 text-lg md:text-xl text-primary-foreground/80 max-w-3xl animate-fade-in-up"
