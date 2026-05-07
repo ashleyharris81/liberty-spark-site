@@ -198,7 +198,7 @@ const NationwideHire = () => {
             {[...customers, ...customers].map((c, i) => (
               <div
                 key={`${c.name}-${i}`}
-                className="flex items-center justify-center h-20 md:h-24 shrink-0"
+                className="flex items-center justify-center h-14 md:h-16 shrink-0"
               >
                 <img
                   src={c.logo}
