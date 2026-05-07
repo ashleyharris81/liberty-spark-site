@@ -272,6 +272,63 @@ const NationwideHire = () => {
 
       <div className="h-12 md:h-16 bg-white" />
 
+      {/* Solar Savings */}
+      <section className="relative overflow-hidden">
+        <img
+          src={solarSavingsBg}
+          alt=""
+          aria-hidden
+          loading="lazy"
+          width={1920}
+          height={768}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-primary/70" />
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 max-w-7xl py-20">
+          <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-10 items-center">
+            <div>
+              <h2 className="font-heading text-4xl md:text-6xl font-black text-primary-foreground uppercase tracking-tight leading-none">
+                Solar
+                <span className="block w-16 h-1 bg-secondary my-3" />
+                A Brighter
+                <br />
+                <span className="text-secondary">Future</span>
+              </h2>
+            </div>
+            <div>
+              <p className="font-heading text-2xl md:text-3xl font-bold text-primary-foreground">
+                Switch to solar welfare & save{" "}
+                <span className="text-secondary">£11,281 a year</span>
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 mt-8">
+                {[
+                  { icon: ArrowDown, value: "£6,925", label: "Fuel Savings" },
+                  { icon: Cloud, value: "10,201kg", label: "CO₂ Emissions" },
+                  { icon: Fuel, value: "3,221L", label: "Fuel Saved" },
+                  { icon: Plug, value: "£2,016", label: "Generator Servicing" },
+                  { icon: Users, value: "£2,340", label: "Toilet Servings" },
+                ].map(({ icon: Icon, value, label }) => (
+                  <div key={label} className="flex flex-col items-center text-center">
+                    <div className="w-14 h-14 rounded-full border-2 border-secondary flex items-center justify-center mb-3">
+                      <Icon className="w-6 h-6 text-secondary" />
+                    </div>
+                    <p className="font-heading font-black text-lg text-primary-foreground">
+                      {value}
+                    </p>
+                    <p className="text-xs text-primary-foreground/75 mt-1">{label}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-primary-foreground/60 mt-6 italic">
+                Data compares a 24ft standard diesel welfare unit with a 24ft Ultimate eco solar welfare unit
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="h-12 md:h-16 bg-white" />
+
       {/* Request a Brochure */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
