@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
-import heroBg from "@/assets/hero-bg.jpg";
+const heroBg = "https://customer-p8mic15ze1rkgi3y.cloudflarestream.com/72c99cace1b5f8642fab7ab476c7c65c/thumbnails/thumbnail.jpg?time=2s&height=900";
 
 interface SpecCategory {
   title: string;
