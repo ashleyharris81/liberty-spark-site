@@ -107,7 +107,7 @@ const NationwideHire = () => {
               >
                 <p
                   key={promiseIndex}
-                  className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-yellow leading-[0.95] animate-fade-in-up"
+                  className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-secondary leading-[0.95] animate-fade-in-up"
                 >
                   {promises[promiseIndex]}
                 </p>
