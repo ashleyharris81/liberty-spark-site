@@ -314,8 +314,8 @@ const NationwideHire = () => {
           <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.5fr)] gap-10 items-center">
             <div>
               <h2 className="font-heading text-4xl md:text-6xl font-black text-primary-foreground uppercase tracking-tight leading-none">
-                Solar
-                <span className="block w-16 h-1 bg-secondary my-3" />
+                <span className="text-yellow">Solar</span>
+                <span className="block w-16 h-1 bg-yellow my-3" />
                 A Brighter
                 <br />
                 <span className="text-secondary">Future</span>
@@ -324,7 +324,7 @@ const NationwideHire = () => {
             <div>
               <p className="font-heading text-2xl md:text-3xl font-bold text-primary-foreground">
                 Switch to solar welfare & save{" "}
-                <span className="text-secondary">£11,281 a year</span>
+                <span className="text-yellow">£11,281 a year</span>
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 mt-8">
                 {[
