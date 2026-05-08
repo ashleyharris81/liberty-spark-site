@@ -99,15 +99,15 @@ const NationwideHire = () => {
               </span>
               <h1 className="mt-6 font-heading text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground uppercase tracking-tight leading-[0.95] animate-fade-in-up max-w-5xl">
                 Liberty Group
-                <span className="block text-secondary">Welfare Hire</span>
+                <span className="block text-yellow">Welfare Hire</span>
               </h1>
               <div
-                className="mt-6 h-10 md:h-12 overflow-hidden animate-fade-in-up"
+                className="mt-6 h-12 md:h-20 lg:h-24 overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
                 <p
                   key={promiseIndex}
-                  className="text-xl md:text-2xl font-heading font-bold text-secondary animate-fade-in-up"
+                  className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-yellow leading-[0.95] animate-fade-in-up"
                 >
                   {promises[promiseIndex]}
                 </p>
