@@ -1,4 +1,4 @@
-import sustainabilityBg from "@/assets/sustainability-bg.jpg";
+import sustainabilityBg from "@/assets/sustainability-pledge.jpg";
 import { Leaf, Zap, Droplets, VolumeX } from "lucide-react";
 
 const stats = [
@@ -15,7 +15,7 @@ const Sustainability = () => {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${sustainabilityBg})` }}
       />
-      <div className="absolute inset-0 bg-primary/85" />
+      
       <div className="relative z-10 container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
