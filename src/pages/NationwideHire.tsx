@@ -102,12 +102,12 @@ const NationwideHire = () => {
                 <span className="block text-yellow">Welfare Hire</span>
               </h1>
               <div
-                className="mt-6 h-12 md:h-20 lg:h-24 overflow-hidden animate-fade-in-up"
+                className="mt-6 h-8 md:h-12 lg:h-16 overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
                 <p
                   key={promiseIndex}
-                  className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold text-secondary leading-[0.95] animate-fade-in-up"
+                  className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-secondary leading-[0.95] animate-fade-in-up"
                 >
                   {promises[promiseIndex]}
                 </p>
