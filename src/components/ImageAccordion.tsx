@@ -39,7 +39,7 @@ const ImageAccordion = () => {
   const [activeIndex, setActiveIndex] = useState(2);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="pt-6 pb-16 bg-white">
       <div className="w-full px-3 md:px-4">
         {/* Mobile: stacked cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:hidden">
