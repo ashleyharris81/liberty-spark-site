@@ -15,7 +15,14 @@ const MobiModel = () => {
     <div className="min-h-screen">
       <Navbar />
 
-      <section className="pt-28 pb-20 bg-primary">
+      {/* Full-width hero video */}
+      <section className="pt-20 bg-primary">
+        <div className="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
+          <CloudflareVideo uid={model.uid} variant="hero" />
+        </div>
+      </section>
+
+      <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 lg:px-8">
           <Link
             to="/mobile-welfare"
@@ -26,7 +33,7 @@ const MobiModel = () => {
           </Link>
 
           <div className="max-w-7xl mx-auto">
-            <div className="mb-8">
+            <div className="mb-12">
               {model.isHybrid && (
                 <span className="inline-block px-3 py-1 mb-4 rounded-full bg-secondary/20 text-secondary font-heading text-xs font-bold uppercase tracking-wider">
                   Hybrid Range
@@ -40,12 +47,6 @@ const MobiModel = () => {
                   {model.subtitle}
                 </p>
               )}
-            </div>
-
-            <div className="mb-12 mx-auto w-full max-w-[900px]">
-              <div className="rounded-xl overflow-hidden border border-primary-foreground/10">
-                <CloudflareVideo uid={model.uid} variant="card" />
-              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
@@ -67,6 +68,17 @@ const MobiModel = () => {
                   </ul>
                 </div>
               ))}
+            </div>
+
+            <div className="mt-12 flex justify-center">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
+              >
+                Product Specification Sheet
+              </a>
             </div>
           </div>
         </div>
