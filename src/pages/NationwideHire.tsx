@@ -8,6 +8,7 @@ import CloudflareVideo from "@/components/CloudflareVideo";
 import Sustainability from "@/components/Sustainability";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
 import solarSavingsBg from "@/assets/solar-savings-bg.jpg";
+import whyLibertyBg from "@/assets/why-liberty-bg.jpg";
 import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
 import mobileCard from "@/assets/welfare-mobile-card.jpg";
