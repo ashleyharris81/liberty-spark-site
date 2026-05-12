@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import Sustainability from "@/components/Sustainability";
+import ImageAccordion from "@/components/ImageAccordion";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
 import solarSavingsBg from "@/assets/solar-savings-bg.jpg";
 import whyLibertyBg from "@/assets/why-liberty-bg.jpg";
