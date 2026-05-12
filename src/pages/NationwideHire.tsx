@@ -8,6 +8,7 @@ import CloudflareVideo from "@/components/CloudflareVideo";
 import Sustainability from "@/components/Sustainability";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
 import solarSavingsBg from "@/assets/solar-savings-bg.jpg";
+import whyLibertyBg from "@/assets/why-liberty-bg.jpg";
 import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
 import mobileCard from "@/assets/welfare-mobile-card.jpg";
@@ -382,11 +383,16 @@ const NationwideHire = () => {
 
       <div className="h-4 md:h-6 bg-white" />
 
-      <section className="py-20 bg-navy-light">
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+      <section className="relative py-20 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${whyLibertyBg})` }}
+        />
+        <div className="absolute inset-0 bg-primary/80" />
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="text-center mb-14">
             <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
-              Why <span className="text-secondary">Liberty Guard</span>
+              Why <span className="text-secondary">Liberty Group</span>
             </h2>
             <div className="w-20 h-1 bg-secondary mx-auto mt-4" />
           </div>
@@ -394,7 +400,7 @@ const NationwideHire = () => {
             {features.map(({ icon: Icon, title, text }) => (
               <div
                 key={title}
-                className="bg-primary rounded-xl p-6 border border-primary-foreground/10 hover:border-secondary/60 transition-colors"
+                className="bg-primary/70 backdrop-blur-sm rounded-xl p-6 border border-primary-foreground/10 hover:border-secondary/60 transition-colors"
               >
                 <div className="w-12 h-12 rounded-lg bg-secondary/15 flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-secondary" />
