@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import Sustainability from "@/components/Sustainability";
+import ImageAccordion from "@/components/ImageAccordion";
 import nationwideHero from "@/assets/nationwide-hero.jpg";
 import solarSavingsBg from "@/assets/solar-savings-bg.jpg";
 import whyLibertyBg from "@/assets/why-liberty-bg.jpg";
@@ -179,45 +180,7 @@ const NationwideHire = () => {
       </section>
 
       {/* Range Showcase */}
-      <section className="py-20 bg-white">
-        <div className="w-full px-3 md:px-4">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-4 md:h-[420px]">
-            {showcase.map((item) => (
-              <Link
-                key={item.title}
-                to={item.link}
-                onClick={() => window.scrollTo(0, 0)}
-                className={`group relative overflow-hidden rounded-xl h-56 md:h-auto ${
-                  item.featured ? "col-span-2 md:col-span-2" : "md:col-span-1"
-                }`}
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-primary/40 group-hover:bg-primary/30 transition-colors" />
-                {item.featured ? (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
-                    <h3 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground uppercase tracking-tight">
-                      {item.title}
-                    </h3>
-                    <span className="mt-4 inline-block bg-white text-primary font-heading font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-md group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
-                      Take a Look
-                    </span>
-                  </div>
-                ) : (
-                  <div className="absolute bottom-0 inset-x-0 p-4 z-10">
-                    <h3 className="font-heading text-sm md:text-base font-black text-primary-foreground uppercase tracking-tight">
-                      {item.title}
-                    </h3>
-                  </div>
-                )}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ImageAccordion />
 
       {/* Trusted by */}
       <section className="py-16 bg-white overflow-hidden">
