@@ -92,10 +92,8 @@ const ImageAccordion = () => {
                   className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10"
                 >
                   <h3
-                    className={`font-heading font-black text-primary-foreground uppercase tracking-tight transition-all duration-500 ${
-                      isActive
-                        ? "text-2xl lg:text-4xl"
-                        : "text-base lg:text-lg [writing-mode:vertical-rl] rotate-180"
+                    className={`font-heading font-black text-primary-foreground uppercase tracking-tight transition-all duration-500 text-center ${
+                      isActive ? "text-2xl lg:text-4xl opacity-100" : "text-sm opacity-0"
                     }`}
                   >
                     {item.title}
