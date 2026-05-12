@@ -138,7 +138,7 @@ const NationwideHire = () => {
       </section>
 
       {/* Our Business */}
-      <section className="py-20 bg-white">
+      <section className="pt-20 pb-10 bg-white">
         <div className="container mx-auto px-4 lg:px-8 max-w-5xl text-center">
           <h2 className="font-heading text-3xl md:text-5xl font-black text-primary uppercase tracking-tight">
             Our <span className="text-secondary">Business</span>
