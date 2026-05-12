@@ -35,27 +35,42 @@ const CloudflareVideo = ({
     } else if (Hls.isSupported()) {
       hls = new Hls({
         capLevelToPlayerSize: false,
-        autoStartLoad: true,
+        autoStartLoad: false, // wait until we set the highest level before loading any fragments
         startLevel: -1,
         maxBufferLength: 30,
+        maxMaxBufferLength: 60,
+        backBufferLength: 30,
       });
       hls.attachMedia(video);
       hls.on(Hls.Events.MEDIA_ATTACHED, () => {
         hls!.loadSource(manifest);
       });
       hls.on(Hls.Events.MANIFEST_PARSED, (_e, data) => {
-        // Force highest-quality rendition immediately
+        // Force highest-quality rendition before any fragments are fetched
         const top = (data.levels?.length ?? hls!.levels.length) - 1;
         if (top >= 0) {
           hls!.startLevel = top;
+          hls!.autoLevelCapping = top;
           hls!.nextLevel = top;
           hls!.currentLevel = top;
-          hls!.autoLevelCapping = top;
         }
+        // Pre-buffer at top quality, then start playback
+        hls!.startLoad(0);
+        const tryPlay = () => {
+          // Start once we have ~3s of high-quality buffer
+          if (video.buffered.length && video.buffered.end(0) >= 3) {
+            video.play().catch(() => {});
+            video.removeEventListener("progress", tryPlay);
+          }
+        };
+        video.addEventListener("progress", tryPlay);
+        // Safety net: start after 4s regardless
+        setTimeout(() => {
+          video.play().catch(() => {});
+          video.removeEventListener("progress", tryPlay);
+        }, 4000);
       });
     }
-
-    video.play().catch(() => {});
 
     return () => {
       if (hls) hls.destroy();
