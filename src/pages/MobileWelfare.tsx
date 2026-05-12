@@ -80,9 +80,12 @@ const MobileWelfare = () => {
           <img
             src={heroBg}
             alt="Liberty Guard mobile welfare unit"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover z-0"
           />
-          <div className="absolute inset-0 bg-primary/60" />
+          <div className="absolute inset-0 z-[1]">
+            <CloudflareVideo uid="718203c553ab7aac3268319b9aae8427" variant="hero" />
+          </div>
+          <div className="absolute inset-0 bg-primary/60 z-[2]" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
               <Link
