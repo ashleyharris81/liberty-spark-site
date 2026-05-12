@@ -33,13 +33,24 @@ const CloudflareVideo = ({
       // Safari
       video.src = manifest;
     } else if (Hls.isSupported()) {
-      hls = new Hls({ capLevelToPlayerSize: false, autoStartLoad: true });
-      hls.loadSource(manifest);
+      hls = new Hls({
+        capLevelToPlayerSize: false,
+        autoStartLoad: true,
+        startLevel: -1,
+        maxBufferLength: 30,
+      });
       hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        // Pick the highest-quality rendition
-        if (hls && hls.levels.length > 0) {
-          hls.currentLevel = hls.levels.length - 1;
+      hls.on(Hls.Events.MEDIA_ATTACHED, () => {
+        hls!.loadSource(manifest);
+      });
+      hls.on(Hls.Events.MANIFEST_PARSED, (_e, data) => {
+        // Force highest-quality rendition immediately
+        const top = (data.levels?.length ?? hls!.levels.length) - 1;
+        if (top >= 0) {
+          hls!.startLevel = top;
+          hls!.nextLevel = top;
+          hls!.currentLevel = top;
+          hls!.autoLevelCapping = top;
         }
       });
     }
