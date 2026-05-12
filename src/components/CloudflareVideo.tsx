@@ -57,18 +57,18 @@ const CloudflareVideo = ({
         // Pre-buffer at top quality, then start playback
         hls!.startLoad(0);
         const tryPlay = () => {
-          // Start once we have ~3s of high-quality buffer
-          if (video.buffered.length && video.buffered.end(0) >= 3) {
+          // Start once we have ~7s of high-quality buffer
+          if (video.buffered.length && video.buffered.end(0) >= 7) {
             video.play().catch(() => {});
             video.removeEventListener("progress", tryPlay);
           }
         };
         video.addEventListener("progress", tryPlay);
-        // Safety net: start after 4s regardless
+        // Safety net: start after 9s regardless
         setTimeout(() => {
           video.play().catch(() => {});
           video.removeEventListener("progress", tryPlay);
-        }, 4000);
+        }, 9000);
       });
     }
 
