@@ -172,29 +172,65 @@ const Solar = () => {
           <h2 className="font-heading text-3xl md:text-4xl font-black text-primary-foreground uppercase tracking-tight text-center mb-12">
             Our Solar <span className="text-secondary">Products</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {solarProducts.map((product) => (
               <Link
                 key={product.title}
                 to={product.link}
                 onClick={() => window.scrollTo(0, 0)}
-                className="group bg-navy-light rounded-xl p-8 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 text-center block"
+                className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/60 transition-all duration-300 aspect-[4/3]"
               >
-                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-secondary/30 transition-colors">
-                  <product.icon className="w-8 h-8 text-secondary" />
+                <CategoryCardMedia product={product} />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <h3 className="font-heading text-xl md:text-2xl font-black text-primary-foreground uppercase tracking-tight">
+                    {product.title}
+                  </h3>
+                  <p className="mt-2 text-primary-foreground/80 text-sm leading-snug line-clamp-2">
+                    {product.description}
+                  </p>
+                  <span className="mt-2 inline-block text-secondary font-heading text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+                    Take a Look →
+                  </span>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-primary-foreground uppercase tracking-wide mb-3">
-                  {product.title}
-                </h3>
-                <p className="text-primary-foreground/70 text-sm leading-relaxed">
-                  {product.description}
-                </p>
-                <span className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider group-hover:underline">
-                  Take a Look →
-                </span>
               </Link>
             ))}
+
+            <Link
+              to="/new-account"
+              onClick={() => window.scrollTo(0, 0)}
+              className="group relative overflow-hidden rounded-xl border-2 border-secondary/60 hover:border-secondary bg-primary hover:bg-secondary/10 transition-all duration-300 aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"
+            >
+              <ClipboardList className="w-14 h-14 text-secondary mb-4" />
+              <h3 className="font-heading text-xl font-black text-primary-foreground uppercase tracking-tight">
+                New Customer
+              </h3>
+              <p className="mt-1 font-heading text-sm text-primary-foreground/80 uppercase tracking-wider">
+                Open an Account
+              </p>
+              <span className="mt-3 text-secondary font-heading text-xs font-semibold uppercase tracking-wider">
+                Get Started →
+              </span>
+            </Link>
+
+            <Link
+              to="/contact"
+              onClick={() => window.scrollTo(0, 0)}
+              className="group relative overflow-hidden rounded-xl border-2 border-secondary/60 hover:border-secondary bg-primary hover:bg-secondary/10 transition-all duration-300 aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"
+            >
+              <Mail className="w-14 h-14 text-secondary mb-4" />
+              <h3 className="font-heading text-xl font-black text-primary-foreground uppercase tracking-tight">
+                Email Us
+              </h3>
+              <p className="mt-1 font-heading text-sm text-primary-foreground/80 uppercase tracking-wider">
+                Request a Quote
+              </p>
+              <span className="mt-3 text-secondary font-heading text-xs font-semibold uppercase tracking-wider">
+                Contact →
+              </span>
+            </Link>
           </div>
+
         </div>
       </section>
 
