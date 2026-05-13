@@ -13,12 +13,14 @@ interface SpecCategory {
 interface Product {
   title: string;
   uid: string;
+  specSheet?: string;
   specs: SpecCategory[];
 }
 
 const products: Product[] = [
   {
     title: "12ft Solar Dry",
+    specSheet: "/downloads/12ft_solar_dry.pdf",
     uid: "dae4d7a7bed6537e29f3d6811b9b5722",
     specs: [
       {
@@ -150,6 +152,18 @@ const SolarDryingRoom = () => {
                       </div>
                     ))}
                   </div>
+                  {product.specSheet && (
+                    <div className="mt-8 flex justify-center">
+                      <a
+                        href={product.specSheet}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
+                      >
+                        Product Specification Sheet
+                      </a>
+                    </div>
+                  )}
                 </div>
               </article>
             ))}

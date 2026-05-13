@@ -13,6 +13,7 @@ interface SpecCategory {
 interface Product {
   title: string;
   uid: string;
+  specSheet?: string;
   specs: SpecCategory[];
 }
 
@@ -138,6 +139,7 @@ const OFFICE_20: SpecCategory = {
 const products: Product[] = [
   {
     title: "12ft Ultimate Eco",
+    specSheet: "/downloads/12ft_ultimate_eco.pdf",
     uid: "e167fa58628c9062d8051429040b06f9",
     specs: [
       CANTEEN_12,
@@ -153,6 +155,7 @@ const products: Product[] = [
   },
   {
     title: "12ft Ultimate Eco Plus",
+    specSheet: "/downloads/12ft_ultimate_eco_plus.pdf",
     uid: "cc2bc1dcb70121e85dc49d711dffd3c0",
     specs: [
       CANTEEN_12,
@@ -168,6 +171,7 @@ const products: Product[] = [
   },
   {
     title: "20ft Ultimate Eco",
+    specSheet: "/downloads/20ft_ultimate_eco.pdf",
     uid: "c508c767438ac222f1cac1294fbfcde1",
     specs: [
       CANTEEN_20,
@@ -184,6 +188,7 @@ const products: Product[] = [
   },
   {
     title: "20ft Ultimate Eco Plus",
+    specSheet: "/downloads/20ft_ultimate_eco_plus.pdf",
     uid: "750f03c60dde24f7d87081424513b5f4",
     specs: [
       CANTEEN_20,
@@ -200,6 +205,7 @@ const products: Product[] = [
   },
   {
     title: "24ft Ultimate Eco Plus",
+    specSheet: "/downloads/24ft_ultimate_eco_plus.pdf",
     uid: "a1c53ee2fffe88785f5e3f8798030aa6",
     specs: [
       CANTEEN_20,
@@ -309,6 +315,18 @@ const SolarMobileWelfare = () => {
                       </div>
                     ))}
                   </div>
+                  {product.specSheet && (
+                    <div className="mt-8 flex justify-center">
+                      <a
+                        href={product.specSheet}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
+                      >
+                        Product Specification Sheet
+                      </a>
+                    </div>
+                  )}
                 </div>
               </article>
             ))}
