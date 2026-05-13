@@ -257,8 +257,8 @@ const _models_unordered: StaticModel[] = [
   },
 ];
 
-// Display order: place 32ft Master in the middle (index 1)
-const order = ["25ft-solar-static", "32ft-master", "26ft-junior-plus", "28ft-eco-hybrid"];
+// Display order: size order 25, 26, 28, 32
+const order = ["25ft-solar-static", "26ft-junior-plus", "28ft-eco-hybrid", "32ft-master"];
 export const staticModels: StaticModel[] = order
   .map((slug) => _models_unordered.find((m) => m.slug === slug)!)
   .filter(Boolean);
