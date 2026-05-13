@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, FileText } from "lucide-react";
 import { useState } from "react";
+import { downloadFile } from "@/lib/downloadFile";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -61,7 +62,11 @@ const Contact = () => {
                 </div>
               </div>
 
-              <a href="/Liberty-Guard-Brochure.pdf" download="Liberty-Guard-Brochure.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
+              <button
+                type="button"
+                onClick={() => downloadFile("/Liberty-Guard-Brochure.pdf", "Liberty-Guard-Brochure.pdf")}
+                className="flex items-center gap-4 group text-left"
+              >
                 <div className="w-14 h-14 bg-secondary/20 rounded-lg flex items-center justify-center group-hover:bg-secondary/30 transition-colors">
                   <FileText className="w-6 h-6 text-secondary" />
                 </div>
@@ -69,7 +74,7 @@ const Contact = () => {
                   <p className="text-primary-foreground/60 text-sm font-medium">Downloads</p>
                   <p className="text-primary-foreground font-heading font-bold">Download a Brochure</p>
                 </div>
-              </a>
+              </button>
             </div>
 
             {/* Social Links */}
