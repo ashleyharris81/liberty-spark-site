@@ -138,6 +138,7 @@ const hybridCanteen = (seats: number): SpecCategory => ({
 export const mobiModels: MobiModel[] = [
   {
     slug: "12ft-mobi",
+    specSheet: "/downloads/12ft_mobi.pdf",
     title: "12ft Mobi",
     uid: "8b316178f0d091f7689dfb8b562f36ef",
     specs: [
@@ -163,6 +164,7 @@ export const mobiModels: MobiModel[] = [
   },
   {
     slug: "16ft-mobi",
+    specSheet: "/downloads/16ft_mobi.pdf",
     title: "16ft Mobi",
     uid: "7d97dd84f8d1b4f437a9cdce22ec9a8f",
     specs: [
@@ -191,6 +193,7 @@ export const mobiModels: MobiModel[] = [
   },
   {
     slug: "16ft-mobi-plus",
+    specSheet: "/downloads/16ft_mobi_plus.pdf",
     title: "16ft Mobi Plus",
     uid: "55a655e74c625fa98b5dfaad02950ee6",
     specs: [
@@ -219,6 +222,7 @@ export const mobiModels: MobiModel[] = [
   },
   {
     slug: "20ft-mobi",
+    specSheet: "/downloads/20ft_mobi.pdf",
     title: "20ft Mobi",
     uid: "f6e58c215f145a61fe3d48394d98ecf8",
     specs: [
@@ -243,6 +247,7 @@ export const mobiModels: MobiModel[] = [
   },
   {
     slug: "20ft-mobi-plus",
+    specSheet: "/downloads/20ft_mobi_plus.pdf",
     title: "20ft Mobi Plus",
     uid: "78d0d5aae467fa6a150c2a1f558eb220",
     specs: [
@@ -270,6 +275,7 @@ export const mobiModels: MobiModel[] = [
   },
   {
     slug: "24ft-mobi",
+    specSheet: "/downloads/24ft_mobi.pdf",
     title: "24ft Mobi",
     uid: "718203c553ab7aac3268319b9aae8427",
     specs: [
@@ -298,6 +304,7 @@ export const mobiModels: MobiModel[] = [
   },
   {
     slug: "24ft-mobi-twin-toilet",
+    specSheet: "/downloads/24ft_mobi_twin_toilet.pdf",
     title: "24ft Mobi Twin Toilet",
     uid: "4246e01f4aa1f753693be5f0cd6bd673",
     specs: [
