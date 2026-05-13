@@ -28,7 +28,7 @@ const ECO_ADVANTAGES: SpecCategory = {
   ],
 };
 
-export const staticModels: StaticModel[] = [
+const _models_unordered: StaticModel[] = [
   {
     slug: "25ft-solar-static",
     title: "25ft Solar Static",
