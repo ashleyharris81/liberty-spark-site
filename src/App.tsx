@@ -11,6 +11,7 @@ import Welfare from "./pages/Welfare";
 import MobileWelfare from "./pages/MobileWelfare";
 import MobiModel from "./pages/MobiModel";
 import StaticWelfare from "./pages/StaticWelfare";
+import StaticModel from "./pages/StaticModel";
 import SolarMobileWelfare from "./pages/SolarMobileWelfare";
 import SolarStaticWelfare from "./pages/SolarStaticWelfare";
 import SolarDryingRoom from "./pages/SolarDryingRoom";
