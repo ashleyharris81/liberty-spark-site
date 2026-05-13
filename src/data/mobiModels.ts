@@ -341,6 +341,7 @@ export const mobiModels: MobiModel[] = [
     subtitle: "7 Person",
     uid: "926eed1261b29291590f8366862e09d4",
     isHybrid: true,
+    specSheet: "/downloads/12ft_hybrid_mobi.pdf",
     specs: [
       hybridCanteen(7),
       HYBRID_KITCHEN,
@@ -356,6 +357,7 @@ export const mobiModels: MobiModel[] = [
     subtitle: "10 Person",
     uid: "3c7277a73a0a7a47c4a6cffb8d599f41",
     isHybrid: true,
+    specSheet: "/downloads/16ft_hybrid_mobi.pdf",
     specs: [
       hybridCanteen(10),
       HYBRID_KITCHEN,
@@ -372,6 +374,7 @@ export const mobiModels: MobiModel[] = [
     subtitle: "14 Person",
     uid: "c81707904798153c440f08d063fa3017",
     isHybrid: true,
+    specSheet: "/downloads/24ft_hybrid_mobi_twin_toilet.pdf",
     specs: [
       hybridCanteen(14),
       HYBRID_RUNNING,
