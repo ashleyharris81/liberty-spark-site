@@ -90,7 +90,8 @@ const StaticWelfare = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {staticModels.map((model) => (
+              {/* First 3 models: 25ft, 26ft, 28ft */}
+              {staticModels.slice(0, 3).map((model) => (
                 <Link
                   key={model.slug}
                   to={`/static-welfare/${model.slug}`}
