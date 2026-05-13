@@ -11,6 +11,7 @@ import Welfare from "./pages/Welfare";
 import MobileWelfare from "./pages/MobileWelfare";
 import MobiModel from "./pages/MobiModel";
 import StaticWelfare from "./pages/StaticWelfare";
+import StaticModel from "./pages/StaticModel";
 import SolarMobileWelfare from "./pages/SolarMobileWelfare";
 import SolarStaticWelfare from "./pages/SolarStaticWelfare";
 import SolarDryingRoom from "./pages/SolarDryingRoom";
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/mobile-welfare" element={<MobileWelfare />} />
           <Route path="/mobile-welfare/:slug" element={<MobiModel />} />
           <Route path="/static-welfare" element={<StaticWelfare />} />
+          <Route path="/static-welfare/:slug" element={<StaticModel />} />
           <Route path="/solar-mobile-welfare" element={<SolarMobileWelfare />} />
           <Route path="/solar-static-welfare" element={<SolarStaticWelfare />} />
           <Route path="/solar-drying-room" element={<SolarDryingRoom />} />
