@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import heroBg from "@/assets/hero-bg.jpg";
+import { downloadFile } from "@/lib/downloadFile";
 
 interface SpecCategory {
   title: string;
@@ -317,14 +318,13 @@ const SolarMobileWelfare = () => {
                   </div>
                   {product.specSheet && (
                     <div className="mt-8 flex justify-center">
-                      <a
-                        href={product.specSheet}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        type="button"
+                        onClick={() => downloadFile(product.specSheet)}
                         className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
                       >
                         Product Specification Sheet
-                      </a>
+                      </button>
                     </div>
                   )}
                 </div>
