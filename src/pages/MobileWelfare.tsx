@@ -16,7 +16,7 @@ const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
 const IFRAME_PARAMS =
   "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
 const thumb = (uid: string, time = "0s") =>
-  `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&height=600`;
+  `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&width=800&height=600&fit=crop`;
 
 const fallbackImages: Partial<Record<MobiModel["slug"], string>> = {
   "12ft-hybrid-mobi": hybrid12ftCard,
