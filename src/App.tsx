@@ -43,6 +43,7 @@ const App = () => (
           <Route path="/mobile-welfare" element={<MobileWelfare />} />
           <Route path="/mobile-welfare/:slug" element={<MobiModel />} />
           <Route path="/static-welfare" element={<StaticWelfare />} />
+          <Route path="/static-welfare/:slug" element={<StaticModel />} />
           <Route path="/solar-mobile-welfare" element={<SolarMobileWelfare />} />
           <Route path="/solar-static-welfare" element={<SolarStaticWelfare />} />
           <Route path="/solar-drying-room" element={<SolarDryingRoom />} />
