@@ -334,7 +334,7 @@ const NationwideHire = () => {
             <div className="mt-8 flex justify-center">
               <button
                 type="button"
-                onClick={() => downloadFile("https://libertyguard.co.uk/wp-content/uploads/2025/10/Brochure.pdf", "Liberty-Guard-Brochure.pdf")}
+                onClick={() => downloadFile("/Liberty-Guard-Brochure.pdf", "Liberty-Guard-Brochure.pdf")}
                 className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
               >
                 <Download className="w-4 h-4" /> Download Brochure
