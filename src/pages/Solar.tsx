@@ -1,36 +1,83 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Sun, Droplets, Wifi, Leaf, Gauge, ShieldCheck } from "lucide-react";
+import { Sun, Droplets, Wifi, Leaf, Gauge, ShieldCheck, ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import solarBg from "@/assets/solar-bg.jpg";
 
-const solarProducts = [
+const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
+const IFRAME_PARAMS =
+  "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
+const thumb = (uid: string, time = "0s") =>
+  `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&width=800&height=600&fit=crop`;
+
+interface SolarCategory {
+  title: string;
+  description: string;
+  link: string;
+  uid: string;
+}
+
+const solarProducts: SolarCategory[] = [
   {
     title: "Solar Mobile Welfare",
     description: "Fully solar-powered mobile welfare units with low emissions, silent running and smart monitoring.",
-    icon: Sun,
     link: "/solar-mobile-welfare",
+    uid: "e167fa58628c9062d8051429040b06f9",
   },
   {
     title: "Solar Static Welfare",
     description: "Static welfare cabins powered by solar technology, ideal for longer-term sites requiring sustainable facilities.",
-    icon: ShieldCheck,
     link: "/solar-static-welfare",
+    uid: "bc0d90221940958c3d321b50e9e36750",
   },
   {
     title: "Solar Drying Room",
     description: "Eco-friendly solar drying rooms — generator-free, silent operation, and zero-emission drying for workwear and PPE.",
-    icon: Gauge,
     link: "/solar-drying-room",
+    uid: "dae4d7a7bed6537e29f3d6811b9b5722",
   },
   {
     title: "Solar Loos",
     description: "Solar-powered portable toilet facilities combining sustainability with essential hygiene on any site.",
-    icon: Droplets,
     link: "/solar-loos",
+    uid: "72c99cace1b5f8642fab7ab476c7c65c",
   },
 ];
+
+const CategoryCardMedia = ({ product }: { product: SolarCategory }) => {
+  const [thumbAttempt, setThumbAttempt] = useState<0 | 1 | 2>(0);
+
+  if (thumbAttempt === 2) {
+    return (
+      <iframe
+        src={`https://${CF_SUBDOMAIN}/${product.uid}/iframe?${IFRAME_PARAMS}`}
+        title={product.title}
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        allowFullScreen
+        loading="lazy"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0"
+        style={{
+          width: "calc(100% + 6rem)",
+          height: "calc(100% + 6rem)",
+          minWidth: "100%",
+          minHeight: "100%",
+        }}
+      />
+    );
+  }
+
+  return (
+    <img
+      src={thumb(product.uid, thumbAttempt === 0 ? "0s" : "2s")}
+      alt={product.title}
+      loading="lazy"
+      onError={() => setThumbAttempt((c) => (c === 0 ? 1 : 2))}
+      className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
+    />
+  );
+};
 
 const benefits = [
   {
