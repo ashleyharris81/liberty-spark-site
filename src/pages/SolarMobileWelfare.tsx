@@ -1,229 +1,72 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
 import heroBg from "@/assets/hero-bg.jpg";
-import { downloadFile } from "@/lib/downloadFile";
+import { solarMobileProducts, type SolarProduct } from "@/data/solarProducts";
 
-interface SpecCategory {
-  title: string;
-  items: string[];
-}
+const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
+const IFRAME_PARAMS =
+  "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
+const thumb = (uid: string, time = "0s") =>
+  `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&width=800&height=600&fit=crop`;
 
-interface Product {
-  title: string;
-  uid: string;
-  specSheet?: string;
-  specs: SpecCategory[];
-}
+const ProductCardMedia = ({ product }: { product: SolarProduct }) => {
+  const [thumbAttempt, setThumbAttempt] = useState<0 | 1 | 2>(0);
 
-const TOWING: SpecCategory = {
-  title: "Towing & Setup",
-  items: [
-    "Standard ball-socket type towbar",
-    "Integrated rear lighting",
-    "Hydraulic system allows wheels to be retracted",
-  ],
+  if (thumbAttempt === 2) {
+    return (
+      <iframe
+        src={`https://${CF_SUBDOMAIN}/${product.uid}/iframe?${IFRAME_PARAMS}`}
+        title={product.title}
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        allowFullScreen
+        loading="lazy"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0"
+        style={{
+          width: "calc(100% + 6rem)",
+          height: "calc(100% + 6rem)",
+          minWidth: "100%",
+          minHeight: "100%",
+        }}
+      />
+    );
+  }
+
+  return (
+    <img
+      src={thumb(product.uid, thumbAttempt === 0 ? "0s" : "2s")}
+      alt={product.title}
+      loading="lazy"
+      onError={() => setThumbAttempt((c) => (c === 0 ? 1 : 2))}
+      className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
+    />
+  );
 };
-
-const DRY_ROOM: SpecCategory = {
-  title: "Dry Room",
-  items: [
-    "24V air-blown diesel heater",
-    "Coat hooks",
-    "Bench seating",
-    "Fully heated",
-  ],
-};
-
-const BATTERY: SpecCategory = {
-  title: "Battery",
-  items: [
-    "Lithium-ion battery",
-    "Back-up generator",
-    "SOLARTracK™ remote energy, battery, tank & fault monitoring system",
-  ],
-};
-
-const TOILET_SINGLE: SpecCategory = {
-  title: "Toilet",
-  items: [
-    "1x toilet cubicle with external access",
-    "Freshwater microflush toilet",
-    "Hand wash sink",
-    "Hands-free low-power electric hand dryers",
-  ],
-};
-
-const TOILET_DOUBLE: SpecCategory = {
-  title: "Toilet",
-  items: [
-    "2x toilet cubicle with external access",
-    "Freshwater microflush toilet",
-    "Hand wash sink",
-    "Hands-free low-power electric hand dryers",
-  ],
-};
-
-const RAIN_HARVESTING: SpecCategory = {
-  title: "Rain Harvesting",
-  items: ["WM PRO™ - rainwater harvesting & greywater recycling system"],
-};
-
-const SOLAR_PANELS: SpecCategory = {
-  title: "Solar Panels",
-  items: ["315W Roof-mounted solar panels"],
-};
-
-const TELEMETRY: SpecCategory = {
-  title: "Telemetry",
-  items: [
-    "Customer friendly digital device tracking location, battery, energy, fuel, waste & water",
-  ],
-};
-
-const KITCHEN_BASE: SpecCategory = {
-  title: "Kitchen",
-  items: [
-    "Fitted kitchen with sink, cupboards & worktop",
-    "Appliances - microwave & kettle",
-    "Notice board",
-  ],
-};
-
-const KITCHEN_PLUS: SpecCategory = {
-  title: "Kitchen",
-  items: [
-    "Fitted kitchen with sink, cupboards & worktop",
-    "Appliances - microwave & kettle",
-    "Fridge",
-    "Notice board",
-  ],
-};
-
-const CANTEEN_12: SpecCategory = {
-  title: "Canteen",
-  items: [
-    "Seating for up to 7 people",
-    "Under-bench storage space",
-    "4x 24V USB charging power outlets",
-    "24V air-blown diesel heater",
-    "Internal and external PIR-sensor 24V LED floodlights",
-  ],
-};
-
-const CANTEEN_20: SpecCategory = {
-  title: "Canteen",
-  items: [
-    "Seating for up to 12 people",
-    "Under-bench storage space",
-    "4x 24V USB charging power outlets",
-    "4x 500W 230V low power sockets",
-    "24V air-blown diesel heater",
-    "Internal and external PIR-sensor 24V LED floodlights",
-  ],
-};
-
-const OFFICE_20: SpecCategory = {
-  title: "Office",
-  items: [
-    "1x Office Chair",
-    "Fitted desk & work surface",
-    "Whiteboard & notice board",
-    "24V air blown diesel heater",
-    "4x 24V USB-C charging power outlets",
-    "2x 500W 230V low power sockets",
-  ],
-};
-
-const products: Product[] = [
-  {
-    title: "12ft Ultimate Eco",
-    specSheet: "/downloads/12ft_ultimate_eco.pdf",
-    uid: "e167fa58628c9062d8051429040b06f9",
-    specs: [
-      CANTEEN_12,
-      TOWING,
-      DRY_ROOM,
-      BATTERY,
-      TOILET_SINGLE,
-      RAIN_HARVESTING,
-      KITCHEN_BASE,
-      SOLAR_PANELS,
-      TELEMETRY,
-    ],
-  },
-  {
-    title: "12ft Ultimate Eco Plus",
-    specSheet: "/downloads/12ft_ultimate_eco_plus.pdf",
-    uid: "cc2bc1dcb70121e85dc49d711dffd3c0",
-    specs: [
-      CANTEEN_12,
-      TOWING,
-      DRY_ROOM,
-      BATTERY,
-      TOILET_SINGLE,
-      RAIN_HARVESTING,
-      KITCHEN_PLUS,
-      SOLAR_PANELS,
-      TELEMETRY,
-    ],
-  },
-  {
-    title: "20ft Ultimate Eco",
-    specSheet: "/downloads/20ft_ultimate_eco.pdf",
-    uid: "c508c767438ac222f1cac1294fbfcde1",
-    specs: [
-      CANTEEN_20,
-      TOWING,
-      DRY_ROOM,
-      BATTERY,
-      TOILET_SINGLE,
-      RAIN_HARVESTING,
-      OFFICE_20,
-      KITCHEN_BASE,
-      SOLAR_PANELS,
-      TELEMETRY,
-    ],
-  },
-  {
-    title: "20ft Ultimate Eco Plus",
-    specSheet: "/downloads/20ft_ultimate_eco_plus.pdf",
-    uid: "750f03c60dde24f7d87081424513b5f4",
-    specs: [
-      CANTEEN_20,
-      TOWING,
-      DRY_ROOM,
-      BATTERY,
-      TOILET_SINGLE,
-      RAIN_HARVESTING,
-      OFFICE_20,
-      KITCHEN_PLUS,
-      SOLAR_PANELS,
-      TELEMETRY,
-    ],
-  },
-  {
-    title: "24ft Ultimate Eco Plus",
-    specSheet: "/downloads/24ft_ultimate_eco_plus.pdf",
-    uid: "a1c53ee2fffe88785f5e3f8798030aa6",
-    specs: [
-      CANTEEN_20,
-      TOWING,
-      DRY_ROOM,
-      BATTERY,
-      TOILET_DOUBLE,
-      RAIN_HARVESTING,
-      OFFICE_20,
-      KITCHEN_PLUS,
-      SOLAR_PANELS,
-      TELEMETRY,
-    ],
-  },
-];
 
 const SolarMobileWelfare = () => {
+  const renderProduct = (product: SolarProduct) => (
+    <Link
+      key={product.slug}
+      to={`/solar-mobile-welfare/${product.slug}`}
+      onClick={() => window.scrollTo(0, 0)}
+      className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/60 transition-all duration-300 aspect-[4/3]"
+    >
+      <ProductCardMedia product={product} />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 p-5">
+        <h2 className="font-heading text-xl md:text-2xl font-black text-primary-foreground uppercase tracking-tight">
+          {product.title}
+        </h2>
+        <span className="mt-2 inline-block text-secondary font-heading text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+          View Details →
+        </span>
+      </div>
+    </Link>
+  );
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -241,6 +84,7 @@ const SolarMobileWelfare = () => {
             <div className="container mx-auto px-4 lg:px-8">
               <Link
                 to="/"
+                onClick={() => window.scrollTo(0, 0)}
                 className="inline-flex items-center text-primary-foreground/70 hover:text-secondary font-heading text-sm uppercase tracking-wider mb-6 transition-colors"
               >
                 ← Back to Home
@@ -259,15 +103,15 @@ const SolarMobileWelfare = () => {
         </div>
       </section>
 
-      {/* Product Cards */}
-      <section className="py-20 bg-primary">
+      {/* Hybrid promo */}
+      <section className="pt-12 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-7xl mx-auto mb-10 rounded-xl bg-muted/10 border border-primary-foreground/10 p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div className="max-w-7xl mx-auto rounded-xl bg-primary/5 border border-primary/10 p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h3 className="font-heading text-xl md:text-2xl font-black text-primary-foreground uppercase tracking-tight">
+              <h3 className="font-heading text-xl md:text-2xl font-black text-primary uppercase tracking-tight">
                 Looking for solar without going full electric?
               </h3>
-              <p className="mt-2 text-primary-foreground/70 max-w-2xl">
+              <p className="mt-2 text-primary/70 max-w-2xl">
                 Our new Hybrid Mobi range combines a 600W solar panel with a back-up generator - the eco benefits of solar with the reliability of a traditional generator.
               </p>
             </div>
@@ -279,57 +123,50 @@ const SolarMobileWelfare = () => {
               View Hybrid Range →
             </Link>
           </div>
-          <div className="space-y-10 max-w-7xl mx-auto">
-            {products.map((product) => (
-              <article
-                key={product.title}
-                className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
+        </div>
+      </section>
+
+      {/* Product Grid */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {solarMobileProducts.map(renderProduct)}
+
+              <Link
+                to="/new-account"
+                onClick={() => window.scrollTo(0, 0)}
+                className="group relative overflow-hidden rounded-xl border-2 border-secondary/60 hover:border-secondary bg-primary hover:bg-secondary/10 transition-all duration-300 aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"
               >
-                <div className="p-6 md:p-10">
-                  <h2 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground uppercase tracking-tight mb-6">
-                    {product.title}
-                  </h2>
+                <ClipboardList className="w-14 h-14 text-secondary mb-4" />
+                <h3 className="font-heading text-xl font-black text-primary-foreground uppercase tracking-tight">
+                  New Customer
+                </h3>
+                <p className="mt-1 font-heading text-sm text-primary-foreground/80 uppercase tracking-wider">
+                  Open an Account
+                </p>
+                <span className="mt-3 text-secondary font-heading text-xs font-semibold uppercase tracking-wider">
+                  Get Started →
+                </span>
+              </Link>
 
-                  <div className="mb-8 mx-auto w-full max-w-[800px]">
-                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10">
-                      <CloudflareVideo uid={product.uid} variant="card" />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                    {product.specs.map((spec) => (
-                      <div key={spec.title}>
-                        <h3 className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
-                          {spec.title}
-                        </h3>
-                        <ul className="space-y-2">
-                          {spec.items.map((item) => (
-                            <li
-                              key={item}
-                              className="text-sm text-primary-foreground/70 leading-relaxed flex gap-2"
-                            >
-                              <span className="text-secondary mt-1">•</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                  {product.specSheet && (
-                    <div className="mt-8 flex justify-center">
-                      <button
-                        type="button"
-                        onClick={() => downloadFile(product.specSheet)}
-                        className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
-                      >
-                        Product Specification Sheet
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </article>
-            ))}
+              <Link
+                to="/contact"
+                onClick={() => window.scrollTo(0, 0)}
+                className="group relative overflow-hidden rounded-xl border-2 border-secondary/60 hover:border-secondary bg-primary hover:bg-secondary/10 transition-all duration-300 aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"
+              >
+                <Mail className="w-14 h-14 text-secondary mb-4" />
+                <h3 className="font-heading text-xl font-black text-primary-foreground uppercase tracking-tight">
+                  Email Us
+                </h3>
+                <p className="mt-1 font-heading text-sm text-primary-foreground/80 uppercase tracking-wider">
+                  Request a Quote
+                </p>
+                <span className="mt-3 text-secondary font-heading text-xs font-semibold uppercase tracking-wider">
+                  Contact →
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
