@@ -32,6 +32,7 @@ const ECO_ADVANTAGES: SpecCategory = {
 const _models_unordered: StaticModel[] = [
   {
     slug: "25ft-solar-static",
+    specSheet: "/specs/25ft_solar_static.pdf",
     title: "25ft Solar Static",
     uid: "bc0d90221940958c3d321b50e9e36750",
     isHybrid: true,
@@ -91,6 +92,7 @@ const _models_unordered: StaticModel[] = [
   },
   {
     slug: "26ft-junior-plus",
+    specSheet: "/specs/26ft_junior_plus.pdf",
     title: "26ft Junior Plus",
     uid: "540d7c150e14b3f469a0cb973cb4b84b",
     specs: [
@@ -142,6 +144,7 @@ const _models_unordered: StaticModel[] = [
   },
   {
     slug: "28ft-eco-hybrid",
+    specSheet: "/specs/28ft_eco_hybrid.pdf",
     title: "28ft Eco Hybrid",
     uid: "1fd4831857cb674dbb1b19b27536690f",
     isHybrid: true,
@@ -200,6 +203,7 @@ const _models_unordered: StaticModel[] = [
   },
   {
     slug: "32ft-master",
+    specSheet: "/specs/32ft_master.pdf",
     title: "32ft Master",
     uid: "dd7aef72afd940ffa72ca9a58fef1963",
     specs: [
