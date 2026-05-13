@@ -9,6 +9,7 @@ export interface StaticModel {
   subtitle?: string;
   uid: string;
   isHybrid?: boolean;
+  specSheet?: string;
   specs: SpecCategory[];
 }
 
