@@ -1,121 +1,74 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
-import { downloadFile } from "@/lib/downloadFile";
-const heroBg = "https://customer-p8mic15ze1rkgi3y.cloudflarestream.com/72c99cace1b5f8642fab7ab476c7c65c/thumbnails/thumbnail.jpg?time=2s&height=900";
+import { solarLooProducts, type SolarProduct } from "@/data/solarProducts";
 
-interface SpecCategory {
-  title: string;
-  items: string[];
-}
+const heroBg =
+  "https://customer-p8mic15ze1rkgi3y.cloudflarestream.com/72c99cace1b5f8642fab7ab476c7c65c/thumbnails/thumbnail.jpg?time=2s&height=900";
 
-interface Product {
-  title: string;
-  uid: string;
-  specSheet?: string;
-  specs: SpecCategory[];
-}
+const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
+const IFRAME_PARAMS =
+  "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
+const thumb = (uid: string, time = "0s") =>
+  `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&width=800&height=600&fit=crop`;
 
-const POWER_SINGLE: SpecCategory = {
-  title: "Power",
-  items: [
-    "3 x 150W Solar panels with inverter",
-    "3 x 150AH Deep cycle batteries",
-    "240v Backup battery",
-    "Integrated diesel/electric power",
-  ],
+const ProductCardMedia = ({ product }: { product: SolarProduct }) => {
+  const [thumbAttempt, setThumbAttempt] = useState<0 | 1 | 2>(0);
+
+  if (thumbAttempt === 2) {
+    return (
+      <iframe
+        src={`https://${CF_SUBDOMAIN}/${product.uid}/iframe?${IFRAME_PARAMS}`}
+        title={product.title}
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        allowFullScreen
+        loading="lazy"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0"
+        style={{
+          width: "calc(100% + 6rem)",
+          height: "calc(100% + 6rem)",
+          minWidth: "100%",
+          minHeight: "100%",
+        }}
+      />
+    );
+  }
+
+  return (
+    <img
+      src={thumb(product.uid, thumbAttempt === 0 ? "0s" : "2s")}
+      alt={product.title}
+      loading="lazy"
+      onError={() => setThumbAttempt((c) => (c === 0 ? 1 : 2))}
+      className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
+    />
+  );
 };
-
-const POWER_TWIN: SpecCategory = {
-  title: "Power",
-  items: [
-    "3 x 185W Solar panels with inverter",
-    "3 x 150AH Deep cycle batteries",
-    "240v Backup battery",
-    "Integrated diesel/electric power",
-  ],
-};
-
-const EXTERIOR: SpecCategory = {
-  title: "Exterior",
-  items: [
-    "Secure locking system",
-    "Suitable for any location",
-    "PIR LED outdoor lighting",
-    "Waste tank indicator",
-  ],
-};
-
-const products: Product[] = [
-  {
-    title: "Single Solar Loo",
-    specSheet: "/downloads/solar_loo_single.pdf",
-    uid: "72c99cace1b5f8642fab7ab476c7c65c",
-    specs: [
-      {
-        title: "Specifications",
-        items: [
-          "Size (mm): 2670 L x 1780 W x 2625 H",
-          "500L Waste tank",
-          "Drop through toilet",
-          "Stainless steel sink",
-          "400L Fresh water tank",
-          "53L Diesel tank",
-        ],
-      },
-      {
-        title: "Interior",
-        items: [
-          "Single toilet interior",
-          "Quality fittings",
-          "12v Diesel Webasto water heating system",
-          "On demand hot water",
-          "Hot & cold freshwater taps",
-          "Feminine hygiene bins",
-          "Unisex facility",
-        ],
-      },
-      POWER_SINGLE,
-      EXTERIOR,
-    ],
-  },
-  {
-    title: "Twin Solar Loo",
-    specSheet: "/downloads/solar_loo_twin.pdf",
-    uid: "8ab52ab4ab0dbb598cf1c432526e5b39",
-    specs: [
-      {
-        title: "Specifications",
-        items: [
-          "Size (mm): 2670 L x 2560 W x 2625 H",
-          "800L Waste tank",
-          "Drop through toilet",
-          "Stainless steel sink",
-          "400L Fresh water tank",
-          "53L Diesel tank",
-        ],
-      },
-      {
-        title: "Interior",
-        items: [
-          "Two single toilets with external access",
-          "Quality fittings",
-          "12v Diesel Webasto water heating system",
-          "On demand hot water",
-          "Hot & cold freshwater taps",
-          "Feminine hygiene bins",
-          "Unisex facility",
-        ],
-      },
-      POWER_TWIN,
-      EXTERIOR,
-    ],
-  },
-];
 
 const SolarLoos = () => {
+  const renderProduct = (product: SolarProduct) => (
+    <Link
+      key={product.slug}
+      to={`/solar-loos/${product.slug}`}
+      onClick={() => window.scrollTo(0, 0)}
+      className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/60 transition-all duration-300 aspect-[4/3]"
+    >
+      <ProductCardMedia product={product} />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 p-5">
+        <h2 className="font-heading text-xl md:text-2xl font-black text-primary-foreground uppercase tracking-tight">
+          {product.title}
+        </h2>
+        <span className="mt-2 inline-block text-secondary font-heading text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+          View Details →
+        </span>
+      </div>
+    </Link>
+  );
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -133,6 +86,7 @@ const SolarLoos = () => {
             <div className="container mx-auto px-4 lg:px-8">
               <Link
                 to="/"
+                onClick={() => window.scrollTo(0, 0)}
                 className="inline-flex items-center text-primary-foreground/70 hover:text-secondary font-heading text-sm uppercase tracking-wider mb-6 transition-colors"
               >
                 ← Back to Home
@@ -151,60 +105,47 @@ const SolarLoos = () => {
         </div>
       </section>
 
-      {/* Product Cards */}
-      <section className="py-20 bg-primary">
+      {/* Product Grid */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="space-y-10 max-w-7xl mx-auto">
-            {products.map((product) => (
-              <article
-                key={product.title}
-                className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {solarLooProducts.map(renderProduct)}
+
+              <Link
+                to="/new-account"
+                onClick={() => window.scrollTo(0, 0)}
+                className="group relative overflow-hidden rounded-xl border-2 border-secondary/60 hover:border-secondary bg-primary hover:bg-secondary/10 transition-all duration-300 aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"
               >
-                <div className="p-6 md:p-10">
-                  <h2 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground uppercase tracking-tight mb-6">
-                    {product.title}
-                  </h2>
+                <ClipboardList className="w-14 h-14 text-secondary mb-4" />
+                <h3 className="font-heading text-xl font-black text-primary-foreground uppercase tracking-tight">
+                  New Customer
+                </h3>
+                <p className="mt-1 font-heading text-sm text-primary-foreground/80 uppercase tracking-wider">
+                  Open an Account
+                </p>
+                <span className="mt-3 text-secondary font-heading text-xs font-semibold uppercase tracking-wider">
+                  Get Started →
+                </span>
+              </Link>
 
-                  <div className="mb-8 mx-auto w-full max-w-[800px]">
-                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10">
-                      <CloudflareVideo uid={product.uid} variant="card" />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                    {product.specs.map((spec) => (
-                      <div key={spec.title}>
-                        <h3 className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
-                          {spec.title}
-                        </h3>
-                        <ul className="space-y-2">
-                          {spec.items.map((item) => (
-                            <li
-                              key={item}
-                              className="text-sm text-primary-foreground/70 leading-relaxed flex gap-2"
-                            >
-                              <span className="text-secondary mt-1">•</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                  {product.specSheet && (
-                    <div className="mt-8 flex justify-center">
-                      <button
-                        type="button"
-                        onClick={() => downloadFile(product.specSheet)}
-                        className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
-                      >
-                        Product Specification Sheet
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </article>
-            ))}
+              <Link
+                to="/contact"
+                onClick={() => window.scrollTo(0, 0)}
+                className="group relative overflow-hidden rounded-xl border-2 border-secondary/60 hover:border-secondary bg-primary hover:bg-secondary/10 transition-all duration-300 aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"
+              >
+                <Mail className="w-14 h-14 text-secondary mb-4" />
+                <h3 className="font-heading text-xl font-black text-primary-foreground uppercase tracking-tight">
+                  Email Us
+                </h3>
+                <p className="mt-1 font-heading text-sm text-primary-foreground/80 uppercase tracking-wider">
+                  Request a Quote
+                </p>
+                <span className="mt-3 text-secondary font-heading text-xs font-semibold uppercase tracking-wider">
+                  Contact →
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
