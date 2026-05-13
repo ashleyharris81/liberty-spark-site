@@ -13,12 +13,14 @@ interface SpecCategory {
 interface Product {
   title: string;
   uid: string;
+  specSheet?: string;
   specs: SpecCategory[];
 }
 
 const products: Product[] = [
   {
     title: "12ft Solar Dry",
+    specSheet: "/downloads/12ft_solar_dry.pdf",
     uid: "dae4d7a7bed6537e29f3d6811b9b5722",
     specs: [
       {

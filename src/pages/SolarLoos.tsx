@@ -13,6 +13,7 @@ interface SpecCategory {
 interface Product {
   title: string;
   uid: string;
+  specSheet?: string;
   specs: SpecCategory[];
 }
 
@@ -49,6 +50,7 @@ const EXTERIOR: SpecCategory = {
 const products: Product[] = [
   {
     title: "Single Solar Loo",
+    specSheet: "/downloads/solar_loo_single.pdf",
     uid: "72c99cace1b5f8642fab7ab476c7c65c",
     specs: [
       {
@@ -80,6 +82,7 @@ const products: Product[] = [
   },
   {
     title: "Twin Solar Loo",
+    specSheet: "/downloads/solar_loo_twin.pdf",
     uid: "8ab52ab4ab0dbb598cf1c432526e5b39",
     specs: [
       {
