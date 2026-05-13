@@ -69,16 +69,18 @@ const StaticModel = () => {
               ))}
             </div>
 
-            <div className="mt-12 flex justify-center">
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
-              >
-                Product Specification Sheet
-              </a>
-            </div>
+            {model.specSheet && (
+              <div className="mt-12 flex justify-center">
+                <a
+                  href={model.specSheet}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
+                >
+                  Product Specification Sheet
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </section>
