@@ -8,7 +8,6 @@ const navLinks = [
   { label: "STATIC", href: "/static-welfare", isRoute: true },
   { label: "SOLAR", href: "/solar", isRoute: true },
   { label: "SOLAR LOO", href: "/solar-loos", isRoute: true },
-  { label: "HYBRID", href: "/mobile-welfare/12ft-hybrid-mobi", isRoute: true },
   { label: "MARKETING SUITES", href: "/marketing-suites", isRoute: true },
   { label: "PORTABLE BUILDINGS", href: "/portable-buildings", isRoute: true },
 ];
