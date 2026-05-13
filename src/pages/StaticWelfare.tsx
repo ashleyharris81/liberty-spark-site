@@ -139,6 +139,40 @@ const StaticWelfare = () => {
                 </span>
               </Link>
 
+              {/* 32ft Master between CTAs */}
+              {(() => {
+                const model = staticModels[3];
+                return (
+                  <Link
+                    key={model.slug}
+                    to={`/static-welfare/${model.slug}`}
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/60 transition-all duration-300 aspect-[4/3]"
+                  >
+                    <ModelCardMedia model={model} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
+                    {model.isHybrid && (
+                      <span className="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-secondary text-secondary-foreground font-heading text-[10px] font-bold uppercase tracking-wider shadow-lg">
+                        Hybrid
+                      </span>
+                    )}
+                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                      <h2 className="font-heading text-xl md:text-2xl font-black text-primary-foreground uppercase tracking-tight">
+                        {model.title}
+                      </h2>
+                      {model.subtitle && (
+                        <p className="mt-1 font-heading text-xs font-bold text-secondary uppercase tracking-wider">
+                          {model.subtitle}
+                        </p>
+                      )}
+                      <span className="mt-2 inline-block text-secondary font-heading text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+                        View Details →
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })()}
+
               {/* CTA: Email Us */}
               <Link
                 to="/contact"
