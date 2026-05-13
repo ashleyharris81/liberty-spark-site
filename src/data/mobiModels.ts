@@ -9,6 +9,7 @@ export interface MobiModel {
   subtitle?: string;
   uid: string;
   isHybrid?: boolean;
+  specSheet?: string;
   specs: SpecCategory[];
 }
 
