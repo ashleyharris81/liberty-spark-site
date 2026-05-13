@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
+import { downloadFile } from "@/lib/downloadFile";
 const heroBg = "https://customer-p8mic15ze1rkgi3y.cloudflarestream.com/72c99cace1b5f8642fab7ab476c7c65c/thumbnails/thumbnail.jpg?time=2s&height=900";
 
 interface SpecCategory {
@@ -192,14 +193,13 @@ const SolarLoos = () => {
                   </div>
                   {product.specSheet && (
                     <div className="mt-8 flex justify-center">
-                      <a
-                        href={product.specSheet}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        type="button"
+                        onClick={() => downloadFile(product.specSheet)}
                         className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
                       >
                         Product Specification Sheet
-                      </a>
+                      </button>
                     </div>
                   )}
                 </div>
