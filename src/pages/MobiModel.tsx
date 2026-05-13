@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import { getMobiModel } from "@/data/mobiModels";
+import { downloadFile } from "@/lib/downloadFile";
 
 const MobiModel = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -72,14 +73,13 @@ const MobiModel = () => {
 
             {model.specSheet && (
               <div className="mt-12 flex justify-center">
-                <a
-                  href={model.specSheet}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  type="button"
+                  onClick={() => downloadFile(model.specSheet)}
                   className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
                 >
                   Product Specification Sheet
-                </a>
+                </button>
               </div>
             )}
           </div>

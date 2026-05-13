@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { downloadFile } from "@/lib/downloadFile";
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -93,12 +94,10 @@ const ContactPage = () => {
                   </div>
                 </div>
 
-                <a
-                  href="/Liberty-Guard-Brochure.pdf"
-                  download="Liberty-Guard-Brochure.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 group"
+                <button
+                  type="button"
+                  onClick={() => downloadFile("/Liberty-Guard-Brochure.pdf", "Liberty-Guard-Brochure.pdf")}
+                  className="flex items-center gap-4 group text-left"
                 >
                   <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
                     <FileText className="w-6 h-6 text-secondary" />
@@ -107,7 +106,7 @@ const ContactPage = () => {
                     <p className="text-muted-foreground text-sm font-medium">Downloads</p>
                     <p className="text-foreground font-heading font-bold">Download a Brochure</p>
                   </div>
-                </a>
+                </button>
               </div>
 
               {/* Social Links */}

@@ -25,6 +25,7 @@ import logoStory from "@/assets/customers/story-homes.png";
 import logoTaylor from "@/assets/customers/taylor-wimpey.png";
 import logoKelling from "@/assets/customers/kelling.png";
 import logoKeepmoat from "@/assets/customers/keepmoat.png";
+import { downloadFile } from "@/lib/downloadFile";
 
 const customers = [
   { name: "HSS ProService", logo: logoHss },
@@ -331,15 +332,13 @@ const NationwideHire = () => {
               Download our latest brochure for a complete overview of our welfare units, portable buildings and solar solutions.
             </p>
             <div className="mt-8 flex justify-center">
-              <a
-                href="https://libertyguard.co.uk/wp-content/uploads/2025/10/Brochure.pdf"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => downloadFile("/Liberty-Guard-Brochure.pdf", "Liberty-Guard-Brochure.pdf")}
                 className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
               >
                 <Download className="w-4 h-4" /> Download Brochure
-              </a>
+              </button>
             </div>
           </div>
         </div>
