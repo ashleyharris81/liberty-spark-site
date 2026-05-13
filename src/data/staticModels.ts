@@ -28,7 +28,7 @@ const ECO_ADVANTAGES: SpecCategory = {
   ],
 };
 
-export const staticModels: StaticModel[] = [
+const _models_unordered: StaticModel[] = [
   {
     slug: "25ft-solar-static",
     title: "25ft Solar Static",
@@ -251,6 +251,12 @@ export const staticModels: StaticModel[] = [
     ],
   },
 ];
+
+// Display order: place 32ft Master in the middle (index 1)
+const order = ["25ft-solar-static", "32ft-master", "26ft-junior-plus", "28ft-eco-hybrid"];
+export const staticModels: StaticModel[] = order
+  .map((slug) => _models_unordered.find((m) => m.slug === slug)!)
+  .filter(Boolean);
 
 export const getStaticModel = (slug: string) =>
   staticModels.find((m) => m.slug === slug);
