@@ -83,6 +83,7 @@ const CloudflareVideo = ({
     }
 
     return () => {
+      video.removeEventListener("ended", handleEnded);
       if (hls) hls.destroy();
     };
   }, [manifest, variant]);
