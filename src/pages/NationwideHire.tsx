@@ -7,7 +7,7 @@ import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import Sustainability from "@/components/Sustainability";
 import ImageAccordion from "@/components/ImageAccordion";
-import nationwideHero from "@/assets/nationwide-hero.jpg";
+import nationwideHireBg from "@/assets/nationwide-hire-bg.jpg";
 import solarSavingsBg from "@/assets/solar-savings-bg.jpg";
 import whyLibertyBg from "@/assets/why-liberty-bg.jpg";
 import UKDepotMap from "@/components/UKDepotMap";
@@ -87,7 +87,7 @@ const NationwideHire = () => {
       <section className="relative pt-20">
         <div className="relative h-[80vh] min-h-[560px] overflow-hidden">
           <img
-            src={nationwideHero}
+            src={nationwideHireBg}
             alt="Liberty Guard welfare unit on site"
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
@@ -217,7 +217,7 @@ const NationwideHire = () => {
       {/* Depot Map */}
       <section className="relative py-20 overflow-hidden">
         <img
-          src={nationwideHero}
+          src={nationwideHireBg}
           alt=""
           aria-hidden
           className="absolute inset-0 w-full h-full object-cover"
