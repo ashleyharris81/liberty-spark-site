@@ -217,7 +217,7 @@ const NationwideHire = () => {
       {/* Depot Map */}
       <section className="relative py-20 overflow-hidden">
         <img
-          src={nationwideHero}
+          src={nationwideHireBg}
           alt=""
           aria-hidden
           className="absolute inset-0 w-full h-full object-cover"
