@@ -27,6 +27,16 @@ const CloudflareVideo = ({
     const video = videoRef.current;
     if (!video) return;
 
+    // hls.js + MSE doesn't always honor the native `loop` attribute reliably.
+    // Force a restart on `ended` so hero videos play continuously.
+    const handleEnded = () => {
+      try {
+        video.currentTime = 0;
+        void video.play();
+      } catch {}
+    };
+    video.addEventListener("ended", handleEnded);
+
     let hls: Hls | null = null;
 
     if (video.canPlayType("application/vnd.apple.mpegurl")) {
@@ -73,6 +83,7 @@ const CloudflareVideo = ({
     }
 
     return () => {
+      video.removeEventListener("ended", handleEnded);
       if (hls) hls.destroy();
     };
   }, [manifest, variant]);
