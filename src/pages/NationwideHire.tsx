@@ -87,7 +87,7 @@ const NationwideHire = () => {
       <section className="relative pt-20">
         <div className="relative h-[80vh] min-h-[560px] overflow-hidden">
           <img
-            src={nationwideHero}
+            src={nationwideHireBg}
             alt="Liberty Guard welfare unit on site"
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
