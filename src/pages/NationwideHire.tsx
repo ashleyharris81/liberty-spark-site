@@ -7,7 +7,7 @@ import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import Sustainability from "@/components/Sustainability";
 import ImageAccordion from "@/components/ImageAccordion";
-import nationwideHero from "@/assets/nationwide-hero.jpg";
+import nationwideHireBg from "@/assets/nationwide-hire-bg.jpg";
 import solarSavingsBg from "@/assets/solar-savings-bg.jpg";
 import whyLibertyBg from "@/assets/why-liberty-bg.jpg";
 import UKDepotMap from "@/components/UKDepotMap";
