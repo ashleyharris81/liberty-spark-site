@@ -89,11 +89,7 @@ const CloudflareVideo = ({
           muted
           playsInline
           poster={poster}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover"
-          style={{
-            width: "max(125%, 222.22vh)",
-            height: "max(125%, 70.31vw)",
-          }}
+          className="absolute inset-0 w-full h-full object-cover"
         />
       </div>
     );
