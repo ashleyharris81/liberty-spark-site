@@ -3,7 +3,7 @@ import { Building, ShieldCheck, Utensils, DoorOpen, Wrench } from "lucide-react"
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
+import HeroVideo from "@/components/HeroVideo";
 import welfareMobileCard from "@/assets/welfare-mobile-card.jpg";
 import welfareStaticCard from "@/assets/welfare-static-card.jpg";
 
