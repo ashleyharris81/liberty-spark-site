@@ -3,14 +3,30 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
+import HeroVideo from "@/components/HeroVideo";
 import { getMobiModel } from "@/data/mobiModels";
 import { downloadFile } from "@/lib/downloadFile";
+
+const MOBI_VIDEO_BASE =
+  "https://assets-libertyguard-co-uk.stackstaging.com/videos/mobilewelfare";
+
+const MOBI_VIDEO_BY_SLUG: Record<string, string> = {
+  "12ft-mobi": `${MOBI_VIDEO_BASE}/12ft%20Mobi/LGM418%20-%2012ft%20Mobi.mov`,
+  "16ft-mobi": `${MOBI_VIDEO_BASE}/16ft%20Mobi/LGM308%20-%2016ft%20Mobi.mov`,
+  "16ft-mobi-plus": `${MOBI_VIDEO_BASE}/16ft%20Mobi%20Plus/LGM160%20-%2016ft%20Mobi%20+.mov`,
+  "20ft-mobi": `${MOBI_VIDEO_BASE}/20ft%20Mobi/LGM424%20-%2020ft%20mobi%20canteen.mp4`,
+  "20ft-mobi-plus": `${MOBI_VIDEO_BASE}/20ft%20Mobi%20Plus/LGN1516%20-%2020ft%20mobi%20plus%20(office).mp4`,
+  "24ft-mobi": `${MOBI_VIDEO_BASE}/24ft%20Mobi/LGMPO68%20-%2024ft%20Mobi.mov`,
+  "24ft-mobi-twin-toilet": `${MOBI_VIDEO_BASE}/24ft%20Mobi%20Twin%20Toilet/LGMP102%20-%2024ft%20Mobi,%20Twin%20Loo,%20New%20Layout.mp4`,
+};
 
 const MobiModel = () => {
   const { slug } = useParams<{ slug: string }>();
   const model = slug ? getMobiModel(slug) : undefined;
 
   if (!model) return <Navigate to="/mobile-welfare" replace />;
+
+  const stackVideo = MOBI_VIDEO_BY_SLUG[model.slug];
 
   return (
     <div className="min-h-screen">
@@ -19,9 +35,14 @@ const MobiModel = () => {
       {/* Full-width hero video */}
       <section className="pt-20 bg-primary">
         <div className="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
-          <CloudflareVideo uid={model.uid} variant="hero" />
+          {stackVideo ? (
+            <HeroVideo src={stackVideo} />
+          ) : (
+            <CloudflareVideo uid={model.uid} variant="hero" />
+          )}
         </div>
       </section>
+
 
       <section className="py-16 bg-primary">
         <div className="container mx-auto px-4 lg:px-8">
