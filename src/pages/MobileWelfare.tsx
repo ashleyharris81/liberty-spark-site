@@ -4,7 +4,7 @@ import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
+import HeroVideo from "@/components/HeroVideo";
 
 import heroBg from "@/assets/hybrid-24ft-twin-card.png";
 import hybrid12ftCard from "@/assets/hybrid-12ft-card.png";
