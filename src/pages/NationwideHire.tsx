@@ -4,7 +4,7 @@ import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf, Download, Arrow
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
+import HeroVideo from "@/components/HeroVideo";
 import Sustainability from "@/components/Sustainability";
 import ImageAccordion from "@/components/ImageAccordion";
 import nationwideHireBg from "@/assets/nationwide-hire-bg.jpg";
