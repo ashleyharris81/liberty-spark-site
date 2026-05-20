@@ -5,6 +5,12 @@ import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import heroBg from "@/assets/hero-bg.jpg";
 
+const ASSETS = "https://assets-libertyguard-co-uk.stackstaging.com/videos";
+const STATIC_IMG_BY_UID: Record<string, string> = {
+  bc0d90221940958c3d321b50e9e36750: `${ASSETS}/solar%20static%20welfare/DSCF7941%2025ft%20solar%20static.jpg`,
+  "1fd4831857cb674dbb1b19b27536690f": `${ASSETS}/solar%20static%20welfare/DSCF1270%2028ft%20static.jpg`,
+};
+
 interface SpecCategory {
   title: string;
   items: string[];
@@ -194,8 +200,17 @@ const SolarStaticWelfare = () => {
                   </h2>
 
                   <div className="mb-8 mx-auto w-full max-w-[800px]">
-                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10">
-                      <CloudflareVideo uid={product.uid} variant="card" />
+                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10" style={{ aspectRatio: "16 / 9" }}>
+                      {STATIC_IMG_BY_UID[product.uid] ? (
+                        <img
+                          src={STATIC_IMG_BY_UID[product.uid]}
+                          alt={product.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <CloudflareVideo uid={product.uid} variant="card" />
+                      )}
                     </div>
                   </div>
 

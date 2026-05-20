@@ -7,16 +7,26 @@ import Contact from "@/components/Contact";
 import heroBg from "@/assets/hero-bg.jpg";
 import { solarMobileProducts, type SolarProduct } from "@/data/solarProducts";
 
+const ASSETS = "https://assets-libertyguard-co-uk.stackstaging.com/videos";
+const SOLAR_MOBILE_THUMBS: Record<string, string> = {
+  "12ft-ultimate-eco": `${ASSETS}/solar%20mobile%20welfare/DSCF2166%2012ft%20UE.jpg`,
+  "12ft-ultimate-eco-plus": `${ASSETS}/solar%20mobile%20welfare/IMG_1277%2012FT%20UE%20PLUS.JPEG`,
+  "20ft-ultimate-eco": `${ASSETS}/solar%20mobile%20welfare/MJP_9997%2020FT%20UE.jpg`,
+  "20ft-ultimate-eco-plus": `${ASSETS}/solar%20mobile%20welfare/IMG_0192%2020ft%20UE%20PLUS.JPEG`,
+  "24ft-ultimate-eco-plus": `${ASSETS}/solar%20mobile%20welfare/MJP_0232-3%2024FT%20UE%20PLUS.jpg`,
+};
+
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
 const IFRAME_PARAMS =
   "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
-const thumb = (uid: string, time = "0s") =>
+const cfThumb = (uid: string, time = "0s") =>
   `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&width=800&height=600&fit=crop`;
 
 const ProductCardMedia = ({ product }: { product: SolarProduct }) => {
-  const [thumbAttempt, setThumbAttempt] = useState<0 | 1 | 2>(0);
+  const override = SOLAR_MOBILE_THUMBS[product.slug];
+  const [attempt, setAttempt] = useState<0 | 1 | 2 | 3>(override ? 0 : 1);
 
-  if (thumbAttempt === 2) {
+  if (attempt === 3) {
     return (
       <iframe
         src={`https://${CF_SUBDOMAIN}/${product.uid}/iframe?${IFRAME_PARAMS}`}
@@ -35,12 +45,17 @@ const ProductCardMedia = ({ product }: { product: SolarProduct }) => {
     );
   }
 
+  const src =
+    attempt === 0 && override
+      ? override
+      : cfThumb(product.uid, attempt <= 1 ? "0s" : "2s");
+
   return (
     <img
-      src={thumb(product.uid, thumbAttempt === 0 ? "0s" : "2s")}
+      src={src}
       alt={product.title}
       loading="lazy"
-      onError={() => setThumbAttempt((c) => (c === 0 ? 1 : 2))}
+      onError={() => setAttempt((c) => ((c + 1) as 0 | 1 | 2 | 3))}
       className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
     />
   );

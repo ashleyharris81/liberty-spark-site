@@ -6,6 +6,11 @@ import CloudflareVideo from "@/components/CloudflareVideo";
 import heroBg from "@/assets/hero-bg.jpg";
 import { downloadFile } from "@/lib/downloadFile";
 
+const ASSETS = "https://assets-libertyguard-co-uk.stackstaging.com/videos";
+const DRY_IMG_BY_UID: Record<string, string> = {
+  dae4d7a7bed6537e29f3d6811b9b5722: `${ASSETS}/solar%20drying%20room/47.0.jpg`,
+};
+
 interface SpecCategory {
   title: string;
   items: string[];
@@ -128,8 +133,17 @@ const SolarDryingRoom = () => {
                   </h2>
 
                   <div className="mb-8 mx-auto w-full max-w-[800px]">
-                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10">
-                      <CloudflareVideo uid={product.uid} variant="card" />
+                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10" style={{ aspectRatio: "16 / 9" }}>
+                      {DRY_IMG_BY_UID[product.uid] ? (
+                        <img
+                          src={DRY_IMG_BY_UID[product.uid]}
+                          alt={product.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <CloudflareVideo uid={product.uid} variant="card" />
+                      )}
                     </div>
                   </div>
 
