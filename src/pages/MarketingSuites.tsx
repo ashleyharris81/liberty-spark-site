@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
+import HeroVideo from "@/components/HeroVideo";
 
 const galleryImages = [
   "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_1961-1024x768.jpeg",
@@ -62,7 +62,10 @@ const MarketingSuites = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <CloudflareVideo uid="f49aa98f155239d8f532a70773ebefc7" variant="hero" />
+          <HeroVideo
+            src="https://assets.libertyguard.co.uk/videos/Showhome-Nottingham-40ft-Marketing-Suite.mov"
+            poster="/posters/marketing-suites.jpg"
+          />
           <div className="absolute inset-0 bg-primary/60 z-[5]" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
