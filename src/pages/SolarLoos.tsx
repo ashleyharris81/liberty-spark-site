@@ -4,21 +4,28 @@ import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import HeroVideo from "@/components/HeroVideo";
 import { solarLooProducts, type SolarProduct } from "@/data/solarProducts";
 
-const heroBg =
-  "https://customer-p8mic15ze1rkgi3y.cloudflarestream.com/72c99cace1b5f8642fab7ab476c7c65c/thumbnails/thumbnail.jpg?time=2s&height=900";
+const ASSETS = "https://assets-libertyguard-co-uk.stackstaging.com/videos";
+const HERO_VIDEO = `${ASSETS}/solar%20loos%20video/Social%202.mov`;
+
+const LOO_THUMBS: Record<string, string> = {
+  "single-solar-loo": `${ASSETS}/solar%20loos/MK2_2824.%20single%20loo.jpg`,
+  "twin-solar-loo": `${ASSETS}/solar%20loos/MJP_3558.%20twin%20loo.jpg`,
+};
 
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
 const IFRAME_PARAMS =
   "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
-const thumb = (uid: string, time = "0s") =>
+const cfThumb = (uid: string, time = "0s") =>
   `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&width=800&height=600&fit=crop`;
 
 const ProductCardMedia = ({ product }: { product: SolarProduct }) => {
-  const [thumbAttempt, setThumbAttempt] = useState<0 | 1 | 2>(0);
+  const override = LOO_THUMBS[product.slug];
+  const [attempt, setAttempt] = useState<0 | 1 | 2 | 3>(override ? 0 : 1);
 
-  if (thumbAttempt === 2) {
+  if (attempt === 3) {
     return (
       <iframe
         src={`https://${CF_SUBDOMAIN}/${product.uid}/iframe?${IFRAME_PARAMS}`}
@@ -37,16 +44,22 @@ const ProductCardMedia = ({ product }: { product: SolarProduct }) => {
     );
   }
 
+  const src =
+    attempt === 0 && override
+      ? override
+      : cfThumb(product.uid, attempt <= 1 ? "0s" : "2s");
+
   return (
     <img
-      src={thumb(product.uid, thumbAttempt === 0 ? "0s" : "2s")}
+      src={src}
       alt={product.title}
       loading="lazy"
-      onError={() => setThumbAttempt((c) => (c === 0 ? 1 : 2))}
+      onError={() => setAttempt((c) => ((c + 1) as 0 | 1 | 2 | 3))}
       className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
     />
   );
 };
+
 
 const SolarLoos = () => {
   const renderProduct = (product: SolarProduct) => (
@@ -76,12 +89,8 @@ const SolarLoos = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <img
-            src={heroBg}
-            alt="Liberty Guard solar loo"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-primary/60" />
+          <HeroVideo src={HERO_VIDEO} />
+          <div className="absolute inset-0 bg-primary/60 z-[5]" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
               <Link
