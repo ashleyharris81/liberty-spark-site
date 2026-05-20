@@ -6,6 +6,11 @@ import CloudflareVideo from "@/components/CloudflareVideo";
 import heroBg from "@/assets/hero-bg.jpg";
 import { downloadFile } from "@/lib/downloadFile";
 
+const ASSETS = "https://assets-libertyguard-co-uk.stackstaging.com/videos";
+const DRY_IMG_BY_UID: Record<string, string> = {
+  dae4d7a7bed6537e29f3d6811b9b5722: `${ASSETS}/solar%20drying%20room/47.0.jpg`,
+};
+
 interface SpecCategory {
   title: string;
   items: string[];
