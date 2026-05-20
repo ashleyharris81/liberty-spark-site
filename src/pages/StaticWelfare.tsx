@@ -4,21 +4,30 @@ import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import HeroVideo from "@/components/HeroVideo";
 import { staticModels, type StaticModel } from "@/data/staticModels";
 
-const heroBg =
-  "https://customer-p8mic15ze1rkgi3y.cloudflarestream.com/bc0d90221940958c3d321b50e9e36750/thumbnails/thumbnail.jpg?time=2s&height=900";
+const ASSETS = "https://assets-libertyguard-co-uk.stackstaging.com/videos";
+const HERO_VIDEO = `${ASSETS}/static%20welfare%20video/LGP54.mov`;
+
+const STATIC_THUMBS: Record<string, string> = {
+  "25ft-solar-static": `${ASSETS}/solar%20static%20welfare/DSCF7941%2025ft%20solar%20static.jpg`,
+  "26ft-junior-plus": `${ASSETS}/static%20welfare/Liberty%20Group-6%2026ft%20junior%20plus%20gen%202.jpg`,
+  "28ft-eco-hybrid": `${ASSETS}/solar%20static%20welfare/DSCF1270%2028ft%20static.jpg`,
+  "32ft-master": `${ASSETS}/static%20welfare/32ft%20static%20welfare.png`,
+};
 
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
 const IFRAME_PARAMS =
   "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
-const thumb = (uid: string, time = "0s") =>
+const cfThumb = (uid: string, time = "0s") =>
   `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&width=800&height=600&fit=crop`;
 
 const ModelCardMedia = ({ model }: { model: StaticModel }) => {
-  const [thumbAttempt, setThumbAttempt] = useState<0 | 1 | 2>(0);
+  const override = STATIC_THUMBS[model.slug];
+  const [attempt, setAttempt] = useState<0 | 1 | 2 | 3>(override ? 0 : 1);
 
-  if (thumbAttempt === 2) {
+  if (attempt === 3) {
     return (
       <iframe
         src={`https://${CF_SUBDOMAIN}/${model.uid}/iframe?${IFRAME_PARAMS}`}
@@ -37,12 +46,17 @@ const ModelCardMedia = ({ model }: { model: StaticModel }) => {
     );
   }
 
+  const src =
+    attempt === 0 && override
+      ? override
+      : cfThumb(model.uid, attempt <= 1 ? "0s" : "2s");
+
   return (
     <img
-      src={thumb(model.uid, thumbAttempt === 0 ? "0s" : "2s")}
+      src={src}
       alt={model.title}
       loading="lazy"
-      onError={() => setThumbAttempt((c) => (c === 0 ? 1 : 2))}
+      onError={() => setAttempt((c) => ((c + 1) as 0 | 1 | 2 | 3))}
       className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
     />
   );
@@ -56,12 +70,8 @@ const StaticWelfare = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <img
-            src={heroBg}
-            alt="Liberty Guard static welfare unit"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-primary/60" />
+          <HeroVideo src={HERO_VIDEO} />
+          <div className="absolute inset-0 bg-primary/60 z-[5]" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
               <Link
@@ -84,6 +94,7 @@ const StaticWelfare = () => {
           </div>
         </div>
       </section>
+
 
       {/* Model Grid */}
       <section className="py-20 bg-white">
