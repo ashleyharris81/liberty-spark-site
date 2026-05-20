@@ -6,14 +6,33 @@ interface HeroVideoProps {
   className?: string;
 }
 
-const HeroVideo = ({ src, poster = heroBg, className = "" }: HeroVideoProps) => (
+// Auto-map known hero videos to their first-frame still in /public/posters
+const POSTER_BY_VIDEO: Record<string, string> = {
+  "home-page-video.mov": "/posters/home.jpg",
+  "LGP54.mov": "/posters/static-welfare.jpg",
+  "Social%201.mov": "/posters/solar.jpg",
+  "Social 1.mov": "/posters/solar.jpg",
+  "Social%202.mov": "/posters/solar-loos.jpg",
+  "Social 2.mov": "/posters/solar-loos.jpg",
+};
+
+const resolvePoster = (src: string, explicit?: string) => {
+  if (explicit) return explicit;
+  for (const [key, url] of Object.entries(POSTER_BY_VIDEO)) {
+    if (src.includes(key)) return url;
+  }
+  return heroBg;
+};
+
+const HeroVideo = ({ src, poster, className = "" }: HeroVideoProps) => (
   <div className={`absolute inset-0 w-full h-full overflow-hidden pointer-events-none ${className}`}>
     <video
       autoPlay
       loop
       muted
       playsInline
-      poster={poster}
+      preload="metadata"
+      poster={resolvePoster(src, poster)}
       className="absolute inset-0 w-full h-full object-cover"
     >
       <source src={src} type="video/mp4" />
