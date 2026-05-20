@@ -200,8 +200,17 @@ const SolarStaticWelfare = () => {
                   </h2>
 
                   <div className="mb-8 mx-auto w-full max-w-[800px]">
-                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10">
-                      <CloudflareVideo uid={product.uid} variant="card" />
+                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10" style={{ aspectRatio: "16 / 9" }}>
+                      {STATIC_IMG_BY_UID[product.uid] ? (
+                        <img
+                          src={STATIC_IMG_BY_UID[product.uid]}
+                          alt={product.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <CloudflareVideo uid={product.uid} variant="card" />
+                      )}
                     </div>
                   </div>
 
