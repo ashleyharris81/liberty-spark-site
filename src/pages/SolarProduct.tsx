@@ -12,8 +12,13 @@ const SolarProduct = () => {
 
   if (!product) return <Navigate to="/solar-mobile-welfare" replace />;
 
-  const backTo = product.category === "loo" ? "/solar-loos" : "/solar-mobile-welfare";
-  const backLabel = product.category === "loo" ? "Back to Solar Loos" : "Back to Solar Mobile Welfare";
+  const backMap: Record<typeof product.category, { to: string; label: string }> = {
+    loo: { to: "/solar-loos", label: "Back to Solar Loos" },
+    mobile: { to: "/solar-mobile-welfare", label: "Back to Solar Mobile Welfare" },
+    static: { to: "/solar-static-welfare", label: "Back to Solar Static Welfare" },
+    dry: { to: "/solar-drying-room", label: "Back to Solar Drying Room" },
+  };
+  const { to: backTo, label: backLabel } = backMap[product.category];
 
   return (
     <div className="min-h-screen">

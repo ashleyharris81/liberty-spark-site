@@ -7,7 +7,7 @@ export interface SolarProduct {
   slug: string;
   title: string;
   uid: string;
-  category: "mobile" | "loo";
+  category: "mobile" | "loo" | "static" | "dry";
   specSheet?: string;
   specs: SpecCategory[];
 }
@@ -272,7 +272,195 @@ export const solarLooProducts: SolarProduct[] = [
   },
 ];
 
-export const allSolarProducts: SolarProduct[] = [...solarMobileProducts, ...solarLooProducts];
+// ---------- Solar Static Welfare ----------
+const STATIC_SOLAR_PANELS: SpecCategory = {
+  title: "Solar Panels",
+  items: ["315W Roof-mounted solar panels", "Fitted with a hybrid system"],
+};
+
+export const solarStaticProducts: SolarProduct[] = [
+  {
+    slug: "25ft-solar-static",
+    title: "25ft Solar Static",
+    category: "static",
+    uid: "bc0d90221940958c3d321b50e9e36750",
+    specs: [
+      STATIC_SOLAR_PANELS,
+      { title: "Generator", items: ["7 KVA Generator", "Full service intervals included"] },
+      {
+        title: "Toilet",
+        items: [
+          "x1 toilet cubicle with external access",
+          "No mains required chemical toilet",
+          "Hand wash sink",
+          "Hands-free low-power electric hand dryers",
+        ],
+      },
+      {
+        title: "Office",
+        items: [
+          "x2 office chairs",
+          "x2 desks & shelving",
+          "Whiteboard & notice board",
+          "12v diesel heating system throughout",
+          "6x 24V USB charging power outlets",
+          "6x 500W 230V low power sockets",
+        ],
+      },
+      {
+        title: "Kitchen",
+        items: [
+          "Fitted kitchen; sink, cupboards, worktop",
+          "Appliances; microwave & kettle",
+          "Fridge",
+          "Notice board",
+        ],
+      },
+      {
+        title: "Dry Room",
+        items: [
+          "x1 cubicle with external access",
+          "Bench seating with under storage sections",
+          "12v diesel heating",
+          "Clothes hooks",
+        ],
+      },
+      {
+        title: "Canteen",
+        items: [
+          "Seating for 15 people",
+          "12v diesel heating system throughout",
+          "Bench seating with under storage sections",
+          "3x 24V USB charging power outlets",
+          "3x 500W 230V low power sockets",
+          "External LED PIR lighting",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "28ft-eco-hybrid",
+    title: "28ft Eco Hybrid",
+    category: "static",
+    uid: "1fd4831857cb674dbb1b19b27536690f",
+    specs: [
+      STATIC_SOLAR_PANELS,
+      { title: "Generator", items: ["11 KVA Generator", "Full service intervals included"] },
+      {
+        title: "Toilet",
+        items: [
+          "x2 toilet cubicle with external access",
+          "No mains required chemical toilet",
+          "Hand wash sink",
+          "Hands-free low-power electric hand dryers",
+        ],
+      },
+      {
+        title: "Office",
+        items: [
+          "x2 office chairs",
+          "x2 desks & shelving",
+          "Whiteboard & notice board",
+          "12v diesel heating system throughout",
+          "2x 24V USB charging power outlets",
+          "4x 500W 230V low power sockets",
+        ],
+      },
+      {
+        title: "Kitchen",
+        items: [
+          "Fitted kitchen; sink, cupboards, worktop",
+          "Appliances; microwave & kettle",
+          "Fridge",
+          "Notice board",
+        ],
+      },
+      {
+        title: "Dry Room",
+        items: [
+          "x1 cubicle with external access",
+          "Bench seating with under storage sections",
+          "Clothes hooks",
+          "12v diesel heating",
+        ],
+      },
+      {
+        title: "Canteen",
+        items: [
+          "Seating for 16 people",
+          "12v diesel heating system throughout",
+          "Bench seating with under storage sections",
+          "4x 500W 230V low power sockets",
+          "External LED PIR lighting",
+        ],
+      },
+    ],
+  },
+];
+
+// ---------- Solar Drying Room ----------
+export const solarDryProducts: SolarProduct[] = [
+  {
+    slug: "12ft-solar-dry",
+    title: "12ft Solar Dry",
+    category: "dry",
+    specSheet: "/downloads/12ft_solar_dry.pdf",
+    uid: "dae4d7a7bed6537e29f3d6811b9b5722",
+    specs: [
+      {
+        title: "Dry Room",
+        items: [
+          "24V air-blown diesel heater",
+          "Boot rack",
+          "3x coat hooks",
+          "Clothes rail with hangers",
+          "Cushioned bench seating",
+          "Fully heated",
+          "Interior PIR-sensor 24v LED lighting",
+          "Advanced temperature & humidity sensors control drying function with auto-shut off",
+        ],
+      },
+      {
+        title: "Battery",
+        items: [
+          "Lithium-ion battery",
+          "No generator",
+          "SOLARTracK™ remote energy, battery, tank & fault monitoring system",
+        ],
+      },
+      { title: "Solar Panels", items: ["315W Roof-mounted & wall mounted solar panels"] },
+      {
+        title: "Telemetry",
+        items: ["Customer friendly digital device tracking location, battery, energy usage, input, fuel"],
+      },
+      {
+        title: "Exterior",
+        items: [
+          "PIR-sensor 24v LED lighting",
+          "High security anti-vandal unit with 3 bolt locking system & anti-prise strip on the door",
+          "Non glass solar panels to reduce vandalism",
+          "User friendly operation",
+          "No mains required hook up",
+        ],
+      },
+      {
+        title: "Towing & Setup",
+        items: [
+          "Standard ball-socket type towbar",
+          "Integrated rear lighting",
+          "Manual hydraulic system allows wheels to be retracted",
+        ],
+      },
+    ],
+  },
+];
+
+export const allSolarProducts: SolarProduct[] = [
+  ...solarMobileProducts,
+  ...solarLooProducts,
+  ...solarStaticProducts,
+  ...solarDryProducts,
+];
 
 export const getSolarProduct = (slug: string) =>
   allSolarProducts.find((p) => p.slug === slug);
