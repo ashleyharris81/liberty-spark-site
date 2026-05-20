@@ -85,7 +85,7 @@ const SolarDryingRoom = () => {
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
           <img
-            src={heroBg}
+            src={`${ASSETS}/solar%20drying%20room/47.0.jpg`}
             alt="Liberty Guard solar drying room"
             className="absolute inset-0 w-full h-full object-cover"
           />
