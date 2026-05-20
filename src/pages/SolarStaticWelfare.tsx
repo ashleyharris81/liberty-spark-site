@@ -5,6 +5,12 @@ import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import heroBg from "@/assets/hero-bg.jpg";
 
+const ASSETS = "https://assets-libertyguard-co-uk.stackstaging.com/videos";
+const STATIC_IMG_BY_UID: Record<string, string> = {
+  bc0d90221940958c3d321b50e9e36750: `${ASSETS}/solar%20static%20welfare/DSCF7941%2025ft%20solar%20static.jpg`,
+  "1fd4831857cb674dbb1b19b27536690f": `${ASSETS}/solar%20static%20welfare/DSCF1270%2028ft%20static.jpg`,
+};
+
 interface SpecCategory {
   title: string;
   items: string[];
