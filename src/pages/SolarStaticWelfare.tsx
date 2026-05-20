@@ -1,160 +1,88 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
 import heroBg from "@/assets/hero-bg.jpg";
+import { solarStaticProducts, type SolarProduct } from "@/data/solarProducts";
 
 const ASSETS = "https://assets-libertyguard-co-uk.stackstaging.com/videos";
-const STATIC_IMG_BY_UID: Record<string, string> = {
-  bc0d90221940958c3d321b50e9e36750: `${ASSETS}/solar%20static%20welfare/DSCF7941%2025ft%20solar%20static.jpg`,
-  "1fd4831857cb674dbb1b19b27536690f": `${ASSETS}/solar%20static%20welfare/DSCF1270%2028ft%20static.jpg`,
+const STATIC_THUMBS: Record<string, string> = {
+  "25ft-solar-static": `${ASSETS}/solar%20static%20welfare/DSCF7941%2025ft%20solar%20static.jpg`,
+  "28ft-eco-hybrid": `${ASSETS}/solar%20static%20welfare/DSCF1270%2028ft%20static.jpg`,
 };
 
-interface SpecCategory {
-  title: string;
-  items: string[];
-}
+const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
+const IFRAME_PARAMS =
+  "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
+const cfThumb = (uid: string, time = "0s") =>
+  `https://${CF_SUBDOMAIN}/${uid}/thumbnails/thumbnail.jpg?time=${time}&width=800&height=600&fit=crop`;
 
-interface Product {
-  title: string;
-  uid: string;
-  specs: SpecCategory[];
-}
+const ProductCardMedia = ({ product }: { product: SolarProduct }) => {
+  const override = STATIC_THUMBS[product.slug];
+  const [attempt, setAttempt] = useState<0 | 1 | 2 | 3>(override ? 0 : 1);
 
-const SOLAR_PANELS: SpecCategory = {
-  title: "Solar Panels",
-  items: ["315W Roof-mounted solar panels", "Fitted with a hybrid system"],
+  if (attempt === 3) {
+    return (
+      <iframe
+        src={`https://${CF_SUBDOMAIN}/${product.uid}/iframe?${IFRAME_PARAMS}`}
+        title={product.title}
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        allowFullScreen
+        loading="lazy"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0"
+        style={{
+          width: "calc(100% + 6rem)",
+          height: "calc(100% + 6rem)",
+          minWidth: "100%",
+          minHeight: "100%",
+        }}
+      />
+    );
+  }
+
+  const src =
+    attempt === 0 && override
+      ? override
+      : cfThumb(product.uid, attempt <= 1 ? "0s" : "2s");
+
+  return (
+    <img
+      src={src}
+      alt={product.title}
+      loading="lazy"
+      onError={() => setAttempt((c) => ((c + 1) as 0 | 1 | 2 | 3))}
+      className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
+    />
+  );
 };
-
-const products: Product[] = [
-  {
-    title: "25ft Solar Static",
-    uid: "bc0d90221940958c3d321b50e9e36750",
-    specs: [
-      SOLAR_PANELS,
-      {
-        title: "Generator",
-        items: ["7 KVA Generator", "Full service intervals included"],
-      },
-      {
-        title: "Toilet",
-        items: [
-          "x1 toilet cubicle with external access",
-          "No mains required chemical toilet",
-          "Hand wash sink",
-          "Hands-free low-power electric hand dryers",
-        ],
-      },
-      {
-        title: "Office",
-        items: [
-          "x2 office chairs",
-          "x2 desks & shelving",
-          "Whiteboard & notice board",
-          "12v diesel heating system throughout",
-          "6x 24V USB charging power outlets",
-          "6x 500W 230V low power sockets",
-        ],
-      },
-      {
-        title: "Kitchen",
-        items: [
-          "Fitted kitchen; sink, cupboards, worktop",
-          "Appliances; microwave & kettle",
-          "Fridge",
-          "Notice board",
-        ],
-      },
-      {
-        title: "Dry Room",
-        items: [
-          "x1 cubicle with external access",
-          "Bench seating with under storage sections",
-          "12v diesel heating",
-          "Clothes hooks",
-        ],
-      },
-      {
-        title: "Canteen",
-        items: [
-          "Seating for 15 people",
-          "12v diesel heating system throughout",
-          "Bench seating with under storage sections",
-          "3x 24V USB charging power outlets",
-          "3x 500W 230V low power sockets",
-          "External LED PIR lighting",
-        ],
-      },
-    ],
-  },
-  {
-    title: "28ft Eco Hybrid",
-    uid: "1fd4831857cb674dbb1b19b27536690f",
-    specs: [
-      SOLAR_PANELS,
-      {
-        title: "Generator",
-        items: ["11 KVA Generator", "Full service intervals included"],
-      },
-      {
-        title: "Toilet",
-        items: [
-          "x2 toilet cubicle with external access",
-          "No mains required chemical toilet",
-          "Hand wash sink",
-          "Hands-free low-power electric hand dryers",
-        ],
-      },
-      {
-        title: "Office",
-        items: [
-          "x2 office chairs",
-          "x2 desks & shelving",
-          "Whiteboard & notice board",
-          "12v diesel heating system throughout",
-          "2x 24V USB charging power outlets",
-          "4x 500W 230V low power sockets",
-        ],
-      },
-      {
-        title: "Kitchen",
-        items: [
-          "Fitted kitchen; sink, cupboards, worktop",
-          "Appliances; microwave & kettle",
-          "Fridge",
-          "Notice board",
-        ],
-      },
-      {
-        title: "Dry Room",
-        items: [
-          "x1 cubicle with external access",
-          "Bench seating with under storage sections",
-          "Clothes hooks",
-          "12v diesel heating",
-        ],
-      },
-      {
-        title: "Canteen",
-        items: [
-          "Seating for 16 people",
-          "12v diesel heating system throughout",
-          "Bench seating with under storage sections",
-          "4x 500W 230V low power sockets",
-          "External LED PIR lighting",
-        ],
-      },
-    ],
-  },
-];
 
 const SolarStaticWelfare = () => {
+  const renderProduct = (product: SolarProduct) => (
+    <Link
+      key={product.slug}
+      to={`/solar-static-welfare/${product.slug}`}
+      onClick={() => window.scrollTo(0, 0)}
+      className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/60 transition-all duration-300 aspect-[4/3]"
+    >
+      <ProductCardMedia product={product} />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 p-5">
+        <h2 className="font-heading text-xl md:text-2xl font-black text-primary-foreground uppercase tracking-tight">
+          {product.title}
+        </h2>
+        <span className="mt-2 inline-block text-secondary font-heading text-xs font-semibold uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity">
+          View Details →
+        </span>
+      </div>
+    </Link>
+  );
+
   return (
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
           <img
@@ -167,6 +95,7 @@ const SolarStaticWelfare = () => {
             <div className="container mx-auto px-4 lg:px-8">
               <Link
                 to="/"
+                onClick={() => window.scrollTo(0, 0)}
                 className="inline-flex items-center text-primary-foreground/70 hover:text-secondary font-heading text-sm uppercase tracking-wider mb-6 transition-colors"
               >
                 ← Back to Home
@@ -185,58 +114,46 @@ const SolarStaticWelfare = () => {
         </div>
       </section>
 
-      {/* Product Cards */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="space-y-10 max-w-7xl mx-auto">
-            {products.map((product) => (
-              <article
-                key={product.title}
-                className="group relative overflow-hidden rounded-xl bg-navy-light border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {solarStaticProducts.map(renderProduct)}
+
+              <Link
+                to="/new-account"
+                onClick={() => window.scrollTo(0, 0)}
+                className="group relative overflow-hidden rounded-xl border-2 border-secondary/60 hover:border-secondary bg-primary hover:bg-secondary/10 transition-all duration-300 aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"
               >
-                <div className="p-6 md:p-10">
-                  <h2 className="font-heading text-2xl md:text-3xl font-black text-primary-foreground uppercase tracking-tight mb-6">
-                    {product.title}
-                  </h2>
+                <ClipboardList className="w-14 h-14 text-secondary mb-4" />
+                <h3 className="font-heading text-xl font-black text-primary-foreground uppercase tracking-tight">
+                  New Customer
+                </h3>
+                <p className="mt-1 font-heading text-sm text-primary-foreground/80 uppercase tracking-wider">
+                  Open an Account
+                </p>
+                <span className="mt-3 text-secondary font-heading text-xs font-semibold uppercase tracking-wider">
+                  Get Started →
+                </span>
+              </Link>
 
-                  <div className="mb-8 mx-auto w-full max-w-[800px]">
-                    <div className="rounded-lg overflow-hidden border border-primary-foreground/10" style={{ aspectRatio: "16 / 9" }}>
-                      {STATIC_IMG_BY_UID[product.uid] ? (
-                        <img
-                          src={STATIC_IMG_BY_UID[product.uid]}
-                          alt={product.title}
-                          loading="lazy"
-                          className="w-full h-full object-cover"
-                        />
-                      ) : (
-                        <CloudflareVideo uid={product.uid} variant="card" />
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                    {product.specs.map((spec) => (
-                      <div key={spec.title}>
-                        <h3 className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
-                          {spec.title}
-                        </h3>
-                        <ul className="space-y-2">
-                          {spec.items.map((item) => (
-                            <li
-                              key={item}
-                              className="text-sm text-primary-foreground/70 leading-relaxed flex gap-2"
-                            >
-                              <span className="text-secondary mt-1">•</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </article>
-            ))}
+              <Link
+                to="/contact"
+                onClick={() => window.scrollTo(0, 0)}
+                className="group relative overflow-hidden rounded-xl border-2 border-secondary/60 hover:border-secondary bg-primary hover:bg-secondary/10 transition-all duration-300 aspect-[4/3] flex flex-col items-center justify-center p-6 text-center"
+              >
+                <Mail className="w-14 h-14 text-secondary mb-4" />
+                <h3 className="font-heading text-xl font-black text-primary-foreground uppercase tracking-tight">
+                  Email Us
+                </h3>
+                <p className="mt-1 font-heading text-sm text-primary-foreground/80 uppercase tracking-wider">
+                  Request a Quote
+                </p>
+                <span className="mt-3 text-secondary font-heading text-xs font-semibold uppercase tracking-wider">
+                  Contact →
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
