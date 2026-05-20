@@ -48,7 +48,9 @@ const App = () => (
           <Route path="/solar-mobile-welfare" element={<SolarMobileWelfare />} />
           <Route path="/solar-mobile-welfare/:slug" element={<SolarProduct />} />
           <Route path="/solar-static-welfare" element={<SolarStaticWelfare />} />
+          <Route path="/solar-static-welfare/:slug" element={<SolarProduct />} />
           <Route path="/solar-drying-room" element={<SolarDryingRoom />} />
+          <Route path="/solar-drying-room/:slug" element={<SolarProduct />} />
           <Route path="/solar-loos" element={<SolarLoos />} />
           <Route path="/solar-loos/:slug" element={<SolarProduct />} />
           <Route path="/portable-accommodation" element={<PortableAccommodation />} />
