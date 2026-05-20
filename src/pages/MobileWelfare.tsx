@@ -4,7 +4,7 @@ import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
+import HeroVideo from "@/components/HeroVideo";
 
 import heroBg from "@/assets/hybrid-24ft-twin-card.png";
 import hybrid12ftCard from "@/assets/hybrid-12ft-card.png";
@@ -83,7 +83,7 @@ const MobileWelfare = () => {
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
           <div className="absolute inset-0 z-[1]">
-            <CloudflareVideo uid="718203c553ab7aac3268319b9aae8427" variant="hero" />
+            <HeroVideo src="https://assets-libertyguard-co-uk.stackstaging.com/videos/mobilewelfare/24ft%20Mobi/LGMPO68%20-%2024ft%20Mobi.mov" />
           </div>
           <div className="absolute inset-0 bg-primary/60 z-[2]" />
           <div className="relative z-10 h-full flex items-center">

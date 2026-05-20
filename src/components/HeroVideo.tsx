@@ -14,6 +14,13 @@ const POSTER_BY_VIDEO: Record<string, string> = {
   "Social 1.mov": "/posters/solar.jpg",
   "Social%202.mov": "/posters/solar-loos.jpg",
   "Social 2.mov": "/posters/solar-loos.jpg",
+  "LGM418": "/posters/mobi-12ft.jpg",
+  "LGM308": "/posters/mobi-16ft.jpg",
+  "LGM160": "/posters/mobi-16ft-plus.jpg",
+  "LGM424": "/posters/mobi-20ft.jpg",
+  "LGN1516": "/posters/mobi-20ft-plus.jpg",
+  "LGMPO68": "/posters/mobi-24ft.jpg",
+  "LGMP102": "/posters/mobi-24ft-twin.jpg",
 };
 
 const resolvePoster = (src: string, explicit?: string) => {
