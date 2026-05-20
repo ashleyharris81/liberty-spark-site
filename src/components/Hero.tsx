@@ -1,5 +1,7 @@
 import heroBg from "@/assets/hero-bg.jpg";
-import CloudflareVideo from "./CloudflareVideo";
+
+const HERO_VIDEO_URL =
+  "https://assets-libertyguard-co-uk.stackstaging.com/videos/home-page-video.mov";
 
 const Hero = () => {
   return (
@@ -9,9 +11,18 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Cloudflare Stream Video Background */}
+      {/* Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-[1]">
-        <CloudflareVideo uid="8f4ff233528f86183d2c5740e0c9b7c9" variant="hero" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={heroBg}
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={HERO_VIDEO_URL} type="video/mp4" />
+        </video>
       </div>
       <div className="absolute inset-0 bg-primary/70 z-[2]" />
       <div className="relative z-10 container mx-auto px-4 text-center">
