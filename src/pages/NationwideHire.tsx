@@ -4,7 +4,7 @@ import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf, Download, Arrow
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
+import HeroVideo from "@/components/HeroVideo";
 import Sustainability from "@/components/Sustainability";
 import ImageAccordion from "@/components/ImageAccordion";
 import nationwideHireBg from "@/assets/nationwide-hire-bg.jpg";
@@ -92,7 +92,7 @@ const NationwideHire = () => {
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
           <div className="absolute inset-0 w-full h-full overflow-hidden z-[1]">
-            <CloudflareVideo uid="8f4ff233528f86183d2c5740e0c9b7c9" variant="hero" />
+            <HeroVideo src="https://assets-libertyguard-co-uk.stackstaging.com/videos/home-page-video.mov" />
           </div>
           <div className="absolute inset-0 bg-primary/20 z-[2]" />
           <div className="relative z-10 h-full flex items-center">

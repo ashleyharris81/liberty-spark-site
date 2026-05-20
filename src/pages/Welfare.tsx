@@ -3,7 +3,7 @@ import { Building, ShieldCheck, Utensils, DoorOpen, Wrench } from "lucide-react"
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
+import HeroVideo from "@/components/HeroVideo";
 import welfareMobileCard from "@/assets/welfare-mobile-card.jpg";
 import welfareStaticCard from "@/assets/welfare-static-card.jpg";
 
@@ -37,7 +37,7 @@ const Welfare = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <CloudflareVideo uid="8f4ff233528f86183d2c5740e0c9b7c9" variant="hero" />
+          <HeroVideo src="https://assets-libertyguard-co-uk.stackstaging.com/videos/static%20welfare%20video/LGP54.mov" />
           <div className="absolute inset-0 bg-primary/60 z-[5]" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
