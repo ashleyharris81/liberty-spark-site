@@ -1,10 +1,20 @@
 import { Link, useParams, Navigate } from "react-router-dom";
+import { ArrowDown, Fuel, Droplet, Plug, Cloud, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import { getSolarProduct } from "@/data/solarProducts";
 import { downloadFile } from "@/lib/downloadFile";
+
+const goSolarStats = [
+  { icon: ArrowDown, value: "£7,465", label: "Total Savings*" },
+  { icon: Fuel, value: "£3,969", label: "Direct Fuel Costs Avoided*" },
+  { icon: Droplet, value: "1,846L", label: "Total Litres Fuel Saved*" },
+  { icon: Plug, value: "£1,156", label: "Generator Service Costs Saved*" },
+  { icon: Cloud, value: "5,846kg", label: "CO₂ Emissions Avoided*" },
+  { icon: Users, value: "£2,340", label: "Toilet Servicing Costs Avoided*" },
+];
 
 const SolarProduct = () => {
   const { slug } = useParams<{ slug: string }>();
