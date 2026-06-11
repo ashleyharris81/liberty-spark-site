@@ -93,6 +93,42 @@ const SolarProduct = () => {
         </div>
       </section>
 
+      {product.category === "mobile" && (
+        <section className="relative w-full bg-[hsl(78,68%,52%)] py-20 overflow-hidden">
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_20%_20%,white,transparent_50%),radial-gradient(circle_at_80%_80%,white,transparent_50%)]" />
+          <div className="relative container mx-auto px-4 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="font-heading text-5xl md:text-7xl font-black text-white uppercase tracking-tight text-center leading-[0.9]">
+                Go S<span className="text-yellow">O</span>lar
+                <br />
+                <span className="italic font-light">&amp; Save</span>
+              </h2>
+
+              <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {goSolarStats.map(({ icon: Icon, value, label }) => (
+                  <div
+                    key={label}
+                    className="rounded-2xl border-2 border-white/70 bg-transparent p-6 flex flex-col items-start hover:bg-white/10 transition-colors"
+                  >
+                    <Icon className="w-10 h-10 text-white mb-4" strokeWidth={2.5} />
+                    <div className="font-heading text-4xl md:text-5xl font-black text-white leading-none">
+                      {value}
+                    </div>
+                    <div className="mt-3 font-heading text-sm font-bold text-white uppercase tracking-wider">
+                      {label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-10 text-xs text-white/90 leading-relaxed max-w-4xl">
+                *Compared to standard comparable 'eco' Canteen unit with fresh water toilet(s) and 7kVA generator 5 day/week. CO₂ emissions calculation: 1l of fuel = 3.16 kg of CO₂ (inc. Scope 3). HVO biofuel - £2.15l. Generator service £280. Toilet service £70.
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       <Contact />
       <Footer />
     </div>
