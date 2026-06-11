@@ -98,10 +98,9 @@ const SolarProduct = () => {
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_20%_20%,white,transparent_50%),radial-gradient(circle_at_80%_80%,white,transparent_50%)]" />
           <div className="relative container mx-auto px-4 lg:px-8">
             <div className="max-w-6xl mx-auto text-center">
-              <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
-                <div className="flex items-baseline font-heading font-black uppercase tracking-tight text-white text-3xl md:text-5xl leading-none">
-                  <span>Ultimate</span>
-                  <span className="ml-2 text-yellow">ECO</span>
+              <div className="flex flex-wrap items-baseline justify-center gap-x-4 md:gap-x-6 gap-y-2">
+                <div className="font-heading font-black uppercase tracking-tight text-white text-4xl md:text-6xl leading-none">
+                  Ultimate<span className="ml-2 text-yellow">ECO</span>
                 </div>
                 <h2 className="font-heading text-4xl md:text-6xl font-black text-white uppercase tracking-tight leading-none">
                   Go S<span className="text-yellow">O</span>lar <span className="italic font-light">&amp; Save</span>
