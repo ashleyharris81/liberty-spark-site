@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import UKDepotMap from "@/components/UKDepotMap";
+import { depots } from "@/data/depots";
 import { downloadFile } from "@/lib/downloadFile";
 
 const ContactPage = () => {
