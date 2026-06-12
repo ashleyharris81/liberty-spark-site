@@ -88,11 +88,9 @@ const UKDepotMap = ({ depots }: { depots: Depot[] }) => {
       {activeDepot && (
         <div className="absolute top-3 left-3 right-3 md:right-auto md:max-w-xs bg-primary text-primary-foreground rounded-xl shadow-2xl border border-secondary/40 p-4 animate-fade-in">
           <div className="flex items-start justify-between gap-3">
-            <div>
-              <p className="font-heading text-xs uppercase tracking-wider text-secondary">
-                Depot {activeDepot.code}
-              </p>
-            </div>
+            <p className="text-sm text-primary-foreground/85 leading-relaxed">
+              {activeDepot.address}
+            </p>
             <button
               onClick={() => setActive(null)}
               aria-label="Close"
@@ -101,9 +99,6 @@ const UKDepotMap = ({ depots }: { depots: Depot[] }) => {
               ×
             </button>
           </div>
-          <p className="text-sm text-primary-foreground/85 mt-2 leading-relaxed">
-            {activeDepot.address}
-          </p>
         </div>
       )}
     </div>
