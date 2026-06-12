@@ -202,6 +202,21 @@ const ContactPage = () => {
         </div>
       </section>
 
+      {/* Depot Map */}
+      <section className="py-20 bg-primary">
+        <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
+              Our <span className="text-secondary">Depots</span>
+            </h2>
+            <div className="w-20 h-1 bg-secondary mx-auto mt-4" />
+          </div>
+          <div className="mx-auto w-full max-w-[360px] md:max-w-[420px]">
+            <UKDepotMap depots={depots} />
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
