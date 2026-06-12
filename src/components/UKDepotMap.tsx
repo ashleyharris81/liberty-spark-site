@@ -92,9 +92,6 @@ const UKDepotMap = ({ depots }: { depots: Depot[] }) => {
               <p className="font-heading text-xs uppercase tracking-wider text-secondary">
                 Depot {activeDepot.code}
               </p>
-              <h3 className="font-heading font-black text-lg uppercase tracking-tight mt-0.5">
-                {activeDepot.name}
-              </h3>
             </div>
             <button
               onClick={() => setActive(null)}
