@@ -103,7 +103,7 @@ const SolarProduct = () => {
                 <img
                   src={ultimateEcoLogo.url}
                   alt="Ultimate ECO"
-                  className="h-16 md:h-24 w-auto"
+                  className="h-20 md:h-28 w-auto"
                 />
                 <h2 className="font-heading text-4xl md:text-6xl font-black text-white uppercase tracking-tight leading-none">
                   Go S<span className="text-yellow">O</span>lar <span className="italic font-light">&amp; Save</span>
