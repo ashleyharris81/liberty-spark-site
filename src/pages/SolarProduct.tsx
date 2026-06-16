@@ -8,13 +8,31 @@ import CloudflareVideo from "@/components/CloudflareVideo";
 import { getSolarProduct } from "@/data/solarProducts";
 import { downloadFile } from "@/lib/downloadFile";
 
-const goSolarStats = [
-  { icon: ArrowDown, value: "£7,465", label: "Total Savings*" },
-  { icon: Fuel, value: "£3,969", label: "Direct Fuel Costs Avoided*" },
-  { icon: Droplet, value: "1,846L", label: "Total Litres Fuel Saved*" },
-  { icon: Plug, value: "£1,156", label: "Generator Service Costs Saved*" },
-  { icon: Cloud, value: "5,846kg", label: "CO₂ Emissions Avoided*" },
-  { icon: Users, value: "£2,340", label: "Toilet Servicing Costs Avoided*" },
+type Savings = {
+  total: string;
+  fuelCost: string;
+  fuelSaved: string;
+  generator: string;
+  co2: string;
+  toilet: string;
+};
+
+const savingsBySlug: Record<string, Savings> = {
+  "12ft-ultimate-eco": { total: "£7,465", fuelCost: "£3,969", fuelSaved: "1,846L", generator: "£1,156", co2: "5,846kg", toilet: "£2,340" },
+  "20ft-ultimate-eco": { total: "£10,222", fuelCost: "£5,678", fuelSaved: "2,641L", generator: "£2,204", co2: "8,345kg", toilet: "£2,340" },
+  "12ft-ultimate-eco-plus": { total: "£8,140", fuelCost: "£4,644", fuelSaved: "2,160L", generator: "£1,150", co2: "6,841kg", toilet: "£2,340" },
+  "20ft-ultimate-eco-plus": { total: "£11,015", fuelCost: "£6,751", fuelSaved: "3,140L", generator: "£1,924", co2: "9,922kg", toilet: "£2,340" },
+  "24ft-ultimate-eco-plus": { total: "£11,281", fuelCost: "£6,925", fuelSaved: "3,221L", generator: "£2,016", co2: "10,201kg", toilet: "£2,340" },
+  "12ft-solar-dry": { total: "£40,585", fuelCost: "N/A", fuelSaved: "27,990L", generator: "£2,016", co2: "88,448kg", toilet: "N/A" },
+};
+
+const buildStats = (s: Savings) => [
+  { icon: ArrowDown, value: s.total, label: "Total Savings*" },
+  { icon: Fuel, value: s.fuelCost, label: "Direct Fuel Costs Avoided*" },
+  { icon: Droplet, value: s.fuelSaved, label: "Total Litres Fuel Saved*" },
+  { icon: Plug, value: s.generator, label: "Generator Service Costs Saved*" },
+  { icon: Cloud, value: s.co2, label: "CO₂ Emissions Avoided*" },
+  { icon: Users, value: s.toilet, label: "Toilet Servicing Costs Avoided*" },
 ];
 
 const SolarProduct = () => {
