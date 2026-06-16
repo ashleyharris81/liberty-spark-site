@@ -114,7 +114,7 @@ const SolarProduct = () => {
         </div>
       </section>
 
-      {product.category === "mobile" && (
+      {savings && (
         <section className="relative w-full bg-[hsl(78,68%,52%)] py-20 overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_20%_20%,white,transparent_50%),radial-gradient(circle_at_80%_80%,white,transparent_50%)]" />
           <div className="relative container mx-auto px-4 lg:px-8">
