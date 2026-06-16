@@ -48,6 +48,8 @@ const SolarProduct = () => {
     dry: { to: "/solar-drying-room", label: "Back to Solar Drying Room" },
   };
   const { to: backTo, label: backLabel } = backMap[product.category];
+  const savings = savingsBySlug[product.slug];
+  const goSolarStats = savings ? buildStats(savings) : [];
 
   return (
     <div className="min-h-screen">
