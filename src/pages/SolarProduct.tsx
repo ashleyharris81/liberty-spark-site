@@ -6,6 +6,7 @@ import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import { getSolarProduct } from "@/data/solarProducts";
 import { downloadFile } from "@/lib/downloadFile";
+import ultimateEcoLogo from "@/assets/ultimate-eco-logo.png.asset.json";
 
 type Savings = {
   total: string;
@@ -35,25 +36,11 @@ const buildStats = (s: Savings) => [
 ];
 
 const UltimateEcoLogo = () => (
-  <svg
-    viewBox="0 0 340 170"
-    role="img"
-    aria-label="Ultimate ECO"
-    className="h-32 md:h-44 w-auto shrink-0"
-  >
-    <title>Ultimate ECO</title>
-    <g fill="none" stroke="white" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M42 86c0-38 30-68 68-68h120c38 0 68 30 68 68s-30 68-68 68H110c-38 0-68-30-68-68Z" />
-      <path d="M232 42c28 10 47 27 47 44s-19 34-47 44" opacity="0.65" />
-    </g>
-    <text x="78" y="78" fill="white" fontFamily="Montserrat, Arial, sans-serif" fontSize="34" fontWeight="800" letterSpacing="2">
-      ULTIMATE
-    </text>
-    <text x="94" y="120" fill="white" fontFamily="Montserrat, Arial, sans-serif" fontSize="52" fontWeight="900" letterSpacing="3">
-      ECO
-    </text>
-    <path d="M247 105c22-8 36-24 39-49 20 22 16 55-8 71-18 12-43 7-52-12 7 1 14-1 21-10Z" fill="white" opacity="0.95" />
-  </svg>
+  <img
+    src={ultimateEcoLogo.url}
+    alt="Ultimate ECO"
+    className="h-24 md:h-32 w-auto shrink-0"
+  />
 );
 
 const SolarProduct = () => {
