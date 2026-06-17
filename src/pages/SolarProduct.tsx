@@ -1,6 +1,5 @@
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowDown, Fuel, Droplet, Plug, Cloud, Users } from "lucide-react";
-import ultimateEcoLogo from "@/assets/ultimate-eco-logo.svg.asset.json";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
@@ -121,7 +120,7 @@ const SolarProduct = () => {
             <div className="max-w-6xl mx-auto text-center">
               <div className="flex flex-wrap items-center justify-center gap-x-6 md:gap-x-8 gap-y-4">
                 <img
-                  src={ultimateEcoLogo.url}
+                  src="/ultimate-eco-logo.svg"
                   alt="Ultimate ECO"
                   className="h-32 md:h-44 w-auto"
                 />
