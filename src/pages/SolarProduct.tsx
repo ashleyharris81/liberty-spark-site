@@ -34,6 +34,28 @@ const buildStats = (s: Savings) => [
   { icon: Users, value: s.toilet, label: "Toilet Servicing Costs Avoided*" },
 ];
 
+const UltimateEcoLogo = () => (
+  <svg
+    viewBox="0 0 340 170"
+    role="img"
+    aria-label="Ultimate ECO"
+    className="h-32 md:h-44 w-auto shrink-0"
+  >
+    <title>Ultimate ECO</title>
+    <g fill="none" stroke="white" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M42 86c0-38 30-68 68-68h120c38 0 68 30 68 68s-30 68-68 68H110c-38 0-68-30-68-68Z" />
+      <path d="M232 42c28 10 47 27 47 44s-19 34-47 44" opacity="0.65" />
+    </g>
+    <text x="78" y="78" fill="white" fontFamily="Montserrat, Arial, sans-serif" fontSize="34" fontWeight="800" letterSpacing="2">
+      ULTIMATE
+    </text>
+    <text x="94" y="120" fill="white" fontFamily="Montserrat, Arial, sans-serif" fontSize="52" fontWeight="900" letterSpacing="3">
+      ECO
+    </text>
+    <path d="M247 105c22-8 36-24 39-49 20 22 16 55-8 71-18 12-43 7-52-12 7 1 14-1 21-10Z" fill="white" opacity="0.95" />
+  </svg>
+);
+
 const SolarProduct = () => {
   const { slug } = useParams<{ slug: string }>();
   const product = slug ? getSolarProduct(slug) : undefined;
@@ -119,11 +141,7 @@ const SolarProduct = () => {
           <div className="relative container mx-auto px-4 lg:px-8">
             <div className="max-w-6xl mx-auto text-center">
               <div className="flex flex-wrap items-center justify-center gap-x-6 md:gap-x-8 gap-y-4">
-                <img
-                  src="/ultimate-eco-logo.svg"
-                  alt="Ultimate ECO"
-                  className="h-32 md:h-44 w-auto"
-                />
+                <UltimateEcoLogo />
                 <h2 className="font-heading text-4xl md:text-6xl font-black text-white uppercase tracking-tight leading-none">
                   Go S<span className="text-yellow">O</span>lar <span className="italic font-light">&amp; Save</span>
                 </h2>
