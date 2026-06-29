@@ -21,6 +21,11 @@ const cardOverrides: Partial<Record<MobiModel["slug"], { src: string; objectPosi
   "24ft-hybrid-mobi-twin-toilet": { src: hybrid24ftTwinCard },
 };
 
+// Fine-tune object-position for Cloudflare thumbnails that are off-centre
+const thumbPositions: Partial<Record<MobiModel["slug"], string>> = {
+  "16ft-mobi-plus": "70% center",
+};
+
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
 const IFRAME_PARAMS =
   "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
