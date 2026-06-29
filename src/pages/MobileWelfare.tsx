@@ -33,8 +33,22 @@ const fallbackImages: Partial<Record<MobiModel["slug"], string>> = {
 };
 
 const ModelCardMedia = ({ model }: { model: MobiModel }) => {
+  const override = cardOverrides[model.slug];
   const [thumbAttempt, setThumbAttempt] = useState<0 | 1 | 2>(0);
   const fallbackImage = fallbackImages[model.slug];
+
+  if (override) {
+    return (
+      <img
+        src={override.src}
+        alt={model.title}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        style={{ objectPosition: override.objectPosition ?? "center" }}
+      />
+    );
+  }
+
 
   if (thumbAttempt === 2) {
     if (fallbackImage) {
