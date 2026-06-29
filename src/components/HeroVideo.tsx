@@ -13,6 +13,8 @@ const POSTER_BY_VIDEO: Record<string, string> = {
   "Social%201.mov": "/posters/solar.jpg",
   "Social 1.mov": "/posters/solar.jpg",
   "Social%202.mov": "/posters/solar-loos.jpg",
+  "DoncasterKnights15.mov": "/posters/solar-mobile.jpg",
+  "LGJP138.mov": "/posters/solar-static.jpg",
   "Social 2.mov": "/posters/solar-loos.jpg",
   "LGM418": "/posters/mobi-12ft.jpg",
   "LGM308": "/posters/mobi-16ft.jpg",
