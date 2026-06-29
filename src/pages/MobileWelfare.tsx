@@ -23,7 +23,7 @@ const cardOverrides: Partial<Record<MobiModel["slug"], { src: string; objectPosi
 
 // Fine-tune object-position for Cloudflare thumbnails that are off-centre
 const thumbPositions: Partial<Record<MobiModel["slug"], string>> = {
-  "16ft-mobi-plus": "70% center",
+  "16ft-mobi-plus": "85% center",
 };
 
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
