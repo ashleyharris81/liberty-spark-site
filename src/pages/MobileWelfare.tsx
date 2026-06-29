@@ -6,18 +6,19 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import HeroVideo from "@/components/HeroVideo";
 
-import heroBg from "@/assets/hybrid-24ft-twin-card.png";
-import hybrid12ftCard from "@/assets/hybrid-12ft-card.png";
-import hybrid16ftCard from "@/assets/hybrid-16ft-card.png";
-import hybrid24ftTwinCard from "@/assets/hybrid-24ft-twin-card.png";
+import heroBg from "@/assets/hybrid-24ft-twin-card.jpg";
+import hybrid12ftCard from "@/assets/hybrid-12ft-card.jpg";
+import hybrid16ftCard from "@/assets/hybrid-16ft-card.jpg";
+import hybrid24ftTwinCard from "@/assets/hybrid-24ft-twin-card.jpg";
 import twin24Centered from "@/assets/24ft-mobi-twin-toilet-card.jpg";
-import hybrid12Centered from "@/assets/12ft-hybrid-mobi-card.jpg";
 import { mobiModels, type MobiModel } from "@/data/mobiModels";
 
-// Centered still-frame overrides (skip CF thumbnail + scale-125 so container stays central)
+// Centered still-image overrides (skip CF thumbnail so container stays central)
 const cardOverrides: Partial<Record<MobiModel["slug"], { src: string; objectPosition?: string }>> = {
-  "24ft-mobi-twin-toilet": { src: twin24Centered, objectPosition: "center" },
-  "12ft-hybrid-mobi": { src: hybrid12Centered, objectPosition: "70% center" },
+  "24ft-mobi-twin-toilet": { src: twin24Centered },
+  "12ft-hybrid-mobi": { src: hybrid12ftCard },
+  "16ft-hybrid-mobi": { src: hybrid16ftCard },
+  "24ft-hybrid-mobi-twin-toilet": { src: hybrid24ftTwinCard },
 };
 
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
