@@ -4,7 +4,7 @@ import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import heroBg from "@/assets/hero-bg.jpg";
+import HeroVideo from "@/components/HeroVideo";
 import { solarStaticProducts, type SolarProduct } from "@/data/solarProducts";
 
 const ASSETS = "https://assets-libertyguard-co-uk.stackstaging.com/videos";
