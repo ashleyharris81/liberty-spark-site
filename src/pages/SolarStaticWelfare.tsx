@@ -85,11 +85,7 @@ const SolarStaticWelfare = () => {
 
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <img
-            src="https://assets-libertyguard-co-uk.stackstaging.com/videos/solar%20solutions%20-%20catagories/MJP_9981%20solar%20mobile%20welfare.jpg"
-            alt="Liberty Guard solar static welfare unit"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          <HeroVideo src="https://assets.libertyguard.co.uk/videos/LGJP138.mov" />
           <div className="absolute inset-0 bg-primary/60" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
