@@ -93,6 +93,7 @@ const ModelCardMedia = ({ model }: { model: MobiModel }) => {
       loading="lazy"
       onError={() => setThumbAttempt((current) => (current === 0 ? 1 : 2))}
       className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
+      style={{ objectPosition: thumbPositions[model.slug] }}
     />
   );
 };
