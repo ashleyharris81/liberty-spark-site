@@ -14,7 +14,7 @@ import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
 import mobileCard from "@/assets/welfare-mobile-card.jpg";
 import staticCard from "@/assets/welfare-static-card.jpg";
-import hybridCard from "@/assets/hybrid-24ft-twin-card.png";
+import hybridCard from "@/assets/hybrid-24ft-twin-card.jpg";
 import msExterior from "@/assets/ms-exterior.jpg";
 import portableHero from "@/assets/portable-buildings-hero.jpg";
 import logoHss from "@/assets/customers/hss.png";
