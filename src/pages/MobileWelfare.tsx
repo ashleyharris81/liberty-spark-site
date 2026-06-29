@@ -21,6 +21,11 @@ const cardOverrides: Partial<Record<MobiModel["slug"], { src: string; objectPosi
   "24ft-hybrid-mobi-twin-toilet": { src: hybrid24ftTwinCard },
 };
 
+// Fine-tune object-position for Cloudflare thumbnails that are off-centre
+const thumbPositions: Partial<Record<MobiModel["slug"], string>> = {
+  "16ft-mobi-plus": "85% center",
+};
+
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
 const IFRAME_PARAMS =
   "autoplay=true&loop=true&muted=true&controls=false&preload=auto";
@@ -88,6 +93,7 @@ const ModelCardMedia = ({ model }: { model: MobiModel }) => {
       loading="lazy"
       onError={() => setThumbAttempt((current) => (current === 0 ? 1 : 2))}
       className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
+      style={{ transformOrigin: thumbPositions[model.slug] }}
     />
   );
 };
