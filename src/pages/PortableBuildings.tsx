@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import heroBg from "@/assets/portable-buildings-hero.jpg";
+import portableAccomImg from "@/assets/portable-accommodation-card.jpg.asset.json";
+import modularBuildingsImg from "@/assets/modular-buildings-card.jpg.asset.json";
 
 const categories = [
   {
@@ -12,6 +14,7 @@ const categories = [
       "Anti-vandal cabins offering a secure, robust solution for high-risk or remote sites with steel construction, secure windows, and reinforced doors.",
     icon: Shield,
     link: "/portable-accommodation",
+    image: portableAccomImg.url,
   },
   {
     title: "Modular Buildings",
@@ -19,6 +22,7 @@ const categories = [
       "Greater flexibility and scalability, perfect for larger projects requiring office space, accommodation, training facilities or meeting rooms.",
     icon: Building,
     link: "/modular-buildings",
+    image: modularBuildingsImg.url,
   },
 ];
 
