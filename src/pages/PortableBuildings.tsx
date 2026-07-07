@@ -132,29 +132,6 @@ const PortableBuildings = () => {
         </div>
       </section>
 
-      {/* Content */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-8">
-            Built for <span className="text-secondary">Every Project</span>
-          </h2>
-          <div className="space-y-6 text-muted-foreground leading-relaxed">
-            <p>
-              Our portable accommodation solutions include anti-vandal cabins and modular buildings, available for both hire and purchase. Designed for flexibility, durability, and comfort, these units are ideal for long-term projects across construction, infrastructure, education, and industrial sectors.
-            </p>
-            <p>
-              Anti-vandal cabins offer a secure, robust solution for high-risk or remote sites, providing peace of mind with a steel construction, secure windows, and reinforced doors. Modular buildings offer greater flexibility and scalability, making them perfect for larger projects that require an office space, accommodation, training facilities or meeting rooms.
-            </p>
-            <p>
-              Whether you need a single unit or a multi-building complex, our team is dedicated to delivering high-quality, tailored solutions to meet your needs. Our portable buildings are designed for rapid deployment and can be configured to your exact specifications.
-            </p>
-            <p>
-              With the option to hire for temporary requirements or purchase for permanent use, we offer competitive packages and full support throughout your project's lifecycle. Our focused accommodation department prides itself on delivering excellent customer service, with our knowledgeable team who ensure a smooth and efficient experience from initial enquiry through to delivery and installation.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Features Grid */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 lg:px-8">
