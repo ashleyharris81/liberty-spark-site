@@ -26,38 +26,6 @@ const categories = [
   },
 ];
 
-const features = [
-  {
-    icon: Shield,
-    title: "Steel Construction",
-    description: "Anti-vandal cabins with secure windows and reinforced doors for high-risk or remote sites.",
-  },
-  {
-    icon: Home,
-    title: "Flexible Configurations",
-    description: "From single units to multi-building complexes, configured to your exact specifications.",
-  },
-  {
-    icon: Truck,
-    title: "Rapid Deployment",
-    description: "Designed for fast setup and can be hired for temporary needs or purchased for permanent use.",
-  },
-  {
-    icon: Users,
-    title: "Dedicated Team",
-    description: "Our focused accommodation department ensures a smooth experience from enquiry to installation.",
-  },
-  {
-    icon: Wrench,
-    title: "Full Lifecycle Support",
-    description: "Competitive packages with full support throughout your project's entire lifecycle.",
-  },
-  {
-    icon: Building,
-    title: "Scalable Solutions",
-    description: "Modular buildings that scale with your project — offices, training rooms, meeting spaces and more.",
-  },
-];
 
 const PortableBuildings = () => {
   return (
