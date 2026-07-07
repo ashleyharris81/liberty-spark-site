@@ -87,7 +87,7 @@ const PortableAccommodation = () => {
       </section>
 
       {/* Key Features */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-24 mt-12 overflow-hidden">
         <img
           src={portableAccomImg.url}
           alt=""
