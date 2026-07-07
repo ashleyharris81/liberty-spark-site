@@ -167,7 +167,7 @@ const Solar = () => {
           </h2>
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              At Liberty Guard, we're excited to introduce you to our innovative solar range, a smart, eco-friendly solution designed with both your needs and the planet in mind. We've combined the latest in solar technology with clever features like rainwater harvesting, telematics, remote monitoring, water level alerts and a waste tank gauge, allowing our teams to monitor and track your cabin's performance.
+              At Liberty, we're excited to introduce you to our innovative solar range, a smart, eco-friendly solution designed with both your needs and the planet in mind. We've combined the latest in solar technology with clever features like rainwater harvesting, telematics, remote monitoring, water level alerts and a waste tank gauge, allowing our teams to monitor and track your cabin's performance.
             </p>
             <p>
               Our solar units are all about efficiency. They're designed to run on low fuel, produce fewer emissions, and keep carbon output to an absolute minimum — using less energy overall. That means you're not just saving money, you're also reducing your environmental impact too.
@@ -252,7 +252,7 @@ const Solar = () => {
               By choosing from our solar range, you are making a smart investment that offers significant financial savings. But it's not just about cutting costs — it's about making a real difference. Whether you're looking to lower your carbon footprint or take steps toward net zero, our solar-powered solutions are here to help you achieve those goals.
             </p>
             <p>
-              As always, our team is on hand to guide you through the options and find the best setup for your site. From initial advice to ongoing support, we're here to make sure your experience with Liberty Guard is as smooth and stress-free as possible.
+              As always, our team is on hand to guide you through the options and find the best setup for your site. From initial advice to ongoing support, we're here to make sure your experience with Liberty is as smooth and stress-free as possible.
             </p>
           </div>
         </div>

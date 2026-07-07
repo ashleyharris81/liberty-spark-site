@@ -88,7 +88,7 @@ const NationwideHire = () => {
         <div className="relative h-[80vh] min-h-[560px] overflow-hidden">
           <img
             src={nationwideHireBg}
-            alt="Liberty Guard welfare unit on site"
+            alt="Liberty welfare unit on site"
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
           <div className="absolute inset-0 w-full h-full overflow-hidden z-[1]">
@@ -101,7 +101,7 @@ const NationwideHire = () => {
                 Nationwide Hire
               </span>
               <h1 className="mt-6 font-heading text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground uppercase tracking-tight leading-[0.95] animate-fade-in-up max-w-5xl">
-                Liberty Group
+                Liberty
                 <span className="block text-secondary">Welfare Hire</span>
               </h1>
               <div
@@ -146,7 +146,7 @@ const NationwideHire = () => {
           </h2>
           <div className="w-20 h-1 bg-secondary mt-4 mb-6 mx-auto" />
           <p className="text-primary/80 text-lg leading-relaxed">
-            At Liberty Group we provide welfare units nationwide, supported by 20 reliable distribution depots. With over 40 years of industry experience, we bring expert product knowledge to every project.
+            At Liberty we provide welfare units nationwide, supported by 20 reliable distribution depots. With over 40 years of industry experience, we bring expert product knowledge to every project.
           </p>
           <p className="text-primary/80 text-lg leading-relaxed mt-4">
             Our fleet of 1,500+ units enables fast, flexible solutions with a quick 24-hour turnaround — backed by our trusted aftercare team, delivering high-quality service and rapid support.
@@ -355,7 +355,7 @@ const NationwideHire = () => {
         <div className="relative z-10 container mx-auto px-4 lg:px-8 max-w-7xl">
           <div className="text-center mb-14">
             <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
-              Why <span className="text-secondary">Liberty Group</span>
+              Why <span className="text-secondary">Liberty</span>
             </h2>
             <div className="w-20 h-1 bg-secondary mx-auto mt-4" />
           </div>
