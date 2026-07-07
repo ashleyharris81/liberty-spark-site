@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Building, Shield, Wrench, Truck, Home, Users } from "lucide-react";
+import { Building, Shield } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
@@ -26,38 +26,6 @@ const categories = [
   },
 ];
 
-const features = [
-  {
-    icon: Shield,
-    title: "Steel Construction",
-    description: "Anti-vandal cabins with secure windows and reinforced doors for high-risk or remote sites.",
-  },
-  {
-    icon: Home,
-    title: "Flexible Configurations",
-    description: "From single units to multi-building complexes, configured to your exact specifications.",
-  },
-  {
-    icon: Truck,
-    title: "Rapid Deployment",
-    description: "Designed for fast setup and can be hired for temporary needs or purchased for permanent use.",
-  },
-  {
-    icon: Users,
-    title: "Dedicated Team",
-    description: "Our focused accommodation department ensures a smooth experience from enquiry to installation.",
-  },
-  {
-    icon: Wrench,
-    title: "Full Lifecycle Support",
-    description: "Competitive packages with full support throughout your project's entire lifecycle.",
-  },
-  {
-    icon: Building,
-    title: "Scalable Solutions",
-    description: "Modular buildings that scale with your project — offices, training rooms, meeting spaces and more.",
-  },
-];
 
 const PortableBuildings = () => {
   return (
@@ -132,32 +100,6 @@ const PortableBuildings = () => {
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-primary-foreground uppercase tracking-tight text-center mb-12">
-            Key <span className="text-secondary">Features</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="group bg-navy-light rounded-xl p-8 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-5 group-hover:bg-secondary/30 transition-colors">
-                  <feature.icon className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-heading text-lg font-bold text-primary-foreground uppercase tracking-wide mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-primary-foreground/70 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-20 bg-background">
