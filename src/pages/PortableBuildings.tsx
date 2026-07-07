@@ -100,32 +100,6 @@ const PortableBuildings = () => {
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-primary-foreground uppercase tracking-tight text-center mb-12">
-            Key <span className="text-secondary">Features</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="group bg-navy-light rounded-xl p-8 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center mb-5 group-hover:bg-secondary/30 transition-colors">
-                  <feature.icon className="w-6 h-6 text-secondary" />
-                </div>
-                <h3 className="font-heading text-lg font-bold text-primary-foreground uppercase tracking-wide mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-primary-foreground/70 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-20 bg-background">
