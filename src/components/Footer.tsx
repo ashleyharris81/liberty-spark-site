@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/liberty-logo-white.png.asset.json";
+import logo from "@/assets/liberty-logo-white.png";
 import risqs from "@/assets/accreditations/risqs.png";
 import constructionline from "@/assets/accreditations/constructionline.png";
 import ssip from "@/assets/accreditations/ssip.jpg";
@@ -29,7 +29,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <div className="flex flex-col gap-4">
-            <img src={logo.url} alt="Liberty" className="h-12 w-auto object-contain self-start" />
+            <img src={logo} alt="Liberty" className="h-12 w-auto object-contain self-start" />
             <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-xs">
               The Old Airfield, Belton Road, Sandtoft DN8 5SX
             </p>
