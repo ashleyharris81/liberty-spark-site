@@ -169,7 +169,7 @@ const MarketingSuites = () => {
                     src={b.logo}
                     alt={b.name}
                     loading="lazy"
-                    className="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    className="max-h-16 w-auto object-contain transition-all duration-300"
                   />
                 </div>
               ))}
