@@ -59,7 +59,7 @@ const NewAccount = () => {
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <div className="mb-10">
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Thank you for applying for a Liberty Group account!
+              Thank you for applying for a Liberty account!
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               To open an account with us we ask for some Company information from you. The form shouldn't take too long to complete but please make sure you read it first to ensure you have everything you need to hand! Unfortunately, we are unable to process incomplete applications. If you do have any queries, please contact our accounts Dept on{" "}

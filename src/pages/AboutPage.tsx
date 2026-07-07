@@ -5,7 +5,7 @@ import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 
 const journeyParagraphs = [
-  "The Liberty Group proudly brings over 40 years of expertise in the modular and portable accommodation sector. We have grown to become one of the UK's most trusted independent suppliers of both standard and specialist solutions within the industry.",
+  "Liberty proudly brings over 40 years of expertise in the modular and portable accommodation sector. We have grown to become one of the UK's most trusted independent suppliers of both standard and specialist solutions within the industry.",
   "Our head office in Sandtoft, Doncaster, serves as the strategic hub for our operations, coordinating a nationwide network that enables us to consistently deliver high-quality products and services to our extensive customer base.",
   "Through strong partnerships with our clients, we stay ahead of industry demands and deliver on our commitment to business continuity and excellence.",
   "The safety, health, and wellbeing of our employees, customers, and suppliers remain a core priority. We continuously strive to enhance the safety standards that protect our people.",
