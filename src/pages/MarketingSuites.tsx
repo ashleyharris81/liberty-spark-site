@@ -121,7 +121,7 @@ const MarketingSuites = () => {
           </h2>
           <div className="space-y-5 text-muted-foreground leading-relaxed text-left">
             <p>
-              At Liberty Guard, we understand the importance of first impressions. Our stand-alone Marketing Suites are designed to provide a stylish, professional, and welcoming environment for both your customers and staff. Each unit is tailored to your specific requirements, with prestigious finishes and bespoke interiors that reflect your brand's identity, creating the perfect platform to showcase your homes and developments in a relaxed, high-quality setting.
+              At Liberty, we understand the importance of first impressions. Our stand-alone Marketing Suites are designed to provide a stylish, professional, and welcoming environment for both your customers and staff. Each unit is tailored to your specific requirements, with prestigious finishes and bespoke interiors that reflect your brand's identity, creating the perfect platform to showcase your homes and developments in a relaxed, high-quality setting.
             </p>
             <p>
               From layout to interior styling, every detail is considered to ensure your sales environment is as functional as it is visually impressive. Whether you need a compact suite or a flagship model, our versatile solutions offer comfort, sophistication, and practicality, helping you promote your homes within a distinctive, secure and fully-equipped space.
@@ -140,7 +140,7 @@ const MarketingSuites = () => {
             <div key={src} className="overflow-hidden aspect-[4/3]">
               <img
                 src={src}
-                alt="Liberty Guard marketing suite"
+                alt="Liberty marketing suite"
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
               />
@@ -217,7 +217,7 @@ const MarketingSuites = () => {
           <div className="w-20 h-1 bg-secondary mx-auto rounded-full mb-10" />
           <div className="space-y-5 text-muted-foreground leading-relaxed mb-12">
             <p>
-              At Liberty Guard we provide welfare units nationwide, supported by 20 reliable distribution depots. With over 40 years of industry experience, we bring expert product knowledge to every project.
+              At Liberty we provide welfare units nationwide, supported by 20 reliable distribution depots. With over 40 years of industry experience, we bring expert product knowledge to every project.
             </p>
             <p>
               Our fleet of 1,500+ units enables fast, flexible solutions with a quick 24-hour turnaround — backed by our trusted aftercare team, delivering high-quality service and rapid support.
