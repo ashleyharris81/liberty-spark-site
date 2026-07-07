@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Building, Shield, Wrench, Truck, Home, Users } from "lucide-react";
+import { Building, Shield } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
