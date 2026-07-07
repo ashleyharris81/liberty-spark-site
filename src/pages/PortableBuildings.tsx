@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import heroBg from "@/assets/portable-buildings-hero.jpg";
+import portableAccomImg from "@/assets/portable-accommodation-card.jpg.asset.json";
+import modularBuildingsImg from "@/assets/modular-buildings-card.jpg.asset.json";
 
 const categories = [
   {
@@ -12,6 +14,7 @@ const categories = [
       "Anti-vandal cabins offering a secure, robust solution for high-risk or remote sites with steel construction, secure windows, and reinforced doors.",
     icon: Shield,
     link: "/portable-accommodation",
+    image: portableAccomImg.url,
   },
   {
     title: "Modular Buildings",
@@ -19,6 +22,7 @@ const categories = [
       "Greater flexibility and scalability, perfect for larger projects requiring office space, accommodation, training facilities or meeting rooms.",
     icon: Building,
     link: "/modular-buildings",
+    image: modularBuildingsImg.url,
   },
 ];
 
@@ -94,20 +98,34 @@ const PortableBuildings = () => {
                 key={cat.title}
                 to={cat.link}
                 onClick={() => window.scrollTo(0, 0)}
-                className="group relative overflow-hidden rounded-xl bg-primary p-10 border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 block"
+                className="group relative overflow-hidden rounded-xl border border-primary-foreground/10 hover:border-secondary/40 transition-all duration-300 block min-h-[420px]"
               >
-                <div className="w-16 h-16 bg-secondary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary/30 transition-colors">
-                  <cat.icon className="w-8 h-8 text-secondary" />
+                {/* Background image */}
+                <img
+                  src={cat.image}
+                  alt={cat.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Gradient overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/85 to-primary/40" />
+
+                {/* Content */}
+                <div className="relative z-10 p-10 flex flex-col h-full min-h-[420px]">
+                  <div className="w-16 h-16 bg-secondary/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary/30 transition-colors">
+                    <cat.icon className="w-8 h-8 text-secondary" />
+                  </div>
+                  <div className="mt-auto">
+                    <h3 className="font-heading text-2xl font-bold text-primary-foreground uppercase tracking-wide mb-4">
+                      {cat.title}
+                    </h3>
+                    <p className="text-primary-foreground/85 leading-relaxed">
+                      {cat.description}
+                    </p>
+                    <span className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider group-hover:underline">
+                      Take a Look →
+                    </span>
+                  </div>
                 </div>
-                <h3 className="font-heading text-2xl font-bold text-primary-foreground uppercase tracking-wide mb-4">
-                  {cat.title}
-                </h3>
-                <p className="text-primary-foreground/70 leading-relaxed">
-                  {cat.description}
-                </p>
-                <span className="inline-block mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider group-hover:underline">
-                  Take a Look →
-                </span>
               </Link>
             ))}
           </div>
