@@ -22,7 +22,7 @@ const articles = [
     date: "September 2025",
     title: "Keepmoat Homes Continued Partnership",
     excerpt:
-      "Liberty Guard renews its long-standing partnership with Keepmoat Homes, supplying marketing suites and welfare units across multiple new developments.",
+      "Liberty renews its long-standing partnership with Keepmoat Homes, supplying marketing suites and welfare units across multiple new developments.",
   },
   {
     image: newsProductFocus,
@@ -36,21 +36,21 @@ const articles = [
     date: "July 2025",
     title: "Acquisan Acquisition",
     excerpt:
-      "Liberty Guard expands its capabilities through the acquisition of Acquisan, strengthening our nationwide service offering.",
+      "Liberty expands its capabilities through the acquisition of Acquisan, strengthening our nationwide service offering.",
   },
   {
     image: newsCustomerFeedback,
     date: "June 2025",
     title: "Customer Feedback Highlights",
     excerpt:
-      "Our customers share their experience with Liberty Guard's welfare solutions - read what makes our service stand out.",
+      "Our customers share their experience with Liberty's welfare solutions - read what makes our service stand out.",
   },
   {
     image: newsNewYear,
     date: "January 2025",
     title: "A New Year, A Greener Fleet",
     excerpt:
-      "Liberty Guard kicks off the year with a major investment in expanding its solar welfare fleet, doubling down on our sustainability commitment.",
+      "Liberty kicks off the year with a major investment in expanding its solar welfare fleet, doubling down on our sustainability commitment.",
   },
 ];
 
@@ -66,7 +66,7 @@ const News = () => {
             News & <span className="text-secondary">Updates</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-2xl">
-            The latest from Liberty Guard - product launches, partnerships, and industry insights.
+            The latest from Liberty - product launches, partnerships, and industry insights.
           </p>
         </div>
       </section>
