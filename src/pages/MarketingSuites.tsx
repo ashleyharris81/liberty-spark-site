@@ -3,54 +3,70 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import HeroVideo from "@/components/HeroVideo";
+import {
+  Sparkles,
+  LifeBuoy,
+  ShieldCheck,
+  MapPin,
+  Palette,
+  Building2,
+} from "lucide-react";
 
-const galleryImages = [
+const stripImages = [
   "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_1961-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2463-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2462-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2424-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2409-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2408-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2396-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2370-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2374-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2377-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2387-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2388-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/LIB_08-1024x683.jpg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/LIB_35-1024x683.jpg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/LIB_38-1024x683.jpg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/Liberty-Llanwern-03.jpg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/Liberty-Llanwern-08.jpg",
   "https://libertyguard.co.uk/wp-content/uploads/2025/09/Liberty-Tetbury-01-1024x683.jpg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/Liberty-Tetbury-04-1024x683.jpg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/Liberty-Tetbury-09-1024x683.jpg",
+  "https://libertyguard.co.uk/wp-content/uploads/2025/09/LIB_08-1024x683.jpg",
+  "https://libertyguard.co.uk/wp-content/uploads/2025/09/Liberty-Llanwern-03.jpg",
+  "https://libertyguard.co.uk/wp-content/uploads/2025/09/LIB_35-1024x683.jpg",
+  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2463-1024x768.jpeg",
 ];
 
-const sections = [
+const housebuilders = [
+  "Miller Homes",
+  "Keepmoat Homes",
+  "Piper Homes",
+  "Taylor Wimpey",
+  "Persimmon",
+  "Honey",
+  "Strata",
+];
+
+const features = [
   {
-    heading: "First Impressions Matter",
-    paragraphs: [
-      "At Liberty Guard, we understand the importance of first impressions. Our stand-alone Marketing Suites are designed to provide a stylish, professional, and welcoming environment for both your customers and staff. Each unit is tailored to your specific requirements, with prestigious finishes and bespoke interiors that reflect your brand's identity, creating the perfect platform to showcase your homes and developments in a relaxed, high-quality setting.",
-      "From layout to interior styling, every detail is considered to ensure your sales environment is as functional as it is visually impressive. Whether you need a compact suite or a flagship model, our versatile solutions offer comfort, sophistication, and practicality, helping you promote your homes within a distinctive, secure and fully-equipped space.",
-      "Over the years, Liberty Marketing Suites have become the supplier of choice for major housebuilders across the UK. Our reputation has been built on understanding the specific needs of the property development industry and responding with a product range that is not only highly functional but also aesthetically outstanding.",
-    ],
+    title: "BRAND IDENTITY",
+    description:
+      "Bespoke suites with prestigious finishes and interiors that reflect your brand.",
+    icon: Sparkles,
   },
   {
-    heading: "A Complete Package",
-    paragraphs: [
-      "Working in close partnership with our clients, we've developed a collection of suites that offer unmatched flexibility and appeal. Our extensive range includes various sizes and configurations, from compact 24' x 10' models to our most prestigious 32' x 24' suites. No matter the size or style, all units are built to the highest standards and finished with a keen eye for design and durability.",
-      "Every Liberty Marketing Suite is offered as a complete package deal. Included is our specially designed Power Pack, featuring a 14KVA generator and a large-capacity water tank, allowing the suite to operate completely independently of external services. This self-sufficient system ensures you can set up and run your marketing suite wherever it's needed, without delay or disruption.",
-      "Each model includes a contemporary kitchen, executive-style toilet facilities, and a spacious open-plan sales area. The suite is accessed through UPVC French doors and features air conditioning as standard, ensuring a comfortable environment in all seasons.",
-    ],
+    title: "AFTERCARE",
+    description:
+      "24/7 support with a responsive service team, keeping your suite running day in, day out.",
+    icon: LifeBuoy,
   },
   {
-    heading: "Security & Support",
-    paragraphs: [
-      "The structure itself allows for significant design flexibility. A standout feature is the full-width glass frontage, offering abundant natural light and visual appeal, protected by remote-controlled electric shutters for added security and convenience.",
-      "Staff security is a priority in every Liberty Marketing Suite. Each unit is equipped with a panic alarm system that includes both an external sounder and a visual warning light. A quick-lock escape route is also integrated to provide peace of mind for on-site sales staff.",
-      "And with our 24/7 After Care support, you're never left in the dark. From power packs to consumables, our responsive service team ensures any issues are resolved quickly, keeping your suite running smoothly day in, day out.",
-    ],
+    title: "HIGH SECURITY",
+    description:
+      "Panic alarm systems, remote-controlled shutters, and quick-lock escape routes as standard.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "NATIONWIDE",
+    description:
+      "Delivered and installed across the UK for major housebuilders and developments.",
+    icon: MapPin,
+  },
+  {
+    title: "BESPOKE DESIGNS",
+    description:
+      "From compact 24' x 10' models to flagship 32' x 24' suites — configured your way.",
+    icon: Palette,
+  },
+  {
+    title: "FOUNDATIONS",
+    description:
+      "Complete package with Power Pack, kitchen, executive WC, and open-plan sales area.",
+    icon: Building2,
   },
 ];
 
@@ -90,40 +106,88 @@ const MarketingSuites = () => {
         </div>
       </section>
 
-      {/* Body sections */}
-      {sections.map((section, idx) => (
-        <section
-          key={section.heading}
-          className={`py-20 ${idx % 2 === 0 ? "bg-background" : "bg-muted"}`}
-        >
-          <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-            <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-8">
-              {section.heading}
-            </h2>
-            <div className="space-y-5 text-muted-foreground leading-relaxed">
-              {section.paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-          </div>
-        </section>
-      ))}
-
-      {/* Gallery */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 lg:px-8">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-primary-foreground uppercase tracking-tight text-center mb-12">
-            Showhomes & <span className="text-secondary">Marketing Suites</span>
+      {/* First Impressions Matter */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4 lg:px-8 max-w-4xl text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-8">
+            First Impressions Matter
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryImages.map((src) => (
-              <div key={src} className="overflow-hidden rounded-lg border border-primary-foreground/10">
-                <img
-                  src={src}
-                  alt="Liberty Guard marketing suite"
-                  loading="lazy"
-                  className="w-full aspect-[4/3] object-cover transition-transform duration-500 hover:scale-110"
-                />
+          <div className="space-y-5 text-muted-foreground leading-relaxed text-left">
+            <p>
+              At Liberty Guard, we understand the importance of first impressions. Our stand-alone Marketing Suites are designed to provide a stylish, professional, and welcoming environment for both your customers and staff. Each unit is tailored to your specific requirements, with prestigious finishes and bespoke interiors that reflect your brand's identity, creating the perfect platform to showcase your homes and developments in a relaxed, high-quality setting.
+            </p>
+            <p>
+              From layout to interior styling, every detail is considered to ensure your sales environment is as functional as it is visually impressive. Whether you need a compact suite or a flagship model, our versatile solutions offer comfort, sophistication, and practicality, helping you promote your homes within a distinctive, secure and fully-equipped space.
+            </p>
+            <p>
+              Over the years, Liberty Marketing Suites have become the supplier of choice for major housebuilders across the UK. Our reputation has been built on understanding the specific needs of the property development industry and responding with a product range that is not only highly functional but also aesthetically outstanding.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Horizontal image strip */}
+      <section className="bg-background">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0">
+          {stripImages.map((src) => (
+            <div key={src} className="overflow-hidden aspect-[4/3]">
+              <img
+                src={src}
+                alt="Liberty Guard marketing suite"
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Housebuilder Network */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-4">
+              Housebuilder <span className="text-secondary">Network</span>
+            </h2>
+            <div className="w-20 h-1 bg-secondary mx-auto rounded-full" />
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 max-w-5xl mx-auto">
+            {housebuilders.map((name) => (
+              <div
+                key={name}
+                className="font-heading text-lg md:text-xl font-bold text-foreground/70 hover:text-foreground transition-colors uppercase tracking-wide"
+              >
+                {name}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Designed for Excellence */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-4">
+              Designed for <span className="text-secondary">Excellence</span>
+            </h2>
+            <div className="w-20 h-1 bg-secondary mx-auto rounded-full" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {features.map((f) => (
+              <div
+                key={f.title}
+                className="bg-primary/90 border border-primary-foreground/10 rounded-lg p-8 text-left hover:bg-primary transition-colors duration-300"
+              >
+                <div className="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mb-5">
+                  <f.icon className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="font-heading text-base font-bold text-primary-foreground uppercase tracking-wider mb-3">
+                  {f.title}
+                </h3>
+                <p className="text-primary-foreground/70 text-sm leading-relaxed">
+                  {f.description}
+                </p>
               </div>
             ))}
           </div>
