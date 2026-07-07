@@ -20,7 +20,7 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Founded in 1981, Liberty Guard has become one of the UK's most trusted suppliers of self-contained welfare cabins. With over 40 years of experience, we've built our reputation on exceptional customer service and reliable, high-quality products.
+            Founded in 1981, Liberty has become one of the UK's most trusted suppliers of self-contained welfare cabins. With over 40 years of experience, we've built our reputation on exceptional customer service and reliable, high-quality products.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
             We started small, with a big vision and we have expanded into a nationwide business with a diverse fleet of mobile and static welfare cabins, modular buildings, portable accommodation, marketing suites and our state-of-the-art solar fleet.
@@ -32,7 +32,7 @@ const About = () => {
             Our sizeable investment in our solar range, promotes sustainable welfare, low emissions, reduced CO₂, low fuel, silent running and rainwater harvesting. Helping our customers to save money, reduce their environmental impact and reach their net zero goals.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            At Liberty Guard we're looking forward to a brighter, cleaner future for the welfare industry.
+            At Liberty we're looking forward to a brighter, cleaner future for the welfare industry.
           </p>
         </div>
 

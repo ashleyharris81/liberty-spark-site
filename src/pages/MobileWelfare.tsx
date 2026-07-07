@@ -108,7 +108,7 @@ const MobileWelfare = () => {
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
           <img
             src={heroBg}
-            alt="Liberty Guard mobile welfare unit"
+            alt="Liberty mobile welfare unit"
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
           <div className="absolute inset-0 z-[1]">
