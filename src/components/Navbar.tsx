@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/liberty-logo-white.png.asset.json";
+import logo from "@/assets/liberty-logo-white.png";
 
 const navLinks = [
   { label: "MOBILE", href: "/mobile-welfare", isRoute: true },

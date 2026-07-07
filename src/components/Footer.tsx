@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/liberty-logo-white.png.asset.json";
+import logo from "@/assets/liberty-logo-white.png";
 import risqs from "@/assets/accreditations/risqs.png";
 import constructionline from "@/assets/accreditations/constructionline.png";
 import ssip from "@/assets/accreditations/ssip.jpg";
