@@ -11,6 +11,13 @@ import {
   Palette,
   Building2,
 } from "lucide-react";
+import millerHomes from "@/assets/miller-homes.png.asset.json";
+import keepmoat from "@/assets/keepmoat.png.asset.json";
+import piperHomes from "@/assets/piper-homes.png.asset.json";
+import taylorWimpey from "@/assets/taylor-wimpey.png.asset.json";
+import persimmon from "@/assets/persimmon.png.asset.json";
+import honey from "@/assets/honey.png.asset.json";
+import strata from "@/assets/strata.png.asset.json";
 
 const stripImages = [
   "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_1961-1024x768.jpeg",
@@ -22,13 +29,13 @@ const stripImages = [
 ];
 
 const housebuilders = [
-  "Miller Homes",
-  "Keepmoat Homes",
-  "Piper Homes",
-  "Taylor Wimpey",
-  "Persimmon",
-  "Honey",
-  "Strata",
+  { name: "Miller Homes", logo: millerHomes.url },
+  { name: "Keepmoat Homes", logo: keepmoat.url },
+  { name: "Piper Homes", logo: piperHomes.url },
+  { name: "Taylor Wimpey", logo: taylorWimpey.url },
+  { name: "Persimmon", logo: persimmon.url },
+  { name: "Honey", logo: honey.url },
+  { name: "Strata", logo: strata.url },
 ];
 
 const features = [
@@ -151,15 +158,22 @@ const MarketingSuites = () => {
             </h2>
             <div className="w-20 h-1 bg-secondary mx-auto rounded-full" />
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 max-w-5xl mx-auto">
-            {housebuilders.map((name) => (
-              <div
-                key={name}
-                className="font-heading text-lg md:text-xl font-bold text-foreground/70 hover:text-foreground transition-colors uppercase tracking-wide"
-              >
-                {name}
-              </div>
-            ))}
+          <div className="relative overflow-hidden max-w-6xl mx-auto [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <div className="flex gap-16 animate-marquee w-max">
+              {[...housebuilders, ...housebuilders].map((b, i) => (
+                <div
+                  key={`${b.name}-${i}`}
+                  className="flex items-center justify-center h-20 shrink-0"
+                >
+                  <img
+                    src={b.logo}
+                    alt={b.name}
+                    loading="lazy"
+                    className="max-h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
