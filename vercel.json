@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/__l5e/:path*",
+      "destination": "https://liberty-spark-site.lovable.app/__l5e/:path*"
+    },
+    {
+      "source": "/((?!__l5e|assets|posters|.*\\..*).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
