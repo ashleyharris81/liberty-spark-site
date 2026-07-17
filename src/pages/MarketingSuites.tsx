@@ -66,7 +66,7 @@ const features = [
   {
     title: "BESPOKE DESIGNS",
     description:
-      "From compact 24' x 10' models to flagship 32' x 24' suites — configured your way.",
+      "Choose from 24' x 12' models to our flagship 24' x 20' suites or create a custom-made design.",
     icon: Palette,
   },
   {
