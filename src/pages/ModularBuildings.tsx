@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import HeroVideo from "@/components/HeroVideo";
 import {
   Hammer,
   Palette,
@@ -59,10 +60,9 @@ const ModularBuildings = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <img
-            src={modularImg.url}
-            alt="Modular building exterior"
-            className="absolute inset-0 w-full h-full object-cover"
+          <HeroVideo
+            src="https://assets.libertyguard.co.uk/videos/modularbuild.mp4"
+            className="z-0"
           />
           <div className="absolute inset-0 bg-primary/60" />
           <div className="relative z-10 h-full flex items-center">
