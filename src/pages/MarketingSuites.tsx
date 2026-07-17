@@ -215,12 +215,9 @@ const MarketingSuites = () => {
             Bespoke <span className="text-secondary">Builds</span>
           </h2>
           <div className="w-20 h-1 bg-secondary mx-auto rounded-full mb-10" />
-          <div className="space-y-5 text-muted-foreground leading-relaxed mb-12">
+          <div className="text-muted-foreground leading-relaxed mb-12">
             <p>
-              At Liberty we provide welfare units nationwide, supported by 20 reliable distribution depots. With over 40 years of industry experience, we bring expert product knowledge to every project.
-            </p>
-            <p>
-              Our fleet of 1,500+ units enables fast, flexible solutions with a quick 24-hour turnaround — backed by our trusted aftercare team, delivering high-quality service and rapid support.
+              Choose from 24' x 12' models to our flagship 24' x 20' suites or create a custom-made design.
             </p>
           </div>
           <a
