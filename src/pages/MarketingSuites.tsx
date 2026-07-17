@@ -72,7 +72,7 @@ const features = [
   {
     title: "FOUNDATIONS",
     description:
-      "Complete package with Power Pack, kitchen, executive WC, and open-plan sales area.",
+      "Complete package with Power Pack, foundations, civils, site survey and nationwide craned transport.",
     icon: Building2,
   },
 ];
