@@ -23,6 +23,7 @@ const POSTER_BY_VIDEO: Record<string, string> = {
   "LGN1516": "/posters/mobi-20ft-plus.jpg",
   "LGMPO68": "/posters/mobi-24ft.jpg",
   "LGMP102": "/posters/mobi-24ft-twin.jpg",
+  "modularbuild.mp4": "/posters/modular-buildings.jpg",
 };
 
 const resolvePoster = (src: string, explicit?: string) => {
