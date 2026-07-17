@@ -9,11 +9,6 @@ interface AccordionItem {
 
 const items: AccordionItem[] = [
   {
-    title: "Mobile & Static Welfare",
-    image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_1188.jpg",
-    link: "/welfare",
-  },
-  {
     title: "Solar Welfare",
     image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/MJP_0029-scaled.jpg",
     link: "/solar",
@@ -22,6 +17,11 @@ const items: AccordionItem[] = [
     title: "Portable Accommodation",
     image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_0595.jpeg",
     link: "/portable-buildings",
+  },
+  {
+    title: "Mobile & Static Welfare",
+    image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_1188.jpg",
+    link: "/welfare",
   },
   {
     title: "Marketing Suite",
