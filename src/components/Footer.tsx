@@ -12,6 +12,7 @@ const quickLinks = [
   { label: "News", href: "/news" },
   { label: "Contact Us", href: "/contact" },
   { label: "Open New Account", href: "/new-account" },
+  { label: "eBay Shop", href: "https://www.ebay.co.uk/str/libertyguardukltd", external: true },
 ];
 
 const accreditations = [
@@ -42,13 +43,24 @@ const Footer = () => {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    to={link.href}
-                    onClick={() => window.scrollTo(0, 0)}
-                    className="text-primary-foreground/70 hover:text-secondary text-sm transition-colors"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-foreground/70 hover:text-secondary text-sm transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      onClick={() => window.scrollTo(0, 0)}
+                      className="text-primary-foreground/70 hover:text-secondary text-sm transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
