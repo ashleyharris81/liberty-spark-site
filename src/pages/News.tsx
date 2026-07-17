@@ -8,8 +8,40 @@ import newsDoncaster from "@/assets/news-doncaster.png";
 import newsKeepmoat from "@/assets/news-keepmoat.png";
 import newsNewYear from "@/assets/news-new-year.jpg";
 import newsProductFocus from "@/assets/news-product-focus.jpg";
+import newsSolarUpgrade from "@/assets/news-solar-upgrade.jpg";
+import newsFunFact from "@/assets/news-fun-fact.jpg";
+import newsAjc from "@/assets/news-ajc.jpeg";
+import newsMnd from "@/assets/news-mnd.png";
 
 const articles = [
+  {
+    image: newsSolarUpgrade,
+    date: "June 2026",
+    title: "New Product Range!",
+    excerpt:
+      "Our new range is here, and we couldn't be more excited! We've named this range SOLAR UPGRADE to distinguish from our original kit.",
+  },
+  {
+    image: newsFunFact,
+    date: "June 2026",
+    title: "Fun Fact",
+    excerpt:
+      "Welfare isn't an optional extra, they're not just handy to have around or just look nice, they're actually a necessity. Welfare facilities are an essential part of every site.",
+  },
+  {
+    image: newsAjc,
+    date: "June 2026",
+    title: "New Partnership with AJC",
+    excerpt:
+      "We're pleased to announce another exciting partnership - our brand-new Eco Smart Mobi from AJC Easy Cabin, renowned for their welfare expertise.",
+  },
+  {
+    image: newsMnd,
+    date: "May 2026",
+    title: "Unit Rebrand with Motor Neurone Disease (MND) Association",
+    excerpt:
+      "Keeping in line with MNDA's brand refresh we have given our favourite 12ft Mobi a complete overhaul, with a full respray, new signs and brand-new livery.",
+  },
   {
     image: newsDoncaster,
     date: "October 2025",
