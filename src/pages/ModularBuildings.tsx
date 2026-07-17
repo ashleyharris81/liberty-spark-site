@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import HeroVideo from "@/components/HeroVideo";
 import {
   Hammer,
   Palette,
