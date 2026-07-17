@@ -24,6 +24,7 @@ const POSTER_BY_VIDEO: Record<string, string> = {
   "LGMPO68": "/posters/mobi-24ft.jpg",
   "LGMP102": "/posters/mobi-24ft-twin.jpg",
   "modularbuild.mp4": "/posters/modular-buildings.jpg",
+  "ZND%20Modular%20Build%20(website).mp4": "/posters/modular-build.jpg",
   "socialslandscapenottingham.mov": "/posters/portable-accommodation.jpg",
 };
 
