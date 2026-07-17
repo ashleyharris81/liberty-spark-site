@@ -61,7 +61,7 @@ const ModularBuildings = () => {
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
           <HeroVideo
-            src="https://assets.libertyguard.co.uk/videos/modularbuild.mp4"
+            src="https://assets.libertyguard.co.uk/videos/ZND%20Modular%20Build%20(website).mp4"
             className="z-0"
           />
           <div className="absolute inset-0 bg-primary/60" />
