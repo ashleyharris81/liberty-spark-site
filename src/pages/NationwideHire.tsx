@@ -1,3 +1,4 @@
+import brochureAsset from "@/assets/liberty-brochure.pdf.asset.json";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf, Download, ArrowDown, Cloud, Fuel, Plug, Users } from "lucide-react";
@@ -334,7 +335,7 @@ const NationwideHire = () => {
             <div className="mt-8 flex justify-center">
               <button
                 type="button"
-                onClick={() => downloadFile("https://libertyguard.co.uk/wp-content/uploads/2025/10/Brochure.pdf", "Liberty-Brochure.pdf")}
+                onClick={() => downloadFile(`${brochureAsset.url}`, "Liberty-Brochure.pdf")}
                 className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
               >
                 <Download className="w-4 h-4" /> Download Brochure

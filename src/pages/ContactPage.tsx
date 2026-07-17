@@ -1,3 +1,4 @@
+import brochureAsset from "@/assets/liberty-brochure.pdf.asset.json";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, FileText } from "lucide-react";
 import { useState } from "react";
@@ -98,7 +99,7 @@ const ContactPage = () => {
 
                 <button
                   type="button"
-                  onClick={() => downloadFile("https://libertyguard.co.uk/wp-content/uploads/2025/10/Brochure.pdf", "Liberty-Brochure.pdf")}
+                  onClick={() => downloadFile(`${brochureAsset.url}`, "Liberty-Brochure.pdf")}
                   className="flex items-center gap-4 group text-left"
                 >
                   <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
