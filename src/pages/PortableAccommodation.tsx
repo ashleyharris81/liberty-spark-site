@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+import HeroVideo from "@/components/HeroVideo";
 import {
   Package,
   ShieldCheck,
@@ -59,10 +60,9 @@ const PortableAccommodation = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <img
-            src={portableAccomImg.url}
-            alt="Portable cabin on construction site"
-            className="absolute inset-0 w-full h-full object-cover"
+          <HeroVideo
+            src="https://assets.libertyguard.co.uk/videos/socialslandscapenottingham.mov"
+            className="z-0"
           />
           <div className="absolute inset-0 bg-primary/60" />
           <div className="relative z-10 h-full flex items-center">
