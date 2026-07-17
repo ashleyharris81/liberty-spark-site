@@ -64,7 +64,7 @@ const Contact = () => {
 
               <button
                 type="button"
-                onClick={() => downloadFile("/Liberty-Guard-Brochure.pdf", "Liberty-Guard-Brochure.pdf")}
+                onClick={() => downloadFile("https://libertyguard.co.uk/wp-content/uploads/2025/10/Brochure.pdf", "Liberty-Brochure.pdf")}
                 className="flex items-center gap-4 group text-left"
               >
                 <div className="w-14 h-14 bg-secondary/20 rounded-lg flex items-center justify-center group-hover:bg-secondary/30 transition-colors">
