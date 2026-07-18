@@ -87,6 +87,16 @@ const dynamicEntries: SitemapEntry[] = [
     changefreq: "monthly" as const,
     priority: "0.6",
   })),
+  ...solarStaticSlugs.map((slug) => ({
+    path: `/solar-static-welfare/${slug}`,
+    changefreq: "monthly" as const,
+    priority: "0.6",
+  })),
+  ...solarDrySlugs.map((slug) => ({
+    path: `/solar-drying-room/${slug}`,
+    changefreq: "monthly" as const,
+    priority: "0.6",
+  })),
 ];
 
 const allEntries = [...staticEntries, ...dynamicEntries];
