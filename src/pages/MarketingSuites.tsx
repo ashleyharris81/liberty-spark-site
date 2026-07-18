@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import HeroVideo from "@/components/HeroVideo";
+import { downloadFile } from "@/lib/downloadFile";
 import {
   Sparkles,
   LifeBuoy,
@@ -10,6 +11,7 @@ import {
   MapPin,
   Palette,
   Building2,
+  FileText,
 } from "lucide-react";
 import millerHomes from "@/assets/miller-homes.png.asset.json";
 import keepmoat from "@/assets/keepmoat.png.asset.json";
@@ -18,6 +20,7 @@ import taylorWimpey from "@/assets/taylor-wimpey.png.asset.json";
 import persimmon from "@/assets/persimmon.png.asset.json";
 import honey from "@/assets/honey.png.asset.json";
 import strata from "@/assets/strata.png.asset.json";
+import marketingSuiteBrochure from "@/assets/Marketing_Suite_Brochure_2026.pdf.asset.json";
 
 const stripImages = [
   "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_1961-1024x768.jpeg",
