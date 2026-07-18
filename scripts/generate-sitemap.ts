@@ -62,6 +62,10 @@ const solarMobileSlugs = [
 
 const solarLooSlugs = ["single-solar-loo", "twin-solar-loo"];
 
+const solarStaticSlugs = ["25ft-solar-static", "28ft-eco-hybrid"];
+
+const solarDrySlugs = ["12ft-solar-dry"];
+
 const dynamicEntries: SitemapEntry[] = [
   ...mobiModelSlugs.map((slug) => ({
     path: `/mobile-welfare/${slug}`,
