@@ -62,6 +62,10 @@ const solarMobileSlugs = [
 
 const solarLooSlugs = ["single-solar-loo", "twin-solar-loo"];
 
+const solarStaticSlugs = ["25ft-solar-static", "28ft-eco-hybrid"];
+
+const solarDrySlugs = ["12ft-solar-dry"];
+
 const dynamicEntries: SitemapEntry[] = [
   ...mobiModelSlugs.map((slug) => ({
     path: `/mobile-welfare/${slug}`,
@@ -80,6 +84,16 @@ const dynamicEntries: SitemapEntry[] = [
   })),
   ...solarLooSlugs.map((slug) => ({
     path: `/solar-loos/${slug}`,
+    changefreq: "monthly" as const,
+    priority: "0.6",
+  })),
+  ...solarStaticSlugs.map((slug) => ({
+    path: `/solar-static-welfare/${slug}`,
+    changefreq: "monthly" as const,
+    priority: "0.6",
+  })),
+  ...solarDrySlugs.map((slug) => ({
+    path: `/solar-drying-room/${slug}`,
     changefreq: "monthly" as const,
     priority: "0.6",
   })),
