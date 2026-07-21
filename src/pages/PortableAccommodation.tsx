@@ -11,7 +11,7 @@ import {
   TrendingUp,
   HeartPulse,
 } from "lucide-react";
-import portableAccomImg from "@/assets/portable-accommodation-card.jpg.asset.json";
+import keyFeaturesBg from "@/assets/portable-accommodation-key-features.jpg.asset.json";
 
 const features = [
   {
@@ -89,7 +89,7 @@ const PortableAccommodation = () => {
       {/* Key Features */}
       <section className="relative py-24 mt-12 overflow-hidden">
         <img
-          src={portableAccomImg.url}
+          src={keyFeaturesBg.url}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
