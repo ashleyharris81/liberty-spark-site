@@ -3,7 +3,7 @@ import { Building, Shield } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import heroBg from "@/assets/portable-buildings-hero.jpg";
+import HeroVideo from "@/components/HeroVideo";
 import portableAccomImg from "@/assets/portable-accommodation-card.jpg.asset.json";
 import modularBuildingsImg from "@/assets/modular-buildings-card.jpg.asset.json";
 
@@ -35,7 +35,10 @@ const PortableBuildings = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <img src={heroBg} alt="Portable building on construction site" className="absolute inset-0 w-full h-full object-cover" />
+          <HeroVideo
+            src="https://assets.libertyguard.co.uk/videos/Socials%20Landscape%20Nottingham%202.mov"
+            className="z-0"
+          />
           <div className="absolute inset-0 bg-primary/60" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
