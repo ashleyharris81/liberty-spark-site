@@ -137,18 +137,20 @@ const MarketingSuites = () => {
       </section>
 
       {/* Horizontal image strip */}
-      <section className="bg-background">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0">
-          {stripImages.map((src) => (
-            <div key={src} className="overflow-hidden aspect-[4/3]">
-              <img
-                src={src}
-                alt="Liberty marketing suite"
-                loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-          ))}
+      <section className="bg-background overflow-hidden">
+        <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+          <div className="flex gap-0 animate-marquee w-max">
+            {[...stripImages, ...stripImages].map((src, i) => (
+              <div key={`${src}-${i}`} className="overflow-hidden h-64 w-80 shrink-0">
+                <img
+                  src={src}
+                  alt="Liberty marketing suite"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
