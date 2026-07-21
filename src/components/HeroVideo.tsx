@@ -26,6 +26,8 @@ const POSTER_BY_VIDEO: Record<string, string> = {
   "modularbuild.mp4": "/posters/modular-buildings.jpg",
   "ZND%20Modular%20Build%20(website).mp4": "/posters/modular-build.jpg",
   "socialslandscapenottingham.mov": "/posters/portable-accommodation.jpg",
+  "Socials%20Landscape%20Nottingham%202.mov": "/posters/portable-buildings.jpg",
+  "Socials Landscape Nottingham 2.mov": "/posters/portable-buildings.jpg",
 };
 
 const resolvePoster = (src: string, explicit?: string) => {
