@@ -61,7 +61,7 @@ const PortableAccommodation = () => {
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
           <HeroVideo
-            src="https://assets.libertyguard.co.uk/videos/socialslandscapenottingham.mov"
+            src="https://assets.libertyguard.co.uk/videos/nottinghambluecabin.mov"
             className="z-0"
           />
           <div className="absolute inset-0 bg-primary/60" />
