@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Montserrat", "sans-serif"],
-        body: ["Open Sans", "sans-serif"],
+        heading: ['"ITC Avant Garde Gothic Pro"', '"ITC Avant Garde Pro Md"', "Jost", '"Century Gothic"', "sans-serif"],
+        body: ["Aptos", '"Aptos Light"', '"Source Sans 3"', '"Segoe UI"', "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
