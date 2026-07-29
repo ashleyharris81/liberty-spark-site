@@ -42,7 +42,9 @@ const MobiModel = () => {
       {/* Full-width hero video */}
       <section className="pt-20 bg-primary">
         <div className="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
-          {stackVideo ? (
+          {vimeoVideo ? (
+            <VimeoEmbed src={vimeoVideo} title={model.title} />
+          ) : stackVideo ? (
             <HeroVideo src={stackVideo} />
           ) : (
             <CloudflareVideo uid={model.uid} variant="hero" />
