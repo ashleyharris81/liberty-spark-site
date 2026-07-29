@@ -23,7 +23,7 @@ const MOBI_VIDEO_BY_SLUG: Record<string, string> = {
 
 const MOBI_VIMEO_BY_SLUG: Record<string, string> = {
   "16ft-hybrid-mobi":
-    "https://player.vimeo.com/video/1213961805?badge=0&autopause=0&player_id=0&app_id=58479",
+    "https://player.vimeo.com/video/1213961805?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
 };
 
 const MobiModel = () => {
