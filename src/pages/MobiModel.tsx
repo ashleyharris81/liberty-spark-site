@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import HeroVideo from "@/components/HeroVideo";
+import VimeoEmbed from "@/components/VimeoEmbed";
 import { getMobiModel } from "@/data/mobiModels";
 import { downloadFile } from "@/lib/downloadFile";
 
