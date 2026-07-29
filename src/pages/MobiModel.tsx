@@ -12,6 +12,7 @@ const MOBI_VIDEO_BASE =
 
 const MOBI_VIDEO_BY_SLUG: Record<string, string> = {
   "12ft-mobi": `${MOBI_VIDEO_BASE}/12ft%20Mobi/LGM418%20-%2012ft%20Mobi.mov`,
+  "16ft-hybrid-mobi": "https://assets.libertyguard.co.uk/videos/newhybrid16ftmobiv2.mp4",
   "16ft-mobi": `${MOBI_VIDEO_BASE}/16ft%20Mobi/LGM308%20-%2016ft%20Mobi.mov`,
   "16ft-mobi-plus": `${MOBI_VIDEO_BASE}/16ft%20Mobi%20Plus/LGM160%20-%2016ft%20Mobi%20+.mov`,
   "20ft-mobi": `${MOBI_VIDEO_BASE}/20ft%20Mobi/LGM424%20-%2020ft%20mobi%20canteen.mp4`,
