@@ -13,13 +13,17 @@ const MOBI_VIDEO_BASE =
 
 const MOBI_VIDEO_BY_SLUG: Record<string, string> = {
   "12ft-mobi": `${MOBI_VIDEO_BASE}/12ft%20Mobi/LGM418%20-%2012ft%20Mobi.mov`,
-  "16ft-hybrid-mobi": "https://assets.libertyguard.co.uk/videos/newhybrid16ftmobiv2.mp4",
   "16ft-mobi": `${MOBI_VIDEO_BASE}/16ft%20Mobi/LGM308%20-%2016ft%20Mobi.mov`,
   "16ft-mobi-plus": `${MOBI_VIDEO_BASE}/16ft%20Mobi%20Plus/LGM160%20-%2016ft%20Mobi%20+.mov`,
   "20ft-mobi": `${MOBI_VIDEO_BASE}/20ft%20Mobi/LGM424%20-%2020ft%20mobi%20canteen.mp4`,
   "20ft-mobi-plus": `${MOBI_VIDEO_BASE}/20ft%20Mobi%20Plus/LGN1516%20-%2020ft%20mobi%20plus%20(office).mp4`,
   "24ft-mobi": `${MOBI_VIDEO_BASE}/24ft%20Mobi/LGMPO68%20-%2024ft%20Mobi.mov`,
   "24ft-mobi-twin-toilet": `${MOBI_VIDEO_BASE}/24ft%20Mobi%20Twin%20Toilet/LGMP102%20-%2024ft%20Mobi,%20Twin%20Loo,%20New%20Layout.mp4`,
+};
+
+const MOBI_VIMEO_BY_SLUG: Record<string, string> = {
+  "16ft-hybrid-mobi":
+    "https://player.vimeo.com/video/1213961805?badge=0&autopause=0&player_id=0&app_id=58479&background=1",
 };
 
 const MobiModel = () => {
@@ -29,6 +33,7 @@ const MobiModel = () => {
   if (!model) return <Navigate to="/mobile-welfare" replace />;
 
   const stackVideo = MOBI_VIDEO_BY_SLUG[model.slug];
+  const vimeoVideo = MOBI_VIMEO_BY_SLUG[model.slug];
 
   return (
     <div className="min-h-screen">
