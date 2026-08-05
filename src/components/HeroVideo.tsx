@@ -1,5 +1,3 @@
-import heroBg from "@/assets/hero-bg.jpg";
-
 interface HeroVideoProps {
   src: string;
   poster?: string;
@@ -36,23 +34,26 @@ const resolvePoster = (src: string, explicit?: string) => {
   for (const [key, url] of Object.entries(POSTER_BY_VIDEO)) {
     if (src.includes(key)) return url;
   }
-  return heroBg;
+  return undefined;
 };
 
-const HeroVideo = ({ src, poster, className = "" }: HeroVideoProps) => (
-  <div className={`absolute inset-0 w-full h-full overflow-hidden pointer-events-none ${className}`}>
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="metadata"
-      poster={resolvePoster(src, poster)}
-      className="absolute inset-0 w-full h-full object-cover"
-    >
-      <source src={src} type="video/mp4" />
-    </video>
-  </div>
-);
+const HeroVideo = ({ src, poster, className = "" }: HeroVideoProps) => {
+  const resolvedPoster = resolvePoster(src, poster);
+  return (
+    <div className={`absolute inset-0 w-full h-full overflow-hidden pointer-events-none ${className}`}>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster={resolvedPoster}
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={src} type="video/mp4" />
+      </video>
+    </div>
+  );
+};
 
 export default HeroVideo;
