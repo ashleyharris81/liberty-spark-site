@@ -96,33 +96,15 @@ const NationwideHire = () => {
                 <span className="block text-secondary">Welfare Hire</span>
               </h1>
               <div
-                className="mt-6 overflow-hidden animate-fade-in-up"
+                className="mt-6 h-8 md:h-12 lg:h-16 overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                <div className="flex whitespace-nowrap animate-marquee">
-                  <span className="text-xl md:text-3xl lg:text-4xl font-heading font-normal text-secondary tracking-wide uppercase">
-                    {tickerItems.map((item, i) => (
-                      <span key={i}>
-                        {item}
-                        {i < tickerItems.length - 1 && (
-                          <span className="mx-3 md:mx-4 text-secondary/70">–</span>
-                        )}
-                      </span>
-                    ))}
-                    <span className="mx-3 md:mx-4 text-secondary/70">–</span>
-                  </span>
-                  <span className="text-xl md:text-3xl lg:text-4xl font-heading font-normal text-secondary tracking-wide uppercase">
-                    {tickerItems.map((item, i) => (
-                      <span key={i}>
-                        {item}
-                        {i < tickerItems.length - 1 && (
-                          <span className="mx-3 md:mx-4 text-secondary/70">–</span>
-                        )}
-                      </span>
-                    ))}
-                    <span className="mx-3 md:mx-4 text-secondary/70">–</span>
-                  </span>
-                </div>
+                <p
+                  key={promiseIndex}
+                  className="text-3xl md:text-5xl lg:text-6xl font-heading font-normal text-yellow leading-[0.95] animate-fade-in-up uppercase"
+                >
+                  {tickerItems[promiseIndex]}
+                </p>
               </div>
               <div
                 className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-in-up"
