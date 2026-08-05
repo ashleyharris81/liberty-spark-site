@@ -1,7 +1,6 @@
 import brochureAsset from "@/assets/liberty-brochure.pdf.asset.json";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf, Download, ArrowDown, Cloud, Fuel, Plug, Users } from "lucide-react";
+import { Phone, MapPin, Truck, Clock, Wrench, ShieldCheck, Leaf, Download, ArrowDown, Cloud, Fuel, Plug, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
@@ -59,27 +58,18 @@ const features = [
   { icon: Leaf, title: "Extensive Range", text: "Standard, hybrid and solar-powered options" },
 ];
 
-const promises = [
-  "Depots throughout the UK",
-  "Sustainable site solutions",
-  "Specialists in the industry",
-  "Dedicated aftercare department",
-  "Site compliant facilities",
-  "Lowering carbon emissions",
-  "Money-saving solar range",
-  "High specification marketing suites",
-  "Rainwater harvesting technology",
-  "Nationwide coverage",
+const tickerItems = [
+  "TRUSTED WELFARE PROVIDER",
+  "UK COVERAGE",
+  "40 YEARS INDUSTRY EXPERIENCE",
+  "MARKET LEADING SOLAR FLEET",
+  "EXTENSIVE PRODUCT RANGE",
+  "NATIONWIDE DISTRIBUTION DEPOTS",
+  "DEDICATED AFTERCARE",
+  "SUSTAINABLE WELFARE SOLUTIONS",
 ];
 
 const NationwideHire = () => {
-  const [promiseIndex, setPromiseIndex] = useState(0);
-  useEffect(() => {
-    const id = setInterval(() => {
-      setPromiseIndex((i) => (i + 1) % promises.length);
-    }, 2500);
-    return () => clearInterval(id);
-  }, []);
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -106,15 +96,33 @@ const NationwideHire = () => {
                 <span className="block text-secondary">Welfare Hire</span>
               </h1>
               <div
-                className="mt-6 h-8 md:h-12 lg:h-16 overflow-hidden animate-fade-in-up"
+                className="mt-6 overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                <p
-                  key={promiseIndex}
-                  className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-yellow leading-[0.95] animate-fade-in-up"
-                >
-                  {promises[promiseIndex]}
-                </p>
+                <div className="flex whitespace-nowrap animate-marquee">
+                  <span className="text-xl md:text-3xl lg:text-4xl font-heading font-normal text-secondary tracking-wide uppercase">
+                    {tickerItems.map((item, i) => (
+                      <span key={i}>
+                        {item}
+                        {i < tickerItems.length - 1 && (
+                          <span className="mx-3 md:mx-4 text-secondary/70">–</span>
+                        )}
+                      </span>
+                    ))}
+                    <span className="mx-3 md:mx-4 text-secondary/70">–</span>
+                  </span>
+                  <span className="text-xl md:text-3xl lg:text-4xl font-heading font-normal text-secondary tracking-wide uppercase">
+                    {tickerItems.map((item, i) => (
+                      <span key={i}>
+                        {item}
+                        {i < tickerItems.length - 1 && (
+                          <span className="mx-3 md:mx-4 text-secondary/70">–</span>
+                        )}
+                      </span>
+                    ))}
+                    <span className="mx-3 md:mx-4 text-secondary/70">–</span>
+                  </span>
+                </div>
               </div>
               <div
                 className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-in-up"
