@@ -46,7 +46,7 @@ const AboutPage = () => {
       {/* Our Core Values */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-primary-foreground uppercase tracking-tight mb-8">
+          <h2 className="font-heading text-3xl md:text-4xl font-black text-primary-foreground uppercase tracking-tight mb-8 text-center">
             Our Core <span className="text-secondary">Values</span>
           </h2>
           <ul className="space-y-4 text-primary-foreground/90 text-lg leading-relaxed">
