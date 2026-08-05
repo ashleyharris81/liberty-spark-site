@@ -87,7 +87,7 @@ const Contact = () => {
                 {[
                   { name: "Facebook", url: "https://www.facebook.com/libertyguarduk" },
                   { name: "LinkedIn", url: "https://www.linkedin.com/company/liberty-guard-uk-ltd/" },
-                  { name: "Instagram", url: "https://www.instagram.com/libertygroupuk" },
+                  { name: "Instagram", url: "https://www.instagram.com/liberty_uk_ltd?igsh=ZnhsYnZxMDR3enh5&utm_source=qr" },
                   { name: "YouTube", url: "https://www.youtube.com/@libertygroup5383" },
                 ].map((social) => (
                   <a
