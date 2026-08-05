@@ -1,4 +1,5 @@
 import brochureAsset from "@/assets/liberty-brochure.pdf.asset.json";
+import { SocialIcon } from "@/components/SocialIcons";
 import { Phone, Mail, MapPin, FileText } from "lucide-react";
 import { useState } from "react";
 import { downloadFile } from "@/lib/downloadFile";
@@ -95,9 +96,10 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center text-secondary hover:bg-secondary hover:text-secondary-foreground transition-all duration-300 font-heading font-bold text-xs"
+                    aria-label={social.name}
+                    className="w-12 h-12 bg-secondary/20 rounded-lg flex items-center justify-center text-secondary hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
                   >
-                    {social.name[0]}
+                    <SocialIcon name={social.name} className="w-5 h-5" />
                   </a>
                 ))}
               </div>
