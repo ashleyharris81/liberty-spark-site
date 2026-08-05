@@ -36,7 +36,7 @@ const resolvePoster = (src: string, explicit?: string) => {
   for (const [key, url] of Object.entries(POSTER_BY_VIDEO)) {
     if (src.includes(key)) return url;
   }
-  return heroBg;
+  return undefined;
 };
 
 const HeroVideo = ({ src, poster, className = "" }: HeroVideoProps) => (
