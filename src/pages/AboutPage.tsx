@@ -4,15 +4,6 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 
-const journeyParagraphs = [
-  "Liberty proudly brings over 40 years of expertise in the modular and portable accommodation sector. We have grown to become one of the UK's most trusted independent suppliers of both standard and specialist solutions within the industry.",
-  "Our head office in Sandtoft, Doncaster, serves as the strategic hub for our operations, coordinating a nationwide network that enables us to consistently deliver high-quality products and services to our extensive customer base.",
-  "Through strong partnerships with our clients, we stay ahead of industry demands and deliver on our commitment to business continuity and excellence.",
-  "The safety, health, and wellbeing of our employees, customers, and suppliers remain a core priority. We continuously strive to enhance the safety standards that protect our people.",
-  "Our ongoing commitment to environmental sustainability is embedded into every aspect of our operations. We are driven to develop climate-resilient solutions that reduce carbon footprints for both ourselves and our clients while safeguarding biodiversity.",
-  "As industry leaders, we move boldly towards a more sustainable future for the welfare sector.",
-];
-
 const AboutPage = () => {
   return (
     <div className="min-h-screen">
@@ -33,41 +24,45 @@ const AboutPage = () => {
                 ← Back to Home
               </Link>
               <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-tight animate-fade-in-up">
-                Our <span className="text-secondary">Journey</span>
+                About <span className="text-secondary">Us</span>
               </h1>
-              <p
-                className="mt-4 text-lg md:text-xl text-primary-foreground/80 max-w-2xl animate-fade-in-up"
-                style={{ animationDelay: "0.2s" }}
-              >
-                Over 40 years delivering modular & portable accommodation to the UK.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Journey */}
+      {/* Who are we? */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-8">
-            Our <span className="text-secondary">Journey</span>
+            Who are <span className="text-secondary">we?</span>
           </h2>
-          <div className="space-y-5 text-muted-foreground leading-relaxed">
-            {journeyParagraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            Liberty was founded in 1981 and has grown to become a pillar in the welfare industry. We supply a variety of portable accommodation facilities, accessible to all sectors. Our trusted reputation is built on our consistency of quality and service.
+          </p>
         </div>
       </section>
 
-      {/* Philosophy */}
+      {/* Our Core Values */}
       <section className="py-20 bg-primary">
         <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
           <h2 className="font-heading text-3xl md:text-4xl font-black text-primary-foreground uppercase tracking-tight mb-8">
-            Our <span className="text-secondary">Philosophy</span>
+            Our Core <span className="text-secondary">Values</span>
           </h2>
           <p className="text-primary-foreground/80 text-lg leading-relaxed">
-            To supply high specification welfare and portable accommodation to all our customers, to offer nationwide transport, to give one-to-one communication throughout your hire, and provide a dedicated aftercare service.
+            To provide high specification kit, backed by our aftercare, help and support systems.
+          </p>
+        </div>
+      </section>
+
+      {/* Sustainability Pledge */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+          <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-8">
+            Sustainability <span className="text-secondary">Pledge</span>
+          </h2>
+          <p className="text-muted-foreground leading-relaxed text-lg">
+            At Liberty we are dedicated to reducing our environmental impact and helping our customers achieve the same. We continuously invest in the latest solar-powered technology delivering sustainable and low-emission solutions. Our goal is to help our customers save energy, cut costs, reduce emissions and protect the planet together. Over the next few years, we’re transforming our entire welfare fleet with cutting-edge solar technology. By regularly reviewing and upgrading our eco-efficient systems, we ensure our operations meet the highest environmental standards and lead the way in a sustainable future.
           </p>
         </div>
       </section>
