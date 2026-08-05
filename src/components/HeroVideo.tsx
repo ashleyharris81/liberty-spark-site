@@ -29,6 +29,7 @@ const POSTER_BY_VIDEO: Record<string, string> = {
   "socialslandscapenottingham.mov": "/posters/portable-accommodation.jpg",
   "Socials%20Landscape%20Nottingham%202.mov": "/posters/portable-buildings.jpg",
   "Socials Landscape Nottingham 2.mov": "/posters/portable-buildings.jpg",
+  "nottinghambluecabin.mov": "/posters/portable-accommodation.jpg",
 };
 
 const resolvePoster = (src: string, explicit?: string) => {
@@ -39,20 +40,23 @@ const resolvePoster = (src: string, explicit?: string) => {
   return undefined;
 };
 
-const HeroVideo = ({ src, poster, className = "" }: HeroVideoProps) => (
-  <div className={`absolute inset-0 w-full h-full overflow-hidden pointer-events-none ${className}`}>
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="metadata"
-      poster={resolvePoster(src, poster)}
-      className="absolute inset-0 w-full h-full object-cover"
-    >
-      <source src={src} type="video/mp4" />
-    </video>
-  </div>
-);
+const HeroVideo = ({ src, poster, className = "" }: HeroVideoProps) => {
+  const resolvedPoster = resolvePoster(src, poster);
+  return (
+    <div className={`absolute inset-0 w-full h-full overflow-hidden pointer-events-none ${className}`}>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster={resolvedPoster}
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={src} type="video/mp4" />
+      </video>
+    </div>
+  );
+};
 
 export default HeroVideo;
