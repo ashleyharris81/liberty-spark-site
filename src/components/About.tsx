@@ -20,19 +20,13 @@ const About = () => {
 
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Founded in 1981, Liberty has become one of the UK's most trusted suppliers of self-contained welfare cabins. With over 40 years of experience, we've built our reputation on exceptional customer service and reliable, high-quality products.
+            Here at Liberty we're your trusted welfare provider and with over 40 years of industry experience we are confident in our product knowledge and reliability.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            We started small, with a big vision and we have expanded into a nationwide business with a diverse fleet of mobile and static welfare cabins, modular buildings, portable accommodation, marketing suites and our state-of-the-art solar fleet.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            We specialise in the hire of welfare units for construction, civil engineering, and remote sites. Each unit provides essential on-site facilities such as toilet, canteen, dry room, kitchen and office, in one secure, portable solution. Our entire fleet is supported by our experienced team of responsive aftercare and on-call engineers, we deliver a seamless service from start to finish.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Our sizeable investment in our solar range, promotes sustainable welfare, low emissions, reduced CO₂, low fuel, silent running and rainwater harvesting. Helping our customers to save money, reduce their environmental impact and reach their net zero goals.
+            Our core focus is to supply a high specification product, that is supported with a quality service and with our dedicated aftercare department and breakdowns division we can deliver.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            At Liberty we're looking forward to a brighter, cleaner future for the welfare industry.
+            We provide portable accommodation covering all sectors, we specialise in towable, static and solar welfare cabins. At Liberty we feel it's imperative to keep up to date with market leading eco efficient welfare, as our mission is to lower carbon emissions across the welfare industry.
           </p>
         </div>
 
