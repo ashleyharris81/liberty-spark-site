@@ -11,20 +11,32 @@ import hybrid12ftCard from "@/assets/hybrid-12ft-card.jpg";
 import hybrid16ftCard from "@/assets/hybrid-16ft-card.jpg";
 import hybrid24ftTwinCard from "@/assets/hybrid-24ft-twin-card.jpg";
 import twin24Centered from "@/assets/24ft-mobi-twin-toilet-card.jpg";
+
+import thumb12ft from "@/assets/mobile-welfare/12ft-mobi.png.asset.json";
+import thumb16ft from "@/assets/mobile-welfare/16ft-mobi.png.asset.json";
+import thumb16ftPlus from "@/assets/mobile-welfare/16ft-mobi-plus.png.asset.json";
+import thumb20ft from "@/assets/mobile-welfare/20ft-mobi.png.asset.json";
+import thumb20ftPlus from "@/assets/mobile-welfare/20ft-mobi-plus.png.asset.json";
+import thumb24ft from "@/assets/mobile-welfare/24ft-mobi.png.asset.json";
+import thumb24ftTwin from "@/assets/mobile-welfare/24ft-mobi-twin-toilet.png.asset.json";
 import { mobiModels, type MobiModel } from "@/data/mobiModels";
 
 // Centered still-image overrides (skip CF thumbnail so container stays central)
 const cardOverrides: Partial<Record<MobiModel["slug"], { src: string; objectPosition?: string }>> = {
-  "24ft-mobi-twin-toilet": { src: twin24Centered },
+  "12ft-mobi": { src: thumb12ft.url },
+  "16ft-mobi": { src: thumb16ft.url },
+  "16ft-mobi-plus": { src: thumb16ftPlus.url },
+  "20ft-mobi": { src: thumb20ft.url },
+  "20ft-mobi-plus": { src: thumb20ftPlus.url },
+  "24ft-mobi": { src: thumb24ft.url },
+  "24ft-mobi-twin-toilet": { src: thumb24ftTwin.url },
   "12ft-hybrid-mobi": { src: hybrid12ftCard },
   "16ft-hybrid-mobi": { src: hybrid16ftCard },
   "24ft-hybrid-mobi-twin-toilet": { src: hybrid24ftTwinCard },
 };
 
 // Fine-tune object-position for Cloudflare thumbnails that are off-centre
-const thumbPositions: Partial<Record<MobiModel["slug"], string>> = {
-  "16ft-mobi-plus": "85% center",
-};
+const thumbPositions: Partial<Record<MobiModel["slug"], string>> = {};
 
 const CF_SUBDOMAIN = "customer-p8mic15ze1rkgi3y.cloudflarestream.com";
 const IFRAME_PARAMS =
