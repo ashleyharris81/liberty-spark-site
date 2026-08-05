@@ -1,5 +1,3 @@
-import heroBg from "@/assets/hero-bg.jpg";
-
 interface HeroVideoProps {
   src: string;
   poster?: string;
@@ -29,7 +27,6 @@ const POSTER_BY_VIDEO: Record<string, string> = {
   "socialslandscapenottingham.mov": "/posters/portable-accommodation.jpg",
   "Socials%20Landscape%20Nottingham%202.mov": "/posters/portable-buildings.jpg",
   "Socials Landscape Nottingham 2.mov": "/posters/portable-buildings.jpg",
-  "nottinghambluecabin.mov": "/posters/portable-accommodation.jpg",
 };
 
 const resolvePoster = (src: string, explicit?: string) => {
