@@ -147,10 +147,13 @@ const NationwideHire = () => {
           </h2>
           <div className="w-20 h-1 bg-secondary mt-4 mb-6 mx-auto" />
           <p className="text-primary/80 text-lg leading-relaxed">
-            At Liberty we provide welfare units nationwide, supported by 20 reliable distribution depots. With over 40 years of industry experience, we bring expert product knowledge to every project.
+            Here at Liberty we're your trusted welfare provider and with over 40 years of industry experience we are confident in our product knowledge and reliability.
           </p>
           <p className="text-primary/80 text-lg leading-relaxed mt-4">
-            Our fleet of 1,500+ units enables fast, flexible solutions with a quick 24-hour turnaround — backed by our trusted aftercare team, delivering high-quality service and rapid support.
+            Our core focus is to supply a high specification product, that is supported with a quality service and with our dedicated aftercare department and breakdowns division we can deliver.
+          </p>
+          <p className="text-primary/80 text-lg leading-relaxed mt-4">
+            We provide portable accommodation covering all sectors, we specialise in towable, static and solar welfare cabins. At Liberty we feel it's imperative to keep up to date with market leading eco efficient welfare, as our mission is to lower carbon emissions across the welfare industry.
           </p>
           <div className="grid grid-cols-3 gap-6 mt-10 max-w-2xl mx-auto">
             <div>
