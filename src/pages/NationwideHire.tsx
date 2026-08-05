@@ -1,4 +1,5 @@
 import brochureAsset from "@/assets/liberty-brochure.pdf.asset.json";
+import remoteMonitoringImg from "@/assets/remote-monitoring.jpg";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Phone, MapPin, Truck, Clock, Wrench, ShieldCheck, Leaf, Download, ArrowDown, Cloud, Fuel, Plug, Users } from "lucide-react";
@@ -299,6 +300,38 @@ const NationwideHire = () => {
               <p className="text-xs text-primary-foreground/60 mt-6 italic">
                 Data compares a 24ft standard diesel welfare unit with a 24ft Ultimate eco solar welfare unit
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="h-4 md:h-6 bg-white" />
+
+      {/* Remote Monitoring */}
+      <section className="relative overflow-hidden bg-white">
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 max-w-7xl py-20">
+          <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] gap-10 items-center">
+            <div>
+              <h2 className="font-heading text-4xl md:text-6xl font-black text-primary uppercase tracking-tight leading-none">
+                Remote
+                <br />
+                <span className="text-secondary">Monitoring</span>
+              </h2>
+              <div className="w-16 h-1 bg-secondary my-6" />
+              <p className="text-primary/80 text-lg leading-relaxed">
+                Our Solar Fleet feature intelligent track-and-trace technology that monitors energy production, usage, and battery levels 24/7 via Wi-Fi or 5G.
+              </p>
+              <p className="text-primary/80 text-lg leading-relaxed mt-4">
+                Real-time data includes cabin location, weather, fuel usage, waste and water levels. Fitted with a back-up generator, remote diagnostics and rainwater harvesting, our systems ensure efficient, reliable, and sustainable operation all year round.
+              </p>
+            </div>
+            <div>
+              <img
+                src={remoteMonitoringImg}
+                alt="Remote monitoring solar welfare unit"
+                loading="lazy"
+                className="w-full h-auto rounded-lg shadow-lg object-cover"
+              />
             </div>
           </div>
         </div>
