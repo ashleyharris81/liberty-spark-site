@@ -24,10 +24,10 @@ const Sustainability = () => {
             Sustainability <span className="text-yellow">Pledge</span>
           </h2>
           <div className="w-20 h-1 bg-yellow mx-auto mt-4 mb-8" />
-          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-6">
+          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-6 font-bold">
             We are dedicated to reducing our environmental impact and helping our customers achieve the same. We continuously invest in the latest solar-powered technology delivering sustainable and low-emission solutions.
           </p>
-          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-12">
+          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-12 font-bold">
             Our goal is to help our customers save energy, cut costs, reduce emissions and protect the planet together. Over the next few years, we're transforming our entire welfare fleet with cutting-edge solar technology. By regularly reviewing and upgrading our eco-efficient systems, we ensure our operations meet the highest environmental standards and lead the way in a sustainable future.
           </p>
 
