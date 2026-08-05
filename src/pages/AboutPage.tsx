@@ -34,7 +34,7 @@ const AboutPage = () => {
       {/* Who are we? */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-8">
+          <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-8 text-center">
             Who are <span className="text-secondary">we?</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
@@ -77,7 +77,7 @@ const AboutPage = () => {
       {/* Sustainability Pledge */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-8">
+          <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-8 text-center">
             Sustainability <span className="text-secondary">Pledge</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
