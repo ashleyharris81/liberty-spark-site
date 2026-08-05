@@ -10,7 +10,7 @@ import heroBg from "@/assets/hybrid-24ft-twin-card.jpg";
 import hybrid12ftCard from "@/assets/hybrid-12ft-card.jpg";
 import hybrid16ftCard from "@/assets/hybrid-16ft-card.jpg";
 import hybrid24ftTwinCard from "@/assets/hybrid-24ft-twin-card.jpg";
-import twin24Centered from "@/assets/24ft-mobi-twin-toilet-card.jpg";
+
 
 import thumb12ft from "@/assets/mobile-welfare/12ft-mobi.png.asset.json";
 import thumb16ft from "@/assets/mobile-welfare/16ft-mobi.png.asset.json";
