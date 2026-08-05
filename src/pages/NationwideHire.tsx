@@ -233,8 +233,9 @@ const NationwideHire = () => {
             </h2>
             <div className="w-20 h-1 bg-secondary mx-auto mt-4" />
           </div>
-          <div className="grid md:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)] gap-10 items-center">
-            <div className="mx-auto w-full max-w-[320px] md:max-w-[360px]">
+          <div className="grid md:grid-cols-[0.6fr_1fr_0.8fr] gap-10 items-center">
+            <div className="hidden md:block" />
+            <div className="mx-auto w-full max-w-[320px] md:max-w-[400px]">
               <UKDepotMap depots={depots} />
             </div>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
