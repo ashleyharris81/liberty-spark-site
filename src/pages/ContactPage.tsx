@@ -218,6 +218,26 @@ const ContactPage = () => {
         </div>
       </section>
 
+      {/* Brochure CTA */}
+      <section className="py-20 bg-muted">
+        <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
+          <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-4">
+            Download Our <span className="text-secondary">Brochure</span>
+          </h2>
+          <p className="text-muted-foreground leading-relaxed mb-8">
+            Explore our full range of portable accommodation, welfare units, and site solutions. Download the Liberty brochure today.
+          </p>
+          <button
+            type="button"
+            onClick={() => downloadFile(`${brochureAsset.url}`, "Liberty-Brochure.pdf")}
+            className="inline-flex items-center gap-3 bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-heading font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all duration-300"
+          >
+            <FileText className="w-5 h-5" />
+            Download a Brochure
+          </button>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
