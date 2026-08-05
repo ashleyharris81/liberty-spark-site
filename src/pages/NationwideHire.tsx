@@ -71,6 +71,13 @@ const tickerItems = [
 ];
 
 const NationwideHire = () => {
+  const [promiseIndex, setPromiseIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setPromiseIndex((i) => (i + 1) % tickerItems.length);
+    }, 2500);
+    return () => clearInterval(id);
+  }, []);
   return (
     <div className="min-h-screen">
       <Navbar />
