@@ -1,5 +1,6 @@
 import brochureAsset from "@/assets/liberty-brochure.pdf.asset.json";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { Phone, MapPin, Truck, Clock, Wrench, ShieldCheck, Leaf, Download, ArrowDown, Cloud, Fuel, Plug, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
