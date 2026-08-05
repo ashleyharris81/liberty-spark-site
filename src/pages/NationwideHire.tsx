@@ -232,7 +232,10 @@ const NationwideHire = () => {
             <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
               Nationwide <span className="text-secondary">Hire</span>
             </h2>
-            <div className="w-20 h-1 bg-secondary mx-auto mt-4" />
+            <div className="w-20 h-1 bg-secondary mx-auto mt-4 mb-6" />
+            <p className="text-primary-foreground/80 text-lg leading-relaxed max-w-4xl mx-auto">
+              We have 20 depot locations distributed across the UK, with this strong partnership in place we can uphold nationwide delivery, competitive rates and a quality service on our entire fleet. At Liberty we have an extensive fleet size, supplying a complete product range and offering a variety of size options, proficiently covering multiple projects in the industry.
+            </p>
           </div>
           <div className="grid md:grid-cols-[minmax(0,0.7fr)_minmax(0,1fr)] gap-10 items-center">
             <div className="mx-auto w-full max-w-[320px] md:max-w-[360px]">
