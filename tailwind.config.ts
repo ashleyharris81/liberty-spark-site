@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"ITC Avant Garde Gothic Pro"', '"ITC Avant Garde Pro Md"', "Jost", '"Century Gothic"', "sans-serif"],
-        body: ["Aptos", '"Aptos Light"', '"Source Sans 3"', '"Segoe UI"', "sans-serif"],
+        sans: ['"Aptos Brand"', "Aptos", '"Aptos Light"', '"Source Sans 3"', '"Segoe UI"', "sans-serif"],
+        heading: ['"ITC Avant Garde Brand"', '"ITC Avant Garde Gothic Pro"', "Jost", '"Century Gothic"', "sans-serif"],
+        body: ['"Aptos Brand"', "Aptos", '"Aptos Light"', '"Source Sans 3"', '"Segoe UI"', "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
