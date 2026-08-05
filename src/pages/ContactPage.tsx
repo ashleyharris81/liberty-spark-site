@@ -1,5 +1,6 @@
 import brochureAsset from "@/assets/liberty-brochure.pdf.asset.json";
 import { Link } from "react-router-dom";
+import { SocialIcon } from "@/components/SocialIcons";
 import { Phone, Mail, MapPin, FileText } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
