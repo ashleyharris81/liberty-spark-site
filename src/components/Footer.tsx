@@ -72,7 +72,14 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-primary-foreground/70 text-sm">
               <li>0333 344 3833</li>
-              <li>sales@libertyguard.co.uk</li>
+              <li>
+                <a
+                  href="mailto:sales@libertyguard.co.uk"
+                  className="hover:text-secondary transition-colors"
+                >
+                  sales@libertyguard.co.uk
+                </a>
+              </li>
             </ul>
           </div>
 
