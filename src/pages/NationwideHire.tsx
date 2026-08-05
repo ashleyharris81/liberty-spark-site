@@ -1,7 +1,6 @@
 import brochureAsset from "@/assets/liberty-brochure.pdf.asset.json";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { MapPin, Truck, Clock, Wrench, Phone, ShieldCheck, Leaf, Download, ArrowDown, Cloud, Fuel, Plug, Users } from "lucide-react";
+import { Phone, ShieldCheck, Leaf, Download, ArrowDown, Cloud, Fuel, Plug, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
@@ -59,27 +58,18 @@ const features = [
   { icon: Leaf, title: "Extensive Range", text: "Standard, hybrid and solar-powered options" },
 ];
 
-const promises = [
-  "Depots throughout the UK",
-  "Sustainable site solutions",
-  "Specialists in the industry",
-  "Dedicated aftercare department",
-  "Site compliant facilities",
-  "Lowering carbon emissions",
-  "Money-saving solar range",
-  "High specification marketing suites",
-  "Rainwater harvesting technology",
-  "Nationwide coverage",
+const tickerItems = [
+  "TRUSTED WELFARE PROVIDER",
+  "UK COVERAGE",
+  "40 YEARS INDUSTRY EXPERIENCE",
+  "MARKET LEADING SOLAR FLEET",
+  "EXTENSIVE PRODUCT RANGE",
+  "NATIONWIDE DISTRIBUTION DEPOTS",
+  "DEDICATED AFTERCARE",
+  "SUSTAINABLE WELFARE SOLUTIONS",
 ];
 
 const NationwideHire = () => {
-  const [promiseIndex, setPromiseIndex] = useState(0);
-  useEffect(() => {
-    const id = setInterval(() => {
-      setPromiseIndex((i) => (i + 1) % promises.length);
-    }, 2500);
-    return () => clearInterval(id);
-  }, []);
   return (
     <div className="min-h-screen">
       <Navbar />
