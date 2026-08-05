@@ -4,6 +4,40 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;600;700&display=swap');
 
+/* Brand fonts: use the licensed desktop fonts when installed locally,
+   otherwise fall back to the closest web equivalents (Jost / Source Sans 3). */
+@font-face {
+  font-family: "ITC Avant Garde Brand";
+  src: local("ITC Avant Garde Gothic Pro Book"), local("ITCAvantGardePro-Bk"),
+       local("ITC Avant Garde Gothic Pro Medium"), local("ITCAvantGardePro-Md"),
+       local("ITC Avant Garde Gothic Pro"), local("Century Gothic");
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ITC Avant Garde Brand";
+  src: local("ITC Avant Garde Gothic Pro Bold"), local("ITCAvantGardePro-Bold"),
+       local("ITC Avant Garde Gothic Pro Demi"), local("Century Gothic Bold");
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aptos Brand";
+  src: local("Aptos Light"), local("Aptos-Light"), local("Aptos");
+  font-weight: 100 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aptos Brand";
+  src: local("Aptos Bold"), local("Aptos-Bold"), local("Aptos SemiBold"), local("Aptos");
+  font-weight: 500 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 210 20% 98%;
