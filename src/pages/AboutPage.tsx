@@ -45,13 +45,32 @@ const AboutPage = () => {
 
       {/* Our Core Values */}
       <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 lg:px-8 text-center max-w-3xl">
+        <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
           <h2 className="font-heading text-3xl md:text-4xl font-black text-primary-foreground uppercase tracking-tight mb-8">
             Our Core <span className="text-secondary">Values</span>
           </h2>
-          <p className="text-primary-foreground/80 text-lg leading-relaxed">
-            To provide high specification kit, backed by our aftercare, help and support systems.
-          </p>
+          <ul className="space-y-4 text-primary-foreground/90 text-lg leading-relaxed">
+            <li className="flex gap-3">
+              <span className="text-secondary mt-2">•</span>
+              <span>High specification welfare, with an extensive fleet size and a wide product range.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-secondary mt-2">•</span>
+              <span>One central hub to run all enquiries, servicing and aftercare resources through.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-secondary mt-2">•</span>
+              <span>Nationwide coverage with our many trusted depot partnerships.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-secondary mt-2">•</span>
+              <span>Quality service with our aftercare, engineers, help and support systems.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-secondary mt-2">•</span>
+              <span>Market leading solar welfare, providing sustainable site solutions to all industry sectors.</span>
+            </li>
+          </ul>
         </div>
       </section>
 
