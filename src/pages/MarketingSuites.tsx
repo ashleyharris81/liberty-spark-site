@@ -154,34 +154,6 @@ const MarketingSuites = () => {
         </div>
       </section>
 
-      {/* Housebuilder Network */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-4">
-              Housebuilder <span className="text-secondary">Network</span>
-            </h2>
-            <div className="w-20 h-1 bg-secondary mx-auto rounded-full" />
-          </div>
-          <div className="relative overflow-hidden max-w-6xl mx-auto [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
-            <div className="flex gap-16 animate-marquee w-max">
-              {[...housebuilders, ...housebuilders].map((b, i) => (
-                <div
-                  key={`${b.name}-${i}`}
-                  className="flex items-center justify-center h-20 shrink-0"
-                >
-                  <img
-                    src={b.logo}
-                    alt={b.name}
-                    loading="lazy"
-                    className="max-h-16 w-auto object-contain transition-all duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Designed for Excellence */}
       <section className="py-24 bg-background">
