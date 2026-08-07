@@ -84,7 +84,7 @@ export const depots: Depot[] = [
   {
     code: "5410",
     name: "Darlington (Newcastle)",
-    address: "Corners Transport, Arlaw Banks, Winston, Darlington, DL2 3PX",
+    address: "Arlaw Banks, Winston, Darlington, DL2 3PX",
     postcode: "DL2 3PX",
     lat: 54.544091,
     lng: -1.858247,
