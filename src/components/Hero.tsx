@@ -1,7 +1,8 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import VimeoEmbed from "@/components/VimeoEmbed";
 
-const HERO_VIDEO_URL =
-  "https://assets-libertyguard-co-uk.stackstaging.com/videos/home-page-video.mov";
+const VIMEO_HERO_URL =
+  "https://player.vimeo.com/video/1216428556?autoplay=1&muted=1&loop=1&background=1&title=0&byline=0&portrait=0&badge=0&autopause=0";
 
 const Hero = () => {
   return (
@@ -11,18 +12,9 @@ const Hero = () => {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      {/* Video Background */}
+      {/* Vimeo Video Background */}
       <div className="absolute inset-0 w-full h-full overflow-hidden z-[1]">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster="/posters/home.jpg"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src={HERO_VIDEO_URL} type="video/mp4" />
-        </video>
+        <VimeoEmbed src={VIMEO_HERO_URL} title="home-page-video" className="z-0" />
       </div>
       <div className="absolute inset-0 bg-primary/70 z-[2]" />
       <div className="relative z-10 container mx-auto px-4 text-center">
