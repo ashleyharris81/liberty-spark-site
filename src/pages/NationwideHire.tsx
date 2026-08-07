@@ -19,26 +19,8 @@ import staticCard from "@/assets/welfare-static-card.jpg";
 import hybridCard from "@/assets/hybrid-24ft-twin-card.jpg";
 import msExterior from "@/assets/ms-exterior.jpg";
 import portableHero from "@/assets/portable-buildings-hero.jpg";
-import logoHss from "@/assets/customers/hss.png";
-import logoMiller from "@/assets/customers/miller-homes.png";
-import logoPersimmon from "@/assets/customers/persimmon.png";
-import logoMnda from "@/assets/customers/mnda.webp";
-import logoStory from "@/assets/customers/story-homes.png";
-import logoTaylor from "@/assets/customers/taylor-wimpey.png";
-import logoKelling from "@/assets/customers/kelling.png";
-import logoKeepmoat from "@/assets/customers/keepmoat.png";
 import { downloadFile } from "@/lib/downloadFile";
 
-const customers = [
-  { name: "HSS ProService", logo: logoHss },
-  { name: "Miller Homes", logo: logoMiller },
-  { name: "Persimmon", logo: logoPersimmon },
-  { name: "MND Association", logo: logoMnda },
-  { name: "Story Homes", logo: logoStory },
-  { name: "Taylor Wimpey", logo: logoTaylor },
-  { name: "Kelling Group", logo: logoKelling },
-  { name: "Keepmoat Homes", logo: logoKeepmoat },
-];
 
 const showcase = [
   { title: "Mobile Welfare", image: mobileCard, link: "/mobile-welfare" },
