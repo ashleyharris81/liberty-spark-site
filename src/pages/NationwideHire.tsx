@@ -169,36 +169,6 @@ const NationwideHire = () => {
       {/* Range Showcase */}
       <ImageAccordion />
 
-      {/* Trusted by */}
-      <section className="py-16 bg-white overflow-hidden">
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl text-center">
-          <h2 className="font-heading text-2xl md:text-3xl font-black text-primary uppercase tracking-tight">
-            Trusted by our valued customers
-          </h2>
-          <div className="w-16 h-1 bg-secondary mx-auto mt-3 mb-12" />
-        </div>
-        <div
-          className="group relative overflow-hidden"
-          style={{ maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)" }}
-        >
-          <div className="flex items-center gap-16 md:gap-20 w-max animate-marquee group-hover:[animation-play-state:paused]">
-            {[...customers, ...customers].map((c, i) => (
-              <div
-                key={`${c.name}-${i}`}
-                className="flex items-center justify-center h-14 md:h-16 shrink-0"
-              >
-                <img
-                  src={c.logo}
-                  alt={`${c.name} logo`}
-                  loading="lazy"
-                  className="max-h-full w-auto object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Depot Map */}
       <section className="relative py-20 overflow-hidden">
         <img
