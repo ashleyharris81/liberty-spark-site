@@ -16,7 +16,7 @@ export const depots: Depot[] = [
     code: "5401",
     name: "Aberdeen",
     address:
-      "William Walker Transport, Shielhill Drive, Bridge of Don, Aberdeen, AB23 8NN",
+      "Shielhill Drive, Bridge of Don, Aberdeen, AB23 8NN",
     postcode: "AB23 8NN",
     lat: 57.207072,
     lng: -2.108263,
@@ -28,7 +28,7 @@ export const depots: Depot[] = [
     code: "5402",
     name: "Bournemouth",
     address:
-      "Wells Transport Services, Field Farm Dairy, Spetisbury, Dorset, DT11 9EE",
+      "Field Farm Dairy, Spetisbury, Dorset, DT11 9EE",
     postcode: "DT11 9EE",
     lat: 50.813988,
     lng: -2.108797,
@@ -50,7 +50,7 @@ export const depots: Depot[] = [
   {
     code: "5404",
     name: "Bristol",
-    address: "DB International, Central Avenue, Hallen, Bristol, BS10 7ES",
+    address: "Central Avenue, Hallen, Bristol, BS10 7ES",
     postcode: "BS10 7ES",
     lat: 51.542501,
     lng: -2.652907,
@@ -62,7 +62,7 @@ export const depots: Depot[] = [
     code: "5406",
     name: "Coventry",
     address:
-      "J.W. Morley Transport, Sole End Farm, Ansley Lane, Bedworth, CV12 0NE",
+      "Sole End Farm, Ansley Lane, Bedworth, CV12 0NE",
     postcode: "CV12 0NE",
     lat: 52.486711,
     lng: -1.519927,
@@ -96,7 +96,7 @@ export const depots: Depot[] = [
     code: "5413",
     name: "Plymouth",
     address:
-      "Newman Haulage, Penquite Farm, Trerulefoot, Saltash, PL12 5BN",
+      "Penquite Farm, Trerulefoot, Saltash, PL12 5BN",
     postcode: "PL12 5BN",
     lat: 50.409954,
     lng: -4.360477,
@@ -108,7 +108,7 @@ export const depots: Depot[] = [
     code: "5408",
     name: "Falkirk (Scotland)",
     address:
-      "Waste Tank Services Ltd, 1-4 Underwood Road, Longcroft, Falkirk, FK4 1ST",
+      "1-4 Underwood Road, Longcroft, Falkirk, FK4 1ST",
     postcode: "FK4 1ST",
     lat: 55.989371,
     lng: -3.917142,
@@ -119,7 +119,7 @@ export const depots: Depot[] = [
     code: "5411",
     name: "Oxford (Waterstock)",
     address:
-      "Waste Tank, Top Yard, Holloway Farm, Church Hill, Waterstock, Oxford, OX33 1LJ",
+      "Top Yard, Holloway Farm, Church Hill, Waterstock, Oxford, OX33 1LJ",
     postcode: "OX33 1LJ",
     lat: 51.738038,
     lng: -1.097191,
@@ -129,7 +129,7 @@ export const depots: Depot[] = [
   {
     code: "5416",
     name: "Warrington (Chester)",
-    address: "Waste Tank Services, Kelsall Rd, Tarvin Sands, Chester, CH3 8NR",
+    address: "Kelsall Rd, Tarvin Sands, Chester, CH3 8NR",
     postcode: "CH3 8NR",
     lat: 53.206979,
     lng: -2.750112,
@@ -163,7 +163,7 @@ export const depots: Depot[] = [
     code: "5417",
     name: "Stafford",
     address:
-      "Renshaw Solutions, Far Coley Farm, Coley Lane, Staffordshire, ST18 0XB",
+      "Far Coley Farm, Coley Lane, Staffordshire, ST18 0XB",
     postcode: "ST18 0XB",
     lat: 52.800075,
     lng: -1.984304,
@@ -175,7 +175,7 @@ export const depots: Depot[] = [
     code: "5418",
     name: "Northampton",
     address:
-      "Renshaw Solutions Ltd, Yard 3, Banbury Lane, Pattishall, Towcester, NN12 8FB",
+      "Yard 3, Banbury Lane, Pattishall, Towcester, NN12 8FB",
     postcode: "NN12 8FB",
     lat: 52.183958,
     lng: -1.013073,
@@ -186,7 +186,7 @@ export const depots: Depot[] = [
   {
     code: "5419",
     name: "Nuneaton",
-    address: "A Star All Solutions, Springfield Farm, Nuneaton, CV10 0QU",
+    address: "Springfield Farm, Nuneaton, CV10 0QU",
     postcode: "CV10 0QU",
     lat: 52.527692,
     lng: -1.590601,
@@ -198,7 +198,7 @@ export const depots: Depot[] = [
     code: "5420",
     name: "Southend-on-Sea (Benfleet)",
     address:
-      "Barclay Site Services Ltd, Towerfields Business Park, Fane Road, Benfleet, SS7 3NH",
+      "Towerfields Business Park, Fane Road, Benfleet, SS7 3NH",
     postcode: "SS7 3NH",
     lat: 51.583728,
     lng: 0.571499,
