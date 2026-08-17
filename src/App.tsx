@@ -24,6 +24,8 @@ import AboutPage from "./pages/AboutPage";
 import NewAccount from "./pages/NewAccount";
 import ContactPage from "./pages/ContactPage";
 import NationwideHire from "./pages/NationwideHire";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookieBanner from "./components/CookieBanner";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -60,10 +62,13 @@ const App = () => (
           <Route path="/new-account" element={<NewAccount />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/nationwide-hire" element={<NationwideHire />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieBanner />
       </BrowserRouter>
+
     </TooltipProvider>
   </QueryClientProvider>
 );
