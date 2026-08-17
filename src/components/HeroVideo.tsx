@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react";
+
 interface HeroVideoProps {
   src: string;
   poster?: string;
@@ -39,13 +41,52 @@ const resolvePoster = (src: string, explicit?: string) => {
 
 const HeroVideo = ({ src, poster, className = "" }: HeroVideoProps) => {
   const resolvedPoster = resolvePoster(src, poster);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Mobile browsers (notably iOS Safari) only autoplay muted, inline videos.
+  // React sets the `muted` *attribute* but not the DOM *property*, so we force
+  // it here and call play() imperatively, handling the rejected promise that
+  // browsers throw when autoplay isn't permitted.
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = true;
+    video.defaultMuted = true;
+
+    const attemptPlay = () => {
+      const p = video.play();
+      if (p && typeof p.catch === "function") {
+        p.catch(() => {
+          // Autoplay blocked — try again on the first user interaction.
+          const resume = () => {
+            video.muted = true;
+            video.play().catch(() => {});
+          };
+          window.addEventListener("touchstart", resume, { once: true });
+          window.addEventListener("click", resume, { once: true });
+        });
+      }
+    };
+
+    // Try immediately and again once metadata is loaded (helps slow networks).
+    attemptPlay();
+    video.addEventListener("loadedmetadata", attemptPlay, { once: true });
+
+    return () => {
+      video.removeEventListener("loadedmetadata", attemptPlay);
+    };
+  }, [src]);
+
   return (
     <div className={`absolute inset-0 w-full h-full overflow-hidden pointer-events-none ${className}`}>
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        webkit-playsinline="true"
         preload="auto"
         poster={resolvedPoster}
         className="absolute inset-0 w-full h-full object-cover"
