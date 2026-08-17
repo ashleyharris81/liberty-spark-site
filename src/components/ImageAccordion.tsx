@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import welfareImg from "@/assets/legacy/IMG_1188.jpg.asset.json";
+import marketingSuiteImg from "@/assets/legacy/IMG_2374.jpeg.asset.json";
+import solarWelfareImg from "@/assets/legacy/MJP_0029-scaled.jpg.asset.json";
+import solarLooImg from "@/assets/legacy/MK2_2812-scaled.jpg.asset.json";
+import portableAccomImg from "@/assets/legacy/IMG_0595.jpeg.asset.json";
 
 interface AccordionItem {
   title: string;
@@ -10,27 +15,27 @@ interface AccordionItem {
 const items: AccordionItem[] = [
   {
     title: "Mobile & Static Welfare",
-    image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_1188.jpg",
+    image: welfareImg.url,
     link: "/welfare",
   },
   {
     title: "Marketing Suite",
-    image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2374.jpeg",
+    image: marketingSuiteImg.url,
     link: "/marketing-suites",
   },
   {
     title: "Solar Welfare",
-    image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/MJP_0029-scaled.jpg",
+    image: solarWelfareImg.url,
     link: "/solar",
   },
   {
     title: "Solar Loo",
-    image: "https://libertyguard.co.uk/wp-content/uploads/2025/07/MK2_2812-scaled.jpg",
+    image: solarLooImg.url,
     link: "/solar-loos",
   },
   {
     title: "Portable Accommodation",
-    image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_0595.jpeg",
+    image: portableAccomImg.url,
     link: "/portable-buildings",
   },
 ];
