@@ -21,14 +21,20 @@ import persimmon from "@/assets/persimmon.png.asset.json";
 import honey from "@/assets/honey.png.asset.json";
 import strata from "@/assets/strata.png.asset.json";
 import marketingSuiteBrochure from "@/assets/Marketing_Suite_Brochure_2026.pdf.asset.json";
+import strip1 from "@/assets/legacy/IMG_1961-1024x768.jpeg.asset.json";
+import strip2 from "@/assets/legacy/Liberty-Tetbury-01-1024x683.jpg.asset.json";
+import strip3 from "@/assets/legacy/LIB_08-1024x683.jpg.asset.json";
+import strip4 from "@/assets/legacy/Liberty-Llanwern-03.jpg.asset.json";
+import strip5 from "@/assets/legacy/LIB_35-1024x683.jpg.asset.json";
+import strip6 from "@/assets/legacy/IMG_2463-1024x768.jpeg.asset.json";
 
 const stripImages = [
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_1961-1024x768.jpeg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/Liberty-Tetbury-01-1024x683.jpg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/LIB_08-1024x683.jpg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/Liberty-Llanwern-03.jpg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/LIB_35-1024x683.jpg",
-  "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_2463-1024x768.jpeg",
+  strip1.url,
+  strip2.url,
+  strip3.url,
+  strip4.url,
+  strip5.url,
+  strip6.url,
 ];
 
 const housebuilders = [
