@@ -9,16 +9,6 @@ interface AccordionItem {
 
 const items: AccordionItem[] = [
   {
-    title: "Solar Welfare",
-    image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/MJP_0029-scaled.jpg",
-    link: "/solar",
-  },
-  {
-    title: "Portable Accommodation",
-    image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_0595.jpeg",
-    link: "/portable-buildings",
-  },
-  {
     title: "Mobile & Static Welfare",
     image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_1188.jpg",
     link: "/welfare",
@@ -29,9 +19,19 @@ const items: AccordionItem[] = [
     link: "/marketing-suites",
   },
   {
+    title: "Solar Welfare",
+    image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/MJP_0029-scaled.jpg",
+    link: "/solar",
+  },
+  {
     title: "Solar Loo",
     image: "https://libertyguard.co.uk/wp-content/uploads/2025/07/MK2_2812-scaled.jpg",
     link: "/solar-loos",
+  },
+  {
+    title: "Portable Accommodation",
+    image: "https://libertyguard.co.uk/wp-content/uploads/2025/09/IMG_0595.jpeg",
+    link: "/portable-buildings",
   },
 ];
 
