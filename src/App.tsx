@@ -62,10 +62,13 @@ const App = () => (
           <Route path="/new-account" element={<NewAccount />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/nationwide-hire" element={<NationwideHire />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieBanner />
       </BrowserRouter>
+
     </TooltipProvider>
   </QueryClientProvider>
 );
