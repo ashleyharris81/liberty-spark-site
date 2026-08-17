@@ -24,6 +24,8 @@ import AboutPage from "./pages/AboutPage";
 import NewAccount from "./pages/NewAccount";
 import ContactPage from "./pages/ContactPage";
 import NationwideHire from "./pages/NationwideHire";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookieBanner from "./components/CookieBanner";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
