@@ -194,7 +194,7 @@ const NationwideHire = () => {
               <UKDepotMap depots={depots} />
             </div>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              We have 20 depot locations distributed across the UK, with this strong partnership in place we can uphold nationwide delivery, competitive rates and a quality service on our entire fleet. At Liberty we have an extensive fleet size, supplying a complete product range and offering a variety of size options, proficiently covering multiple projects in the industry.
+              With 20 depot locations across the UK, Liberty offers nationwide delivery, competitive rates and a quality service. Our extensive fleet covers the complete product range in a variety of sizes, so whatever the scale or sector of your project, we have a unit to match.
             </p>
           </div>
         </div>
