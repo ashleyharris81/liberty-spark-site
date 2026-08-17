@@ -109,7 +109,6 @@ Our operations are UK-based and we aim to keep personal data within the UK. Some
 
 Our website uses cookies and similar technologies, including analytics and marketing tools. Non-essential cookies are only set once you have given consent through our cookie banner, and you can change or withdraw your preferences at any time.
 
-Full details of the cookies we use, their purpose and their duration are set out in our separate **Cookie Policy** [link].
 
 ---
 
