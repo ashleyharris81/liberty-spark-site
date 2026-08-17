@@ -128,13 +128,16 @@ const NationwideHire = () => {
           </h2>
           <div className="w-20 h-1 bg-secondary mt-4 mb-6 mx-auto" />
           <p className="text-primary/80 text-lg leading-relaxed">
-            Here at Liberty we're your trusted welfare provider and with over 40 years of industry experience we are confident in our product knowledge and reliability.
+            With over 40 years in the welfare industry, Liberty is the trusted provider you can rely on.
           </p>
           <p className="text-primary/80 text-lg leading-relaxed mt-4">
-            Our core focus is to supply a high specification product, that is supported with a quality service and with our dedicated aftercare department and breakdowns division we can deliver.
+            We supply high-specification portable accommodation across all sectors, specialising in towable, static and solar welfare cabins.
           </p>
           <p className="text-primary/80 text-lg leading-relaxed mt-4">
-            We provide portable accommodation covering all sectors, we specialise in towable, static and solar welfare cabins. At Liberty we feel it's imperative to keep up to date with market leading eco efficient welfare, as our mission is to lower carbon emissions across the welfare industry.
+            Every unit is backed by a quality service, with a dedicated aftercare department and breakdowns division to keep you up and running.
+          </p>
+          <p className="text-primary/80 text-lg leading-relaxed mt-4">
+            At Liberty we feel it's imperative to stay at the forefront of eco-efficient welfare. Our mission is simple: to lower carbon emissions across the welfare industry.
           </p>
           <div className="grid grid-cols-3 gap-6 mt-10 max-w-2xl mx-auto">
             <div>
@@ -191,7 +194,7 @@ const NationwideHire = () => {
               <UKDepotMap depots={depots} />
             </div>
             <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              We have 20 depot locations distributed across the UK, with this strong partnership in place we can uphold nationwide delivery, competitive rates and a quality service on our entire fleet. At Liberty we have an extensive fleet size, supplying a complete product range and offering a variety of size options, proficiently covering multiple projects in the industry.
+              With 20 depot locations across the UK, Liberty offers nationwide delivery, competitive rates and a quality service. Our extensive fleet covers the complete product range in a variety of sizes, so whatever the scale or sector of your project, we have a unit to match.
             </p>
           </div>
         </div>

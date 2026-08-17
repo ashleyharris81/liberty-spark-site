@@ -50,11 +50,11 @@ const AboutPage = () => {
             Our Core <span className="text-secondary">Values</span>
           </h2>
           <div className="space-y-4 text-primary-foreground/90 text-lg leading-relaxed">
-            <p>High specification welfare, with an extensive fleet size and a wide product range.</p>
-            <p>One central hub to run all enquiries, servicing and aftercare resources through.</p>
-            <p>Nationwide coverage with our many trusted depot partnerships.</p>
-            <p>Quality service with our aftercare, engineers, help and support systems.</p>
-            <p>Market leading solar welfare, providing sustainable site solutions to all industry sectors.</p>
+            <p><span className="font-bold">High-specification welfare:</span> our extensive fleet and wide product range covers all projects.</p>
+            <p><span className="font-bold">One central hub:</span> all enquiries, servicing and aftercare handled through a single point of contact.</p>
+            <p><span className="font-bold">Nationwide coverage:</span> fast delivery anywhere in the UK through our trusted depot partners.</p>
+            <p><span className="font-bold">Quality service:</span> dedicated aftercare, experienced engineers, help and support systems.</p>
+            <p><span className="font-bold">Sustainability first:</span> market-leading solar welfare units, lowering carbon emissions across all industry sectors.</p>
           </div>
         </div>
       </section>

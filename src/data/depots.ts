@@ -206,4 +206,12 @@ export const depots: Depot[] = [
     phone: "07535 681786",
     email: "info@barclaysiteservices.co.uk",
   },
+  {
+    code: "5422",
+    name: "Cardiff (Aberdare)",
+    address: "Fedw Hir, Llwydcoed, Aberdare, Cardiff, CF44 0DX",
+    postcode: "CF44 0DX",
+    lat: 51.729,
+    lng: -3.464,
+  },
 ];
