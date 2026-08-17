@@ -29,10 +29,11 @@ const CookieBanner = () => {
     <div
       role="dialog"
       aria-label="Cookie consent"
-      className="fixed bottom-0 left-0 right-0 z-[60] bg-primary/98 backdrop-blur-md border-t border-navy-light animate-fade-in"
+      className="fixed bottom-0 left-0 right-0 z-[60] bg-primary border-t-2 border-secondary shadow-[0_-10px_40px_-10px_rgba(0,0,0,0.5)]"
     >
       <div className="container mx-auto px-4 lg:px-8 py-5 flex flex-col md:flex-row md:items-center gap-4">
-        <p className="text-primary-foreground/80 text-sm leading-relaxed flex-1">
+        <p className="text-primary-foreground text-sm leading-relaxed flex-1">
+
           We use essential cookies to make our site work. With your consent we also use
           analytics and marketing cookies to improve our website. See our{" "}
           <Link
