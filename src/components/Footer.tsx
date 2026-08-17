@@ -12,6 +12,7 @@ const quickLinks = [
   { label: "News", href: "/news" },
   { label: "Contact Us", href: "/contact" },
   { label: "Open New Account", href: "/new-account" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "eBay Shop", href: "https://www.ebay.co.uk/str/libertyguardukltd", external: true },
 ];
 
