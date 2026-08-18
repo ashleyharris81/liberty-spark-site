@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://dev.libertyguard.co.uk/sitemap.xml
+Sitemap: https://libertyguard.co.uk/sitemap.xml
