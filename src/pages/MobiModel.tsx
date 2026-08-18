@@ -7,6 +7,7 @@ import HeroVideo from "@/components/HeroVideo";
 import VimeoEmbed from "@/components/VimeoEmbed";
 import { getMobiModel } from "@/data/mobiModels";
 import { downloadFile } from "@/lib/downloadFile";
+import { ProductJsonLd } from "@/components/JsonLd";
 
 const MOBI_VIDEO_BASE =
   "https://assets-libertyguard-co-uk.stackstaging.com/videos/mobilewelfare";
@@ -39,6 +40,12 @@ const MobiModel = () => {
 
   return (
     <div className="min-h-screen">
+      <ProductJsonLd
+        name={`${model.title} Mobile Welfare Unit`}
+        description={`${model.title}${model.subtitle ? ` — ${model.subtitle}` : ""} mobile welfare unit available for nationwide hire from Liberty.`}
+        path={`/mobile-welfare/${model.slug}`}
+        specs={model.specs}
+      />
       <Navbar />
 
       {/* Full-width hero video */}

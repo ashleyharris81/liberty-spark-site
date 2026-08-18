@@ -12,6 +12,7 @@ import newsSolarUpgrade from "@/assets/news-solar-upgrade.jpg";
 import newsFunFact from "@/assets/news-fun-fact.jpg";
 import newsAjc from "@/assets/news-ajc.jpeg";
 import newsMnd from "@/assets/news-mnd.png";
+import { ArticleListJsonLd } from "@/components/JsonLd";
 
 const articles = [
   {
@@ -89,6 +90,7 @@ const articles = [
 const News = () => {
   return (
     <div className="min-h-screen bg-background">
+      <ArticleListJsonLd path="/news" articles={articles} />
       <Navbar />
 
       {/* Hero */}

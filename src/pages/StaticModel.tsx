@@ -5,6 +5,7 @@ import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import { getStaticModel } from "@/data/staticModels";
 import { downloadFile } from "@/lib/downloadFile";
+import { ProductJsonLd } from "@/components/JsonLd";
 
 const StaticModel = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -14,6 +15,12 @@ const StaticModel = () => {
 
   return (
     <div className="min-h-screen">
+      <ProductJsonLd
+        name={`${model.title} Static Welfare Unit`}
+        description={`${model.title}${model.subtitle ? ` — ${model.subtitle}` : ""} static welfare unit available for nationwide hire from Liberty.`}
+        path={`/static-welfare/${model.slug}`}
+        specs={model.specs}
+      />
       <Navbar />
 
       <section className="pt-20 bg-primary">
