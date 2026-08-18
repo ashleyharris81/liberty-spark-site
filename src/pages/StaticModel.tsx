@@ -52,9 +52,9 @@ const StaticModel = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {model.specs.map((spec) => (
                 <div key={spec.title}>
-                  <h3 className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
+                  <h2 className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
                     {spec.title}
-                  </h3>
+                  </h2>
                   <ul className="space-y-2">
                     {spec.items.map((item) => (
                       <li
