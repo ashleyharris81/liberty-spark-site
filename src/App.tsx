@@ -26,6 +26,7 @@ import ContactPage from "./pages/ContactPage";
 import NationwideHire from "./pages/NationwideHire";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookieBanner from "./components/CookieBanner";
+import Seo from "./components/Seo";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +37,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <Seo />
         <Routes>
           <Route path="/" element={<NationwideHire />} />
           <Route path="/homepage2" element={<Index />} />
