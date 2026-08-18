@@ -86,7 +86,7 @@ const PortableBuildings = () => {
                     <cat.icon className="w-8 h-8 text-secondary" />
                   </div>
                   <div className="mt-auto">
-                    <h3 className="font-heading text-2xl font-bold text-primary-foreground uppercase tracking-wide mb-4">
+                    <h2 className="font-heading text-2xl font-bold text-primary-foreground uppercase tracking-wide mb-4">
                       {cat.title}
                     </h3>
                     <p className="text-primary-foreground/85 leading-relaxed">
