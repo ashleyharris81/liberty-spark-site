@@ -7,6 +7,7 @@ import CloudflareVideo from "@/components/CloudflareVideo";
 import { getSolarProduct } from "@/data/solarProducts";
 import { downloadFile } from "@/lib/downloadFile";
 import ultimateEcoLogo from "@/assets/ultimate-eco-logo.png.asset.json";
+import { ProductJsonLd } from "@/components/JsonLd";
 
 type Savings = {
   total: string;
@@ -61,6 +62,12 @@ const SolarProduct = () => {
 
   return (
     <div className="min-h-screen">
+      <ProductJsonLd
+        name={product.title}
+        description={`${product.title} solar-powered welfare product available for nationwide hire from Liberty.`}
+        path={`${backTo}/${product.slug}`}
+        specs={product.specs}
+      />
       <Navbar />
 
       <section className="pt-20 bg-primary">
