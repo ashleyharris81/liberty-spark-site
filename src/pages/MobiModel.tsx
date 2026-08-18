@@ -87,7 +87,7 @@ const MobiModel = () => {
                 <div key={spec.title}>
                   <h2 className="font-heading text-sm font-bold text-secondary uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
                     {spec.title}
-                  </h3>
+                  </h2>
                   <ul className="space-y-2">
                     {spec.items.map((item) => (
                       <li

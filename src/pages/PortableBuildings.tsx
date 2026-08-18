@@ -88,7 +88,7 @@ const PortableBuildings = () => {
                   <div className="mt-auto">
                     <h2 className="font-heading text-2xl font-bold text-primary-foreground uppercase tracking-wide mb-4">
                       {cat.title}
-                    </h3>
+                    </h2>
                     <p className="text-primary-foreground/85 leading-relaxed">
                       {cat.description}
                     </p>
