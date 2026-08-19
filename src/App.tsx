@@ -25,6 +25,7 @@ import NewAccount from "./pages/NewAccount";
 import ContactPage from "./pages/ContactPage";
 import NationwideHire from "./pages/NationwideHire";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Admin from "./pages/Admin";
 import CookieBanner from "./components/CookieBanner";
 import Seo from "./components/Seo";
 import NotFound from "./pages/NotFound";
@@ -65,6 +66,7 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/nationwide-hire" element={<NationwideHire />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
