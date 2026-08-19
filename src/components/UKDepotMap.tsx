@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { geoMercator, geoPath } from "d3-geo";
 import ukOutline from "@/assets/uk-outline.json";
+import { depotDisplayLocation } from "@/data/depotDisplay";
 
 export type Depot = {
   code: string;
@@ -88,8 +89,9 @@ const UKDepotMap = ({ depots }: { depots: Depot[] }) => {
       {activeDepot && (
         <div className="absolute top-3 left-3 right-3 md:right-auto md:max-w-xs bg-primary text-primary-foreground rounded-xl shadow-2xl border border-secondary/40 p-4 animate-fade-in">
           <div className="flex items-start justify-between gap-3">
+            {/* Town-level only: partner street addresses must not be published. */}
             <p className="text-sm text-primary-foreground/85 leading-relaxed">
-              {activeDepot.address}
+              {depotDisplayLocation(activeDepot.code, activeDepot.name)}
             </p>
             <button
               onClick={() => setActive(null)}

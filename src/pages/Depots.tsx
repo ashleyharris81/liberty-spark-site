@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
-import { depotsByRegion, depotAreasServed } from "@/data/depotRegions";
+import { publicDepotsByRegion, depotAreasServed } from "@/data/depotRegions";
 import { BreadcrumbJsonLd, OrganizationAreaServedJsonLd } from "@/components/JsonLd";
 
 const Depots = () => {
@@ -28,10 +28,11 @@ const Depots = () => {
               UK Depot <span className="text-secondary">Network</span>
             </h1>
             <p className="mt-4 text-lg text-primary-foreground/80 max-w-3xl leading-relaxed">
-              Liberty Guard operates a nationwide distribution and delivery network, with welfare
-              units and portable buildings dispatched from depot locations across mainland UK and
-              Wales. Every hire, service visit and collection is coordinated centrally by our team
-              on 0333 344 3833.
+              Liberty Guard's head office is in Sandtoft, Doncaster. Nationwide delivery,
+              servicing and collection of our welfare units and portable buildings are operated
+              through a network of distribution partners across mainland UK and Wales, giving
+              coverage from Aberdeen to Plymouth. Every hire, service visit and collection is
+              coordinated centrally by our team on 0333 344 3833.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
@@ -67,7 +68,7 @@ const Depots = () => {
           <div className="w-20 h-1 bg-secondary mt-4 mb-10" />
 
           <div className="space-y-12">
-            {depotsByRegion.map((group) => (
+            {publicDepotsByRegion.map((group) => (
               <div key={group.region}>
                 <h3 className="font-heading text-xl font-bold text-primary uppercase tracking-wider border-b border-border pb-3">
                   {group.region}
@@ -79,12 +80,12 @@ const Depots = () => {
                         {depot.name}
                       </p>
                       <p className="text-primary/70 text-sm leading-relaxed mt-2">
-                        {depot.address}
+                        {depot.location}
                       </p>
                       <p className="text-primary/60 text-sm mt-3">
-                        Delivery and collection handled from this location. Enquiries and hire
-                        bookings via our central team on 0333 344 3833 or
-                        sales@libertyguard.co.uk.
+                        Delivery and collection are handled from this location by our distribution
+                        network. Enquiries and hire bookings via our central team on
+                        0333 344 3833 or sales@libertyguard.co.uk.
                       </p>
                     </div>
                   ))}
