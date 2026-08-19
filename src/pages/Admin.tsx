@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -153,36 +153,34 @@ const Admin = () => {
     return () => sub.subscription.unsubscribe();
   }, []);
 
+  const load = useCallback(async () => {
+    if (!session) return;
+    const { data } = await supabase
+      .from("user_roles")
+      .select("role")
+      .eq("user_id", session.user.id)
+      .eq("role", "admin")
+      .maybeSingle();
+    const admin = !!data;
+    setIsAdmin(admin);
+    if (!admin) return;
+
+    const [c, a] = await Promise.all([
+      supabase.from("contact_submissions").select("*").order("created_at", { ascending: false }),
+      supabase.from("account_applications").select("*").order("created_at", { ascending: false }),
+    ]);
+    setContacts((c.data as ContactRow[]) ?? []);
+    setAccounts((a.data as AccountRow[]) ?? []);
+  }, [session]);
+
   useEffect(() => {
     if (!session) {
       setIsAdmin(null);
       return;
     }
-    let cancelled = false;
-    (async () => {
-      const { data } = await supabase
-        .from("user_roles")
-        .select("role")
-        .eq("user_id", session.user.id)
-        .eq("role", "admin")
-        .maybeSingle();
-      if (cancelled) return;
-      const admin = !!data;
-      setIsAdmin(admin);
-      if (!admin) return;
+    load();
+  }, [session, load]);
 
-      const [c, a] = await Promise.all([
-        supabase.from("contact_submissions").select("*").order("created_at", { ascending: false }),
-        supabase.from("account_applications").select("*").order("created_at", { ascending: false }),
-      ]);
-      if (cancelled) return;
-      setContacts((c.data as ContactRow[]) ?? []);
-      setAccounts((a.data as AccountRow[]) ?? []);
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [session]);
 
   const head = (
     <Helmet>
@@ -207,9 +205,16 @@ const Admin = () => {
             <h1 className="text-3xl font-bold uppercase text-primary">Form submissions</h1>
             <p className="text-sm text-muted-foreground">{session.user.email}</p>
           </div>
-          <Button variant="outline" onClick={() => supabase.auth.signOut()}>
-            Sign out
-          </Button>
+          <div className="flex gap-3">
+            <Button variant="outline" onClick={() => load()}>
+              Refresh
+            </Button>
+            <Button variant="outline" onClick={() => supabase.auth.signOut()}>
+              Sign out
+            </Button>
+          </div>
+
+
         </div>
 
 
