@@ -9,6 +9,8 @@ import Footer from "@/components/Footer";
 import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
 import { downloadFile } from "@/lib/downloadFile";
+import { submitForm } from "@/lib/submitForm";
+
 
 const ContactPage = () => {
   const { toast } = useToast();
