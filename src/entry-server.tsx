@@ -1,6 +1,6 @@
 import { renderToString } from "react-dom/server";
-import { StaticRouter } from "react-router-dom/server";
-import { HelmetProvider, type FilledContext } from "react-helmet-async";
+import { StaticRouter } from "react-router";
+import { HelmetProvider, type HelmetServerState } from "react-helmet-async";
 import App from "./App";
 
 /**
@@ -8,7 +8,7 @@ import App from "./App";
  * Not part of the client bundle and never executed at request time.
  */
 export function render(url: string) {
-  const helmetContext = {} as FilledContext;
+  const helmetContext: { helmet?: HelmetServerState } = {};
 
   const html = renderToString(
     <HelmetProvider context={helmetContext}>
