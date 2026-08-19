@@ -505,7 +505,7 @@
     },
     {
       "source": "/((?!__l5e|assets|posters|.*\\..*).*)",
-      "destination": "/index.html"
+      "destination": "/spa-fallback.html"
     }
   ]
 }
