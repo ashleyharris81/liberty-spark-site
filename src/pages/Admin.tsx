@@ -36,14 +36,12 @@ const AdminLogin = () => {
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [mode, setMode] = useState<"signin" | "signup">("signin");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setBusy(true);
     setError(null);
-    const fn = mode === "signin" ? supabase.auth.signInWithPassword : supabase.auth.signUp;
-    const { error: authError } = await fn.call(supabase.auth, { email, password });
+    const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
     if (authError) setError(authError.message);
     setBusy(false);
   };
@@ -52,9 +50,7 @@ const AdminLogin = () => {
     <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
       <h1 className="mb-2 text-3xl font-bold uppercase text-primary">Admin</h1>
       <p className="mb-8 text-muted-foreground">
-        {mode === "signin"
-          ? "Sign in to view website form submissions."
-          : "Create the admin account for sales@libertyguard.co.uk."}
+        Private area. Sign in to view website form submissions.
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -73,31 +69,21 @@ const AdminLogin = () => {
           <Input
             id="admin-password"
             type="password"
-            autoComplete={mode === "signin" ? "current-password" : "new-password"}
+            autoComplete="current-password"
             required
-            minLength={8}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         {error && <p className="text-sm text-destructive">{error}</p>}
         <Button type="submit" className="w-full" disabled={busy}>
-          {busy ? "Please wait…" : mode === "signin" ? "Sign in" : "Create account"}
+          {busy ? "Signing in…" : "Sign in"}
         </Button>
       </form>
-      <button
-        type="button"
-        className="mt-6 text-sm text-muted-foreground underline"
-        onClick={() => {
-          setMode(mode === "signin" ? "signup" : "signin");
-          setError(null);
-        }}
-      >
-        {mode === "signin" ? "First time? Create the admin account" : "Already have an account? Sign in"}
-      </button>
     </div>
   );
 };
+
 
 const IpNotice = () => {
   const [ip, setIp] = useState<string | null>(null);
