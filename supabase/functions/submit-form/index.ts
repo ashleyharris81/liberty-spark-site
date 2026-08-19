@@ -143,7 +143,10 @@ Deno.serve(async (req) => {
     await notify(
       `New account application — ${d.companyName}`,
       `<table>${rows(Object.entries(d.details))}</table>`,
+      d.email,
     );
+
+
 
     return json({ ok: true });
   } catch (e) {
