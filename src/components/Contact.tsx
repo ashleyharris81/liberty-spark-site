@@ -182,10 +182,12 @@ const Contact = () => {
             />
             <button
               type="submit"
-              className="w-full bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider py-4 rounded-lg hover:brightness-110 transition-all duration-300"
+              disabled={isSubmitting}
+              className="w-full bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider py-4 rounded-lg hover:brightness-110 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Submit Form
+              {isSubmitting ? "Sending..." : "Submit Form"}
             </button>
+
           </form>
         </div>
       </div>
