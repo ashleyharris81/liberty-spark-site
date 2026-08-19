@@ -3,6 +3,8 @@ import { createClient } from 'npm:@supabase/supabase-js@2';
 import { z } from 'npm:zod@3.23.8';
 
 const NOTIFY_TO = 'sales@libertyguard.co.uk';
+const NOTIFY_FROM = Deno.env.get('SENDGRID_FROM') ?? 'sales@libertyguard.co.uk';
+
 
 const contactSchema = z.object({
   type: z.literal('contact'),
