@@ -1,5 +1,6 @@
 import { depots } from "@/data/depots";
 import type { Depot } from "@/components/UKDepotMap";
+import { publicDepots, type PublicDepot } from "@/data/depotDisplay";
 
 /**
  * Regional grouping for the /depots hub page. Each depot is assigned from its
@@ -55,3 +56,10 @@ export const depotAreasServed = Array.from(
     }),
   ),
 );
+
+/** Town-level public depot rows grouped by region (see depotDisplay.ts). */
+export const publicDepotsByRegion: { region: Region; depots: PublicDepot[] }[] =
+  REGION_ORDER.map((region) => ({
+    region,
+    depots: publicDepots.filter((d) => regionByCode[d.code] === region),
+  })).filter((group) => group.depots.length > 0);
