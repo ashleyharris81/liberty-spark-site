@@ -7,8 +7,8 @@ import NotFound from "@/pages/NotFound";
  * renders the real 404 for everything else (no blanket homepage redirect —
  * that would create soft-404s).
  *
- * These redirects are client-side; a server-side 301 at the CDN/host remains
- * the preferred long-term implementation.
+ * This is the client-side fallback layer; the authoritative 301s live in the
+ * `redirects` array in vercel.json. Keep the two in sync.
  */
 const LegacyRedirect = () => {
   const { pathname } = useLocation();
