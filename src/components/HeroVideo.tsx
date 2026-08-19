@@ -81,11 +81,11 @@ const HeroVideo = ({ src, poster, className = "" }: HeroVideoProps) => {
         muted
         playsInline
         webkit-playsinline="true"
-        preload="none"
+        preload="metadata"
         poster={resolvedPoster}
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src={src} type={mimeType} />
+        <source src={src} />
       </video>
     </div>
   );
