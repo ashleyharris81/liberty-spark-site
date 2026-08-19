@@ -153,36 +153,34 @@ const Admin = () => {
     return () => sub.subscription.unsubscribe();
   }, []);
 
+  const load = useCallback(async () => {
+    if (!session) return;
+    const { data } = await supabase
+      .from("user_roles")
+      .select("role")
+      .eq("user_id", session.user.id)
+      .eq("role", "admin")
+      .maybeSingle();
+    const admin = !!data;
+    setIsAdmin(admin);
+    if (!admin) return;
+
+    const [c, a] = await Promise.all([
+      supabase.from("contact_submissions").select("*").order("created_at", { ascending: false }),
+      supabase.from("account_applications").select("*").order("created_at", { ascending: false }),
+    ]);
+    setContacts((c.data as ContactRow[]) ?? []);
+    setAccounts((a.data as AccountRow[]) ?? []);
+  }, [session]);
+
   useEffect(() => {
     if (!session) {
       setIsAdmin(null);
       return;
     }
-    let cancelled = false;
-    (async () => {
-      const { data } = await supabase
-        .from("user_roles")
-        .select("role")
-        .eq("user_id", session.user.id)
-        .eq("role", "admin")
-        .maybeSingle();
-      if (cancelled) return;
-      const admin = !!data;
-      setIsAdmin(admin);
-      if (!admin) return;
+    load();
+  }, [session, load]);
 
-      const [c, a] = await Promise.all([
-        supabase.from("contact_submissions").select("*").order("created_at", { ascending: false }),
-        supabase.from("account_applications").select("*").order("created_at", { ascending: false }),
-      ]);
-      if (cancelled) return;
-      setContacts((c.data as ContactRow[]) ?? []);
-      setAccounts((a.data as AccountRow[]) ?? []);
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [session]);
 
   const head = (
     <Helmet>
