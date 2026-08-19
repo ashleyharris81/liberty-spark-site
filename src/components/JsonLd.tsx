@@ -1,6 +1,13 @@
 import { Helmet } from "react-helmet-async";
 
-const ORIGIN = "https://libertyguard.co.uk";
+/**
+ * Canonical host is https://www.libertyguard.co.uk (with www).
+ * www is already the serving host and was the host on the old WordPress site, so
+ * the existing backlink profile points there — aligning the code to www preserves
+ * that history and avoids touching the project-level apex->www domain redirect,
+ * which is the only option carrying redirect-loop risk.
+ */
+const ORIGIN = "https://www.libertyguard.co.uk";
 
 const BRAND = {
   "@type": "Brand",

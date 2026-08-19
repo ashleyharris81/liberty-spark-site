@@ -1,7 +1,9 @@
 import { writeFileSync } from "fs";
 import { resolve } from "path";
 
-const BASE_URL = "https://libertyguard.co.uk";
+// Canonical host is www: it is the serving host and the host the old WordPress
+// site's backlinks point at, so keeping it preserves that link history.
+const BASE_URL = "https://www.libertyguard.co.uk";
 
 interface SitemapEntry {
   path: string;
