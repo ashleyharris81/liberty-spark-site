@@ -56,39 +56,46 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
-      <h1 className="mb-2 text-3xl font-bold uppercase text-primary">Admin</h1>
-      <p className="mb-8 text-muted-foreground">
-        Private area. Sign in to view website form submissions.
-      </p>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <Label htmlFor="admin-email">Email</Label>
-          <Input
-            id="admin-email"
-            type="email"
-            autoComplete="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <Label htmlFor="admin-password">Password</Label>
-          <Input
-            id="admin-password"
-            type="password"
-            autoComplete="current-password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        {error && <p className="text-sm text-destructive">{error}</p>}
-        <Button type="submit" className="w-full" disabled={busy}>
-          {busy ? "Signing in…" : "Sign in"}
-        </Button>
-      </form>
+    <div className="min-h-screen bg-primary">
+      <AdminHeader />
+      <div className="mx-auto flex max-w-md flex-col justify-center px-6 py-16">
+        <h1 className="mb-2 text-3xl font-bold uppercase text-primary-foreground">
+          Admin
+        </h1>
+        <p className="mb-8 text-primary-foreground/70">
+          Private area. Sign in to view website form submissions.
+        </p>
+        <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border border-navy-light bg-navy-light/40 p-6">
+          <div>
+            <Label htmlFor="admin-email" className="text-primary-foreground">Email</Label>
+            <Input
+              id="admin-email"
+              type="email"
+              autoComplete="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="border-navy-light bg-background/10 text-primary-foreground"
+            />
+          </div>
+          <div>
+            <Label htmlFor="admin-password" className="text-primary-foreground">Password</Label>
+            <Input
+              id="admin-password"
+              type="password"
+              autoComplete="current-password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="border-navy-light bg-background/10 text-primary-foreground"
+            />
+          </div>
+          {error && <p className="text-sm text-destructive">{error}</p>}
+          <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={busy}>
+            {busy ? "Signing in…" : "Sign in"}
+          </Button>
+        </form>
+      </div>
     </div>
   );
 };
