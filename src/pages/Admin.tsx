@@ -6,8 +6,17 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Session } from "@supabase/supabase-js";
+import logo from "@/assets/liberty-logo-white.png";
 
 const ALLOWED_IPS = ["5.133.168.10", "5.133.169.82", "5.133.169.42"];
+
+const AdminHeader = ({ compact = false }: { compact?: boolean }) => (
+  <header className="border-b border-navy-light bg-primary">
+    <div className={`mx-auto flex items-center justify-center ${compact ? "py-4" : "py-6"} px-6`}>
+      <img src={logo} alt="Liberty" className="h-10 w-auto" />
+    </div>
+  </header>
+);
 
 type ContactRow = {
   id: string;
