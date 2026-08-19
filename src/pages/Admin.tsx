@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Session } from "@supabase/supabase-js";
 
-const ALLOWED_IP = "5.133.168.10";
+const ALLOWED_IPS = ["5.133.168.10", "5.133.169.82"];
 
 type ContactRow = {
   id: string;
