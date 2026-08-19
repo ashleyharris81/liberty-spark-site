@@ -177,35 +177,36 @@ const NewAccount = () => {
                       Trade Reference {num}
                     </p>
                     <div>
-                      <label className={labelClass} htmlFor="name">Name *</label>
-                      <input id="name" type="text" required maxLength={100} className={inputClass} />
+                      <label className={labelClass} htmlFor={`ref-${num}-name`}>Name *</label>
+                      <input id={`ref-${num}-name`} data-label={`Trade Reference ${num} Name`} type="text" required maxLength={100} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass} htmlFor="address-line-1-3">Address Line 1</label>
-                      <input id="address-line-1-3" type="text" maxLength={200} className={inputClass} />
+                      <label className={labelClass} htmlFor={`ref-${num}-address-1`}>Address Line 1</label>
+                      <input id={`ref-${num}-address-1`} data-label={`Trade Reference ${num} Address Line 1`} type="text" maxLength={200} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass} htmlFor="address-line-2-3">Address Line 2</label>
-                      <input id="address-line-2-3" type="text" maxLength={200} className={inputClass} />
+                      <label className={labelClass} htmlFor={`ref-${num}-address-2`}>Address Line 2</label>
+                      <input id={`ref-${num}-address-2`} data-label={`Trade Reference ${num} Address Line 2`} type="text" maxLength={200} className={inputClass} />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className={labelClass} htmlFor="city-3">City</label>
-                        <input id="city-3" type="text" maxLength={100} className={inputClass} />
+                        <label className={labelClass} htmlFor={`ref-${num}-city`}>City</label>
+                        <input id={`ref-${num}-city`} data-label={`Trade Reference ${num} City`} type="text" maxLength={100} className={inputClass} />
                       </div>
                       <div>
-                        <label className={labelClass} htmlFor="post-code-3">Post Code</label>
-                        <input id="post-code-3" type="text" maxLength={10} className={inputClass} />
+                        <label className={labelClass} htmlFor={`ref-${num}-post-code`}>Post Code</label>
+                        <input id={`ref-${num}-post-code`} data-label={`Trade Reference ${num} Post Code`} type="text" maxLength={10} className={inputClass} />
                       </div>
                     </div>
                     <div>
-                      <label className={labelClass} htmlFor="contact-number">Contact Number *</label>
-                      <input id="contact-number" type="tel" required maxLength={20} className={inputClass} />
+                      <label className={labelClass} htmlFor={`ref-${num}-contact-number`}>Contact Number *</label>
+                      <input id={`ref-${num}-contact-number`} data-label={`Trade Reference ${num} Contact Number`} type="tel" required maxLength={20} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass} htmlFor="email-2">Email *</label>
-                      <input id="email-2" type="email" required maxLength={255} className={inputClass} />
+                      <label className={labelClass} htmlFor={`ref-${num}-email`}>Email *</label>
+                      <input id={`ref-${num}-email`} data-label={`Trade Reference ${num} Email`} type="email" required maxLength={255} className={inputClass} />
                     </div>
+
                   </div>
                 ))}
               </div>
