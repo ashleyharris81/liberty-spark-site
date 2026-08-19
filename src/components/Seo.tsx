@@ -2,7 +2,14 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 const SITE = "Liberty Guard";
-const ORIGIN = "https://libertyguard.co.uk";
+/**
+ * Canonical host is https://www.libertyguard.co.uk (with www).
+ * www is already the serving host and was the host on the old WordPress site, so
+ * the existing backlink profile points there — aligning the code to www preserves
+ * that history and avoids touching the project-level apex->www domain redirect,
+ * which is the only option carrying redirect-loop risk.
+ */
+const ORIGIN = "https://www.libertyguard.co.uk";
 const OG_IMAGE = `${ORIGIN}/og-image.jpg`;
 
 type Meta = { title: string; description: string };
