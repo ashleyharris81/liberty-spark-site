@@ -3,8 +3,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
-import HeroVideo from "@/components/HeroVideo";
-import VimeoEmbed from "@/components/VimeoEmbed";
 import { getMobiModel } from "@/data/mobiModels";
 import { downloadFile } from "@/lib/downloadFile";
 import { BreadcrumbJsonLd, ProductJsonLd } from "@/components/JsonLd";
@@ -17,9 +15,6 @@ const MobiModel = () => {
   const model = slug ? getMobiModel(slug) : undefined;
 
   if (!model) return <Navigate to="/mobile-welfare" replace />;
-
-  const stackVideo = MOBI_VIDEO_BY_SLUG[model.slug];
-  const vimeoVideo = MOBI_VIMEO_BY_SLUG[model.slug];
 
   return (
     <div className="min-h-screen">
@@ -41,13 +36,7 @@ const MobiModel = () => {
       {/* Full-width hero video */}
       <section className="pt-20 bg-primary">
         <div className="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
-          {vimeoVideo ? (
-            <VimeoEmbed src={vimeoVideo} title={model.title} />
-          ) : stackVideo ? (
-            <HeroVideo src={stackVideo} />
-          ) : (
-            <CloudflareVideo uid={model.uid} variant="hero" />
-          )}
+          <CloudflareVideo uid={model.uid} variant="hero" />
         </div>
       </section>
 
