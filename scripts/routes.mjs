@@ -18,6 +18,7 @@ const staticEntries = [
   { path: "/contact", changefreq: "monthly", priority: "0.8" },
   { path: "/new-account", changefreq: "monthly", priority: "0.7" },
   { path: "/news", changefreq: "weekly", priority: "0.7" },
+  { path: "/depots", changefreq: "monthly", priority: "0.7" },
   { path: "/privacy-policy", changefreq: "yearly", priority: "0.3" },
   { path: "/welfare", changefreq: "weekly", priority: "0.8" },
   { path: "/mobile-welfare", changefreq: "weekly", priority: "0.8" },

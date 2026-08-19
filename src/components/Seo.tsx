@@ -95,6 +95,11 @@ const routeMeta: Record<string, Meta> = {
     description:
       "News and updates from Liberty Guard, including fleet investment, solar upgrades, partnerships and charity work across the UK. Read the latest stories here.",
   },
+  "/depots": {
+    title: "UK Depot Network — Nationwide Welfare Hire",
+    description:
+      "Nationwide depot coverage for welfare unit and portable building hire, with delivery and collection from locations across the UK. Call 0333 344 3833.",
+  },
   "/about": {
     title: "About Us — Welfare Unit Suppliers Since 1981",
     description:

@@ -150,3 +150,26 @@ export const BreadcrumbJsonLd = ({
     </Helmet>
   );
 };
+
+/**
+ * Extends the Organization reference with the towns/cities the depot network
+ * serves. Deliberately NOT LocalBusiness per depot: most depots are
+ * partner-operated yards, not premises Liberty Guard occupies. The Sandtoft
+ * head office remains the only address in the Organization graph (index.html).
+ */
+export const OrganizationAreaServedJsonLd = ({ areas }: { areas: string[] }) => {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${ORIGIN}/#organization`,
+    name: "Liberty Guard (U.K.) Limited",
+    url: ORIGIN,
+    areaServed: areas.map((name) => ({ "@type": "Place", name })),
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(data)}</script>
+    </Helmet>
+  );
+};
