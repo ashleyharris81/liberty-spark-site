@@ -205,12 +205,15 @@ const Admin = () => {
             <h1 className="text-3xl font-bold uppercase text-primary">Form submissions</h1>
             <p className="text-sm text-muted-foreground">{session.user.email}</p>
           </div>
-          <Button variant="outline" onClick={() => load()}>
-            Refresh
-          </Button>
-          <Button variant="outline" onClick={() => supabase.auth.signOut()}>
-            Sign out
-          </Button>
+          <div className="flex gap-3">
+            <Button variant="outline" onClick={() => load()}>
+              Refresh
+            </Button>
+            <Button variant="outline" onClick={() => supabase.auth.signOut()}>
+              Sign out
+            </Button>
+          </div>
+
 
         </div>
 
