@@ -111,7 +111,9 @@ const Contact = () => {
             <div className="grid grid-cols-2 gap-4">
               <input
                 type="text"
-                placeholder="First Name"
+                id="home-first-name"
+              aria-label="First Name"
+              placeholder="First Name"
                 value={formData.firstName}
                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                 className="bg-navy-light border border-primary-foreground/10 rounded-lg px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-secondary transition-colors font-body"
@@ -119,7 +121,9 @@ const Contact = () => {
               />
               <input
                 type="text"
-                placeholder="Last Name"
+                id="home-last-name"
+              aria-label="Last Name"
+              placeholder="Last Name"
                 value={formData.lastName}
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                 className="bg-navy-light border border-primary-foreground/10 rounded-lg px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-secondary transition-colors font-body"
@@ -128,6 +132,8 @@ const Contact = () => {
             </div>
             <input
               type="email"
+              id="home-email"
+              aria-label="Email"
               placeholder="Email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -136,6 +142,8 @@ const Contact = () => {
             />
             <input
               type="text"
+              id="home-subject"
+              aria-label="Subject"
               placeholder="Subject"
               value={formData.subject}
               onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -143,6 +151,8 @@ const Contact = () => {
               required
             />
             <textarea
+              id="home-message"
+              aria-label="Your Message"
               placeholder="Your Message"
               rows={5}
               value={formData.message}
