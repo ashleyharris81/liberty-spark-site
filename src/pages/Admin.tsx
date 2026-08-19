@@ -120,12 +120,15 @@ const useAllowedIp = () => {
 };
 
 const IpBlocked = ({ ip }: { ip: string | null }) => (
-  <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6 text-center">
-    <h1 className="mb-3 text-3xl font-bold uppercase text-primary">Access restricted</h1>
-    <p className="text-muted-foreground">
-      This area can only be accessed from an approved office network
-      {ip ? ` (your address: ${ip})` : ""}.
-    </p>
+  <div className="min-h-screen bg-primary">
+    <AdminHeader />
+    <div className="mx-auto flex max-w-md flex-col justify-center px-6 py-16 text-center">
+      <h1 className="mb-3 text-3xl font-bold uppercase text-primary-foreground">Access restricted</h1>
+      <p className="text-primary-foreground/70">
+        This area can only be accessed from an approved office network
+        {ip ? ` (your address: ${ip})` : ""}.
+      </p>
+    </div>
   </div>
 );
 
