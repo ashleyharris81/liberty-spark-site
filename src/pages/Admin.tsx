@@ -199,7 +199,9 @@ const Admin = () => {
   return (
     <>
       {head}
-      <div className="mx-auto max-w-6xl px-6 py-12">
+      <div className="min-h-screen bg-background">
+        <AdminHeader />
+        <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold uppercase text-primary">Form submissions</h1>
