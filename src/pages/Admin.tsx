@@ -120,6 +120,8 @@ const Admin = () => {
   const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
   const [contacts, setContacts] = useState<ContactRow[]>([]);
   const [accounts, setAccounts] = useState<AccountRow[]>([]);
+  const { ip, allowed } = useAllowedIp();
+
 
   useEffect(() => {
     const { data: sub } = supabase.auth.onAuthStateChange((_event, next) => {
