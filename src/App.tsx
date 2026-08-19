@@ -28,7 +28,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Admin from "./pages/Admin";
 import CookieBanner from "./components/CookieBanner";
 import Seo from "./components/Seo";
-import NotFound from "./pages/NotFound";
+import LegacyRedirect from "./components/LegacyRedirect";
 
 const queryClient = new QueryClient();
 
@@ -68,7 +68,8 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          {/* Legacy WordPress URLs redirect here; everything else renders NotFound. */}
+          <Route path="*" element={<LegacyRedirect />} />
         </Routes>
         <CookieBanner />
       </BrowserRouter>
