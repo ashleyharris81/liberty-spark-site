@@ -12,13 +12,7 @@
 // site's backlinks point at, so keeping it preserves that link history.
 export const BASE_URL = "https://www.libertyguard.co.uk";
 
-export interface SitemapEntry {
-  path: string;
-  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority?: string;
-}
-
-const staticEntries: SitemapEntry[] = [
+const staticEntries = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/about", changefreq: "monthly", priority: "0.8" },
   { path: "/contact", changefreq: "monthly", priority: "0.8" },
@@ -71,40 +65,40 @@ const solarStaticSlugs = ["25ft-solar-static", "28ft-eco-hybrid"];
 
 const solarDrySlugs = ["12ft-solar-dry"];
 
-const dynamicEntries: SitemapEntry[] = [
+const dynamicEntries = [
   ...mobiModelSlugs.map((slug) => ({
     path: `/mobile-welfare/${slug}`,
-    changefreq: "monthly" as const,
+    changefreq: "monthly",
     priority: "0.6",
   })),
   ...staticModelSlugs.map((slug) => ({
     path: `/static-welfare/${slug}`,
-    changefreq: "monthly" as const,
+    changefreq: "monthly",
     priority: "0.6",
   })),
   ...solarMobileSlugs.map((slug) => ({
     path: `/solar-mobile-welfare/${slug}`,
-    changefreq: "monthly" as const,
+    changefreq: "monthly",
     priority: "0.6",
   })),
   ...solarLooSlugs.map((slug) => ({
     path: `/solar-loos/${slug}`,
-    changefreq: "monthly" as const,
+    changefreq: "monthly",
     priority: "0.6",
   })),
   ...solarStaticSlugs.map((slug) => ({
     path: `/solar-static-welfare/${slug}`,
-    changefreq: "monthly" as const,
+    changefreq: "monthly",
     priority: "0.6",
   })),
   ...solarDrySlugs.map((slug) => ({
     path: `/solar-drying-room/${slug}`,
-    changefreq: "monthly" as const,
+    changefreq: "monthly",
     priority: "0.6",
   })),
 ];
 
-export const allEntries: SitemapEntry[] = [...staticEntries, ...dynamicEntries];
+export const allEntries = [...staticEntries, ...dynamicEntries];
 
 /** Routes to prerender to static HTML at build time. */
-export const prerenderRoutes: string[] = allEntries.map((e) => e.path);
+export const prerenderRoutes = allEntries.map((e) => e.path);
