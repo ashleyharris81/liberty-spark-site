@@ -172,8 +172,10 @@ const Admin = () => {
     </Helmet>
   );
 
-  if (!ready) return <>{head}</>;
+  if (!ready || allowed === null) return <>{head}</>;
+  if (!allowed) return <>{head}<IpBlocked ip={ip} /></>;
   if (!session) return <>{head}<AdminLogin /></>;
+
 
   return (
     <>
