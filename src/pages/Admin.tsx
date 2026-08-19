@@ -95,12 +95,12 @@ const IpNotice = () => {
       .catch(() => setIp(null));
   }, []);
 
-  if (!ip || ip === ALLOWED_IP) return null;
+  if (!ip || ALLOWED_IPS.includes(ip)) return null;
 
   return (
     <div className="mb-6 rounded-md border border-yellow-500/50 bg-yellow-500/10 px-4 py-3 text-sm">
-      You are signed in from <strong>{ip}</strong>, not the approved office address{" "}
-      <strong>{ALLOWED_IP}</strong>. Access is still allowed because you are an authenticated admin.
+      You are signed in from <strong>{ip}</strong>, not an approved office address
+      ({ALLOWED_IPS.join(", ")}). Access is still allowed because you are an authenticated admin.
     </div>
   );
 };
