@@ -76,8 +76,8 @@ const NewAccount = () => {
               <h3 className={sectionTitle}>Company Information</h3>
               <div className="space-y-5">
                 <div>
-                  <label className={labelClass}>Company Name *</label>
-                  <input type="text" required maxLength={200} className={inputClass} />
+                  <label className={labelClass} htmlFor="company-name">Company Name *</label>
+                  <input id="company-name" type="text" required maxLength={200} className={inputClass} />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -85,21 +85,21 @@ const NewAccount = () => {
                   <div className="space-y-4">
                     <p className="font-heading text-sm font-bold text-muted-foreground uppercase tracking-wide">Trading Address</p>
                     <div>
-                      <label className={labelClass}>Address Line 1 *</label>
-                      <input type="text" required maxLength={200} className={inputClass} />
+                      <label className={labelClass} htmlFor="address-line-1">Address Line 1 *</label>
+                      <input id="address-line-1" type="text" required maxLength={200} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass}>Address Line 2</label>
-                      <input type="text" maxLength={200} className={inputClass} />
+                      <label className={labelClass} htmlFor="address-line-2">Address Line 2</label>
+                      <input id="address-line-2" type="text" maxLength={200} className={inputClass} />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className={labelClass}>City *</label>
-                        <input type="text" required maxLength={100} className={inputClass} />
+                        <label className={labelClass} htmlFor="city">City *</label>
+                        <input id="city" type="text" required maxLength={100} className={inputClass} />
                       </div>
                       <div>
-                        <label className={labelClass}>Post Code *</label>
-                        <input type="text" required maxLength={10} className={inputClass} />
+                        <label className={labelClass} htmlFor="post-code">Post Code *</label>
+                        <input id="post-code" type="text" required maxLength={10} className={inputClass} />
                       </div>
                     </div>
                   </div>
@@ -108,21 +108,21 @@ const NewAccount = () => {
                   <div className="space-y-4">
                     <p className="font-heading text-sm font-bold text-muted-foreground uppercase tracking-wide">Invoice Address</p>
                     <div>
-                      <label className={labelClass}>Address Line 1 *</label>
-                      <input type="text" required maxLength={200} className={inputClass} />
+                      <label className={labelClass} htmlFor="address-line-1-2">Address Line 1 *</label>
+                      <input id="address-line-1-2" type="text" required maxLength={200} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass}>Address Line 2</label>
-                      <input type="text" maxLength={200} className={inputClass} />
+                      <label className={labelClass} htmlFor="address-line-2-2">Address Line 2</label>
+                      <input id="address-line-2-2" type="text" maxLength={200} className={inputClass} />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className={labelClass}>City *</label>
-                        <input type="text" required maxLength={100} className={inputClass} />
+                        <label className={labelClass} htmlFor="city-2">City *</label>
+                        <input id="city-2" type="text" required maxLength={100} className={inputClass} />
                       </div>
                       <div>
-                        <label className={labelClass}>Post Code *</label>
-                        <input type="text" required maxLength={10} className={inputClass} />
+                        <label className={labelClass} htmlFor="post-code-2">Post Code *</label>
+                        <input id="post-code-2" type="text" required maxLength={10} className={inputClass} />
                       </div>
                     </div>
                   </div>
@@ -130,34 +130,34 @@ const NewAccount = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className={labelClass}>Company Registration Number</label>
-                    <input type="text" maxLength={20} className={inputClass} />
+                    <label className={labelClass} htmlFor="company-registration-number">Company Registration Number</label>
+                    <input id="company-registration-number" type="text" maxLength={20} className={inputClass} />
                   </div>
                   <div>
-                    <label className={labelClass}>VAT Number</label>
-                    <input type="text" maxLength={20} className={inputClass} />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className={labelClass}>Number of Years Trading</label>
-                    <input type="text" maxLength={10} className={inputClass} />
-                  </div>
-                  <div>
-                    <label className={labelClass}>Email *</label>
-                    <input type="email" required maxLength={255} className={inputClass} />
+                    <label className={labelClass} htmlFor="vat-number">VAT Number</label>
+                    <input id="vat-number" type="text" maxLength={20} className={inputClass} />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label className={labelClass}>Accounts Contact Name *</label>
-                    <input type="text" required maxLength={100} className={inputClass} />
+                    <label className={labelClass} htmlFor="number-of-years-trading">Number of Years Trading</label>
+                    <input id="number-of-years-trading" type="text" maxLength={10} className={inputClass} />
                   </div>
                   <div>
-                    <label className={labelClass}>Accounts Telephone Number *</label>
-                    <input type="tel" required maxLength={20} className={inputClass} />
+                    <label className={labelClass} htmlFor="email">Email *</label>
+                    <input id="email" type="email" required maxLength={255} className={inputClass} />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className={labelClass} htmlFor="accounts-contact-name">Accounts Contact Name *</label>
+                    <input id="accounts-contact-name" type="text" required maxLength={100} className={inputClass} />
+                  </div>
+                  <div>
+                    <label className={labelClass} htmlFor="accounts-telephone-number">Accounts Telephone Number *</label>
+                    <input id="accounts-telephone-number" type="tel" required maxLength={20} className={inputClass} />
                   </div>
                 </div>
               </div>
@@ -177,34 +177,34 @@ const NewAccount = () => {
                       Trade Reference {num}
                     </p>
                     <div>
-                      <label className={labelClass}>Name *</label>
-                      <input type="text" required maxLength={100} className={inputClass} />
+                      <label className={labelClass} htmlFor="name">Name *</label>
+                      <input id="name" type="text" required maxLength={100} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass}>Address Line 1</label>
-                      <input type="text" maxLength={200} className={inputClass} />
+                      <label className={labelClass} htmlFor="address-line-1-3">Address Line 1</label>
+                      <input id="address-line-1-3" type="text" maxLength={200} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass}>Address Line 2</label>
-                      <input type="text" maxLength={200} className={inputClass} />
+                      <label className={labelClass} htmlFor="address-line-2-3">Address Line 2</label>
+                      <input id="address-line-2-3" type="text" maxLength={200} className={inputClass} />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className={labelClass}>City</label>
-                        <input type="text" maxLength={100} className={inputClass} />
+                        <label className={labelClass} htmlFor="city-3">City</label>
+                        <input id="city-3" type="text" maxLength={100} className={inputClass} />
                       </div>
                       <div>
-                        <label className={labelClass}>Post Code</label>
-                        <input type="text" maxLength={10} className={inputClass} />
+                        <label className={labelClass} htmlFor="post-code-3">Post Code</label>
+                        <input id="post-code-3" type="text" maxLength={10} className={inputClass} />
                       </div>
                     </div>
                     <div>
-                      <label className={labelClass}>Contact Number *</label>
-                      <input type="tel" required maxLength={20} className={inputClass} />
+                      <label className={labelClass} htmlFor="contact-number">Contact Number *</label>
+                      <input id="contact-number" type="tel" required maxLength={20} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass}>Email *</label>
-                      <input type="email" required maxLength={255} className={inputClass} />
+                      <label className={labelClass} htmlFor="email-2">Email *</label>
+                      <input id="email-2" type="email" required maxLength={255} className={inputClass} />
                     </div>
                   </div>
                 ))}
@@ -216,8 +216,8 @@ const NewAccount = () => {
               <h3 className={sectionTitle}>Additional Information</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className={labelClass}>Did you speak to a sales rep today?</label>
-                  <select className={inputClass}>
+                  <label className={labelClass} htmlFor="did-you-speak-to-a-sales-rep-today">Did you speak to a sales rep today?</label>
+                  <select id="did-you-speak-to-a-sales-rep-today" className={inputClass}>
                     <option value="">- Select -</option>
                     {salesReps.map((rep) => (
                       <option key={rep} value={rep}>{rep}</option>
@@ -225,8 +225,8 @@ const NewAccount = () => {
                   </select>
                 </div>
                 <div>
-                  <label className={labelClass}>How did you hear about Liberty?</label>
-                  <select className={inputClass}>
+                  <label className={labelClass} htmlFor="how-did-you-hear-about-liberty">How did you hear about Liberty?</label>
+                  <select id="how-did-you-hear-about-liberty" className={inputClass}>
                     <option value="">- Select -</option>
                     {hearAboutOptions.map((opt) => (
                       <option key={opt} value={opt}>{opt}</option>
@@ -247,22 +247,22 @@ const NewAccount = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 <div>
-                  <label className="block font-heading text-sm font-semibold text-primary-foreground uppercase tracking-wide mb-1.5">
+                  <label className="block font-heading text-sm font-semibold text-primary-foreground uppercase tracking-wide mb-1.5" htmlFor="position">
                     Position *
                   </label>
-                  <input type="text" required maxLength={100} className={`${inputClass} bg-navy-light border-primary-foreground/20 text-primary-foreground`} />
+                  <input id="position" type="text" required maxLength={100} className={`${inputClass} bg-navy-light border-primary-foreground/20 text-primary-foreground`} />
                 </div>
                 <div>
-                  <label className="block font-heading text-sm font-semibold text-primary-foreground uppercase tracking-wide mb-1.5">
+                  <label className="block font-heading text-sm font-semibold text-primary-foreground uppercase tracking-wide mb-1.5" htmlFor="name-2">
                     Name *
                   </label>
-                  <input type="text" required maxLength={100} className={`${inputClass} bg-navy-light border-primary-foreground/20 text-primary-foreground`} />
+                  <input id="name-2" type="text" required maxLength={100} className={`${inputClass} bg-navy-light border-primary-foreground/20 text-primary-foreground`} />
                 </div>
                 <div>
-                  <label className="block font-heading text-sm font-semibold text-primary-foreground uppercase tracking-wide mb-1.5">
+                  <label className="block font-heading text-sm font-semibold text-primary-foreground uppercase tracking-wide mb-1.5" htmlFor="date">
                     Date *
                   </label>
-                  <input type="date" required className={`${inputClass} bg-navy-light border-primary-foreground/20 text-primary-foreground`} />
+                  <input id="date" type="date" required className={`${inputClass} bg-navy-light border-primary-foreground/20 text-primary-foreground`} />
                 </div>
               </div>
 
