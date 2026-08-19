@@ -3,6 +3,8 @@ import { createClient } from 'npm:@supabase/supabase-js@2';
 import { z } from 'npm:zod@3.23.8';
 
 const NOTIFY_TO = 'sales@libertyguard.co.uk';
+const NOTIFY_FROM = Deno.env.get('SENDGRID_FROM') ?? 'sales@libertyguard.co.uk';
+
 
 const contactSchema = z.object({
   type: z.literal('contact'),
@@ -37,26 +39,40 @@ const rows = (entries: [string, string][]) =>
     )
     .join('');
 
-async function notify(subject: string, html: string) {
-  const supabaseUrl = Deno.env.get('SUPABASE_URL');
-  const serviceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
-  if (!supabaseUrl || !serviceKey) return;
+async function notify(subject: string, html: string, replyTo?: string) {
+  const apiKey = Deno.env.get('SENDGRID_API_KEY');
+  if (!apiKey) {
+    console.error('SENDGRID_API_KEY is not configured — skipping notification email');
+    return;
+  }
 
-  const admin = createClient(supabaseUrl, serviceKey);
   try {
-    const { error } = await admin.functions.invoke('send-transactional-email', {
-      body: {
-        templateName: 'form-notification',
-        recipientEmail: NOTIFY_TO,
-        idempotencyKey: `form-${crypto.randomUUID()}`,
-        templateData: { subject, html },
+    const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
       },
+      body: JSON.stringify({
+        personalizations: [{ to: [{ email: NOTIFY_TO }] }],
+        from: { email: NOTIFY_FROM, name: 'Liberty Website' },
+        ...(replyTo ? { reply_to: { email: replyTo } } : {}),
+        subject,
+        content: [
+          { type: 'text/html', value: `<div style="font-family:Arial,sans-serif;font-size:14px">${html}</div>` },
+        ],
+      }),
     });
-    if (error) console.error('Email notification failed:', error.message);
+
+    if (!response.ok) {
+      const body = await response.text();
+      console.error(`SendGrid request failed [${response.status}]: ${body}`);
+    }
   } catch (e) {
-    console.error('Email notification unavailable:', e instanceof Error ? e.message : e);
+    console.error('SendGrid request error:', e instanceof Error ? e.message : e);
   }
 }
+
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') {
@@ -106,7 +122,9 @@ Deno.serve(async (req) => {
           ['Message', d.message],
           ['Page', d.source],
         ])}</table>`,
+        d.email,
       );
+
 
       return json({ ok: true });
     }
@@ -125,7 +143,10 @@ Deno.serve(async (req) => {
     await notify(
       `New account application — ${d.companyName}`,
       `<table>${rows(Object.entries(d.details))}</table>`,
+      d.email,
     );
+
+
 
     return json({ ok: true });
   } catch (e) {
