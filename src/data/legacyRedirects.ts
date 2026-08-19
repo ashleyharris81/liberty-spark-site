@@ -1,14 +1,18 @@
 /**
  * Legacy WordPress URL mappings from the pre-migration site.
  *
- * These are CLIENT-SIDE redirects: the browser loads the SPA, React Router
- * resolves the old path and replaces it with the new one. That preserves the
- * user journey and passes most link equity, but it is not a true 301.
- * The preferred long-term implementation is a server-side 301 at the CDN/host
- * so crawlers see a real permanent redirect without executing JavaScript.
+ * AUTHORITATIVE SOURCE: `vercel.json` — the `redirects` array there issues real
+ * server-side 301s at the edge, which is what crawlers should see. This file is
+ * the CLIENT-SIDE FALLBACK: if an edge rule is ever missed (or the app is served
+ * somewhere without those rules), React Router still recovers the journey by
+ * replacing the old path with the new one.
  *
- * Add new rows here as more old URLs surface in Search Console.
+ * The two lists MUST BE KEPT IN SYNC. When you add a mapping here, add the same
+ * mapping (plus its trailing-slash variant) to `vercel.json`, and vice versa.
+ *
+ * Add new rows as more old URLs surface in Search Console.
  */
+
 
 /** Exact old path -> new path (matched case-insensitively, trailing slash optional). */
 export const legacyExactRedirects: Record<string, string> = {
