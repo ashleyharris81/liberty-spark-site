@@ -3,30 +3,67 @@ import { Link } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { submitForm } from "@/lib/submitForm";
 
 const salesReps = ["Ben", "Ross", "Hannah W", "Abbie", "Josh", "Andy", "None"];
 const hearAboutOptions = ["Linkedin", "Social Media", "Word of Mouth", "Trade Event", "Google", "Other"];
+
+const collectDetails = (form: HTMLFormElement) => {
+  const details: Record<string, string> = {};
+  const fields = form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(
+    "input, select, textarea",
+  );
+  fields.forEach((field) => {
+    if (field instanceof HTMLInputElement && field.type === "checkbox") return;
+    const value = field.value?.trim();
+    if (!value) return;
+    const labelled =
+      field.dataset.label ||
+      form.querySelector(`label[for="${field.id}"]`)?.textContent?.replace(/\*/g, "").trim() ||
+      field.id;
+    let key = labelled;
+    let suffix = 2;
+    while (key in details) key = `${labelled} (${suffix++})`;
+    details[key] = value.slice(0, 2000);
+  });
+  return details;
+};
 
 const NewAccount = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [agreed, setAgreed] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setIsSubmitting(true);
 
-    // Simulate submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const details = collectDetails(form);
+      await submitForm({
+        type: "account",
+        companyName: (form.querySelector<HTMLInputElement>("#company-name")?.value || "").trim(),
+        email: (form.querySelector<HTMLInputElement>("#email")?.value || "").trim(),
+        details,
+      });
       toast({
         title: "Application Submitted",
         description: "Thank you! We'll review your application and be in touch shortly.",
       });
-      (e.target as HTMLFormElement).reset();
+      form.reset();
       setAgreed(false);
-    }, 1000);
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again, or call us on 0333 344 3833.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   const inputClass =
     "w-full px-4 py-3 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-colors font-body text-sm";
