@@ -41,7 +41,7 @@ const UKDepotMap = ({ depots }: { depots: Depot[] }) => {
         viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
         className="w-full h-auto"
         role="img"
-        aria-label="UK depot locations"
+        aria-label="Map of Liberty Guard depot locations across the UK"
       >
         <defs>
           <filter id="pinShadow" x="-50%" y="-50%" width="200%" height="200%">
@@ -68,6 +68,7 @@ const UKDepotMap = ({ depots }: { depots: Depot[] }) => {
               }
               filter="url(#pinShadow)"
             >
+              <title>{depotDisplayLocation(d.code, d.name)}</title>
               <circle
                 r={isActive ? 14 : 10}
                 fill="hsl(var(--secondary))"
