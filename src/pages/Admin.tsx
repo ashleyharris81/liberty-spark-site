@@ -85,25 +85,34 @@ const AdminLogin = () => {
 };
 
 
-const IpNotice = () => {
-  const [ip, setIp] = useState<string | null>(null);
+const useAllowedIp = () => {
+  const [state, setState] = useState<{ ip: string | null; allowed: boolean | null }>({
+    ip: null,
+    allowed: null,
+  });
 
   useEffect(() => {
     fetch("https://api.ipify.org?format=json")
       .then((r) => r.json())
-      .then((d: { ip?: string }) => setIp(d.ip ?? null))
-      .catch(() => setIp(null));
+      .then((d: { ip?: string }) =>
+        setState({ ip: d.ip ?? null, allowed: !!d.ip && ALLOWED_IPS.includes(d.ip) }),
+      )
+      .catch(() => setState({ ip: null, allowed: false }));
   }, []);
 
-  if (!ip || ALLOWED_IPS.includes(ip)) return null;
-
-  return (
-    <div className="mb-6 rounded-md border border-yellow-500/50 bg-yellow-500/10 px-4 py-3 text-sm">
-      You are signed in from <strong>{ip}</strong>, not an approved office address
-      ({ALLOWED_IPS.join(", ")}). Access is still allowed because you are an authenticated admin.
-    </div>
-  );
+  return state;
 };
+
+const IpBlocked = ({ ip }: { ip: string | null }) => (
+  <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6 text-center">
+    <h1 className="mb-3 text-3xl font-bold uppercase text-primary">Access restricted</h1>
+    <p className="text-muted-foreground">
+      This area can only be accessed from an approved office network
+      {ip ? ` (your address: ${ip})` : ""}.
+    </p>
+  </div>
+);
+
 
 const Admin = () => {
   const [session, setSession] = useState<Session | null>(null);
