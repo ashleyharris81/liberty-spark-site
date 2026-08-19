@@ -3,8 +3,12 @@ import { SocialIcon } from "@/components/SocialIcons";
 import { Phone, Mail, MapPin, FileText } from "lucide-react";
 import { useState } from "react";
 import { downloadFile } from "@/lib/downloadFile";
+import { submitForm } from "@/lib/submitForm";
+import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -13,11 +17,27 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission placeholder
-    alert("Thank you for your enquiry! We will be in touch shortly.");
+    setIsSubmitting(true);
+    try {
+      await submitForm({ type: "contact", ...formData, source: "Home page" });
+      toast({
+        title: "Message Sent",
+        description: "Thank you for your enquiry! We will be in touch shortly.",
+      });
+      setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again, or call us on 0333 344 3833.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   return (
     <section id="contact" className="py-24 bg-primary">
@@ -162,10 +182,12 @@ const Contact = () => {
             />
             <button
               type="submit"
-              className="w-full bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider py-4 rounded-lg hover:brightness-110 transition-all duration-300"
+              disabled={isSubmitting}
+              className="w-full bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider py-4 rounded-lg hover:brightness-110 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Submit Form
+              {isSubmitting ? "Sending..." : "Submit Form"}
             </button>
+
           </form>
         </div>
       </div>

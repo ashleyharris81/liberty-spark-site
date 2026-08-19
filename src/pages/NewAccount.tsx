@@ -3,30 +3,67 @@ import { Link } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { submitForm } from "@/lib/submitForm";
 
 const salesReps = ["Ben", "Ross", "Hannah W", "Abbie", "Josh", "Andy", "None"];
 const hearAboutOptions = ["Linkedin", "Social Media", "Word of Mouth", "Trade Event", "Google", "Other"];
+
+const collectDetails = (form: HTMLFormElement) => {
+  const details: Record<string, string> = {};
+  const fields = form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(
+    "input, select, textarea",
+  );
+  fields.forEach((field) => {
+    if (field instanceof HTMLInputElement && field.type === "checkbox") return;
+    const value = field.value?.trim();
+    if (!value) return;
+    const labelled =
+      field.dataset.label ||
+      form.querySelector(`label[for="${field.id}"]`)?.textContent?.replace(/\*/g, "").trim() ||
+      field.id;
+    let key = labelled;
+    let suffix = 2;
+    while (key in details) key = `${labelled} (${suffix++})`;
+    details[key] = value.slice(0, 2000);
+  });
+  return details;
+};
 
 const NewAccount = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [agreed, setAgreed] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
     setIsSubmitting(true);
 
-    // Simulate submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const details = collectDetails(form);
+      await submitForm({
+        type: "account",
+        companyName: (form.querySelector<HTMLInputElement>("#company-name")?.value || "").trim(),
+        email: (form.querySelector<HTMLInputElement>("#email")?.value || "").trim(),
+        details,
+      });
       toast({
         title: "Application Submitted",
         description: "Thank you! We'll review your application and be in touch shortly.",
       });
-      (e.target as HTMLFormElement).reset();
+      form.reset();
       setAgreed(false);
-    }, 1000);
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again, or call us on 0333 344 3833.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   const inputClass =
     "w-full px-4 py-3 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-colors font-body text-sm";
@@ -177,35 +214,36 @@ const NewAccount = () => {
                       Trade Reference {num}
                     </p>
                     <div>
-                      <label className={labelClass} htmlFor="name">Name *</label>
-                      <input id="name" type="text" required maxLength={100} className={inputClass} />
+                      <label className={labelClass} htmlFor={`ref-${num}-name`}>Name *</label>
+                      <input id={`ref-${num}-name`} data-label={`Trade Reference ${num} Name`} type="text" required maxLength={100} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass} htmlFor="address-line-1-3">Address Line 1</label>
-                      <input id="address-line-1-3" type="text" maxLength={200} className={inputClass} />
+                      <label className={labelClass} htmlFor={`ref-${num}-address-1`}>Address Line 1</label>
+                      <input id={`ref-${num}-address-1`} data-label={`Trade Reference ${num} Address Line 1`} type="text" maxLength={200} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass} htmlFor="address-line-2-3">Address Line 2</label>
-                      <input id="address-line-2-3" type="text" maxLength={200} className={inputClass} />
+                      <label className={labelClass} htmlFor={`ref-${num}-address-2`}>Address Line 2</label>
+                      <input id={`ref-${num}-address-2`} data-label={`Trade Reference ${num} Address Line 2`} type="text" maxLength={200} className={inputClass} />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className={labelClass} htmlFor="city-3">City</label>
-                        <input id="city-3" type="text" maxLength={100} className={inputClass} />
+                        <label className={labelClass} htmlFor={`ref-${num}-city`}>City</label>
+                        <input id={`ref-${num}-city`} data-label={`Trade Reference ${num} City`} type="text" maxLength={100} className={inputClass} />
                       </div>
                       <div>
-                        <label className={labelClass} htmlFor="post-code-3">Post Code</label>
-                        <input id="post-code-3" type="text" maxLength={10} className={inputClass} />
+                        <label className={labelClass} htmlFor={`ref-${num}-post-code`}>Post Code</label>
+                        <input id={`ref-${num}-post-code`} data-label={`Trade Reference ${num} Post Code`} type="text" maxLength={10} className={inputClass} />
                       </div>
                     </div>
                     <div>
-                      <label className={labelClass} htmlFor="contact-number">Contact Number *</label>
-                      <input id="contact-number" type="tel" required maxLength={20} className={inputClass} />
+                      <label className={labelClass} htmlFor={`ref-${num}-contact-number`}>Contact Number *</label>
+                      <input id={`ref-${num}-contact-number`} data-label={`Trade Reference ${num} Contact Number`} type="tel" required maxLength={20} className={inputClass} />
                     </div>
                     <div>
-                      <label className={labelClass} htmlFor="email-2">Email *</label>
-                      <input id="email-2" type="email" required maxLength={255} className={inputClass} />
+                      <label className={labelClass} htmlFor={`ref-${num}-email`}>Email *</label>
+                      <input id={`ref-${num}-email`} data-label={`Trade Reference ${num} Email`} type="email" required maxLength={255} className={inputClass} />
                     </div>
+
                   </div>
                 ))}
               </div>
