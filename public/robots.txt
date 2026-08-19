@@ -12,6 +12,7 @@ Allow: /
 
 User-agent: *
 Disallow: /admin
+Disallow: /homepage2
 Allow: /
 
 Sitemap: https://libertyguard.co.uk/sitemap.xml
