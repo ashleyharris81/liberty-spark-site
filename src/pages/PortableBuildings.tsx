@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Building, Shield } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -30,6 +31,7 @@ const categories = [
 const PortableBuildings = () => {
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Portable Buildings", path: "/portable-buildings" }]} />
       <Navbar />
 
       {/* Hero */}
@@ -74,7 +76,7 @@ const PortableBuildings = () => {
                 {/* Background image */}
                 <img
                   src={cat.image}
-                  alt={cat.title}
+                  alt={`${cat.title} available for hire from Liberty Guard`}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Gradient overlay for text readability */}

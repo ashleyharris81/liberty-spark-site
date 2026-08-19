@@ -70,7 +70,7 @@ const NationwideHire = () => {
         <div className="relative h-[80vh] min-h-[560px] overflow-hidden">
           <img
             src={nationwideHireBg}
-            alt="Liberty welfare unit on site"
+            alt="Liberty Guard welfare unit on a UK construction site"
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
           <div className="absolute inset-0 w-full h-full overflow-hidden z-[1]">

@@ -13,7 +13,7 @@ const ALLOWED_IPS = ["5.133.168.10", "5.133.169.82", "5.133.169.42"];
 const AdminHeader = ({ compact = false }: { compact?: boolean }) => (
   <header className="border-b border-navy-light bg-primary">
     <div className={`mx-auto flex items-center justify-center ${compact ? "py-4" : "py-6"} px-6`}>
-      <img src={logo} alt="Liberty" className="h-10 w-auto" />
+      <img src={logo} alt="Liberty Guard" className="h-10 w-auto" />
     </div>
   </header>
 );
@@ -216,8 +216,9 @@ const Admin = () => {
 
   const head = (
     <Helmet>
-      <title>Admin | Liberty</title>
-      <meta name="robots" content="noindex, nofollow" />
+      <title>Admin | Liberty Guard</title>
+      <meta name="robots" content="noindex, follow" />
+
     </Helmet>
   );
 

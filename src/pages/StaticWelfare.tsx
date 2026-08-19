@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Link } from "react-router-dom";
 import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -54,7 +55,7 @@ const ModelCardMedia = ({ model }: { model: StaticModel }) => {
   return (
     <img
       src={src}
-      alt={model.title}
+      alt={`${model.title} static welfare unit from Liberty Guard`}
       loading="lazy"
       onError={() => setAttempt((c) => ((c + 1) as 0 | 1 | 2 | 3))}
       className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
@@ -65,6 +66,7 @@ const ModelCardMedia = ({ model }: { model: StaticModel }) => {
 const StaticWelfare = () => {
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Welfare", path: "/welfare" }, { name: "Static Welfare", path: "/static-welfare" }]} />
       <Navbar />
 
       {/* Hero */}

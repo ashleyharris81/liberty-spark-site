@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Link } from "react-router-dom";
 import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -49,7 +50,7 @@ const ProductCardMedia = ({ product }: { product: SolarProduct }) => {
   return (
     <img
       src={src}
-      alt={product.title}
+      alt={`${product.title} solar drying room`}
       loading="lazy"
       onError={() => setAttempt((c) => ((c + 1) as 0 | 1 | 2 | 3))}
       className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
@@ -80,13 +81,14 @@ const SolarDryingRoom = () => {
 
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Solar Solutions", path: "/solar" }, { name: "Solar Drying Room", path: "/solar-drying-room" }]} />
       <Navbar />
 
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
           <img
             src={`${ASSETS}/solar%20drying%20room/47.0.jpg`}
-            alt="Liberty solar drying room"
+            alt="Liberty Guard solar drying room on site"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-primary/60" />

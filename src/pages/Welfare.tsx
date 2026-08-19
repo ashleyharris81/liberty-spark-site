@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Building, ShieldCheck, Utensils, DoorOpen, Wrench } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -32,6 +33,7 @@ const facilities = [
 const Welfare = () => {
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Welfare", path: "/welfare" }]} />
       <Navbar />
 
       {/* Hero */}
@@ -96,7 +98,7 @@ const Welfare = () => {
               >
                 <img
                   src={type.image}
-                  alt={type.title}
+                  alt={`${type.title} available for hire from Liberty Guard`}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-primary/10" />

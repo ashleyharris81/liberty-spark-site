@@ -11,7 +11,6 @@ interface SitemapEntry {
 
 const staticEntries: SitemapEntry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
-  { path: "/nationwide-hire", changefreq: "weekly", priority: "0.9" },
   { path: "/about", changefreq: "monthly", priority: "0.8" },
   { path: "/contact", changefreq: "monthly", priority: "0.8" },
   { path: "/new-account", changefreq: "monthly", priority: "0.7" },
@@ -29,7 +28,6 @@ const staticEntries: SitemapEntry[] = [
   { path: "/portable-accommodation", changefreq: "weekly", priority: "0.8" },
   { path: "/modular-buildings", changefreq: "weekly", priority: "0.8" },
   { path: "/marketing-suites", changefreq: "weekly", priority: "0.8" },
-  { path: "/homepage2", changefreq: "weekly", priority: "0.5" },
 ];
 
 // Dynamic route slugs from data files
@@ -46,12 +44,9 @@ const mobiModelSlugs = [
   "24ft-hybrid-mobi-twin-toilet",
 ];
 
-const staticModelSlugs = [
-  "25ft-solar-static",
-  "26ft-junior-plus",
-  "28ft-eco-hybrid",
-  "32ft-master",
-];
+// 25ft-solar-static and 28ft-eco-hybrid are solar models: they canonicalise to
+// the /solar-static-welfare path, so only that version is listed below.
+const staticModelSlugs = ["26ft-junior-plus", "32ft-master"];
 
 const solarMobileSlugs = [
   "12ft-ultimate-eco",

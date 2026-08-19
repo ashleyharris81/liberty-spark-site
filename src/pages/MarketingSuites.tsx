@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
@@ -89,6 +90,7 @@ const features = [
 const MarketingSuites = () => {
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Portable Buildings", path: "/portable-buildings" }, { name: "Marketing Suites", path: "/marketing-suites" }]} />
       <Navbar />
 
       {/* Hero */}
@@ -150,7 +152,7 @@ const MarketingSuites = () => {
               <div key={`${src}-${i}`} className="overflow-hidden h-64 w-80 shrink-0">
                 <img
                   src={src}
-                  alt="Liberty marketing suite"
+                  alt="Liberty Guard marketing suite for a housebuilder development"
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />

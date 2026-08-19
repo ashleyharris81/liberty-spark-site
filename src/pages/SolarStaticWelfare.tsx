@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Link } from "react-router-dom";
 import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -50,7 +51,7 @@ const ProductCardMedia = ({ product }: { product: SolarProduct }) => {
   return (
     <img
       src={src}
-      alt={product.title}
+      alt={`${product.title} solar static welfare unit`}
       loading="lazy"
       onError={() => setAttempt((c) => ((c + 1) as 0 | 1 | 2 | 3))}
       className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
@@ -81,6 +82,7 @@ const SolarStaticWelfare = () => {
 
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Solar Solutions", path: "/solar" }, { name: "Solar Static Welfare", path: "/solar-static-welfare" }]} />
       <Navbar />
 
       <section className="relative pt-20">

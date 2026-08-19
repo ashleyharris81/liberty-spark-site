@@ -31,16 +31,16 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <div className="flex flex-col gap-4">
-            <img src={logo} alt="Liberty" className="h-12 w-auto object-contain self-start" />
+            <img src={logo} alt="Liberty Guard" className="h-12 w-auto object-contain self-start" />
             <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-xs">
               The Old Airfield, Belton Road, Sandtoft DN8 5SX
             </p>
           </div>
 
           <div>
-            <h4 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-4">
+            <h2 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-4">
               Quick Links
-            </h4>
+            </h2>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.label}>
@@ -68,9 +68,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-4">
+            <h2 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-4">
               Get in Touch
-            </h4>
+            </h2>
             <ul className="space-y-2 text-primary-foreground/70 text-sm">
               <li>0333 344 3833</li>
               <li>
@@ -85,9 +85,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-4">
+            <h2 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-4">
               Accreditations
-            </h4>
+            </h2>
             <div className="grid grid-cols-3 gap-2">
               {accreditations.map((a) => (
                 <div

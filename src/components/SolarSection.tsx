@@ -30,9 +30,9 @@ const SolarSection = () => {
                     <feature.icon className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-foreground text-sm uppercase tracking-wide">
+                    <h3 className="font-heading font-bold text-foreground text-sm uppercase tracking-wide">
                       {feature.title}
-                    </h4>
+                    </h3>
                     <p className="text-muted-foreground text-sm mt-1">
                       {feature.desc}
                     </p>

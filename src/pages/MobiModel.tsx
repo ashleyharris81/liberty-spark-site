@@ -7,7 +7,7 @@ import HeroVideo from "@/components/HeroVideo";
 import VimeoEmbed from "@/components/VimeoEmbed";
 import { getMobiModel } from "@/data/mobiModels";
 import { downloadFile } from "@/lib/downloadFile";
-import { ProductJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, ProductJsonLd } from "@/components/JsonLd";
 
 const MOBI_VIDEO_BASE =
   "https://assets-libertyguard-co-uk.stackstaging.com/videos/mobilewelfare";
@@ -42,9 +42,16 @@ const MobiModel = () => {
     <div className="min-h-screen">
       <ProductJsonLd
         name={`${model.title} Mobile Welfare Unit`}
-        description={`${model.title}${model.subtitle ? ` — ${model.subtitle}` : ""} mobile welfare unit available for nationwide hire from Liberty.`}
+        description={`${model.title}${model.subtitle ? ` — ${model.subtitle}` : ""} mobile welfare unit available for nationwide hire from Liberty Guard.`}
         path={`/mobile-welfare/${model.slug}`}
         specs={model.specs}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Welfare", path: "/welfare" },
+          { name: "Mobile Welfare", path: "/mobile-welfare" },
+          { name: model.title, path: `/mobile-welfare/${model.slug}` },
+        ]}
       />
       <Navbar />
 

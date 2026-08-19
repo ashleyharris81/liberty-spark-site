@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
-const SITE = "Liberty";
+const SITE = "Liberty Guard";
 const ORIGIN = "https://libertyguard.co.uk";
 const OG_IMAGE = `${ORIGIN}/og-image.jpg`;
 
@@ -9,105 +9,118 @@ type Meta = { title: string; description: string };
 
 const routeMeta: Record<string, Meta> = {
   "/": {
-    title: "Welfare Units & Portable Buildings Hire UK",
+    title: "Welfare Unit & Portable Building Hire UK",
     description:
-      "Nationwide hire of mobile, static and solar welfare units, portable accommodation and modular buildings, backed by 40+ years' industry experience.",
+      "Welfare unit and portable building hire across the UK, from mobile and solar welfare to modular buildings. 40+ years' experience — call 0333 344 3833.",
   },
   "/homepage2": {
     title: "Welfare Unit & Portable Building Hire",
     description:
-      "Explore Liberty's range of welfare units, solar solutions and portable buildings available for hire across the UK.",
+      "Welfare units, solar site solutions and portable buildings for hire across the UK from Liberty Guard. Call 0333 344 3833 to talk through your site needs.",
   },
   "/nationwide-hire": {
-    title: "Nationwide Welfare Hire & UK Depot Network",
+    title: "Nationwide Welfare Unit Hire & UK Depot Network",
     description:
-      "Fast delivery anywhere in the UK from our nationwide depot network, with one central hub for enquiries, servicing and aftercare.",
+      "Nationwide welfare unit hire from our UK depot network, with one central hub for enquiries, servicing and aftercare. Call 0333 344 3833 for fast delivery.",
   },
   "/marketing-suites": {
-    title: "Marketing Suites Hire",
+    title: "Marketing Suite Hire for Housebuilders",
     description:
-      "Bespoke marketing suites from 24' x 12' models to flagship 24' x 20' suites, or a custom-made design for your development.",
+      "Marketing suite hire across the UK, from 24' x 12' models to flagship 24' x 20' suites or a bespoke design for your development. Call 0333 344 3833.",
   },
   "/portable-buildings": {
-    title: "Portable Buildings Hire",
+    title: "Portable Building Hire UK",
     description:
-      "Portable accommodation, modular buildings and marketing suites for hire — delivered, installed and ready to use on site.",
+      "Portable building hire across the UK — portable accommodation, modular buildings and marketing suites, delivered, installed and ready to use. Call us today.",
   },
   "/portable-accommodation": {
-    title: "Portable Accommodation Hire",
+    title: "Portable Accommodation & Site Cabin Hire",
     description:
-      "Safe, secure and flexible on-site cabins including canteens, dry rooms and offices, built to health and safety standards.",
+      "Portable accommodation and site cabin hire across the UK — canteens, dry rooms and offices built to health and safety standards. Call 0333 344 3833.",
   },
   "/modular-buildings": {
-    title: "Modular Buildings Hire",
+    title: "Modular Building Hire",
     description:
-      "Custom-made modular buildings for offices, training and meeting spaces, precision built and fully compliant.",
+      "Modular building hire across the UK for offices, training rooms and meeting spaces, custom made, precision built and fully compliant. Call 0333 344 3833.",
   },
   "/solar": {
-    title: "Solar Welfare Units & Solar Solutions",
+    title: "Solar Welfare Units & Solar Site Solutions",
     description:
-      "Market-leading solar welfare units, solar loos and drying rooms that cut fuel use, costs and carbon emissions on site.",
+      "Solar welfare units, solar loos and solar drying rooms for hire across the UK, cutting fuel use, costs and carbon on site. Call 0333 344 3833 to enquire.",
   },
   "/welfare": {
-    title: "Mobile & Static Welfare Units",
+    title: "Mobile & Static Welfare Units for Hire",
     description:
-      "High-specification mobile and static welfare units for hire across the UK, with canteens, toilets and drying facilities.",
+      "Mobile and static welfare units for hire across the UK, with canteens, toilets and drying facilities to a high specification. Call 0333 344 3833 to enquire.",
   },
   "/mobile-welfare": {
-    title: "Mobile Welfare Units for Hire",
+    title: "Mobile Welfare Unit Hire 12ft to 24ft",
     description:
-      "Towable mobile welfare units from 12ft to 24ft, including twin toilet and Mobi Plus models, ready for immediate site use.",
+      "Mobile welfare unit hire across the UK from 12ft to 24ft, including twin toilet and Mobi Plus models ready for immediate site use. Call 0333 344 3833.",
   },
   "/static-welfare": {
-    title: "Static Welfare Units for Hire",
+    title: "Static Welfare Unit Hire",
     description:
-      "Static welfare units offering spacious canteens, drying rooms, offices and toilets for longer-term site projects.",
+      "Static welfare unit hire across the UK with spacious canteens, drying rooms, offices and toilets for longer-term site projects. Call 0333 344 3833 today.",
   },
   "/solar-mobile-welfare": {
-    title: "Solar Mobile Welfare Units",
+    title: "Solar Mobile Welfare Unit Hire",
     description:
-      "Solar-powered mobile welfare units delivering quiet, low-emission site facilities with minimal generator run time.",
+      "Solar mobile welfare unit hire across the UK, giving quiet, low-emission site facilities with minimal generator run time. Call 0333 344 3833 to enquire.",
   },
   "/solar-static-welfare": {
-    title: "Solar Static Welfare Units",
+    title: "Solar Static Welfare Unit Hire",
     description:
-      "Solar static welfare units combining spacious facilities with sustainable, low-carbon power for long-term sites.",
+      "Solar static welfare unit hire across the UK, combining spacious site facilities with sustainable, low-carbon power for long-term sites. Call us today.",
   },
   "/solar-drying-room": {
-    title: "Solar Drying Rooms",
+    title: "Solar Drying Room Hire",
     description:
-      "Solar-powered drying rooms keeping site workwear dry and ready, without the fuel cost of conventional units.",
+      "Solar drying room hire across the UK, keeping site workwear dry and ready without the fuel cost of conventional units. Call 0333 344 3833 to enquire.",
   },
   "/solar-loos": {
-    title: "Solar Loos",
+    title: "Solar Toilet Hire — Solar Loos",
     description:
-      "Solar-powered welfare toilets providing clean, self-sufficient facilities anywhere on site.",
+      "Solar toilet hire across the UK — clean, self-sufficient solar loos that run anywhere on site with no mains power. Call 0333 344 3833 to book yours.",
   },
   "/news": {
-    title: "Latest News & Updates",
+    title: "News & Updates",
     description:
-      "News from Liberty, including fleet investment, solar upgrades, partnerships and charity work across the UK.",
+      "News and updates from Liberty Guard, including fleet investment, solar upgrades, partnerships and charity work across the UK. Read the latest stories here.",
   },
   "/about": {
-    title: "About Us",
+    title: "About Us — Welfare Unit Suppliers Since 1981",
     description:
-      "Founded in 1981, Liberty supplies portable accommodation and welfare facilities nationwide, built on quality and service.",
+      "Founded in 1981, Liberty Guard supplies portable accommodation and welfare facilities nationwide, built on quality and service. Call 0333 344 3833 to talk.",
   },
   "/new-account": {
-    title: "Open a New Account",
+    title: "Open a Hire Account",
     description:
-      "Apply to open a credit account with Liberty and start hiring welfare units and portable buildings for your projects.",
+      "Open a hire account with Liberty Guard and start hiring welfare units and portable buildings for your UK projects. Complete the application form online now.",
   },
   "/contact": {
-    title: "Contact Us",
+    title: "Contact Us — 0333 344 3833",
     description:
-      "Speak to our team on 0333 344 3833 or email sales@libertyguard.co.uk for hire enquiries, quotes and our brochure.",
+      "Contact the Liberty Guard team on 0333 344 3833 or email sales@libertyguard.co.uk for UK hire enquiries, quotes and our latest brochure. Get in touch today.",
   },
   "/privacy-policy": {
     title: "Privacy Policy",
     description:
-      "How Liberty collects, uses and protects your personal data, and the cookies used on this website.",
+      "How Liberty Guard collects, uses and protects your personal data, and the cookies used on this website. Contact us if you have any privacy questions.",
   },
+};
+
+/** Routes that must not be indexed (duplicates, private tools, error pages). */
+const NOINDEX_PATHS = new Set(["/homepage2", "/admin"]);
+
+/**
+ * Canonical overrides. "/" and "/nationwide-hire" render the same page, and a
+ * few solar models are reachable from both a solar and a non-solar path.
+ */
+const canonicalOverrides: Record<string, string> = {
+  "/nationwide-hire": "/",
+  "/static-welfare/25ft-solar-static": "/solar-static-welfare/25ft-solar-static",
+  "/static-welfare/28ft-eco-hybrid": "/solar-static-welfare/28ft-eco-hybrid",
 };
 
 const prettify = (slug: string) =>
@@ -121,6 +134,7 @@ const Seo = () => {
   const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
 
   let meta = routeMeta[path];
+  let notFound = false;
 
   if (!meta) {
     const segments = path.split("/").filter(Boolean);
@@ -129,26 +143,33 @@ const Seo = () => {
       const parent = routeMeta[`/${segments[0]}`];
       meta = {
         title: name,
-        description: `${name} specifications, features and hire details from Liberty${
+        description: `${name} specifications, features and hire details from Liberty Guard${
           parent ? ` — part of our ${parent.title.toLowerCase()} range` : ""
         }.`,
       };
     } else {
+      notFound = true;
       meta = {
         title: "Page Not Found",
-        description: "The page you are looking for could not be found on the Liberty website.",
+        description:
+          "The page you are looking for could not be found on the Liberty Guard website.",
       };
     }
   }
 
-  const title = path === "/" ? `${SITE} — ${meta.title}` : `${meta.title} | ${SITE}`;
-  const canonical = `${ORIGIN}${path === "/" ? "/" : path}`;
+  const suffixed = `${meta.title} | ${SITE}`;
+  const title =
+    path === "/" ? `${SITE} — ${meta.title}` : suffixed.length < 60 ? suffixed : meta.title;
+  const canonicalPath = canonicalOverrides[path] ?? (path === "/" ? "/" : path);
+  const canonical = `${ORIGIN}${canonicalPath}`;
+  const noindex = notFound || NOINDEX_PATHS.has(path);
 
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={meta.description} />
       <link rel="canonical" href={canonical} />
+      {noindex ? <meta name="robots" content="noindex, follow" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={meta.description} />
       <meta property="og:url" content={canonical} />
