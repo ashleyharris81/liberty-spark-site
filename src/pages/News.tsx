@@ -120,7 +120,7 @@ const News = () => {
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={article.image}
-                    alt={article.title}
+                    alt={`${article.title} — Liberty Guard news`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />

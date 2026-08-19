@@ -152,7 +152,7 @@ const MarketingSuites = () => {
               <div key={`${src}-${i}`} className="overflow-hidden h-64 w-80 shrink-0">
                 <img
                   src={src}
-                  alt="Liberty marketing suite"
+                  alt="Liberty Guard marketing suite for a housebuilder development"
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />

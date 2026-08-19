@@ -54,7 +54,7 @@ const ProductCardMedia = ({ product }: { product: SolarProduct }) => {
   return (
     <img
       src={src}
-      alt={product.title}
+      alt={`${product.title} solar mobile welfare unit`}
       loading="lazy"
       onError={() => setAttempt((c) => ((c + 1) as 0 | 1 | 2 | 3))}
       className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"

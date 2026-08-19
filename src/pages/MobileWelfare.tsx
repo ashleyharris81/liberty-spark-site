@@ -60,7 +60,7 @@ const ModelCardMedia = ({ model }: { model: MobiModel }) => {
     return (
       <img
         src={override.src}
-        alt={model.title}
+        alt={`${model.title} mobile welfare unit from Liberty Guard`}
         loading="lazy"
         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         style={{ objectPosition: override.objectPosition ?? "center" }}
@@ -74,7 +74,7 @@ const ModelCardMedia = ({ model }: { model: MobiModel }) => {
       return (
         <img
           src={fallbackImage}
-          alt={model.title}
+          alt={`${model.title} mobile welfare unit from Liberty Guard`}
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
@@ -102,7 +102,7 @@ const ModelCardMedia = ({ model }: { model: MobiModel }) => {
   return (
     <img
       src={thumb(model.uid, thumbAttempt === 0 ? "0s" : "2s")}
-      alt={model.title}
+      alt={`${model.title} mobile welfare unit from Liberty Guard`}
       loading="lazy"
       onError={() => setThumbAttempt((current) => (current === 0 ? 1 : 2))}
       className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-[1.32] transition-transform duration-500"
@@ -122,7 +122,7 @@ const MobileWelfare = () => {
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
           <img
             src={heroBg}
-            alt="Liberty mobile welfare unit"
+            alt="Liberty Guard mobile welfare unit on a UK construction site"
             className="absolute inset-0 w-full h-full object-cover z-0"
           />
           <div className="absolute inset-0 z-[1]">

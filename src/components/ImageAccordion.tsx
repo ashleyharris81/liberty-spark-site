@@ -55,7 +55,7 @@ const ImageAccordion = () => {
               onClick={() => window.scrollTo(0, 0)}
               className="group relative overflow-hidden rounded-xl h-56 block"
             >
-              <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
+              <img src={item.image} alt={`${item.title} from Liberty Guard`} className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-primary/50 group-hover:bg-primary/30 transition-colors" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
                 <h3 className="font-heading text-xl font-black text-primary-foreground uppercase tracking-tight">
@@ -83,7 +83,7 @@ const ImageAccordion = () => {
               >
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={`${item.title} from Liberty Guard`}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div
