@@ -47,6 +47,11 @@ export const depotsByRegion: { region: Region; depots: Depot[] }[] = REGION_ORDE
 ).filter((group) => group.depots.length > 0);
 
 /** Towns/cities served, derived from the depot names (used for areaServed). */
-export const depotAreasServed = depots.map((d) =>
-  d.name.replace(/\s*\(([^)]+)\)\s*$/, (_m, inner) => ` / ${inner}`).trim(),
+export const depotAreasServed = Array.from(
+  new Set(
+    depots.flatMap((d) => {
+      const match = d.name.match(/^(.*?)\s*\(([^)]+)\)$/);
+      return match ? [match[1].trim(), match[2].trim()] : [d.name.trim()];
+    }),
+  ),
 );
