@@ -6,8 +6,17 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import type { Session } from "@supabase/supabase-js";
+import logo from "@/assets/liberty-logo-white.png";
 
 const ALLOWED_IPS = ["5.133.168.10", "5.133.169.82", "5.133.169.42"];
+
+const AdminHeader = ({ compact = false }: { compact?: boolean }) => (
+  <header className="border-b border-navy-light bg-primary">
+    <div className={`mx-auto flex items-center justify-center ${compact ? "py-4" : "py-6"} px-6`}>
+      <img src={logo} alt="Liberty" className="h-10 w-auto" />
+    </div>
+  </header>
+);
 
 type ContactRow = {
   id: string;
@@ -47,39 +56,46 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6">
-      <h1 className="mb-2 text-3xl font-bold uppercase text-primary">Admin</h1>
-      <p className="mb-8 text-muted-foreground">
-        Private area. Sign in to view website form submissions.
-      </p>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <Label htmlFor="admin-email">Email</Label>
-          <Input
-            id="admin-email"
-            type="email"
-            autoComplete="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <Label htmlFor="admin-password">Password</Label>
-          <Input
-            id="admin-password"
-            type="password"
-            autoComplete="current-password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        {error && <p className="text-sm text-destructive">{error}</p>}
-        <Button type="submit" className="w-full" disabled={busy}>
-          {busy ? "Signing in…" : "Sign in"}
-        </Button>
-      </form>
+    <div className="min-h-screen bg-primary">
+      <AdminHeader />
+      <div className="mx-auto flex max-w-md flex-col justify-center px-6 py-16">
+        <h1 className="mb-2 text-3xl font-bold uppercase text-primary-foreground">
+          Admin
+        </h1>
+        <p className="mb-8 text-primary-foreground/70">
+          Private area. Sign in to view website form submissions.
+        </p>
+        <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border border-navy-light bg-navy-light/40 p-6">
+          <div>
+            <Label htmlFor="admin-email" className="text-primary-foreground">Email</Label>
+            <Input
+              id="admin-email"
+              type="email"
+              autoComplete="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="border-navy-light bg-background/10 text-primary-foreground"
+            />
+          </div>
+          <div>
+            <Label htmlFor="admin-password" className="text-primary-foreground">Password</Label>
+            <Input
+              id="admin-password"
+              type="password"
+              autoComplete="current-password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="border-navy-light bg-background/10 text-primary-foreground"
+            />
+          </div>
+          {error && <p className="text-sm text-destructive">{error}</p>}
+          <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={busy}>
+            {busy ? "Signing in…" : "Sign in"}
+          </Button>
+        </form>
+      </div>
     </div>
   );
 };
@@ -104,12 +120,15 @@ const useAllowedIp = () => {
 };
 
 const IpBlocked = ({ ip }: { ip: string | null }) => (
-  <div className="mx-auto flex min-h-screen max-w-md flex-col justify-center px-6 text-center">
-    <h1 className="mb-3 text-3xl font-bold uppercase text-primary">Access restricted</h1>
-    <p className="text-muted-foreground">
-      This area can only be accessed from an approved office network
-      {ip ? ` (your address: ${ip})` : ""}.
-    </p>
+  <div className="min-h-screen bg-primary">
+    <AdminHeader />
+    <div className="mx-auto flex max-w-md flex-col justify-center px-6 py-16 text-center">
+      <h1 className="mb-3 text-3xl font-bold uppercase text-primary-foreground">Access restricted</h1>
+      <p className="text-primary-foreground/70">
+        This area can only be accessed from an approved office network
+        {ip ? ` (your address: ${ip})` : ""}.
+      </p>
+    </div>
   </div>
 );
 
@@ -180,7 +199,9 @@ const Admin = () => {
   return (
     <>
       {head}
-      <div className="mx-auto max-w-6xl px-6 py-12">
+      <div className="min-h-screen bg-background">
+        <AdminHeader />
+        <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold uppercase text-primary">Form submissions</h1>
@@ -253,6 +274,7 @@ const Admin = () => {
             </TabsContent>
           </Tabs>
         )}
+        </div>
       </div>
     </>
   );
