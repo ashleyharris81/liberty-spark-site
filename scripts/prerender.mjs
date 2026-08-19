@@ -18,10 +18,16 @@ const SSR_DIR = resolve("dist-ssr");
 const { prerenderRoutes } = await import("./routes.mjs");
 const { render } = await import(pathToFileURL(resolve(SSR_DIR, "entry-server.js")).href);
 
+const shell = readFileSync(resolve(DIST, "index.html"), "utf8");
+
+// "/" overwrites dist/index.html, so keep an untouched copy of the empty SPA
+// shell for unknown paths (legacy redirects, NotFound) to fall back to.
+writeFileSync(resolve(DIST, "spa-fallback.html"), shell);
+
 // index.html carries fallback head tags marked data-rh="true" (react-helmet
 // manages them on the client). For prerendered pages Helmet emits the real
 // per-route versions, so strip the fallbacks to avoid duplicate title/meta.
-const template = readFileSync(resolve(DIST, "index.html"), "utf8")
+const template = shell
   .replace(/^[ \t]*<title>[\s\S]*?<\/title>[ \t]*\n/m, "")
   .replace(/^[ \t]*<meta[^>]*data-rh="true"[^>]*>[ \t]*\n/gm, "");
 
