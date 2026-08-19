@@ -18,7 +18,12 @@ const SSR_DIR = resolve("dist-ssr");
 const { prerenderRoutes } = await import("./routes.mjs");
 const { render } = await import(pathToFileURL(resolve(SSR_DIR, "entry-server.js")).href);
 
-const template = readFileSync(resolve(DIST, "index.html"), "utf8");
+// index.html carries fallback head tags marked data-rh="true" (react-helmet
+// manages them on the client). For prerendered pages Helmet emits the real
+// per-route versions, so strip the fallbacks to avoid duplicate title/meta.
+const template = readFileSync(resolve(DIST, "index.html"), "utf8")
+  .replace(/^[ \t]*<title>[\s\S]*?<\/title>[ \t]*\n/m, "")
+  .replace(/^[ \t]*<meta[^>]*data-rh="true"[^>]*>[ \t]*\n/gm, "");
 
 if (!template.includes('<div id="root"></div>')) {
   throw new Error("prerender: could not find <div id=\"root\"></div> in dist/index.html");
