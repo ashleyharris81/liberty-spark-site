@@ -200,6 +200,14 @@
       "destination": "/about.html"
     },
     {
+      "source": "/depots",
+      "destination": "/depots.html"
+    },
+    {
+      "source": "/depots/",
+      "destination": "/depots.html"
+    },
+    {
       "source": "/contact",
       "destination": "/contact.html"
     },

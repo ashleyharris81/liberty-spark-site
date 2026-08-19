@@ -14,6 +14,7 @@ import solarSavingsBg from "@/assets/solar-savings-bg.jpg";
 import whyLibertyBg from "@/assets/why-liberty-bg.jpg";
 import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
+import DepotList from "@/components/DepotList";
 import mobileCard from "@/assets/welfare-mobile-card.jpg";
 import staticCard from "@/assets/welfare-static-card.jpg";
 import hybridCard from "@/assets/hybrid-24ft-twin-card.jpg";
@@ -193,10 +194,27 @@ const NationwideHire = () => {
             <div className="mx-auto w-full max-w-[320px] md:max-w-[400px]">
               <UKDepotMap depots={depots} />
             </div>
-            <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              With 20 depot locations across the UK, Liberty offers nationwide delivery, competitive rates and a quality service. Our extensive fleet covers the complete product range in a variety of sizes, so whatever the scale or sector of your project, we have a unit to match.
-            </p>
+            <div>
+              <p className="text-primary-foreground/80 text-lg leading-relaxed">
+                With 20 depot locations across the UK, Liberty offers nationwide delivery, competitive rates and a quality service. Our extensive fleet covers the complete product range in a variety of sizes, so whatever the scale or sector of your project, we have a unit to match.
+              </p>
+              <Link
+                to="/depots"
+                onClick={() => window.scrollTo(0, 0)}
+                className="inline-block mt-6 font-heading text-sm font-bold uppercase tracking-wider text-secondary hover:text-primary-foreground transition-colors"
+              >
+                View all UK depots →
+              </Link>
+            </div>
           </div>
+
+          <div className="mt-14 border-t border-primary-foreground/20 pt-10">
+            <h3 className="font-heading text-xl font-bold text-primary-foreground uppercase tracking-wider mb-6">
+              Our UK Depot Locations
+            </h3>
+            <DepotList tone="dark" />
+          </div>
+
         </div>
       </section>
 
