@@ -122,7 +122,9 @@ Deno.serve(async (req) => {
           ['Message', d.message],
           ['Page', d.source],
         ])}</table>`,
+        d.email,
       );
+
 
       return json({ ok: true });
     }
