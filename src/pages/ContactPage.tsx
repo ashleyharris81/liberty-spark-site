@@ -149,6 +149,8 @@ const ContactPage = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <input
                     type="text"
+                    id="contact-first-name"
+                    aria-label="First Name"
                     placeholder="First Name"
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
@@ -158,6 +160,8 @@ const ContactPage = () => {
                   />
                   <input
                     type="text"
+                    id="contact-last-name"
+                    aria-label="Last Name"
                     placeholder="Last Name"
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
@@ -168,7 +172,9 @@ const ContactPage = () => {
                 </div>
                 <input
                   type="email"
-                  placeholder="Email"
+                  id="contact-email"
+                    aria-label="Email"
+                    placeholder="Email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/50 transition-colors font-body"
@@ -177,7 +183,9 @@ const ContactPage = () => {
                 />
                 <input
                   type="text"
-                  placeholder="Subject"
+                  id="contact-subject"
+                    aria-label="Subject"
+                    placeholder="Subject"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full bg-card border border-border rounded-lg px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/50 transition-colors font-body"
@@ -185,7 +193,9 @@ const ContactPage = () => {
                   maxLength={200}
                 />
                 <textarea
-                  placeholder="Your Message"
+                  id="contact-message"
+                    aria-label="Your Message"
+                    placeholder="Your Message"
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
