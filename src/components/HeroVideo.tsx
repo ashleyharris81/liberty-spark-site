@@ -33,23 +33,8 @@ const resolvePoster = (src: string, explicit?: string) => {
   return undefined;
 };
 
-const MIME_BY_EXTENSION: Record<string, string> = {
-  mov: "video/quicktime",
-  mp4: "video/mp4",
-  webm: "video/webm",
-  m4v: "video/mp4",
-  ogv: "video/ogg",
-};
-
-const resolveMimeType = (src: string) => {
-  const path = src.split(/[?#]/)[0];
-  const ext = path.slice(path.lastIndexOf(".") + 1).toLowerCase();
-  return MIME_BY_EXTENSION[ext] ?? "video/mp4";
-};
-
 const HeroVideo = ({ src, poster, className = "" }: HeroVideoProps) => {
   const resolvedPoster = resolvePoster(src, poster);
-  const mimeType = resolveMimeType(src);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // Mobile browsers (notably iOS Safari) only autoplay muted, inline videos.
@@ -96,11 +81,11 @@ const HeroVideo = ({ src, poster, className = "" }: HeroVideoProps) => {
         muted
         playsInline
         webkit-playsinline="true"
-        preload="none"
+        preload="metadata"
         poster={resolvedPoster}
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src={src} type={mimeType} />
+        <source src={src} />
       </video>
     </div>
   );
