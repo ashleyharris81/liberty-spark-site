@@ -216,8 +216,9 @@ const Admin = () => {
 
   const head = (
     <Helmet>
-      <title>Admin | Liberty</title>
-      <meta name="robots" content="noindex, nofollow" />
+      <title>Admin | Liberty Guard</title>
+      <meta name="robots" content="noindex, follow" />
+
     </Helmet>
   );
 
