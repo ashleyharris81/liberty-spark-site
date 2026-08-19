@@ -1,43 +1,190 @@
 {
   "redirects": [
-    { "source": "/about-2", "destination": "/about", "permanent": true },
-    { "source": "/about-2/", "destination": "/about", "permanent": true },
-    { "source": "/news-2", "destination": "/news", "permanent": true },
-    { "source": "/news-2/", "destination": "/news", "permanent": true },
-    { "source": "/charity-work", "destination": "/about", "permanent": true },
-    { "source": "/charity-work/", "destination": "/about", "permanent": true },
-    { "source": "/towable-welfare-units", "destination": "/mobile-welfare", "permanent": true },
-    { "source": "/towable-welfare-units/", "destination": "/mobile-welfare", "permanent": true },
-    { "source": "/static-welfare-units", "destination": "/static-welfare", "permanent": true },
-    { "source": "/static-welfare-units/", "destination": "/static-welfare", "permanent": true },
-    { "source": "/welfare-units-for-construction-sites", "destination": "/welfare", "permanent": true },
-    { "source": "/welfare-units-for-construction-sites/", "destination": "/welfare", "permanent": true },
-    { "source": "/anti-vandal-cabin-hire-2", "destination": "/portable-accommodation", "permanent": true },
-    { "source": "/anti-vandal-cabin-hire-2/", "destination": "/portable-accommodation", "permanent": true },
-    { "source": "/the-complete-package", "destination": "/news", "permanent": true },
-    { "source": "/the-complete-package/", "destination": "/news", "permanent": true },
-    { "source": "/everything-under-one-roof", "destination": "/news", "permanent": true },
-    { "source": "/everything-under-one-roof/", "destination": "/news", "permanent": true },
-    { "source": "/pro-light-comparisons", "destination": "/news", "permanent": true },
-    { "source": "/pro-light-comparisons/", "destination": "/news", "permanent": true },
-    { "source": "/international-earth-day", "destination": "/news", "permanent": true },
-    { "source": "/international-earth-day/", "destination": "/news", "permanent": true },
-
-    { "source": "/lg-products/solar-powered-marketing-suite/:path*", "destination": "/marketing-suites", "permanent": true },
-    { "source": "/lg-categories/solar-powered-marketing-suite/:path*", "destination": "/marketing-suites", "permanent": true },
-    { "source": "/lg-products/:path*", "destination": "/welfare", "permanent": true },
-    { "source": "/lg-categories/:path*", "destination": "/welfare", "permanent": true },
-    { "source": "/tag/:path*", "destination": "/news", "permanent": true },
-    { "source": "/category/:path*", "destination": "/news", "permanent": true },
-    { "source": "/author/:path*", "destination": "/news", "permanent": true },
-    { "source": "/2018/:path*", "destination": "/news", "permanent": true },
-    { "source": "/2019/:path*", "destination": "/news", "permanent": true },
-    { "source": "/2020/:path*", "destination": "/news", "permanent": true },
-    { "source": "/2021/:path*", "destination": "/news", "permanent": true },
-    { "source": "/2022/:path*", "destination": "/news", "permanent": true },
-    { "source": "/2023/:path*", "destination": "/news", "permanent": true },
-    { "source": "/2024/:path*", "destination": "/news", "permanent": true },
-    { "source": "/2025/:path*", "destination": "/news", "permanent": true }
+    {
+      "source": "/about-2",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/about-2/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/news-2",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/news-2/",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/charity-work",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/charity-work/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/towable-welfare-units",
+      "destination": "/mobile-welfare",
+      "permanent": true
+    },
+    {
+      "source": "/towable-welfare-units/",
+      "destination": "/mobile-welfare",
+      "permanent": true
+    },
+    {
+      "source": "/static-welfare-units",
+      "destination": "/static-welfare",
+      "permanent": true
+    },
+    {
+      "source": "/static-welfare-units/",
+      "destination": "/static-welfare",
+      "permanent": true
+    },
+    {
+      "source": "/welfare-units-for-construction-sites",
+      "destination": "/welfare",
+      "permanent": true
+    },
+    {
+      "source": "/welfare-units-for-construction-sites/",
+      "destination": "/welfare",
+      "permanent": true
+    },
+    {
+      "source": "/anti-vandal-cabin-hire-2",
+      "destination": "/portable-accommodation",
+      "permanent": true
+    },
+    {
+      "source": "/anti-vandal-cabin-hire-2/",
+      "destination": "/portable-accommodation",
+      "permanent": true
+    },
+    {
+      "source": "/the-complete-package",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/the-complete-package/",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/everything-under-one-roof",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/everything-under-one-roof/",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/pro-light-comparisons",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/pro-light-comparisons/",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/international-earth-day",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/international-earth-day/",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/lg-products/solar-powered-marketing-suite/:path*",
+      "destination": "/marketing-suites",
+      "permanent": true
+    },
+    {
+      "source": "/lg-categories/solar-powered-marketing-suite/:path*",
+      "destination": "/marketing-suites",
+      "permanent": true
+    },
+    {
+      "source": "/lg-products/:path*",
+      "destination": "/welfare",
+      "permanent": true
+    },
+    {
+      "source": "/lg-categories/:path*",
+      "destination": "/welfare",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/2018/:path*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/2019/:path*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/2020/:path*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/2021/:path*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/2022/:path*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/2023/:path*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/2024/:path*",
+      "destination": "/news",
+      "permanent": true
+    },
+    {
+      "source": "/2025/:path*",
+      "destination": "/news",
+      "permanent": true
+    }
   ],
   "rewrites": [
     {
@@ -45,8 +192,320 @@
       "destination": "https://liberty-spark-site.lovable.app/__l5e/:path*"
     },
     {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/about/",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/new-account",
+      "destination": "/new-account.html"
+    },
+    {
+      "source": "/new-account/",
+      "destination": "/new-account.html"
+    },
+    {
+      "source": "/news",
+      "destination": "/news.html"
+    },
+    {
+      "source": "/news/",
+      "destination": "/news.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/welfare",
+      "destination": "/welfare.html"
+    },
+    {
+      "source": "/welfare/",
+      "destination": "/welfare.html"
+    },
+    {
+      "source": "/mobile-welfare",
+      "destination": "/mobile-welfare.html"
+    },
+    {
+      "source": "/mobile-welfare/",
+      "destination": "/mobile-welfare.html"
+    },
+    {
+      "source": "/static-welfare",
+      "destination": "/static-welfare.html"
+    },
+    {
+      "source": "/static-welfare/",
+      "destination": "/static-welfare.html"
+    },
+    {
+      "source": "/solar",
+      "destination": "/solar.html"
+    },
+    {
+      "source": "/solar/",
+      "destination": "/solar.html"
+    },
+    {
+      "source": "/solar-mobile-welfare",
+      "destination": "/solar-mobile-welfare.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/",
+      "destination": "/solar-mobile-welfare.html"
+    },
+    {
+      "source": "/solar-static-welfare",
+      "destination": "/solar-static-welfare.html"
+    },
+    {
+      "source": "/solar-static-welfare/",
+      "destination": "/solar-static-welfare.html"
+    },
+    {
+      "source": "/solar-drying-room",
+      "destination": "/solar-drying-room.html"
+    },
+    {
+      "source": "/solar-drying-room/",
+      "destination": "/solar-drying-room.html"
+    },
+    {
+      "source": "/solar-loos",
+      "destination": "/solar-loos.html"
+    },
+    {
+      "source": "/solar-loos/",
+      "destination": "/solar-loos.html"
+    },
+    {
+      "source": "/portable-buildings",
+      "destination": "/portable-buildings.html"
+    },
+    {
+      "source": "/portable-buildings/",
+      "destination": "/portable-buildings.html"
+    },
+    {
+      "source": "/portable-accommodation",
+      "destination": "/portable-accommodation.html"
+    },
+    {
+      "source": "/portable-accommodation/",
+      "destination": "/portable-accommodation.html"
+    },
+    {
+      "source": "/modular-buildings",
+      "destination": "/modular-buildings.html"
+    },
+    {
+      "source": "/modular-buildings/",
+      "destination": "/modular-buildings.html"
+    },
+    {
+      "source": "/marketing-suites",
+      "destination": "/marketing-suites.html"
+    },
+    {
+      "source": "/marketing-suites/",
+      "destination": "/marketing-suites.html"
+    },
+    {
+      "source": "/mobile-welfare/12ft-mobi",
+      "destination": "/mobile-welfare/12ft-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/12ft-mobi/",
+      "destination": "/mobile-welfare/12ft-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/16ft-mobi",
+      "destination": "/mobile-welfare/16ft-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/16ft-mobi/",
+      "destination": "/mobile-welfare/16ft-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/16ft-mobi-plus",
+      "destination": "/mobile-welfare/16ft-mobi-plus.html"
+    },
+    {
+      "source": "/mobile-welfare/16ft-mobi-plus/",
+      "destination": "/mobile-welfare/16ft-mobi-plus.html"
+    },
+    {
+      "source": "/mobile-welfare/20ft-mobi",
+      "destination": "/mobile-welfare/20ft-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/20ft-mobi/",
+      "destination": "/mobile-welfare/20ft-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/20ft-mobi-plus",
+      "destination": "/mobile-welfare/20ft-mobi-plus.html"
+    },
+    {
+      "source": "/mobile-welfare/20ft-mobi-plus/",
+      "destination": "/mobile-welfare/20ft-mobi-plus.html"
+    },
+    {
+      "source": "/mobile-welfare/24ft-mobi",
+      "destination": "/mobile-welfare/24ft-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/24ft-mobi/",
+      "destination": "/mobile-welfare/24ft-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/24ft-mobi-twin-toilet",
+      "destination": "/mobile-welfare/24ft-mobi-twin-toilet.html"
+    },
+    {
+      "source": "/mobile-welfare/24ft-mobi-twin-toilet/",
+      "destination": "/mobile-welfare/24ft-mobi-twin-toilet.html"
+    },
+    {
+      "source": "/mobile-welfare/12ft-hybrid-mobi",
+      "destination": "/mobile-welfare/12ft-hybrid-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/12ft-hybrid-mobi/",
+      "destination": "/mobile-welfare/12ft-hybrid-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/16ft-hybrid-mobi",
+      "destination": "/mobile-welfare/16ft-hybrid-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/16ft-hybrid-mobi/",
+      "destination": "/mobile-welfare/16ft-hybrid-mobi.html"
+    },
+    {
+      "source": "/mobile-welfare/24ft-hybrid-mobi-twin-toilet",
+      "destination": "/mobile-welfare/24ft-hybrid-mobi-twin-toilet.html"
+    },
+    {
+      "source": "/mobile-welfare/24ft-hybrid-mobi-twin-toilet/",
+      "destination": "/mobile-welfare/24ft-hybrid-mobi-twin-toilet.html"
+    },
+    {
+      "source": "/static-welfare/26ft-junior-plus",
+      "destination": "/static-welfare/26ft-junior-plus.html"
+    },
+    {
+      "source": "/static-welfare/26ft-junior-plus/",
+      "destination": "/static-welfare/26ft-junior-plus.html"
+    },
+    {
+      "source": "/static-welfare/32ft-master",
+      "destination": "/static-welfare/32ft-master.html"
+    },
+    {
+      "source": "/static-welfare/32ft-master/",
+      "destination": "/static-welfare/32ft-master.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/12ft-ultimate-eco",
+      "destination": "/solar-mobile-welfare/12ft-ultimate-eco.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/12ft-ultimate-eco/",
+      "destination": "/solar-mobile-welfare/12ft-ultimate-eco.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/12ft-ultimate-eco-plus",
+      "destination": "/solar-mobile-welfare/12ft-ultimate-eco-plus.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/12ft-ultimate-eco-plus/",
+      "destination": "/solar-mobile-welfare/12ft-ultimate-eco-plus.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/20ft-ultimate-eco",
+      "destination": "/solar-mobile-welfare/20ft-ultimate-eco.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/20ft-ultimate-eco/",
+      "destination": "/solar-mobile-welfare/20ft-ultimate-eco.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/20ft-ultimate-eco-plus",
+      "destination": "/solar-mobile-welfare/20ft-ultimate-eco-plus.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/20ft-ultimate-eco-plus/",
+      "destination": "/solar-mobile-welfare/20ft-ultimate-eco-plus.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/24ft-ultimate-eco-plus",
+      "destination": "/solar-mobile-welfare/24ft-ultimate-eco-plus.html"
+    },
+    {
+      "source": "/solar-mobile-welfare/24ft-ultimate-eco-plus/",
+      "destination": "/solar-mobile-welfare/24ft-ultimate-eco-plus.html"
+    },
+    {
+      "source": "/solar-loos/single-solar-loo",
+      "destination": "/solar-loos/single-solar-loo.html"
+    },
+    {
+      "source": "/solar-loos/single-solar-loo/",
+      "destination": "/solar-loos/single-solar-loo.html"
+    },
+    {
+      "source": "/solar-loos/twin-solar-loo",
+      "destination": "/solar-loos/twin-solar-loo.html"
+    },
+    {
+      "source": "/solar-loos/twin-solar-loo/",
+      "destination": "/solar-loos/twin-solar-loo.html"
+    },
+    {
+      "source": "/solar-static-welfare/25ft-solar-static",
+      "destination": "/solar-static-welfare/25ft-solar-static.html"
+    },
+    {
+      "source": "/solar-static-welfare/25ft-solar-static/",
+      "destination": "/solar-static-welfare/25ft-solar-static.html"
+    },
+    {
+      "source": "/solar-static-welfare/28ft-eco-hybrid",
+      "destination": "/solar-static-welfare/28ft-eco-hybrid.html"
+    },
+    {
+      "source": "/solar-static-welfare/28ft-eco-hybrid/",
+      "destination": "/solar-static-welfare/28ft-eco-hybrid.html"
+    },
+    {
+      "source": "/solar-drying-room/12ft-solar-dry",
+      "destination": "/solar-drying-room/12ft-solar-dry.html"
+    },
+    {
+      "source": "/solar-drying-room/12ft-solar-dry/",
+      "destination": "/solar-drying-room/12ft-solar-dry.html"
+    },
+    {
       "source": "/((?!__l5e|assets|posters|.*\\..*).*)",
-      "destination": "/index.html"
+      "destination": "/spa-fallback.html"
     }
   ]
 }

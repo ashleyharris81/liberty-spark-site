@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import MarketingSuites from "./pages/MarketingSuites";
 import PortableBuildings from "./pages/PortableBuildings";
@@ -32,12 +32,17 @@ import LegacyRedirect from "./components/LegacyRedirect";
 
 const queryClient = new QueryClient();
 
+/**
+ * App content without a Router. The router is supplied by the entry point:
+ * BrowserRouter in src/main.tsx (client) and StaticRouter in src/entry-server.tsx
+ * (build-time prerender), so the same tree renders in both environments.
+ */
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <>
         <Seo />
         <Routes>
           <Route path="/" element={<NationwideHire />} />
@@ -72,8 +77,7 @@ const App = () => (
           <Route path="*" element={<LegacyRedirect />} />
         </Routes>
         <CookieBanner />
-      </BrowserRouter>
-
+      </>
     </TooltipProvider>
   </QueryClientProvider>
 );

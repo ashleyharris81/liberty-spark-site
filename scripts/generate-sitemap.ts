@@ -1,109 +1,17 @@
 import { writeFileSync } from "fs";
 import { resolve } from "path";
+// Routes live in scripts/routes.mjs so the sitemap and the build-time prerender
+// step (scripts/prerender.mjs) can never drift apart.
+import { BASE_URL, allEntries } from "./routes.mjs";
 
-// Canonical host is www: it is the serving host and the host the old WordPress
-// site's backlinks point at, so keeping it preserves that link history.
-const BASE_URL = "https://www.libertyguard.co.uk";
+const LASTMOD = new Date().toISOString().slice(0, 10);
 
-interface SitemapEntry {
-  path: string;
-  changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-  priority?: string;
-}
-
-const staticEntries: SitemapEntry[] = [
-  { path: "/", changefreq: "weekly", priority: "1.0" },
-  { path: "/about", changefreq: "monthly", priority: "0.8" },
-  { path: "/contact", changefreq: "monthly", priority: "0.8" },
-  { path: "/new-account", changefreq: "monthly", priority: "0.7" },
-  { path: "/news", changefreq: "weekly", priority: "0.7" },
-  { path: "/privacy-policy", changefreq: "yearly", priority: "0.3" },
-  { path: "/welfare", changefreq: "weekly", priority: "0.8" },
-  { path: "/mobile-welfare", changefreq: "weekly", priority: "0.8" },
-  { path: "/static-welfare", changefreq: "weekly", priority: "0.8" },
-  { path: "/solar", changefreq: "weekly", priority: "0.8" },
-  { path: "/solar-mobile-welfare", changefreq: "weekly", priority: "0.8" },
-  { path: "/solar-static-welfare", changefreq: "weekly", priority: "0.8" },
-  { path: "/solar-drying-room", changefreq: "weekly", priority: "0.8" },
-  { path: "/solar-loos", changefreq: "weekly", priority: "0.8" },
-  { path: "/portable-buildings", changefreq: "weekly", priority: "0.8" },
-  { path: "/portable-accommodation", changefreq: "weekly", priority: "0.8" },
-  { path: "/modular-buildings", changefreq: "weekly", priority: "0.8" },
-  { path: "/marketing-suites", changefreq: "weekly", priority: "0.8" },
-];
-
-// Dynamic route slugs from data files
-const mobiModelSlugs = [
-  "12ft-mobi",
-  "16ft-mobi",
-  "16ft-mobi-plus",
-  "20ft-mobi",
-  "20ft-mobi-plus",
-  "24ft-mobi",
-  "24ft-mobi-twin-toilet",
-  "12ft-hybrid-mobi",
-  "16ft-hybrid-mobi",
-  "24ft-hybrid-mobi-twin-toilet",
-];
-
-// 25ft-solar-static and 28ft-eco-hybrid are solar models: they canonicalise to
-// the /solar-static-welfare path, so only that version is listed below.
-const staticModelSlugs = ["26ft-junior-plus", "32ft-master"];
-
-const solarMobileSlugs = [
-  "12ft-ultimate-eco",
-  "12ft-ultimate-eco-plus",
-  "20ft-ultimate-eco",
-  "20ft-ultimate-eco-plus",
-  "24ft-ultimate-eco-plus",
-];
-
-const solarLooSlugs = ["single-solar-loo", "twin-solar-loo"];
-
-const solarStaticSlugs = ["25ft-solar-static", "28ft-eco-hybrid"];
-
-const solarDrySlugs = ["12ft-solar-dry"];
-
-const dynamicEntries: SitemapEntry[] = [
-  ...mobiModelSlugs.map((slug) => ({
-    path: `/mobile-welfare/${slug}`,
-    changefreq: "monthly" as const,
-    priority: "0.6",
-  })),
-  ...staticModelSlugs.map((slug) => ({
-    path: `/static-welfare/${slug}`,
-    changefreq: "monthly" as const,
-    priority: "0.6",
-  })),
-  ...solarMobileSlugs.map((slug) => ({
-    path: `/solar-mobile-welfare/${slug}`,
-    changefreq: "monthly" as const,
-    priority: "0.6",
-  })),
-  ...solarLooSlugs.map((slug) => ({
-    path: `/solar-loos/${slug}`,
-    changefreq: "monthly" as const,
-    priority: "0.6",
-  })),
-  ...solarStaticSlugs.map((slug) => ({
-    path: `/solar-static-welfare/${slug}`,
-    changefreq: "monthly" as const,
-    priority: "0.6",
-  })),
-  ...solarDrySlugs.map((slug) => ({
-    path: `/solar-drying-room/${slug}`,
-    changefreq: "monthly" as const,
-    priority: "0.6",
-  })),
-];
-
-const allEntries = [...staticEntries, ...dynamicEntries];
-
-function generateSitemap(entries: SitemapEntry[]) {
+function generateSitemap(entries: { path: string; changefreq?: string; priority?: string }[]) {
   const urls = entries.map((e) => {
     const lines = [
       `  <url>`,
       `    <loc>${BASE_URL}${e.path}</loc>`,
+      `    <lastmod>${LASTMOD}</lastmod>`,
       e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
       e.priority ? `    <priority>${e.priority}</priority>` : null,
       `  </url>`,
