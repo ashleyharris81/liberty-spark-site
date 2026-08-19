@@ -31,6 +31,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.libertyguard.co.uk/depots</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.libertyguard.co.uk/privacy-policy</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>yearly</changefreq>

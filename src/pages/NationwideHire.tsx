@@ -14,6 +14,7 @@ import solarSavingsBg from "@/assets/solar-savings-bg.jpg";
 import whyLibertyBg from "@/assets/why-liberty-bg.jpg";
 import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
+import DepotList from "@/components/DepotList";
 import mobileCard from "@/assets/welfare-mobile-card.jpg";
 import staticCard from "@/assets/welfare-static-card.jpg";
 import hybridCard from "@/assets/hybrid-24ft-twin-card.jpg";
