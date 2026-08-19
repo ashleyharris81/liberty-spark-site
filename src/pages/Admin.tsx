@@ -139,6 +139,8 @@ const Admin = () => {
   const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
   const [contacts, setContacts] = useState<ContactRow[]>([]);
   const [accounts, setAccounts] = useState<AccountRow[]>([]);
+  const [loadingSubmissions, setLoadingSubmissions] = useState(false);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const { ip, allowed } = useAllowedIp();
 
 
@@ -155,22 +157,40 @@ const Admin = () => {
 
   const load = useCallback(async () => {
     if (!session) return;
-    const { data } = await supabase
+    setLoadingSubmissions(true);
+    setLoadError(null);
+
+    const { data, error: roleError } = await supabase
       .from("user_roles")
       .select("role")
       .eq("user_id", session.user.id)
       .eq("role", "admin")
       .maybeSingle();
+    if (roleError) {
+      setIsAdmin(false);
+      setLoadError("We couldn't verify admin access. Please sign out and sign in again.");
+      setLoadingSubmissions(false);
+      return;
+    }
     const admin = !!data;
     setIsAdmin(admin);
-    if (!admin) return;
+    if (!admin) {
+      setLoadingSubmissions(false);
+      return;
+    }
 
     const [c, a] = await Promise.all([
       supabase.from("contact_submissions").select("*").order("created_at", { ascending: false }),
       supabase.from("account_applications").select("*").order("created_at", { ascending: false }),
     ]);
+    if (c.error || a.error) {
+      setLoadError("Submissions couldn't be loaded. Please refresh or sign in again.");
+      setLoadingSubmissions(false);
+      return;
+    }
     setContacts((c.data as ContactRow[]) ?? []);
     setAccounts((a.data as AccountRow[]) ?? []);
+    setLoadingSubmissions(false);
   }, [session]);
 
   useEffect(() => {
@@ -180,6 +200,18 @@ const Admin = () => {
     }
     load();
   }, [session, load]);
+
+  useEffect(() => {
+    if (!session || !isAdmin) return;
+
+    const refreshOnFocus = () => load();
+    const interval = window.setInterval(load, 30_000);
+    window.addEventListener("focus", refreshOnFocus);
+    return () => {
+      window.clearInterval(interval);
+      window.removeEventListener("focus", refreshOnFocus);
+    };
+  }, [session, isAdmin, load]);
 
 
   const head = (
@@ -206,8 +238,8 @@ const Admin = () => {
             <p className="text-sm text-muted-foreground">{session.user.email}</p>
           </div>
           <div className="flex gap-3">
-            <Button variant="outline" onClick={() => load()}>
-              Refresh
+            <Button variant="outline" onClick={() => load()} disabled={loadingSubmissions}>
+              {loadingSubmissions ? "Refreshing…" : "Refresh"}
             </Button>
             <Button variant="outline" onClick={() => supabase.auth.signOut()}>
               Sign out
@@ -224,6 +256,12 @@ const Admin = () => {
           </p>
         )}
 
+        {loadError && (
+          <p className="mb-6 rounded-md border border-destructive/50 bg-destructive/10 px-4 py-3 text-sm">
+            {loadError}
+          </p>
+        )}
+
         {isAdmin && (
           <Tabs defaultValue="contact">
             <TabsList>
@@ -232,7 +270,7 @@ const Admin = () => {
             </TabsList>
 
             <TabsContent value="contact" className="space-y-4 pt-6">
-              {contacts.length === 0 && <p className="text-muted-foreground">No enquiries yet.</p>}
+              {!loadingSubmissions && contacts.length === 0 && <p className="text-muted-foreground">No enquiries yet.</p>}
               {contacts.map((row) => (
                 <article key={row.id} className="rounded-lg border p-5">
                   <header className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
@@ -254,7 +292,7 @@ const Admin = () => {
             </TabsContent>
 
             <TabsContent value="account" className="space-y-4 pt-6">
-              {accounts.length === 0 && <p className="text-muted-foreground">No applications yet.</p>}
+              {!loadingSubmissions && accounts.length === 0 && <p className="text-muted-foreground">No applications yet.</p>}
               {accounts.map((row) => (
                 <article key={row.id} className="rounded-lg border p-5">
                   <header className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
