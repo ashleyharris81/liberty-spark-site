@@ -3,11 +3,19 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
+import VimeoEmbed from "@/components/VimeoEmbed";
 import { getMobiModel } from "@/data/mobiModels";
 import { downloadFile } from "@/lib/downloadFile";
 import { BreadcrumbJsonLd, ProductJsonLd } from "@/components/JsonLd";
 
-
+// These two hybrid UIDs are not yet live on Cloudflare Stream (manifest 500 /
+// thumbnail 404), so they stay on their working Vimeo sources for now.
+const MOBI_VIMEO_BY_SLUG: Record<string, string> = {
+  "16ft-hybrid-mobi":
+    "https://player.vimeo.com/video/1213961805?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1&controls=0&title=0&byline=0&portrait=0",
+  "24ft-hybrid-mobi-twin-toilet":
+    "https://player.vimeo.com/video/1213962091?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1&controls=0&title=0&byline=0&portrait=0",
+};
 
 
 const MobiModel = () => {
@@ -36,7 +44,11 @@ const MobiModel = () => {
       {/* Full-width hero video */}
       <section className="pt-20 bg-primary">
         <div className="relative w-full h-[60vh] min-h-[400px] overflow-hidden">
-          <CloudflareVideo uid={model.uid} variant="hero" />
+          {MOBI_VIMEO_BY_SLUG[model.slug] ? (
+            <VimeoEmbed src={MOBI_VIMEO_BY_SLUG[model.slug]} title={model.title} />
+          ) : (
+            <CloudflareVideo uid={model.uid} variant="hero" />
+          )}
         </div>
       </section>
 
