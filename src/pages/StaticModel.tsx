@@ -5,7 +5,10 @@ import Contact from "@/components/Contact";
 import CloudflareVideo from "@/components/CloudflareVideo";
 import { getStaticModel } from "@/data/staticModels";
 import { downloadFile } from "@/lib/downloadFile";
-import { ProductJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, ProductJsonLd } from "@/components/JsonLd";
+
+/** Models that are also listed as solar products and canonicalise there. */
+const SOLAR_CANONICAL_SLUGS = new Set(["25ft-solar-static", "28ft-eco-hybrid"]);
 
 const StaticModel = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -13,13 +16,34 @@ const StaticModel = () => {
 
   if (!model) return <Navigate to="/static-welfare" replace />;
 
+  // Solar models live on the solar path, which is their canonical URL.
+  const isSolarPath = SOLAR_CANONICAL_SLUGS.has(model.slug);
+  const canonicalPath = isSolarPath
+    ? `/solar-static-welfare/${model.slug}`
+    : `/static-welfare/${model.slug}`;
+
   return (
     <div className="min-h-screen">
       <ProductJsonLd
         name={`${model.title} Static Welfare Unit`}
-        description={`${model.title}${model.subtitle ? ` — ${model.subtitle}` : ""} static welfare unit available for nationwide hire from Liberty.`}
-        path={`/static-welfare/${model.slug}`}
+        description={`${model.title}${model.subtitle ? ` — ${model.subtitle}` : ""} static welfare unit available for nationwide hire from Liberty Guard.`}
+        path={canonicalPath}
         specs={model.specs}
+      />
+      <BreadcrumbJsonLd
+        items={
+          isSolarPath
+            ? [
+                { name: "Solar Solutions", path: "/solar" },
+                { name: "Solar Static Welfare", path: "/solar-static-welfare" },
+                { name: model.title, path: canonicalPath },
+              ]
+            : [
+                { name: "Welfare", path: "/welfare" },
+                { name: "Static Welfare", path: "/static-welfare" },
+                { name: model.title, path: canonicalPath },
+              ]
+        }
       />
       <Navbar />
 

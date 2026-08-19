@@ -7,7 +7,7 @@ import CloudflareVideo from "@/components/CloudflareVideo";
 import { getSolarProduct } from "@/data/solarProducts";
 import { downloadFile } from "@/lib/downloadFile";
 import ultimateEcoLogo from "@/assets/ultimate-eco-logo.png.asset.json";
-import { ProductJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, ProductJsonLd } from "@/components/JsonLd";
 
 type Savings = {
   total: string;
@@ -64,9 +64,16 @@ const SolarProduct = () => {
     <div className="min-h-screen">
       <ProductJsonLd
         name={product.title}
-        description={`${product.title} solar-powered welfare product available for nationwide hire from Liberty.`}
+        description={`${product.title} solar-powered welfare product available for nationwide hire from Liberty Guard.`}
         path={`${backTo}/${product.slug}`}
         specs={product.specs}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Solar Solutions", path: "/solar" },
+          { name: backLabel.replace("Back to ", ""), path: backTo },
+          { name: product.title, path: `${backTo}/${product.slug}` },
+        ]}
       />
       <Navbar />
 
@@ -96,9 +103,9 @@ const SolarProduct = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {product.specs.map((spec) => (
                 <div key={spec.title}>
-                  <h3 className="font-heading text-sm font-bold text-yellow uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
+                  <h2 className="font-heading text-sm font-bold text-yellow uppercase tracking-wider mb-3 pb-2 border-b border-primary-foreground/10">
                     {spec.title}
-                  </h3>
+                  </h2>
                   <ul className="space-y-2">
                     {spec.items.map((item) => (
                       <li
