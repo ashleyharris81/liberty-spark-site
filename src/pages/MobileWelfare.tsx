@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Link } from "react-router-dom";
 import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -113,6 +114,7 @@ const ModelCardMedia = ({ model }: { model: MobiModel }) => {
 const MobileWelfare = () => {
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Welfare", path: "/welfare" }, { name: "Mobile Welfare", path: "/mobile-welfare" }]} />
       <Navbar />
 
       {/* Hero */}

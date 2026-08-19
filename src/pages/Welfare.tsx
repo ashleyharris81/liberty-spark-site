@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Building, ShieldCheck, Utensils, DoorOpen, Wrench } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -32,6 +33,7 @@ const facilities = [
 const Welfare = () => {
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Welfare", path: "/welfare" }]} />
       <Navbar />
 
       {/* Hero */}

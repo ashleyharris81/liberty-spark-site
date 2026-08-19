@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Link } from "react-router-dom";
 import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -84,6 +85,7 @@ const SolarLoos = () => {
 
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Solar Solutions", path: "/solar" }, { name: "Solar Loos", path: "/solar-loos" }]} />
       <Navbar />
 
       {/* Hero */}

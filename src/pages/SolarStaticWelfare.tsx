@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { Link } from "react-router-dom";
 import { ClipboardList, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -81,6 +82,7 @@ const SolarStaticWelfare = () => {
 
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Solar Solutions", path: "/solar" }, { name: "Solar Static Welfare", path: "/solar-static-welfare" }]} />
       <Navbar />
 
       <section className="relative pt-20">

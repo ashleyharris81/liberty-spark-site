@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
@@ -55,6 +56,7 @@ const features = [
 const ModularBuildings = () => {
   return (
     <div className="min-h-screen">
+      <BreadcrumbJsonLd items={[{ name: "Portable Buildings", path: "/portable-buildings" }, { name: "Modular Buildings", path: "/modular-buildings" }]} />
       <Navbar />
 
       {/* Hero */}

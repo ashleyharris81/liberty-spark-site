@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 
@@ -91,6 +92,7 @@ const News = () => {
   return (
     <div className="min-h-screen bg-background">
       <ArticleListJsonLd path="/news" articles={articles} />
+      <BreadcrumbJsonLd items={[{ name: "News", path: "/news" }]} />
       <Navbar />
 
       {/* Hero */}
