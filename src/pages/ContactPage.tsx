@@ -12,6 +12,7 @@ import { downloadFile } from "@/lib/downloadFile";
 
 const ContactPage = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,14 +21,27 @@ const ContactPage = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent",
-      description: "Thank you for your enquiry! We will be in touch shortly.",
-    });
-    setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
+    setIsSubmitting(true);
+    try {
+      await submitForm({ type: "contact", ...formData, source: "Contact page" });
+      toast({
+        title: "Message Sent",
+        description: "Thank you for your enquiry! We will be in touch shortly.",
+      });
+      setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
+    } catch {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again, or call us on 0333 344 3833.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   return (
     <div className="min-h-screen">
