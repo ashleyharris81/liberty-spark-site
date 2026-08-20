@@ -76,7 +76,7 @@ const articles = [
   },
   {
     image: newsAcquisan,
-    date: "July 2025",
+    date: "November 2025",
     title: "Acquisan Acquisition",
     excerpt:
       "Liberty expands its capabilities through the acquisition of Acquisan, strengthening our nationwide service offering.",
