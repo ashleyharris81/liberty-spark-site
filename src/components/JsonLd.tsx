@@ -151,6 +151,45 @@ export const BreadcrumbJsonLd = ({
   );
 };
 
+export const NewsArticleJsonLd = ({
+  title,
+  date,
+  excerpt,
+  image,
+  slug,
+}: {
+  title: string;
+  date: string;
+  excerpt: string;
+  image?: string;
+  slug: string;
+}) => {
+  const datePublished = monthYearToIso(date);
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: title,
+    description: excerpt,
+    mainEntityOfPage: `${ORIGIN}/news/${slug}`,
+    ...(datePublished ? { datePublished } : {}),
+    ...(image
+      ? {
+          image: image.startsWith("http")
+            ? image
+            : `${ORIGIN}${image}`,
+        }
+      : {}),
+    author: { "@type": "Organization", name: "Liberty Guard" },
+    publisher: { "@type": "Organization", name: "Liberty Guard" },
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">{JSON.stringify(data)}</script>
+    </Helmet>
+  );
+};
+
 /**
  * Extends the Organization reference with the towns/cities the depot network
  * serves. Deliberately NOT LocalBusiness per depot: most depots are

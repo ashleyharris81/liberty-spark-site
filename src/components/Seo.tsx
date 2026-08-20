@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
+import { getArticleBySlug } from "@/data/newsArticles";
 
 const SITE = "Liberty Guard";
 /**
@@ -150,7 +151,20 @@ const Seo = () => {
 
   if (!meta) {
     const segments = path.split("/").filter(Boolean);
-    if (segments.length === 2) {
+    // /news/<slug> — look up the article for a real title and excerpt.
+    if (segments.length === 2 && segments[0] === "news") {
+      const article = getArticleBySlug(segments[1]);
+      if (article) {
+        meta = { title: article.title, description: article.excerpt };
+      } else {
+        notFound = true;
+        meta = {
+          title: "Article Not Found",
+          description:
+            "The news article you are looking for could not be found on the Liberty Guard website.",
+        };
+      }
+    } else if (segments.length === 2) {
       const name = prettify(segments[1]);
       const parent = routeMeta[`/${segments[0]}`];
       meta = {

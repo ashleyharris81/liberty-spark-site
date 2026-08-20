@@ -66,6 +66,19 @@ const solarStaticSlugs = ["25ft-solar-static", "28ft-eco-hybrid"];
 
 const solarDrySlugs = ["12ft-solar-dry"];
 
+const newsArticleSlugs = [
+  "new-product-range",
+  "fun-fact",
+  "new-partnership-with-ajc",
+  "unit-rebrand-with-mnd-association",
+  "doncaster-knights-partnership",
+  "keepmoat-homes-continued-partnership",
+  "product-focus-24ft-ultimate-eco-plus",
+  "acquisan-acquisition",
+  "customer-feedback-highlights",
+  "a-new-year-a-greener-fleet",
+];
+
 const dynamicEntries = [
   ...mobiModelSlugs.map((slug) => ({
     path: `/mobile-welfare/${slug}`,
@@ -94,6 +107,11 @@ const dynamicEntries = [
   })),
   ...solarDrySlugs.map((slug) => ({
     path: `/solar-drying-room/${slug}`,
+    changefreq: "monthly",
+    priority: "0.6",
+  })),
+  ...newsArticleSlugs.map((slug) => ({
+    path: `/news/${slug}`,
     changefreq: "monthly",
     priority: "0.6",
   })),
