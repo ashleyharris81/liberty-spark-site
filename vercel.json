@@ -242,6 +242,86 @@
       "destination": "/news.html"
     },
     {
+      "source": "/news/new-product-range",
+      "destination": "/news/new-product-range.html"
+    },
+    {
+      "source": "/news/new-product-range/",
+      "destination": "/news/new-product-range.html"
+    },
+    {
+      "source": "/news/fun-fact",
+      "destination": "/news/fun-fact.html"
+    },
+    {
+      "source": "/news/fun-fact/",
+      "destination": "/news/fun-fact.html"
+    },
+    {
+      "source": "/news/new-partnership-with-ajc",
+      "destination": "/news/new-partnership-with-ajc.html"
+    },
+    {
+      "source": "/news/new-partnership-with-ajc/",
+      "destination": "/news/new-partnership-with-ajc.html"
+    },
+    {
+      "source": "/news/unit-rebrand-with-mnd-association",
+      "destination": "/news/unit-rebrand-with-mnd-association.html"
+    },
+    {
+      "source": "/news/unit-rebrand-with-mnd-association/",
+      "destination": "/news/unit-rebrand-with-mnd-association.html"
+    },
+    {
+      "source": "/news/doncaster-knights-partnership",
+      "destination": "/news/doncaster-knights-partnership.html"
+    },
+    {
+      "source": "/news/doncaster-knights-partnership/",
+      "destination": "/news/doncaster-knights-partnership.html"
+    },
+    {
+      "source": "/news/keepmoat-homes-continued-partnership",
+      "destination": "/news/keepmoat-homes-continued-partnership.html"
+    },
+    {
+      "source": "/news/keepmoat-homes-continued-partnership/",
+      "destination": "/news/keepmoat-homes-continued-partnership.html"
+    },
+    {
+      "source": "/news/product-focus-24ft-ultimate-eco-plus",
+      "destination": "/news/product-focus-24ft-ultimate-eco-plus.html"
+    },
+    {
+      "source": "/news/product-focus-24ft-ultimate-eco-plus/",
+      "destination": "/news/product-focus-24ft-ultimate-eco-plus.html"
+    },
+    {
+      "source": "/news/acquisan-acquisition",
+      "destination": "/news/acquisan-acquisition.html"
+    },
+    {
+      "source": "/news/acquisan-acquisition/",
+      "destination": "/news/acquisan-acquisition.html"
+    },
+    {
+      "source": "/news/customer-feedback-highlights",
+      "destination": "/news/customer-feedback-highlights.html"
+    },
+    {
+      "source": "/news/customer-feedback-highlights/",
+      "destination": "/news/customer-feedback-highlights.html"
+    },
+    {
+      "source": "/news/a-new-year-a-greener-fleet",
+      "destination": "/news/a-new-year-a-greener-fleet.html"
+    },
+    {
+      "source": "/news/a-new-year-a-greener-fleet/",
+      "destination": "/news/a-new-year-a-greener-fleet.html"
+    },
+    {
       "source": "/privacy-policy",
       "destination": "/privacy-policy.html"
     },
