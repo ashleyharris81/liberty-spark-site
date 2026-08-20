@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
+
 
 import newsAcquisan from "@/assets/news-acquisan.jpg";
 import newsCustomerFeedback from "@/assets/news-customer-feedback.png";
