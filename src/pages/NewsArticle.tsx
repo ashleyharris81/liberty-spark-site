@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import { articles, getArticleBySlug } from "@/data/newsArticles";
 
 const NewsArticle = () => {
-  const { slug } = useParams<{ slug: string }>();
   const article = slug ? getArticleBySlug(slug) : undefined;
 
   useEffect(() => {
