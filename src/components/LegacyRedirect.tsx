@@ -14,6 +14,13 @@ const LegacyRedirect = () => {
   const { pathname } = useLocation();
   const target = resolveLegacyRedirect(pathname);
 
+  // Asset targets (e.g. the old brochure URL) are real files, not app routes —
+  // hand them to the browser instead of React Router.
+  if (target?.startsWith("/__l5e/")) {
+    if (typeof window !== "undefined") window.location.replace(target);
+    return null;
+  }
+
   if (target) return <Navigate to={target} replace />;
 
   return <NotFound />;
