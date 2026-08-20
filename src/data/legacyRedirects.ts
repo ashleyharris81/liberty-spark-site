@@ -55,6 +55,16 @@ export const legacyPrefixRedirects: { prefix: string; to: string }[] = [
 ];
 
 /**
+ * Old WordPress media URLs -> the current CDN file. These are checked BEFORE
+ * `legacyIgnoredPaths` so specific uploads still resolve even though the rest
+ * of /wp-content 404s. Targets are absolute file URLs, not app routes.
+ */
+export const legacyFileRedirects: Record<string, string> = {
+  "/wp-content/uploads/2025/10/brochure.pdf":
+    "/__l5e/assets-v1/bf0ec2de-8623-4fcb-ab41-e6fab5d28227/Liberty-Brochure.pdf",
+};
+
+/**
  * WordPress infrastructure paths that must NOT be redirected — they should
  * fall through to the real 404 so we never send crawlers or bots onward.
  */
