@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { articles, getArticleBySlug } from "@/data/newsArticles";
 
 const NewsArticle = () => {
+  const { slug } = useParams<{ slug: string }>();
   const article = slug ? getArticleBySlug(slug) : undefined;
 
   useEffect(() => {
@@ -17,7 +18,7 @@ const NewsArticle = () => {
   if (!article) {
     return (
       <div className="min-h-screen bg-background">
-        <Seo title="Article Not Found | Liberty" />
+        <Seo />
         <Navbar />
         <section className="pt-32 pb-20">
           <div className="container mx-auto px-4 lg:px-8 text-center max-w-2xl">
@@ -47,10 +48,7 @@ const NewsArticle = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Seo
-        title={`${article.title} | Liberty News`}
-        description={article.excerpt}
-      />
+      <Seo />
       <NewsArticleJsonLd
         title={article.title}
         date={article.date}
