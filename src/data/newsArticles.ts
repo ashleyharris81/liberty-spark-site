@@ -18,7 +18,7 @@ export type NewsArticle = {
   body: string;
 };
 
-export const articles: NewsArticle[] = [
+const rawArticles: NewsArticle[] = [
   {
     slug: "new-product-range",
     image: newsSolarUpgrade,
@@ -110,6 +110,16 @@ export const articles: NewsArticle[] = [
     body: "Liberty kicks off the year with a major investment in expanding its solar welfare fleet, doubling down on our sustainability commitment.\n\nThe investment adds further solar mobile and solar static units across our depot network, replacing older diesel-dependent kit and cutting fuel deliveries, emissions and noise on the sites we supply.\n\nTalk to us about switching your next project over to solar welfare.",
   },
 ];
+
+const parseDate = (date: string) => {
+  const parsed = Date.parse(`1 ${date}`);
+  return Number.isNaN(parsed) ? 0 : parsed;
+};
+
+// Newest first
+export const articles: NewsArticle[] = [...rawArticles].sort(
+  (a, b) => parseDate(b.date) - parseDate(a.date)
+);
 
 export const getArticleBySlug = (slug: string) =>
   articles.find((a) => a.slug === slug);
