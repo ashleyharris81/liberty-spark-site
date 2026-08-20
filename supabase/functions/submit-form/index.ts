@@ -133,7 +133,7 @@ Deno.serve(async (req) => {
       );
 
 
-      return json({ ok: true, notified: notified.sent, notifyError: notified.detail });
+      return json({ ok: true, notified: notified.sent });
     }
 
     const d = parsed.data;
@@ -155,7 +155,7 @@ Deno.serve(async (req) => {
 
 
 
-    return json({ ok: true, notified: notified.sent, notifyError: notified.detail });
+    return json({ ok: true, notified: notified.sent });
   } catch (e) {
     console.error('submit-form error:', e instanceof Error ? e.message : e);
     return json({ error: 'Unexpected error' }, 500);
