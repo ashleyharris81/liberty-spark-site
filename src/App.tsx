@@ -20,6 +20,7 @@ import SolarProduct from "./pages/SolarProduct";
 import PortableAccommodation from "./pages/PortableAccommodation";
 import ModularBuildings from "./pages/ModularBuildings";
 import News from "./pages/News";
+import NewsArticle from "./pages/NewsArticle";
 import AboutPage from "./pages/AboutPage";
 import NewAccount from "./pages/NewAccount";
 import ContactPage from "./pages/ContactPage";
@@ -67,6 +68,7 @@ const App = () => (
           <Route path="/portable-accommodation" element={<PortableAccommodation />} />
           <Route path="/modular-buildings" element={<ModularBuildings />} />
           <Route path="/news" element={<News />} />
+          <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/new-account" element={<NewAccount />} />
           <Route path="/contact" element={<ContactPage />} />
