@@ -1,0 +1,1 @@
+delete from public.contact_submissions where source = 'diagnostic' and email = 'noreply@example.com';
