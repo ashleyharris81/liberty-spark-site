@@ -130,45 +130,75 @@ const News = () => {
               return (
               <article
                 key={article.title}
-                className={`group bg-card rounded-xl overflow-hidden border border-border transition-all duration-300 flex flex-col shadow-sm hover:shadow-lg ${
-                  isOpen ? "border-secondary/40 md:col-span-2 lg:col-span-3" : "hover:border-secondary/40 hover:-translate-y-2"
+                className={`group bg-card rounded-xl overflow-hidden border border-border transition-all duration-300 shadow-sm hover:shadow-lg ${
+                  isOpen
+                    ? "border-secondary/40 md:col-span-2 lg:col-span-3 shadow-xl"
+                    : "flex flex-col hover:border-secondary/40 hover:-translate-y-2"
                 }`}
               >
-                <div className={isOpen ? "aspect-[21/9] overflow-hidden" : "aspect-video overflow-hidden"}>
-                  <img
-                    src={article.image}
-                    alt={`${article.title} — Liberty Guard news`}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="text-xs uppercase tracking-wider text-secondary font-heading font-semibold mb-3">
-                    {article.date}
-                  </div>
-                  <h2 className="font-heading text-xl font-bold text-foreground uppercase tracking-wide mb-3 leading-snug">
-                    {article.title}
-                  </h2>
-                  {isOpen ? (
-                    <div className="text-muted-foreground text-sm leading-relaxed flex-1 space-y-4 max-w-3xl">
-                      {article.body.split("\n\n").map((para) => (
-                        <p key={para.slice(0, 24)}>{para}</p>
-                      ))}
+                {isOpen ? (
+                  <div className="flex flex-col md:flex-row">
+                    <div className="md:w-2/5 aspect-[4/3] md:aspect-auto overflow-hidden">
+                      <img
+                        src={article.image}
+                        alt={`${article.title} — Liberty Guard news`}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
                     </div>
-                  ) : (
-                    <p className="text-muted-foreground text-sm leading-relaxed flex-1">
-                      {article.excerpt}
-                    </p>
-                  )}
-                  <button
-                    type="button"
-                    onClick={() => setOpenTitle(isOpen ? null : article.title)}
-                    aria-expanded={isOpen}
-                    className="self-start mt-4 text-secondary font-heading font-semibold text-sm uppercase tracking-wider hover:underline"
-                  >
-                    {isOpen ? "Show Less ←" : "Read More →"}
-                  </button>
-                </div>
+                    <div className="md:w-3/5 p-6 md:p-8 lg:p-10 flex flex-col flex-1">
+                      <div className="text-xs uppercase tracking-wider text-secondary font-heading font-semibold mb-3">
+                        {article.date}
+                      </div>
+                      <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground uppercase tracking-wide mb-4 leading-snug">
+                        {article.title}
+                      </h2>
+                      <div className="text-muted-foreground text-sm md:text-base leading-relaxed flex-1 space-y-4">
+                        {article.body.split("\n\n").map((para) => (
+                          <p key={para.slice(0, 24)}>{para}</p>
+                        ))}
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setOpenTitle(null)}
+                        aria-expanded={isOpen}
+                        className="self-start mt-6 text-secondary font-heading font-semibold text-sm uppercase tracking-wider hover:underline"
+                      >
+                        Show Less ←
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <div className="aspect-video overflow-hidden">
+                      <img
+                        src={article.image}
+                        alt={`${article.title} — Liberty Guard news`}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <div className="text-xs uppercase tracking-wider text-secondary font-heading font-semibold mb-3">
+                        {article.date}
+                      </div>
+                      <h2 className="font-heading text-xl font-bold text-foreground uppercase tracking-wide mb-3 leading-snug">
+                        {article.title}
+                      </h2>
+                      <p className="text-muted-foreground text-sm leading-relaxed flex-1">
+                        {article.excerpt}
+                      </p>
+                      <button
+                        type="button"
+                        onClick={() => setOpenTitle(article.title)}
+                        aria-expanded={isOpen}
+                        className="self-start mt-4 text-secondary font-heading font-semibold text-sm uppercase tracking-wider hover:underline"
+                      >
+                        Read More →
+                      </button>
+                    </div>
+                  </>
+                )}
               </article>
               );
             })}
