@@ -39,11 +39,13 @@ const rows = (entries: [string, string][]) =>
     )
     .join('');
 
-async function notify(subject: string, html: string, replyTo?: string) {
+type NotifyResult = { sent: boolean; detail?: string };
+
+async function notify(subject: string, html: string, replyTo?: string): Promise<NotifyResult> {
   const apiKey = Deno.env.get('SENDGRID_API_KEY');
   if (!apiKey) {
     console.error('SENDGRID_API_KEY is not configured — skipping notification email');
-    return;
+    return { sent: false, detail: 'SENDGRID_API_KEY not configured' };
   }
 
   try {
@@ -67,9 +69,14 @@ async function notify(subject: string, html: string, replyTo?: string) {
     if (!response.ok) {
       const body = await response.text();
       console.error(`SendGrid request failed [${response.status}]: ${body}`);
+      return { sent: false, detail: `SendGrid ${response.status}: ${body}` };
     }
+
+    return { sent: true };
   } catch (e) {
-    console.error('SendGrid request error:', e instanceof Error ? e.message : e);
+    const detail = e instanceof Error ? e.message : String(e);
+    console.error('SendGrid request error:', detail);
+    return { sent: false, detail };
   }
 }
 
@@ -113,7 +120,7 @@ Deno.serve(async (req) => {
         return json({ error: 'Could not save your enquiry' }, 500);
       }
 
-      await notify(
+      const notified = await notify(
         `New website enquiry from ${d.firstName} ${d.lastName}`.trim(),
         `<table>${rows([
           ['Name', `${d.firstName} ${d.lastName}`.trim()],
@@ -126,7 +133,7 @@ Deno.serve(async (req) => {
       );
 
 
-      return json({ ok: true });
+      return json({ ok: true, notified: notified.sent, notifyError: notified.detail });
     }
 
     const d = parsed.data;
@@ -140,7 +147,7 @@ Deno.serve(async (req) => {
       return json({ error: 'Could not save your application' }, 500);
     }
 
-    await notify(
+    const notified = await notify(
       `New account application — ${d.companyName}`,
       `<table>${rows(Object.entries(d.details))}</table>`,
       d.email,
@@ -148,7 +155,7 @@ Deno.serve(async (req) => {
 
 
 
-    return json({ ok: true });
+    return json({ ok: true, notified: notified.sent, notifyError: notified.detail });
   } catch (e) {
     console.error('submit-form error:', e instanceof Error ? e.message : e);
     return json({ error: 'Unexpected error' }, 500);
