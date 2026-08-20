@@ -36,7 +36,7 @@ const features = [
   { icon: MapPin, title: "UK Coverage", text: "Nationwide reach across mainland UK" },
   { icon: Truck, title: "1,500+ Fleet", text: "One of the largest welfare fleets in the country" },
   { icon: Wrench, title: "20 Depots", text: "Strategically located distribution depots" },
-  { icon: Clock, title: "Breakdown Support", text: "Responsive breakdown assistance during working hours" },
+  { icon: Clock, title: "Breakdown Support", text: "Responsive breakdown assistance across our UK fleet" },
   { icon: ShieldCheck, title: "Toilet Servicing", text: "Scheduled servicing available on every unit" },
   { icon: Truck, title: "24-Hour Turnaround", text: "Fast delivery and collection" },
   { icon: Clock, title: "Short & Long Term", text: "Hire periods to suit any project" },
