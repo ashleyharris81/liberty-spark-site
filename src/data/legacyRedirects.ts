@@ -94,6 +94,8 @@ const normalise = (pathname: string) => {
 export const resolveLegacyRedirect = (pathname: string): string | null => {
   const path = normalise(pathname);
 
+  if (legacyFileRedirects[path]) return legacyFileRedirects[path];
+
   if (legacyIgnoredPaths.some((p) => path === p || path.startsWith(`${p}/`))) {
     return null;
   }
