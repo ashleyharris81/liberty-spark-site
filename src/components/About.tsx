@@ -4,7 +4,7 @@ const stats = [
   { icon: Clock, value: "40+", label: "Years Experience" },
   { icon: Building2, value: "1981", label: "Founded" },
   { icon: Users, value: "UK Wide", label: "Coverage" },
-  { icon: Wrench, value: "24/7", label: "Support" },
+  { icon: Wrench, value: "UK", label: "Support Team" },
 ];
 
 const About = () => {

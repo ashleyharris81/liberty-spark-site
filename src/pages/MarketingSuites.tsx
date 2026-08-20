@@ -58,7 +58,7 @@ const features = [
   {
     title: "AFTERCARE",
     description:
-      "24/7 support with a responsive service team, keeping your suite running day in, day out.",
+      "Aftercare from a responsive service team, keeping your suite running day in, day out.",
     icon: LifeBuoy,
   },
   {
