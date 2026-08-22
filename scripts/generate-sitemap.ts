@@ -4,14 +4,11 @@ import { resolve } from "path";
 // step (scripts/prerender.mjs) can never drift apart.
 import { BASE_URL, allEntries } from "./routes.mjs";
 
-const LASTMOD = new Date().toISOString().slice(0, 10);
-
 function generateSitemap(entries: { path: string; changefreq?: string; priority?: string }[]) {
   const urls = entries.map((e) => {
     const lines = [
       `  <url>`,
       `    <loc>${BASE_URL}${e.path}</loc>`,
-      `    <lastmod>${LASTMOD}</lastmod>`,
       e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
       e.priority ? `    <priority>${e.priority}</priority>` : null,
       `  </url>`,
