@@ -1,6 +1,21 @@
 {
   "redirects": [
     {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/wp-sitemap.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap-index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
+    },
+    {
       "source": "/wp-content/uploads/2025/10/Brochure.pdf",
       "destination": "/__l5e/assets-v1/bf0ec2de-8623-4fcb-ab41-e6fab5d28227/Liberty-Brochure.pdf",
       "permanent": true
