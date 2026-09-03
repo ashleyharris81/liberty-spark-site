@@ -247,7 +247,7 @@ const _models_unordered: StaticModel[] = [
           "Seating for up to model capacity",
           "Notice boards",
           "Coat hooks",
-          "Water cooler",
+          
           "Fan heaters",
         ],
       },
