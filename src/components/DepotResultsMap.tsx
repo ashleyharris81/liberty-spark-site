@@ -12,6 +12,8 @@ const API_KEY = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY a
 const CHANNEL = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_TRACKING_ID as string | undefined;
 
 let loaderPromise: Promise<void> | null = null;
+let authFailed = false;
+const authListeners = new Set<() => void>();
 
 const loadMaps = () => {
   if (typeof window === "undefined") return Promise.reject(new Error("no window"));
@@ -21,6 +23,10 @@ const loadMaps = () => {
 
   loaderPromise = new Promise<void>((resolve, reject) => {
     (window as any).__initDepotMap = () => resolve();
+    (window as any).gm_authFailure = () => {
+      authFailed = true;
+      authListeners.forEach((fn) => fn());
+    };
     const script = document.createElement("script");
     const channel = CHANNEL ? `&channel=${encodeURIComponent(CHANNEL)}` : "";
     script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&loading=async&callback=__initDepotMap${channel}`;
