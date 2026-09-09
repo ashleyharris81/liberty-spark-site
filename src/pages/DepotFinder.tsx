@@ -56,11 +56,26 @@ const DepotFinder = () => {
         },
       });
 
-      if (fnError) throw fnError;
+      if (fnError) {
+        const res = (fnError as { context?: Response }).context;
+        if (res && typeof res.json === "function") {
+          try {
+            const body = await res.clone().json();
+            if (body?.error) {
+              setError(String(body.error));
+              return;
+            }
+          } catch {
+            /* fall through to the generic message */
+          }
+        }
+        throw fnError;
+      }
       if (data?.error) {
         setError(String(data.error));
         return;
       }
+
       setOrigin(data?.origin?.postcode ?? value);
       if (typeof data?.origin?.lat === "number" && typeof data?.origin?.lng === "number") {
         setOriginCoords({ lat: data.origin.lat, lng: data.origin.lng });
