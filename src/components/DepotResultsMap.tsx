@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 type MapPoint = {
   lat: number;
@@ -18,26 +19,56 @@ let loaderPromise: Promise<void> | null = null;
 let authFailed = false;
 const authListeners = new Set<() => void>();
 
+/**
+ * Preview/editor addresses use the shared Lovable key; the live site uses the
+ * client's own Google key (restricted to libertyguard.co.uk).
+ */
+const isPreviewHost = () => {
+  const host = window.location.hostname;
+  return (
+    host === "localhost" ||
+    host === "127.0.0.1" ||
+    host.endsWith(".lovable.app") ||
+    host.endsWith(".lovableproject.com")
+  );
+};
+
+const resolveKey = async () => {
+  if (isPreviewHost() && API_KEY) return API_KEY;
+  try {
+    const { data } = await supabase.functions.invoke("maps-key");
+    const key = (data as { key?: string } | null)?.key;
+    if (key) return key;
+  } catch {
+    // fall through to the preview key
+  }
+  return API_KEY;
+};
+
 const loadMaps = () => {
   if (typeof window === "undefined") return Promise.reject(new Error("no window"));
   if ((window as any).google?.maps?.Map) return Promise.resolve();
   if (loaderPromise) return loaderPromise;
-  if (!API_KEY) return Promise.reject(new Error("missing key"));
 
-  loaderPromise = new Promise<void>((resolve, reject) => {
-    (window as any).__initDepotMap = () => resolve();
-    (window as any).gm_authFailure = () => {
-      authFailed = true;
-      authListeners.forEach((fn) => fn());
-      reject(new Error("Google Maps auth failure"));
-    };
-    const script = document.createElement("script");
-    const channel = CHANNEL ? `&channel=${encodeURIComponent(CHANNEL)}` : "";
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&loading=async&libraries=geometry&callback=__initDepotMap${channel}`;
-    script.async = true;
-    script.onerror = () => reject(new Error("Google Maps failed to load"));
-    document.head.appendChild(script);
-  });
+  loaderPromise = (async () => {
+    const key = await resolveKey();
+    if (!key) throw new Error("missing key");
+
+    await new Promise<void>((resolve, reject) => {
+      (window as any).__initDepotMap = () => resolve();
+      (window as any).gm_authFailure = () => {
+        authFailed = true;
+        authListeners.forEach((fn) => fn());
+        reject(new Error("Google Maps auth failure"));
+      };
+      const script = document.createElement("script");
+      const channel = CHANNEL ? `&channel=${encodeURIComponent(CHANNEL)}` : "";
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${key}&loading=async&libraries=geometry&callback=__initDepotMap${channel}`;
+      script.async = true;
+      script.onerror = () => reject(new Error("Google Maps failed to load"));
+      document.head.appendChild(script);
+    });
+  })();
 
   return loaderPromise;
 };
@@ -159,7 +190,7 @@ const DepotResultsMap = ({ points }: { points: MapPoint[] }) => {
     };
   }, [points]);
 
-  if (failed || !API_KEY) return null;
+  if (failed) return null;
 
   return (
     <div
