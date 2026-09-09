@@ -1,9 +1,12 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
+import { createClient } from 'npm:@supabase/supabase-js@2';
 import { z } from 'npm:zod@3.23.8';
 
 const GATEWAY_URL = 'https://connector-gateway.lovable.dev/google_maps';
 const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
 const GOOGLE_MAPS_API_KEY = Deno.env.get('GOOGLE_MAPS_API_KEY');
+const DAILY_LOOKUP_CAP = 100;
+
 
 const depotSchema = z.object({
   code: z.string().trim().min(1).max(20),
