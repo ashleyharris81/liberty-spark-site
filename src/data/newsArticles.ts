@@ -21,6 +21,15 @@ export type NewsArticle = {
 
 const rawArticles: NewsArticle[] = [
   {
+    slug: "innovation-day",
+    image: newsInnovationDay,
+    date: "September 2026",
+    title: "Innovation Day",
+    excerpt:
+      "It was a real pleasure over the summer to host this innovation day for some of our suppliers — a hands-on showcase of our complete product range, with on-site brewery and homemade pizzas thrown in.",
+    body: "It was a real pleasure over the summer to host this innovation day for some of our suppliers. This event was an excellent opportunity for us to showcase our complete product range and get to know our trusted suppliers a little better — we feel the personal approach is always the better option when we're talking welfare. Plus, I think the on-site brewery and homemade pizzas make it much easier to get to know everyone.\n\nAnother great prospect with this style of event is our suppliers get to experience a hands-on approach with each product: they can test, trial and use the product just as their customer would. We feel this is the best way to understand each individual product and grasp all the practical features. This hands-on approach is particularly helpful with our solar range too, as it's much easier to learn about the energy saving benefits and rainwater harvesting features first hand.\n\nIt's safe to say, the whole day was a great success and we're truly eager to book in the next one.",
+  },
+  {
     slug: "new-product-range",
     image: newsSolarUpgrade,
     date: "June 2026",
