@@ -6,10 +6,13 @@ type MapPoint = {
   label: string;
   title: string;
   isOrigin?: boolean;
+  polyline?: string | null;
 };
 
 const API_KEY = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY as string | undefined;
 const CHANNEL = import.meta.env.VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_TRACKING_ID as string | undefined;
+
+const ROUTE_COLOURS = ["#0f766e", "#f59e0b", "#6366f1"];
 
 let loaderPromise: Promise<void> | null = null;
 let authFailed = false;
@@ -26,10 +29,11 @@ const loadMaps = () => {
     (window as any).gm_authFailure = () => {
       authFailed = true;
       authListeners.forEach((fn) => fn());
+      reject(new Error("Google Maps auth failure"));
     };
     const script = document.createElement("script");
     const channel = CHANNEL ? `&channel=${encodeURIComponent(CHANNEL)}` : "";
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&loading=async&callback=__initDepotMap${channel}`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&loading=async&libraries=geometry&callback=__initDepotMap${channel}`;
     script.async = true;
     script.onerror = () => reject(new Error("Google Maps failed to load"));
     document.head.appendChild(script);
@@ -38,9 +42,50 @@ const loadMaps = () => {
   return loaderPromise;
 };
 
+/** Fallback decoder so route lines still draw if the geometry library is unavailable. */
+const decodePolyline = (encoded: string) => {
+  const path: { lat: number; lng: number }[] = [];
+  let index = 0;
+  let lat = 0;
+  let lng = 0;
+
+  while (index < encoded.length) {
+    let result = 0;
+    let shift = 0;
+    let byte: number;
+    do {
+      byte = encoded.charCodeAt(index++) - 63;
+      result |= (byte & 0x1f) << shift;
+      shift += 5;
+    } while (byte >= 0x20);
+    lat += result & 1 ? ~(result >> 1) : result >> 1;
+
+    result = 0;
+    shift = 0;
+    do {
+      byte = encoded.charCodeAt(index++) - 63;
+      result |= (byte & 0x1f) << shift;
+      shift += 5;
+    } while (byte >= 0x20);
+    lng += result & 1 ? ~(result >> 1) : result >> 1;
+
+    path.push({ lat: lat / 1e5, lng: lng / 1e5 });
+  }
+
+  return path;
+};
+
 const DepotResultsMap = ({ points }: { points: MapPoint[] }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [failed, setFailed] = useState(false);
+  const [failed, setFailed] = useState(authFailed);
+
+  useEffect(() => {
+    const listener = () => setFailed(true);
+    authListeners.add(listener);
+    return () => {
+      authListeners.delete(listener);
+    };
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -58,9 +103,27 @@ const DepotResultsMap = ({ points }: { points: MapPoint[] }) => {
 
         const bounds = new google.maps.LatLngBounds();
         const info = new google.maps.InfoWindow();
+        let routeIndex = 0;
 
         points.forEach((point) => {
           bounds.extend({ lat: point.lat, lng: point.lng });
+
+          if (point.polyline) {
+            const decoder = google.maps.geometry?.encoding?.decodePath;
+            const path = decoder
+              ? decoder(point.polyline)
+              : decodePolyline(point.polyline);
+            new google.maps.Polyline({
+              path,
+              map,
+              strokeColor: ROUTE_COLOURS[routeIndex % ROUTE_COLOURS.length],
+              strokeOpacity: 0.85,
+              strokeWeight: 4,
+            });
+            (path as any[]).forEach((position) => bounds.extend(position));
+            routeIndex += 1;
+          }
+
           const marker = new google.maps.Marker({
             position: { lat: point.lat, lng: point.lng },
             map,
@@ -102,7 +165,7 @@ const DepotResultsMap = ({ points }: { points: MapPoint[] }) => {
     <div
       ref={containerRef}
       className="mt-8 h-[360px] md:h-[440px] w-full rounded-xl border border-border overflow-hidden bg-muted"
-      aria-label="Map showing the entered postcode and nearest depots"
+      aria-label="Map showing the entered postcode, nearest depots and driving routes"
     />
   );
 };

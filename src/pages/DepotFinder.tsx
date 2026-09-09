@@ -14,6 +14,7 @@ type Result = {
   roadMiles: number | null;
   driveMinutes: number | null;
   straightMiles: number;
+  polyline?: string | null;
 };
 
 const POSTCODE_RE = /^[A-Za-z]{1,2}\d[A-Za-z\d]?\s*\d[A-Za-z]{2}$/;
@@ -183,6 +184,7 @@ const DepotFinder = () => {
                           title: `${index + 1}. ${r.name} — ${
                             r.roadMiles !== null ? `${r.roadMiles} miles` : `${r.straightMiles} miles direct`
                           }`,
+                          polyline: r.polyline ?? null,
                         },
                       ];
                     }),
