@@ -8,6 +8,7 @@ import newsSolarUpgrade from "@/assets/news-solar-upgrade.jpg";
 import newsFunFact from "@/assets/news-fun-fact.jpg";
 import newsAjc from "@/assets/news-ajc.jpeg";
 import newsMnd from "@/assets/news-mnd.png";
+import newsInnovationDay from "@/assets/news-innovation-day.jpg";
 
 export type NewsArticle = {
   slug: string;
