@@ -9,6 +9,13 @@ import newsFunFact from "@/assets/news-fun-fact.jpg";
 import newsAjc from "@/assets/news-ajc.jpeg";
 import newsMnd from "@/assets/news-mnd.png";
 import newsInnovationDay from "@/assets/news-innovation-day.jpg";
+import newsCustomerFeedbackTeam from "@/assets/news-customer-feedback-team.jpg.asset.json";
+import newsSalesSuites from "@/assets/news-sales-suites.jpg.asset.json";
+import newsGoSolar from "@/assets/news-go-solar.jpg.asset.json";
+import newsHeatwave from "@/assets/news-heatwave.jpg.asset.json";
+import newsMndaCause from "@/assets/news-mnda-cause.jpg.asset.json";
+import newsRainwater from "@/assets/news-rainwater-harvesting.jpg.asset.json";
+
 
 export type NewsArticle = {
   slug: string;
