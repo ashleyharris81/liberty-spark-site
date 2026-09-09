@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { depots } from "@/data/depots";
 import { depotDisplayLocation } from "@/data/depotDisplay";
 import { supabase } from "@/integrations/supabase/client";
+import DepotResultsMap from "@/components/DepotResultsMap";
 
 type Result = {
   code: string;
@@ -22,6 +23,7 @@ const DepotFinder = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [origin, setOrigin] = useState<string | null>(null);
+  const [originCoords, setOriginCoords] = useState<{ lat: number; lng: number } | null>(null);
   const [results, setResults] = useState<Result[] | null>(null);
 
   const handleSubmit = async (event: React.FormEvent) => {
@@ -37,6 +39,7 @@ const DepotFinder = () => {
     setError(null);
     setResults(null);
     setOrigin(null);
+    setOriginCoords(null);
 
     try {
       const { data, error: fnError } = await supabase.functions.invoke("depot-finder", {
@@ -58,6 +61,9 @@ const DepotFinder = () => {
         return;
       }
       setOrigin(data?.origin?.postcode ?? value);
+      if (typeof data?.origin?.lat === "number" && typeof data?.origin?.lng === "number") {
+        setOriginCoords({ lat: data.origin.lat, lng: data.origin.lng });
+      }
       setResults((data?.results ?? []) as Result[]);
     } catch (err) {
       console.error("depot-finder failed", err);
@@ -156,6 +162,33 @@ const DepotFinder = () => {
                   </li>
                 ))}
               </ol>
+              {results.length > 0 && originCoords && (
+                <DepotResultsMap
+                  points={[
+                    {
+                      lat: originCoords.lat,
+                      lng: originCoords.lng,
+                      label: "",
+                      title: origin ?? "Your postcode",
+                      isOrigin: true,
+                    },
+                    ...results.flatMap((r, index) => {
+                      const depot = depots.find((d) => d.code === r.code);
+                      if (!depot) return [];
+                      return [
+                        {
+                          lat: depot.lat,
+                          lng: depot.lng,
+                          label: String(index + 1),
+                          title: `${index + 1}. ${r.name} — ${
+                            r.roadMiles !== null ? `${r.roadMiles} miles` : `${r.straightMiles} miles direct`
+                          }`,
+                        },
+                      ];
+                    }),
+                  ]}
+                />
+              )}
               {results.length > 0 && (
                 <p className="mt-6 text-xs text-muted-foreground">
                   Distances are by road from the centre of the postcode entered and are indicative only.
