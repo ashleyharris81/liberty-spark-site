@@ -71,6 +71,21 @@ export type Database = {
         }
         Relationships: []
       }
+      depot_lookup_usage: {
+        Row: {
+          day: string
+          lookups: number
+        }
+        Insert: {
+          day?: string
+          lookups?: number
+        }
+        Update: {
+          day?: string
+          lookups?: number
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
@@ -97,6 +112,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      consume_depot_lookup: { Args: { _max: number }; Returns: boolean }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
