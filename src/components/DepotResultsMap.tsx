@@ -176,7 +176,7 @@ const DepotResultsMap = ({ points }: { points: MapPoint[] }) => {
     };
   }, [points]);
 
-  if (failed || !API_KEY) return null;
+  if (failed) return null;
 
   return (
     <div
