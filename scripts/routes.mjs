@@ -67,6 +67,7 @@ const solarStaticSlugs = ["25ft-solar-static", "28ft-eco-hybrid"];
 const solarDrySlugs = ["12ft-solar-dry"];
 
 const newsArticleSlugs = [
+  "innovation-day",
   "new-product-range",
   "fun-fact",
   "new-partnership-with-ajc",
