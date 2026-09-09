@@ -78,7 +78,31 @@ Deno.serve(async (req) => {
     }
     const { postcode, depots } = parsed.data;
 
+    // 0. Enforce the site-wide daily lookup cap
+    const admin = createClient(
+      Deno.env.get('SUPABASE_URL') ?? '',
+      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '',
+      { auth: { persistSession: false } },
+    );
+    const { data: allowed, error: capError } = await admin.rpc('consume_depot_lookup', {
+      _max: DAILY_LOOKUP_CAP,
+    });
+    if (capError) {
+      console.error('Daily cap check failed', capError);
+      return json({ error: 'Something went wrong looking up that postcode.' }, 500);
+    }
+    if (allowed !== true) {
+      return json(
+        {
+          error:
+            'The depot finder has reached its daily limit of 100 searches. Please try again tomorrow.',
+        },
+        429,
+      );
+    }
+
     // 1. Geocode the entered postcode (UK only)
+
     const geoRes = await fetch(
       `${GATEWAY_URL}/maps/api/geocode/json?components=country:GB|postal_code:${encodeURIComponent(
         postcode,
