@@ -19,8 +19,22 @@ let loaderPromise: Promise<void> | null = null;
 let authFailed = false;
 const authListeners = new Set<() => void>();
 
-/** The site's own Google key (works on the live domain); falls back to the preview key. */
+/**
+ * Preview/editor addresses use the shared Lovable key; the live site uses the
+ * client's own Google key (restricted to libertyguard.co.uk).
+ */
+const isPreviewHost = () => {
+  const host = window.location.hostname;
+  return (
+    host === "localhost" ||
+    host === "127.0.0.1" ||
+    host.endsWith(".lovable.app") ||
+    host.endsWith(".lovableproject.com")
+  );
+};
+
 const resolveKey = async () => {
+  if (isPreviewHost() && API_KEY) return API_KEY;
   try {
     const { data } = await supabase.functions.invoke("maps-key");
     const key = (data as { key?: string } | null)?.key;
