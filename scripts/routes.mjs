@@ -67,7 +67,14 @@ const solarStaticSlugs = ["25ft-solar-static", "28ft-eco-hybrid"];
 const solarDrySlugs = ["12ft-solar-dry"];
 
 const newsArticleSlugs = [
+  "customer-feedback",
+  "sales-suites-made-for-you",
+  "go-solar-without-compromise",
+  "heatwave-solar-welfare",
+  "mnd-association-a-worthy-cause",
+  "yes-our-cabins-harvest-rainwater",
   "innovation-day",
+
   "new-product-range",
   "fun-fact",
   "new-partnership-with-ajc",
