@@ -153,9 +153,45 @@ Deno.serve(async (req) => {
       })
       .slice(0, 3);
 
+    // 3. Fetch the driving route line for each of the three nearest depots
+    const withRoutes = await Promise.all(
+      results.map(async (result) => {
+        const depot = depots.find((d) => d.code === result.code);
+        if (!depot) return { ...result, polyline: null as string | null };
+        try {
+          const routeRes = await fetch(`${GATEWAY_URL}/routes/directions/v2:computeRoutes`, {
+            method: 'POST',
+            headers: gatewayHeaders({
+              'X-Goog-FieldMask': 'routes.polyline.encodedPolyline',
+            }),
+            body: JSON.stringify({
+              origin: { location: { latLng: { latitude: origin.lat, longitude: origin.lng } } },
+              destination: {
+                location: { latLng: { latitude: depot.lat, longitude: depot.lng } },
+              },
+              travelMode: 'DRIVE',
+              polylineQuality: 'OVERVIEW',
+            }),
+          });
+          if (!routeRes.ok) {
+            console.error(`Route line failed [${routeRes.status}]: ${await routeRes.text()}`);
+            return { ...result, polyline: null as string | null };
+          }
+          const routeBody = await routeRes.json();
+          return {
+            ...result,
+            polyline: (routeBody?.routes?.[0]?.polyline?.encodedPolyline ?? null) as string | null,
+          };
+        } catch (routeError) {
+          console.error('Route line error', routeError);
+          return { ...result, polyline: null as string | null };
+        }
+      }),
+    );
+
     return json({
       origin: { postcode: first.formatted_address ?? postcode, ...origin },
-      results,
+      results: withRoutes,
     });
   } catch (error) {
     console.error('depot-finder error', error);
