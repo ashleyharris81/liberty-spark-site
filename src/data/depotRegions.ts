@@ -31,8 +31,8 @@ const regionByCode: Record<string, Region> = {
   "5404": "South West", // Bristol
   "5402": "South West", // Bournemouth
   "5413": "South West", // Plymouth
-  "5421": "South East", // Oxford (Weston)
-  "5411": "South East", // Oxford (Waterstock)
+  "5421": "South East", // Oxford (Banbury)
+
   "5407": "South East", // Dartford
   "5414": "South East", // Reading (Hurst)
   "5414b": "South East", // Reading (Wokingham)
