@@ -206,6 +206,36 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.libertyguard.co.uk/news/customer-feedback</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.libertyguard.co.uk/news/sales-suites-made-for-you</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.libertyguard.co.uk/news/go-solar-without-compromise</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.libertyguard.co.uk/news/heatwave-solar-welfare</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.libertyguard.co.uk/news/mnd-association-a-worthy-cause</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.libertyguard.co.uk/news/yes-our-cabins-harvest-rainwater</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.libertyguard.co.uk/news/innovation-day</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
