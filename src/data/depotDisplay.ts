@@ -28,7 +28,7 @@ const publicLocation: Record<string, string> = {
   "5407": "Dartford (DA2)",
   "5408": "Falkirk, Scotland (FK4)",
   "5410": "Darlington (DL2)",
-  "5411": "Oxford, Oxfordshire (OX33)",
+  "5411": "Banbury, Oxfordshire (OX17)",
   "5413": "Plymouth / Saltash (PL12)",
   "5414": "Reading, Berkshire (RG10)",
   "5414b": "Wokingham, Berkshire (RG40)",
@@ -37,7 +37,7 @@ const publicLocation: Record<string, string> = {
   "5418": "Northampton / Towcester (NN12)",
   "5419": "Nuneaton (CV10)",
   "5420": "Southend-on-Sea / Benfleet (SS7)",
-  "5421": "Oxford, Oxfordshire (OX25)",
+  "5421": "Banbury, Oxfordshire (OX17)",
   "5422": "Aberdare, Cardiff (CF44)",
 };
 
@@ -48,14 +48,15 @@ export const depotDisplayLocation = (code: string, name: string) =>
 export type PublicDepot = { code: string; name: string; location: string };
 
 /**
- * At town level the two Reading and the two Oxford yards collapse into one
- * visible row each, so the public list merges them.
+ * At town level the two Reading yards collapse into one visible row, so the
+ * public list merges them. Oxford is now a single Banbury yard.
  */
 const MERGED: Record<string, PublicDepot> = {
   "5414": { code: "5414", name: "Reading", location: "Reading & Wokingham, Berkshire" },
-  "5421": { code: "5421", name: "Oxford", location: "Oxford, Oxfordshire" },
+  "5421": { code: "5421", name: "Oxford", location: "Banbury, Oxfordshire" },
 };
-const DROPPED = new Set(["5414b", "5411"]);
+const DROPPED = new Set(["5414b"]);
+
 
 export const publicDepots: PublicDepot[] = depots
   .filter((d) => !DROPPED.has(d.code))

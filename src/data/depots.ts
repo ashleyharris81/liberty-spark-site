@@ -38,15 +38,16 @@ export const depots: Depot[] = [
   },
   {
     code: "5421",
-    name: "Oxford (Weston)",
-    address: "A34 Southbound, Weston-on-the-Green, OX25 3QQ",
-    postcode: "OX25 3QQ",
-    lat: 51.850014,
-    lng: -1.229493,
+    name: "Oxford (Banbury)",
+    address: "Cherwell Valley Business Park, Banbury, OX17 3AS",
+    postcode: "OX17 3AS",
+    lat: 52.034289,
+    lng: -1.292835,
     contact: "Jamie",
     phone: "07824 790176",
     email: "jamie@wellstransportservices.com",
   },
+
   {
     code: "5404",
     name: "Bristol",
@@ -116,17 +117,7 @@ export const depots: Depot[] = [
     email: "transport@wastetankservices.co.uk",
   },
   {
-    code: "5411",
-    name: "Oxford (Waterstock)",
-    address:
-      "Top Yard, Holloway Farm, Church Hill, Waterstock, Oxford, OX33 1LJ",
-    postcode: "OX33 1LJ",
-    lat: 51.738038,
-    lng: -1.097191,
-    phone: "01207 260714",
-    email: "transport@wastetankservices.co.uk",
-  },
-  {
+
     code: "5416",
     name: "Warrington (Chester)",
     address: "Kelsall Rd, Tarvin Sands, Chester, CH3 8NR",
