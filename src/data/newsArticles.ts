@@ -30,6 +30,15 @@ export type NewsArticle = {
 
 const rawArticles: NewsArticle[] = [
   {
+    slug: "inclusive-toilet-facilities",
+    image: newsInclusiveToilets.url,
+    date: "September 2026",
+    title: "Inclusive Toilet Facilities",
+    excerpt:
+      "Providing female-friendly toilet provisions on-site shouldn't be a difficult task — it should be the norm. Our Solar Loo range gives every worker a private, clean and accessible facility.",
+    body: "Providing female friendly toilet provisions on-site should not be a difficult task, it should be the norm!\n\nIt's becoming increasingly clear within the construction industry that employers are not providing sufficient toilet facilities for female workers. At Liberty, we feel in 2026 this should not be a problem, it shouldn't even be a topic of discussion, health and safety compliant toilet facilities should be provided for all workers irrespective of their gender. We are increasingly seeing more and more reports of female workers not being happy at work in the construction industry and inadequate toilet amenities being the main culprit. With many cases of female employees being forced to use shared facilities with male colleagues or using toilets that are unsafe or unhygienic. With some articles stating female workers are driving to a local supermarket or petrol station just to use their toilets or with some choosing to wait until they get home just to use the loo. Other ladies are saying correct sanitary disposal bins are often not provided on site either, sharing that they've had no choice but to put their used sanitary products in their pocket or bag, as there's nowhere else to dispose of them.\n\nWelfare amenities for female employees should not be a big debate, it should not be a huge struggle and it should not be a massive task to source. The construction industry has a duty of care to legally provide practical, clean and accessible toilet facilities for all employees, despite their gender. At Liberty our welfare cabins offer inclusive facilities for all people and most certainly for females too. Our Solar Loo range gives a practical solution for male and female workers onsite, which are suitable for all construction projects, are easily transported, with no manufacture or complicated set-up. Once delivered the Solar Loo is instantly ready to use, eliminating any wasted working time onsite. The Solar Loo has individual cubicles, providing private space for female workers. Plus, with hot and cold hand wash, heating throughout, a secure locking door and a water flush toilet, we like to think the Liberty Solar Loo offers that extra bit of luxury for you know, when you've gotta go.",
+  },
+  {
     slug: "customer-feedback",
     image: newsCustomerFeedbackTeam.url,
     date: "September 2026",
