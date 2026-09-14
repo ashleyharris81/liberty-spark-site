@@ -74,6 +74,8 @@ const newsArticleSlugs = [
   "mnd-association-a-worthy-cause",
   "yes-our-cabins-harvest-rainwater",
   "innovation-day",
+  "inclusive-toilet-facilities",
+
 
   "new-product-range",
   "fun-fact",

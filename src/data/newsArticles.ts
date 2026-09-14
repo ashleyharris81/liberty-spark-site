@@ -15,6 +15,8 @@ import newsGoSolar from "@/assets/news-go-solar.jpg.asset.json";
 import newsHeatwave from "@/assets/news-heatwave.jpg.asset.json";
 import newsMndaCause from "@/assets/news-mnda-cause.jpg.asset.json";
 import newsRainwater from "@/assets/news-rainwater-harvesting.jpg.asset.json";
+import newsInclusiveToilets from "@/assets/news-inclusive-toilets.jpg.asset.json";
+
 
 
 export type NewsArticle = {
