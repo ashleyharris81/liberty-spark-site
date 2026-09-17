@@ -74,6 +74,7 @@ const newsArticleSlugs = [
   "mnd-association-a-worthy-cause",
   "yes-our-cabins-harvest-rainwater",
   "innovation-day",
+  "acquisan-acquires-just-welfare",
   "inclusive-toilet-facilities",
 
 
