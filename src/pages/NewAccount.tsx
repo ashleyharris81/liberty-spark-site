@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { submitForm } from "@/lib/submitForm";
 
-const salesReps = ["Ben", "Ross", "Hannah W", "Abbie", "Josh", "Andy", "None"];
+const salesReps = ["Ross", "Hannah W", "Abbie", "Hannah.H", "Farren", "None"];
 const hearAboutOptions = ["Linkedin", "Social Media", "Word of Mouth", "Trade Event", "Google", "Other"];
 
 const collectDetails = (form: HTMLFormElement) => {
