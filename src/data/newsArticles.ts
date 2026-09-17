@@ -16,6 +16,7 @@ import newsHeatwave from "@/assets/news-heatwave.jpg.asset.json";
 import newsMndaCause from "@/assets/news-mnda-cause.jpg.asset.json";
 import newsRainwater from "@/assets/news-rainwater-harvesting.jpg.asset.json";
 import newsInclusiveToilets from "@/assets/news-inclusive-toilets.jpg.asset.json";
+import newsAcquisanJustWelfare from "@/assets/news-acquisan-just-welfare.jpg.asset.json";
 
 
 
@@ -29,6 +30,15 @@ export type NewsArticle = {
 };
 
 const rawArticles: NewsArticle[] = [
+  {
+    slug: "acquisan-acquires-just-welfare",
+    image: newsAcquisanJustWelfare.url,
+    date: "September 2026",
+    title: "Acquisan Limited Announces Acquisition of Just Welfare Limited",
+    excerpt:
+      "Acquisan, supported by Westbrooke Equity Partners, has acquired Just Welfare Limited — the third acquisition in under two years. The transaction completed on 3 September 2026.",
+    body: "Acquisan, supported by Westbrooke Equity Partners (Westbrooke), has acquired Just Welfare Limited, a leading provider of mobile welfare units and associated products to customers across Kent and the South East of England. It is the third acquisition Acquisan has made in under two years, following those of Welfare Unit Hire and Liberty Guard. The transaction completed on 3 September 2026.\n\nJust Welfare, based near Margate in Kent, has a reputation for delivering high-quality products coupled with exceptional levels of client service, responsiveness and reliability. For customers, nothing changes: the business will continue to trade under its own name, from the same site and with the same team – now backed by the scale and resources of the wider Acquisan group.\n\nAcquisan Chief Executive Officer Julian Pienaar said: \u2018This is an exciting addition to our portfolio, substantially boosting our presence in the greater London area whilst complementing the strong brand and national footprint of Liberty Guard, and the regional strength of North West-focused Welfare Unit Hire. The Just Welfare team have built an excellent reputation for looking after their customers, and their service excellence and outstanding local responsiveness are precisely the qualities upon which our \u201cthink local, act national\u201d model is built. We are delighted to welcome them to the group.\u2019\n\nJust Welfare founder Lee Pooley said: \u2018We\u2019re excited to join the Acquisan group and work alongside its other highly rated operations. Our customers will see the same team and the same standard of service, now with the fleet, buying power and national support of a larger group behind us. For our people it opens up opportunities we could not have offered on our own, and for our customers it means we can expand our reach more efficiently.\u2019\n\nHead of Westbrooke UK Private Equity Rob Grieve said: \u2018We are pleased to have completed another acquisition within the Acquisan group. Just Welfare is exactly the kind of business we look to back: founder-led, well run, and trusted by its customers in an attractive and growing regional market. Adding it to the platform alongside Liberty and Welfare Unit Hire is a further step in building a genuinely national provider, and we look forward to supporting the management team through the next phase of growth.\u2019\n\nThe parties were advised in the transaction by Clarke Willmott (Acquisan), Birketts (Just Welfare), and Crowe, which advised both parties.",
+  },
   {
     slug: "inclusive-toilet-facilities",
     image: newsInclusiveToilets.url,
