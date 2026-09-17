@@ -16,6 +16,7 @@ import newsHeatwave from "@/assets/news-heatwave.jpg.asset.json";
 import newsMndaCause from "@/assets/news-mnda-cause.jpg.asset.json";
 import newsRainwater from "@/assets/news-rainwater-harvesting.jpg.asset.json";
 import newsInclusiveToilets from "@/assets/news-inclusive-toilets.jpg.asset.json";
+import newsAcquisanJustWelfare from "@/assets/news-acquisan-just-welfare.jpg.asset.json";
 
 
 
