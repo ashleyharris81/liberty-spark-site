@@ -241,6 +241,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.libertyguard.co.uk/news/acquisan-acquires-just-welfare</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.libertyguard.co.uk/news/inclusive-toilet-facilities</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

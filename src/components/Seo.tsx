@@ -121,10 +121,15 @@ const routeMeta: Record<string, Meta> = {
     description:
       "How Liberty Guard collects, uses and protects your personal data, and the cookies used on this website. Contact us if you have any privacy questions.",
   },
+  "/mnda": {
+    title: "MND Association Partnership",
+    description:
+      "Liberty's partnership with the Motor Neurone Disease Association — our dedicated 12ft Mobi charity unit, the Rob Burrow Leeds Marathon 2024, the 2026 rebrand and how to donate.",
+  },
 };
 
 /** Routes that must not be indexed (duplicates, private tools, error pages). */
-const NOINDEX_PATHS = new Set(["/homepage2", "/admin"]);
+const NOINDEX_PATHS = new Set(["/homepage2", "/admin", "/depotfinder", "/mnda"]);
 
 /**
  * Canonical overrides. "/" and "/nationwide-hire" render the same page, and a
