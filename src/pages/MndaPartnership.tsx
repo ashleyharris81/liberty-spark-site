@@ -46,7 +46,7 @@ const MndaPartnership = () => {
             MND Association <span className="text-secondary">Partnership</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-2xl">
-            Liberty's ongoing commitment to the Motor Neurone Disease Association —
+            Liberty's ongoing commitment to the Motor Neurone Disease Association -
             supporting families affected by MND through our dedicated charity welfare unit.
           </p>
         </div>
@@ -70,7 +70,7 @@ const MndaPartnership = () => {
                   Back in September 2021 we made the decision to support the Motor Neurone
                   Disease Association. This was an easy choice for us to make as the
                   Association is extremely close to our hearts and forever will be. At Liberty
-                  we chose to support the Association in the only way we know how — with
+                  we chose to support the Association in the only way we know how - with
                   welfare! We chose a 12ft Mobi to be our dedicated charity unit and vowed each
                   time this unit was out on hire, £125 per week would instantly go to the
                   Association. We were delighted to send our first donation to the charity.
@@ -114,7 +114,7 @@ const MndaPartnership = () => {
                     to get to the end!"
                   </p>
                   <footer className="mt-3 not-italic font-heading font-semibold text-secondary text-sm uppercase tracking-wider">
-                    — Beth Jones
+                    - Beth Jones
                   </footer>
                 </blockquote>
               </div>
@@ -140,7 +140,7 @@ const MndaPartnership = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   In February 2026 the MND Association launched their rebrand, consisting of a
                   new logo, brand colours and fonts. However, the rebrand for the Association
-                  was a lot more than just creating an image — it was about clearly portraying
+                  was a lot more than just creating an image - it was about clearly portraying
                   their story. The Association is passionate about aiding all people directly
                   affected by the disease; they support their families and carers through the
                   daily struggles and pressures too.
