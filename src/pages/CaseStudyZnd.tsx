@@ -187,9 +187,8 @@ const CaseStudyZnd = () => (
           accommodation for its functionality and stylish features. This project
           was a pleasure throughout.
         </p>
-      </section>
+      </Section>
 
-      {/* CTA */}
       <section className="bg-[hsl(var(--navy))]">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-14 text-center">
           <h2 className="font-heading text-3xl font-bold uppercase text-white">
