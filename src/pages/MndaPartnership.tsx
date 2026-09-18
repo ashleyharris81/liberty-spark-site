@@ -166,33 +166,29 @@ const MndaPartnership = () => {
       </section>
 
       {/* Timeline rail */}
-      <section className="pb-20 bg-background">
-        <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
+      <section className="pb-24 bg-background">
+        <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
           <div className="relative">
             {/* vertical rail */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" aria-hidden="true" />
+            <div className="absolute left-6 md:left-8 top-2 bottom-2 w-px bg-border" aria-hidden="true" />
 
-            <div className="space-y-20 md:space-y-28">
-              {milestones.map((m, i) => (
-                <div key={m.date} className="relative">
+            <div className="space-y-16 md:space-y-24">
+              {milestones.map((m) => (
+                <div key={m.date} className="relative pl-16 md:pl-24">
                   {/* milestone dot */}
-                  <div className="absolute left-4 md:left-1/2 top-2 -translate-x-1/2 z-10 hidden md:block">
+                  <div className="absolute left-6 md:left-8 top-1 -translate-x-1/2 z-10">
                     <span className="flex h-5 w-5 items-center justify-center rounded-full bg-secondary ring-4 ring-background">
                       <span className="h-2 w-2 rounded-full bg-secondary-foreground" />
                     </span>
                   </div>
 
-                  <div
-                    className={`grid md:grid-cols-2 gap-8 md:gap-16 items-center ${
-                      m.reverse ? "md:[direction:rtl]" : ""
-                    }`}
-                  >
+                  <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                     {/* text */}
-                    <div className={`pl-12 md:pl-0 md:[direction:ltr] ${m.reverse ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
+                    <div className={m.reverse ? "md:order-2" : "md:order-1"}>
                       <span className="text-secondary font-heading font-semibold text-sm uppercase tracking-[0.15em]">
                         {m.date}
                       </span>
-                      <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary uppercase tracking-wide mt-1 mb-4">
+                      <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary uppercase tracking-wide mt-1 mb-2">
                         {m.title}
                       </h3>
                       <p className="font-heading text-xs uppercase tracking-wider text-muted-foreground mb-4">
@@ -200,7 +196,7 @@ const MndaPartnership = () => {
                       </p>
                       <div className="prose-news text-muted-foreground">{m.body}</div>
                       {m.quote && (
-                        <blockquote className={`mt-6 border-l-4 border-secondary pl-4 ${m.reverse ? "md:ml-auto md:border-r-4 md:border-l-0 md:pl-0 md:pr-4 md:text-left" : ""}`}>
+                        <blockquote className="mt-6 border-l-4 border-secondary pl-4">
                           <p className="italic text-foreground/80 mb-2">{m.quote.text}</p>
                           <footer className="font-heading font-semibold text-secondary text-sm uppercase tracking-wider not-italic">
                             - {m.quote.cite}
@@ -210,7 +206,7 @@ const MndaPartnership = () => {
                     </div>
 
                     {/* image */}
-                    <div className={`pl-12 md:pl-0 md:[direction:ltr] ${m.reverse ? "md:pr-12" : "md:pl-12"}`}>
+                    <div className={m.reverse ? "md:order-1" : "md:order-2"}>
                       <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-border shadow-xl">
                         <img
                           src={m.image}
