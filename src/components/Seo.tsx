@@ -124,12 +124,22 @@ const routeMeta: Record<string, Meta> = {
   "/mnda": {
     title: "MND Association Partnership",
     description:
-      "Liberty's partnership with the Motor Neurone Disease Association — our dedicated 12ft Mobi charity unit, the Rob Burrow Leeds Marathon 2024, the 2026 rebrand and how to donate.",
+      "Liberty's partnership with the Motor Neurone Disease Association - our dedicated 12ft Mobi charity unit, the Rob Burrow Leeds Marathon 2024, the 2026 rebrand and how to donate.",
+  },
+  "/case-studies": {
+    title: "Case Studies",
+    description:
+      "Real projects from Liberty - modular buildings, welfare and portable accommodation delivered for clients across the UK.",
+  },
+  "/case-studies/znd-uk": {
+    title: "ZND Temporary Fence Solutions - Case Study",
+    description:
+      "A 30m x 9.6m two-storey, 10-bay modular office building with 8 offices, meeting room, canteen and reception for ZND UK.",
   },
 };
 
 /** Routes that must not be indexed (duplicates, private tools, error pages). */
-const NOINDEX_PATHS = new Set(["/homepage2", "/admin", "/depotfinder", "/mnda"]);
+const NOINDEX_PATHS = new Set(["/homepage2", "/admin", "/depotfinder", "/mnda", "/case-studies", "/case-studies/znd-uk"]);
 
 /**
  * Canonical overrides. "/" and "/nationwide-hire" render the same page, and a
