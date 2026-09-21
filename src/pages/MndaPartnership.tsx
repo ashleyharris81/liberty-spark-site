@@ -17,6 +17,7 @@ type Milestone = {
   image: string;
   alt: string;
   reverse?: boolean;
+  objectPosition?: string;
   quote?: { text: string; cite: string };
 };
 
@@ -34,7 +35,8 @@ const milestones: Milestone[] = [
           we chose to support the Association in the only way we know how - with
           welfare! We chose a 12ft Mobi to be our dedicated charity unit and vowed each
           time this unit was out on hire, £125 per week would instantly go to the
-          Association. We were delighted to send our first donation to the charity.
+          Association. We were delighted to send our first donation to the Association
+          of £2125.00 in February 2022.
         </p>
       </>
     ),
@@ -59,6 +61,7 @@ const milestones: Milestone[] = [
     image: mndaMarathon.url,
     alt: "Beth Jones with her Rob Burrow Leeds Marathon 2024 finisher's medal",
     reverse: true,
+    objectPosition: "center top",
     quote: {
       text: "I took part in the marathon to raise funds and awareness for MND as my grandad lost his battle with the disease in 2010. The marathon was something else but honestly was so incredible! The atmosphere and support from people on the roadside is just next level... to then see my family on the last corner just gave me the extra boost I needed to get to the end!",
       cite: "Beth Jones",
@@ -132,23 +135,27 @@ const MndaPartnership = () => {
           >
             ← Back to Home
           </Link>
-          <div className="max-w-2xl">
-            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-lg p-3 mb-8">
-              <img
-                src={mndaLogo.url}
-                alt="MND Association logo"
-                className="h-16 w-auto"
-              />
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+            <div className="max-w-xl">
+              <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-[1.05]">
+                MND Association
+                <br />
+                <span className="text-secondary">Partnership</span>
+              </h1>
+              <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-xl leading-relaxed">
+                Liberty's ongoing commitment to the Motor Neurone Disease Association -
+                supporting families affected by MND through our dedicated charity welfare unit.
+              </p>
             </div>
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight leading-[1.05]">
-              MND Association
-              <br />
-              <span className="text-secondary">Partnership</span>
-            </h1>
-            <p className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-xl leading-relaxed">
-              Liberty's ongoing commitment to the Motor Neurone Disease Association -
-              supporting families affected by MND through our dedicated charity welfare unit.
-            </p>
+            <div className="flex justify-center md:justify-end">
+              <div className="bg-black rounded-2xl p-6 md:p-10 shadow-2xl">
+                <img
+                  src={mndaLogo.url}
+                  alt="MND Association logo"
+                  className="h-28 md:h-40 w-auto"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -212,6 +219,7 @@ const MndaPartnership = () => {
                           src={m.image}
                           alt={m.alt}
                           className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                          style={{ objectPosition: m.objectPosition || "center" }}
                           loading="lazy"
                         />
                       </div>
@@ -226,9 +234,18 @@ const MndaPartnership = () => {
 
       {/* Donate CTA */}
       <section className="py-20 md:py-28 bg-primary relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl -mr-24 -mt-24" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-72 h-72 bg-mnda/10 rounded-full blur-3xl -mr-24 -mt-24" aria-hidden="true" />
         <div className="relative container mx-auto px-4 lg:px-8 max-w-3xl text-center">
-          <p className="text-secondary font-heading font-semibold text-sm uppercase tracking-[0.2em] mb-4">
+          <div className="flex justify-center mb-8">
+            <div className="bg-black rounded-xl p-4">
+              <img
+                src={mndaLogo.url}
+                alt="MND Association logo"
+                className="h-16 md:h-20 w-auto"
+              />
+            </div>
+          </div>
+          <p className="text-mnda font-heading font-semibold text-sm uppercase tracking-[0.2em] mb-4">
             Make a difference
           </p>
           <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight mb-6">
@@ -245,13 +262,13 @@ const MndaPartnership = () => {
               <span className="font-heading text-base font-bold uppercase tracking-wider text-primary-foreground/70">
                 Text
               </span>
-              <span className="inline-block bg-secondary text-secondary-foreground font-heading text-2xl font-black px-6 py-3 rounded-lg uppercase tracking-widest">
+              <span className="inline-block bg-mnda text-mnda-foreground font-heading text-2xl font-black px-6 py-3 rounded-lg uppercase tracking-widest">
                 MNDASSOC
               </span>
               <span className="font-heading text-base font-bold uppercase tracking-wider text-primary-foreground/70">
                 to
               </span>
-              <span className="inline-block bg-secondary text-secondary-foreground font-heading text-2xl font-black px-6 py-3 rounded-lg tracking-widest">
+              <span className="inline-block bg-mnda text-mnda-foreground font-heading text-2xl font-black px-6 py-3 rounded-lg tracking-widest">
                 70085
               </span>
             </div>
@@ -264,7 +281,7 @@ const MndaPartnership = () => {
             href="https://www.mndassociation.org/get-involved/donate-mnd-association-today"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-secondary text-secondary-foreground font-heading font-semibold text-sm uppercase tracking-wider px-10 py-4 rounded-lg hover:bg-secondary/90 transition-colors"
+            className="inline-block bg-mnda text-mnda-foreground font-heading font-semibold text-sm uppercase tracking-wider px-10 py-4 rounded-lg hover:bg-mnda/90 transition-colors"
           >
             Set up a monthly donation →
           </a>

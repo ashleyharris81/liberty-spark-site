@@ -86,6 +86,8 @@
     --teal-dark: 168 55% 40%;
     --hero-overlay: 213 60% 13%;
     --yellow: 54 100% 58%;
+    --mnda: 10 70% 46%;
+    --mnda-foreground: 0 0% 100%;
   }
 
   .dark {
