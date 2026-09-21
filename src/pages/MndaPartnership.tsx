@@ -18,6 +18,7 @@ type Milestone = {
   alt: string;
   reverse?: boolean;
   objectPosition?: string;
+  zoom?: number;
   quote?: { text: string; cite: string };
 };
 
@@ -62,6 +63,7 @@ const milestones: Milestone[] = [
     alt: "Beth Jones with her Rob Burrow Leeds Marathon 2024 finisher's medal",
     reverse: true,
     objectPosition: "center top",
+    zoom: 1.2,
     quote: {
       text: "I took part in the marathon to raise funds and awareness for MND as my grandad lost his battle with the disease in 2010. The marathon was something else but honestly was so incredible! The atmosphere and support from people on the roadside is just next level... to then see my family on the last corner just gave me the extra boost I needed to get to the end!",
       cite: "Beth Jones",
@@ -218,8 +220,12 @@ const MndaPartnership = () => {
                         <img
                           src={m.image}
                           alt={m.alt}
-                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                          style={{ objectPosition: m.objectPosition || "center" }}
+                          className={`w-full h-full object-cover transition-transform duration-700 ${m.zoom ? "" : "hover:scale-105"}`}
+                          style={{
+                            objectPosition: m.objectPosition || "center",
+                            transform: m.zoom ? `scale(${m.zoom})` : undefined,
+                            transformOrigin: "top center",
+                          }}
                           loading="lazy"
                         />
                       </div>
