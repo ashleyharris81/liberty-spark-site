@@ -63,6 +63,10 @@ export default {
         yellow: {
           DEFAULT: "hsl(var(--yellow))",
         },
+        mnda: {
+          DEFAULT: "hsl(var(--mnda))",
+          foreground: "hsl(var(--mnda-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
