@@ -17,6 +17,7 @@ import newsMndaCause from "@/assets/news-mnda-cause.jpg.asset.json";
 import newsRainwater from "@/assets/news-rainwater-harvesting.jpg.asset.json";
 import newsInclusiveToilets from "@/assets/news-inclusive-toilets.jpg.asset.json";
 import newsAcquisanJustWelfare from "@/assets/news-acquisan-just-welfare.jpg.asset.json";
+import newsLetsTalkAboutLoos from "@/assets/news-lets-talk-about-loos.jpg.asset.json";
 
 
 
@@ -30,6 +31,15 @@ export type NewsArticle = {
 };
 
 const rawArticles: NewsArticle[] = [
+  {
+    slug: "lets-talk-about-loos",
+    image: newsLetsTalkAboutLoos.url,
+    date: "September 2026",
+    title: "Let's Talk About Loos!",
+    excerpt:
+      "Chemical toilets have been the only option for decades - smelly, dirty and unhygienic. We offer a cleaner alternative: water flush toilets across our towable, solar and portable ranges.",
+    body: "I know it's not overly a pleasant topic of conversation, however it's something we all use every day and I know if we had a choice, would prefer clean and hygienic facilities.\n\nIn the construction industry chemical toilets have been the only option for decades and let's face it they're not the best, are they? Chemi loos are often smelly, dirty, unhygienic and offer limited space inside. They also require biocides, fragrances and chemicals to break down the waste, giving a high damage risk to the environment and aquatic life if not disposed of correctly.\n\nWe are delighted to offer an alternative option for your toilet facilities, we provide a full range of products containing water flush toilets. At Liberty we feel water flush toilets are the future in the construction industry and will soon become the new norm. We supply towable welfare, solar welfare and portable toilets options which all contain a water flush toilet.\n\nWater flush toilets provide a clean and hygienic loo experience, they contain a separate waste tank that is emptied only when necessary, this significantly reduces bad odours and lowers the amount of waste service visits. Water flush toilets do not require any chemicals or fragrances to function, this is a much added benefit to the user and dramatically reduces environmental impact too. Plus, our Solar Loo range give a touch of luxury to your loo experience with white ceramic pedestal toilet with fresh water flush, a white ceramic sink with hot and cold wash, Webasto heating throughout and a spacious internal area.... plenty of space to read the newspaper, while you, you know.",
+  },
   {
     slug: "acquisan-acquires-just-welfare",
     image: newsAcquisanJustWelfare.url,
