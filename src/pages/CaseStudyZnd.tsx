@@ -44,17 +44,17 @@ const CaseStudyZnd = () => (
     <Navbar />
 
     {/* Hero */}
-    <header className="relative">
-      <div className="h-[420px] overflow-hidden md:h-[520px]">
-        <img
-          src={heroImg.url}
-          alt="The finished modular office building at the ZND UK factory"
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--navy))] via-[hsl(var(--navy))]/40 to-transparent" />
-      </div>
-      <div className="absolute inset-x-0 bottom-0">
-        <div className="mx-auto max-w-6xl px-4 pb-10">
+    <header className="relative overflow-hidden">
+      <img
+        src={heroImg.url}
+        alt="The finished modular office building at the ZND UK factory"
+        className="absolute inset-0 h-full w-full object-cover"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--navy))] via-[hsl(var(--navy))]/60 to-[hsl(var(--navy))]/10" />
+
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-12 pt-64 md:flex-row md:items-end md:justify-between md:pb-14 md:pt-[420px]">
+        <div>
           <Link
             to="/case-studies"
             className="font-heading text-sm font-bold uppercase tracking-wider text-secondary hover:text-white"
@@ -68,31 +68,29 @@ const CaseStudyZnd = () => (
             New office facilities for the staff at ZND UK
           </p>
         </div>
+
+        {/* Project facts panel */}
+        <div className="w-full max-w-sm rounded-2xl border border-white/10 bg-[hsl(var(--navy))]/70 p-6 backdrop-blur-sm md:w-auto">
+          <img
+            src={zndLogo.url}
+            alt="ZND Temporary Fence Solutions logo"
+            className="w-36 rounded-lg bg-white p-2"
+          />
+          <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <dt className="font-heading text-[11px] font-bold uppercase tracking-wider text-secondary">
+                  {s.label}
+                </dt>
+                <dd className="mt-1 font-heading text-sm font-bold text-white">
+                  {s.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </div>
     </header>
-
-    {/* Client + stats strip */}
-    <div className="border-b border-border bg-card">
-      <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-4 py-8 md:flex-row md:items-center">
-        <img
-          src={zndLogo.url}
-          alt="ZND Temporary Fence Solutions logo"
-          className="w-48 rounded-lg bg-white p-3"
-        />
-        <dl className="grid flex-1 grid-cols-2 gap-6 md:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <dt className="font-heading text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                {s.label}
-              </dt>
-              <dd className="mt-1 font-heading text-lg font-bold text-primary">
-                {s.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </div>
 
     <main className="pb-16">
       <Section kicker="Overview" title="The Project">
@@ -202,7 +200,7 @@ const CaseStudyZnd = () => (
             to="/contact"
             className="rounded-full bg-secondary px-8 py-3 font-heading text-sm font-bold uppercase tracking-wider text-[hsl(var(--navy))] transition-opacity hover:opacity-90"
           >
-            Get in touch
+            Email the team
           </Link>
         </div>
       </section>
