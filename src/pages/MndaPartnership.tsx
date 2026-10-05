@@ -150,13 +150,11 @@ const MndaPartnership = () => {
               </p>
             </div>
             <div className="flex justify-center md:justify-end">
-              <div className="bg-black rounded-2xl p-6 md:p-10 shadow-2xl">
-                <img
-                  src={mndaLogo.url}
-                  alt="MND Association logo"
-                  className="h-28 md:h-40 w-auto"
-                />
-              </div>
+              <img
+                src={mndaLogo.url}
+                alt="MND Association logo"
+                className="h-28 md:h-40 w-auto"
+              />
             </div>
           </div>
         </div>
@@ -243,13 +241,11 @@ const MndaPartnership = () => {
         <div className="absolute top-0 right-0 w-72 h-72 bg-mnda/10 rounded-full blur-3xl -mr-24 -mt-24" aria-hidden="true" />
         <div className="relative container mx-auto px-4 lg:px-8 max-w-3xl text-center">
           <div className="flex justify-center mb-8">
-            <div className="bg-black rounded-xl p-4">
-              <img
-                src={mndaLogo.url}
-                alt="MND Association logo"
-                className="h-16 md:h-20 w-auto"
-              />
-            </div>
+            <img
+              src={mndaLogo.url}
+              alt="MND Association logo"
+              className="h-16 md:h-20 w-auto"
+            />
           </div>
           <p className="text-mnda font-heading font-semibold text-sm uppercase tracking-[0.2em] mb-4">
             Make a difference
