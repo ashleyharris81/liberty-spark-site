@@ -10,6 +10,7 @@ import chas from "@/assets/accreditations/chas.png";
 const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "News", href: "/news" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "UK Depots", href: "/depots" },
   { label: "Contact Us", href: "/contact" },
   { label: "Open New Account", href: "/new-account" },
