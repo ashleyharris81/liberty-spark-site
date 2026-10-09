@@ -118,14 +118,25 @@ const NewsArticle = () => {
 
             {/* Main Article Content */}
             <div className="flex-1 order-1 lg:order-2 min-w-0">
-              <div className="aspect-[16/9] overflow-hidden rounded-xl mb-10 shadow-lg">
-                <img
-                  src={article.image}
-                  alt={`${article.title} — Liberty news`}
-                  className="w-full h-full object-cover"
-                  loading="eager"
-                />
-              </div>
+              {article.imageFit === "contain" ? (
+                <figure className="mb-10 rounded-xl border border-border bg-card p-3 md:p-5 shadow-lg">
+                  <img
+                    src={article.image}
+                    alt={`${article.title} — Liberty news`}
+                    className="w-full h-auto rounded-md"
+                    loading="eager"
+                  />
+                </figure>
+              ) : (
+                <div className="aspect-[16/9] overflow-hidden rounded-xl mb-10 shadow-lg">
+                  <img
+                    src={article.image}
+                    alt={`${article.title} — Liberty news`}
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                  />
+                </div>
+              )}
 
               <div className="text-foreground text-base md:text-lg leading-relaxed space-y-6">
                 {article.body.split("\n\n").map((para) => {

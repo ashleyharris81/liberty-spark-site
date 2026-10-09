@@ -28,6 +28,7 @@ import newsAutumnSolar from "@/assets/news-autumn-solar.jpg.asset.json";
 export type NewsArticle = {
   slug: string;
   image: string;
+  imageFit?: "contain";
   date: string;
   title: string;
   excerpt: string;
@@ -37,6 +38,7 @@ export type NewsArticle = {
 const rawArticles: NewsArticle[] = [
   {
     slug: "monitor-and-track-with-liberty-solar",
+    imageFit: "contain",
     image: newsVictronMonitor.url,
     date: "October 2026",
     title: "Monitor and Track with Liberty Solar",
