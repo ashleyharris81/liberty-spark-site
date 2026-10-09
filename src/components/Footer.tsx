@@ -92,11 +92,11 @@ const Footer = () => {
             <h2 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-4">
               Accreditations
             </h2>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {accreditations.map((a) => (
                 <div
                   key={a.alt}
-                  className="bg-white rounded-md p-1.5 flex items-center justify-center h-14"
+                  className="bg-white rounded-md p-1.5 flex items-center justify-center h-14 w-[calc((100%-1rem)/3)]"
                 >
                   <img
                     src={a.src}
