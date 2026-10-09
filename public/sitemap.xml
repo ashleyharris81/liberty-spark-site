@@ -206,6 +206,26 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.libertyguard.co.uk/news/monitor-and-track-with-liberty-solar</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.libertyguard.co.uk/news/back-me-up-i-have-a-backup-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.libertyguard.co.uk/news/welfare-in-wales</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.libertyguard.co.uk/news/autumn-doesnt-mean-solar-season-is-over</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.libertyguard.co.uk/news/lets-talk-about-loos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
