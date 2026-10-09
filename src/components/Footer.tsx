@@ -6,6 +6,7 @@ import ssip from "@/assets/accreditations/ssip.jpg";
 import safecontractor from "@/assets/accreditations/safecontractor.jpeg";
 import iso9001 from "@/assets/accreditations/iso9001.jpg";
 import chas from "@/assets/accreditations/chas.png";
+import hae from "@/assets/hae-member.png.asset.json";
 
 const quickLinks = [
   { label: "About Us", href: "/about" },
@@ -25,6 +26,7 @@ const accreditations = [
   { src: safecontractor, alt: "SafeContractor SafePQQ Verified" },
   { src: iso9001, alt: "NQA ISO 9001 Quality Management" },
   { src: risqs, alt: "RISQS Verified" },
+  { src: hae.url, alt: "Hire Association Europe Member" },
 ];
 
 const Footer = () => {
@@ -90,11 +92,11 @@ const Footer = () => {
             <h2 className="font-heading text-sm font-bold text-primary-foreground uppercase tracking-wider mb-4">
               Accreditations
             </h2>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {accreditations.map((a) => (
                 <div
                   key={a.alt}
-                  className="bg-white rounded-md p-1.5 flex items-center justify-center h-14"
+                  className="bg-white rounded-md p-1.5 flex items-center justify-center h-14 w-[calc((100%-1rem)/3)]"
                 >
                   <img
                     src={a.src}
