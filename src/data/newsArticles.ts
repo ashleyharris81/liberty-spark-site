@@ -18,6 +18,10 @@ import newsRainwater from "@/assets/news-rainwater-harvesting.jpg.asset.json";
 import newsInclusiveToilets from "@/assets/news-inclusive-toilets.jpg.asset.json";
 import newsAcquisanJustWelfare from "@/assets/news-acquisan-just-welfare.jpg.asset.json";
 import newsLetsTalkAboutLoos from "@/assets/news-lets-talk-about-loos.jpg.asset.json";
+import newsVictronMonitor from "@/assets/news-victron-monitor.png.asset.json";
+import newsBackupGenerator from "@/assets/news-backup-generator.jpg.asset.json";
+import newsWelfareInWales from "@/assets/news-welfare-in-wales.png.asset.json";
+import newsAutumnSolar from "@/assets/news-autumn-solar.jpg.asset.json";
 
 
 
@@ -31,6 +35,42 @@ export type NewsArticle = {
 };
 
 const rawArticles: NewsArticle[] = [
+  {
+    slug: "monitor-and-track-with-liberty-solar",
+    image: newsVictronMonitor.url,
+    date: "October 2026",
+    title: "Monitor and Track with Liberty Solar",
+    excerpt:
+      "Every Ultimate Eco cabin is built with remote monitoring technology. At Liberty HQ our team track your cabin's location, water levels, battery percentage, waste tank, back-up generator run time and fuel used - so issues are fixed before they become breakdowns.",
+    body: "Our Ultimate Eco range are all manufactured with remote monitoring technology and give many benefits to the user. At Liberty HQ our team track many aspects of your cabin including; cabin location, fresh water tank level, weather forecast, battery percentage, waste tank indicator, back-up generator run time and amount of fuel used. Our team constantly monitor your cabin, meaning they can react to any possible breakdown issues and allocate a response engineer immediately or better still fix any minor issues remotely, reducing potential big problems and possible breakdowns. By collating all this data we're able to target service visits only when required, reducing vehicles on the road, lowering financial costs and using less fuel overall.\n\nThe Liberty Ultimate Eco range has the preservation of our planet in mind!\n\n- Low CO2 emissions\n- Low water consumption\n- Low maintenance\n- Low fuel usage\n- Low noise pollution\n- Low service visits\n\nULTIMATE ECO, ULTIMATELY BETTER",
+  },
+  {
+    slug: "back-me-up-i-have-a-backup-generator",
+    image: newsBackupGenerator.url,
+    date: "October 2026",
+    title: "Back Me Up Here, I Have a Back-Up Generator",
+    excerpt:
+      "Solar welfare is becoming increasingly popular in the construction industry. Every Liberty solar unit is fitted with a back-up generator, so reliability never depends on the weather.",
+    body: "Solar welfare is becoming increasingly popular in the construction industry. There used to be a stigma around solar products, people doubting their reliability, customers worried about the financial side and others concerned that they would only function effectively in summer months.\n\nThankfully, these worries are dissolved with our solar welfare. At Liberty we provide facts and data around our solar welfare, giving our customers reassurance that our solar products deliver on function, use and longevity. To further add peace of mind for our customers, all of our solar welfare are fitted with a back-up generator. This ensures complete reliability 24 hours a day, 7 days a week, 365 days of the year. Meaning we don't need to hide away our solar range in Autumn and Winter months, they can be used at any time of year, providing reliable power and function all day, every day. A huge priority for us, is for our customers to be confident in our products and at Liberty, we know we can deliver.",
+  },
+  {
+    slug: "welfare-in-wales",
+    image: newsWelfareInWales.url,
+    date: "October 2026",
+    title: "Welfare in Wales!",
+    excerpt:
+      "A new partnership with the Aberdare, Cardiff depot strengthens our presence in Wales, keeping delivery times speedy and rates competitive across the whole region.",
+    body: "As you all know Liberty provides site welfare cabins across the whole of the UK and we've covered England, Scotland and Wales for many years now. Well, getting our welfare units to sites across Wales is now even easier! With our new partnership with the Aberdare, Cardiff depot, we're strengthening our presence in Wales and making it easier to provide customers with the welfare solutions they need, when they need them. This new partnership helps us keep delivery times speedy, maintain our competitive rates and provide an efficient, reliable service to customers across the entire region. Plus, with this new Aberdare depot support we're able to offer our complete product range to customers in this area, that's our mobile, static and solar welfare, and our solar loo range too. At Liberty we're always looking to progress and expand our business.",
+  },
+  {
+    slug: "autumn-doesnt-mean-solar-season-is-over",
+    image: newsAutumnSolar.url,
+    date: "October 2026",
+    title: "Just Because It's Autumn Doesn't Mean Solar Season Is Over!",
+    excerpt:
+      "Solar panels generate power from natural daylight, not heat - so cooler, cloudy UK autumn days still produce energy. Our solar fleet stays available for hire all year round.",
+    body: "As the leaves start to change and the temperatures begin to drop, it's easy to assume that solar power becomes less effective. But solar welfare can continue to perform throughout the cooler months, making it a great option for construction sites all year round. Our Liberty solar welfare range generate power from natural daylight, it's not heat. This means you don't need blazing sunshine or high temperatures for the solar panels to work, even on cooler, cloudy or overcast days, there is still daylight available for the panels to absorb energy and convert into power. And let's be honest, here in the UK, we're certainly no strangers to cloudy skies and a bit of rain! But that doesn't mean solar panels stop working. While daylight hours are shorter during Autumn and Winter, there are still plenty of hours of natural daylight available each day and the amount of daylight the panels are exposed to is an important factor in generating solar energy.\n\nThat's why at Liberty we don't pack away all the solar range when these cold Autumn mornings begin, we keep the fleet available for hire all year round. Reliable, sustainable welfare for Spring, Summer, Autumn and Winter too.",
+  },
   {
     slug: "lets-talk-about-loos",
     image: newsLetsTalkAboutLoos.url,
