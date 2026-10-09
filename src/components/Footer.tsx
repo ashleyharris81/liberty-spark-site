@@ -6,6 +6,7 @@ import ssip from "@/assets/accreditations/ssip.jpg";
 import safecontractor from "@/assets/accreditations/safecontractor.jpeg";
 import iso9001 from "@/assets/accreditations/iso9001.jpg";
 import chas from "@/assets/accreditations/chas.png";
+import hae from "@/assets/hae-member.png.asset.json";
 
 const quickLinks = [
   { label: "About Us", href: "/about" },
@@ -25,6 +26,7 @@ const accreditations = [
   { src: safecontractor, alt: "SafeContractor SafePQQ Verified" },
   { src: iso9001, alt: "NQA ISO 9001 Quality Management" },
   { src: risqs, alt: "RISQS Verified" },
+  { src: hae.url, alt: "Hire Association Europe Member" },
 ];
 
 const Footer = () => {
