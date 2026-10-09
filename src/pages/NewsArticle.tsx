@@ -128,9 +128,19 @@ const NewsArticle = () => {
               </div>
 
               <div className="text-foreground text-base md:text-lg leading-relaxed space-y-6">
-                {article.body.split("\n\n").map((para) => (
-                  <p key={para.slice(0, 24)}>{para}</p>
-                ))}
+                {article.body.split("\n\n").map((para) => {
+                  const lines = para.split("\n");
+                  if (lines.length > 1 && lines.every((l) => l.startsWith("- "))) {
+                    return (
+                      <ul key={para.slice(0, 24)} className="list-disc space-y-2 pl-6">
+                        {lines.map((line) => (
+                          <li key={line}>{line.slice(2)}</li>
+                        ))}
+                      </ul>
+                    );
+                  }
+                  return <p key={para.slice(0, 24)}>{para}</p>;
+                })}
               </div>
 
               {/* Prev / Next */}
