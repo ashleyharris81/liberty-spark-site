@@ -1,4 +1,4 @@
-import brochureAsset from "@/assets/liberty-brochure.pdf.asset.json";
+import brochureAsset from "@/assets/liberty-brochure-2026.pdf.asset.json";
 import { Link } from "react-router-dom";
 import { SocialIcon } from "@/components/SocialIcons";
 import { Phone, Mail, MapPin, FileText } from "lucide-react";
@@ -116,7 +116,7 @@ const ContactPage = () => {
 
                 <button
                   type="button"
-                  onClick={() => downloadFile(`${brochureAsset.url}`, "Liberty-Brochure.pdf")}
+                  onClick={() => downloadFile(`${brochureAsset.url}`, "Liberty-Solar-Mobile-Static-Brochure-2026.pdf")}
                   className="flex items-center gap-4 group text-left"
                 >
                   <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
@@ -259,7 +259,7 @@ const ContactPage = () => {
           </p>
           <button
             type="button"
-            onClick={() => downloadFile(`${brochureAsset.url}`, "Liberty-Brochure.pdf")}
+            onClick={() => downloadFile(`${brochureAsset.url}`, "Liberty-Solar-Mobile-Static-Brochure-2026.pdf")}
             className="inline-flex items-center gap-3 bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-heading font-bold text-sm uppercase tracking-wider hover:brightness-110 transition-all duration-300"
           >
             <FileText className="w-5 h-5" />

@@ -61,7 +61,7 @@ export const legacyPrefixRedirects: { prefix: string; to: string }[] = [
  */
 export const legacyFileRedirects: Record<string, string> = {
   "/wp-content/uploads/2025/10/brochure.pdf":
-    "/__l5e/assets-v1/bf0ec2de-8623-4fcb-ab41-e6fab5d28227/Liberty-Brochure.pdf",
+    "/__l5e/assets-v1/5b96a9be-4903-4a37-9295-dba30cc31eee/Liberty-Solar-Mobile-Static-Brochure-2026.pdf",
 };
 
 /**
