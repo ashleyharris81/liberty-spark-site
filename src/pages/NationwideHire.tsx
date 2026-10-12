@@ -1,4 +1,4 @@
-import brochureAsset from "@/assets/liberty-brochure.pdf.asset.json";
+import brochureAsset from "@/assets/liberty-brochure-2026.pdf.asset.json";
 import remoteMonitoringImg from "@/assets/remote-monitoring.jpg";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -309,7 +309,7 @@ const NationwideHire = () => {
             <div className="mt-8 flex justify-center">
               <button
                 type="button"
-                onClick={() => downloadFile(`${brochureAsset.url}`, "Liberty-Brochure.pdf")}
+                onClick={() => downloadFile(`${brochureAsset.url}`, "Liberty-Solar-Mobile-Static-Brochure-2026.pdf")}
                 className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
               >
                 <Download className="w-4 h-4" /> Download Brochure
