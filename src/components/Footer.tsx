@@ -12,6 +12,7 @@ const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "News", href: "/news" },
   { label: "Case Studies", href: "/case-studies" },
+  { label: "MND Association", href: "/mnda" },
   { label: "Video Manuals", href: "/video-manuals" },
   { label: "UK Depots", href: "/depots" },
   { label: "Contact Us", href: "/contact" },
