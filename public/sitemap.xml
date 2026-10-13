@@ -26,6 +26,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.libertyguard.co.uk/video-manuals</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.libertyguard.co.uk/depots</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
