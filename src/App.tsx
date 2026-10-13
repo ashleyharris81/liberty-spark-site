@@ -35,6 +35,7 @@ import Admin from "./pages/Admin";
 import CookieBanner from "./components/CookieBanner";
 import Seo from "./components/Seo";
 import LegacyRedirect from "./components/LegacyRedirect";
+import VideoManuals from "./pages/VideoManuals";
 
 const queryClient = new QueryClient();
 
@@ -72,6 +73,7 @@ const App = () => (
           <Route path="/portable-accommodation" element={<PortableAccommodation />} />
           <Route path="/modular-buildings" element={<ModularBuildings />} />
           <Route path="/news" element={<News />} />
+          <Route path="/video-manuals" element={<VideoManuals />} />
           <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/new-account" element={<NewAccount />} />

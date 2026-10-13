@@ -16,6 +16,10 @@ const OG_IMAGE = `${ORIGIN}/og-image.jpg`;
 type Meta = { title: string; description: string };
 
 const routeMeta: Record<string, Meta> = {
+  "/video-manuals": {
+    title: "Mobile Welfare Video Manuals",
+    description: "Liberty mobile welfare video manuals for towing, site setup, lifting, electrical systems, toilet operation and wheel changes.",
+  },
   "/": {
     title: "Welfare Unit & Portable Building Hire UK",
     description:

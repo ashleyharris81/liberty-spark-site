@@ -353,6 +353,14 @@
       "destination": "/welfare.html"
     },
     {
+      "source": "/video-manuals",
+      "destination": "/video-manuals.html"
+    },
+    {
+      "source": "/video-manuals/",
+      "destination": "/video-manuals.html"
+    },
+    {
       "source": "/mobile-welfare",
       "destination": "/mobile-welfare.html"
     },
