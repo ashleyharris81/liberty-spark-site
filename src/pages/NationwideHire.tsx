@@ -213,7 +213,7 @@ const NationwideHire = () => {
               <Link
                 to="/mnda"
                 onClick={() => window.scrollTo(0, 0)}
-                className="inline-flex mt-6 items-center justify-center bg-mnda text-primary-foreground font-heading font-bold text-sm uppercase tracking-wider px-6 py-3 rounded-lg hover:brightness-110 transition-all"
+                className="inline-flex mt-6 items-center justify-center bg-mnda text-mnda-foreground font-heading font-bold text-sm uppercase tracking-wider px-6 py-3 rounded-lg hover:brightness-110 transition-all"
               >
                 Read More Here
               </Link>
