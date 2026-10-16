@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Sustainability from "@/components/Sustainability";
+import NewsTeaser from "@/components/NewsTeaser";
 import CO2Stat from "@/components/CO2Stat";
 import SolarSection from "@/components/SolarSection";
 import Contact from "@/components/Contact";
