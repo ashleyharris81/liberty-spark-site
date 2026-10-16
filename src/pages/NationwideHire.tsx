@@ -263,6 +263,7 @@ const NationwideHire = () => {
       <div className="h-4 md:h-6 bg-white" />
 
       <Sustainability />
+      <NewsTeaser />
 
       <div className="h-4 md:h-6 bg-white" />
 
