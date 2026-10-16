@@ -10,40 +10,42 @@ const stats = [
 
 const Sustainability = () => {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-24 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${sustainabilityBg})` }}
       />
       <div className="absolute inset-0 bg-primary/50" />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-primary/30" />
-      
+
       <div className="relative z-10 container mx-auto px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
-            Sustainability <span className="text-yellow">Pledge</span>
-          </h2>
-          <div className="w-20 h-1 bg-yellow mx-auto mt-4 mb-8" />
-          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-6 font-bold">
-            We are dedicated to reducing our environmental impact and helping our customers achieve the same. We continuously invest in the latest solar-powered technology delivering sustainable and low-emission solutions.
-          </p>
-          <p className="text-primary-foreground/80 text-lg leading-relaxed mb-12 font-bold">
-            Our goal is to help our customers save energy, cut costs, reduce emissions and protect the planet together. Over the next few years, we're transforming our entire welfare fleet with cutting-edge solar technology. By regularly reviewing and upgrading our eco-efficient systems, we ensure our operations meet the highest environmental standards and lead the way in a sustainable future.
-          </p>
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12 items-center">
+          <div className="lg:col-span-3 text-center">
+            <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
+              Sustainability <span className="text-yellow">Pledge</span>
+            </h2>
+            <div className="w-20 h-1 bg-yellow mx-auto mt-4 mb-8" />
+            <p className="text-primary-foreground/80 text-lg leading-relaxed mb-6 font-bold">
+              We are dedicated to reducing our environmental impact and helping our customers achieve the same. We continuously invest in the latest solar-powered technology delivering sustainable and low-emission solutions.
+            </p>
+            <p className="text-primary-foreground/80 text-lg leading-relaxed font-bold">
+              Our goal is to help our customers save energy, cut costs, reduce emissions and protect the planet together. Over the next few years, we're transforming our entire welfare fleet with cutting-edge solar technology. By regularly reviewing and upgrading our eco-efficient systems, we ensure our operations meet the highest environmental standards and lead the way in a sustainable future.
+            </p>
+          </div>
 
-          <div className="w-full h-px bg-primary-foreground/15 mb-12" />
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 mb-4 rounded-full bg-yellow/20 border border-yellow/40 flex items-center justify-center">
-                  <stat.icon className="w-6 h-6 text-yellow" />
+          <div className="lg:col-span-2">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-10 max-w-xs mx-auto lg:mx-0 lg:ml-auto">
+              {stats.map((stat) => (
+                <div key={stat.label} className="flex flex-col items-center text-center">
+                  <div className="w-12 h-12 mb-3 rounded-full bg-yellow/20 border border-yellow/40 flex items-center justify-center">
+                    <stat.icon className="w-6 h-6 text-yellow" />
+                  </div>
+                  <p className="text-primary-foreground font-heading font-semibold text-xs uppercase tracking-wider">
+                    {stat.label}
+                  </p>
                 </div>
-                <p className="text-primary-foreground font-heading font-semibold text-sm uppercase tracking-wider">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
