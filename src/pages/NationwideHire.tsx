@@ -221,9 +221,39 @@ const NationwideHire = () => {
             <Link
               to="/mnda"
               onClick={() => window.scrollTo(0, 0)}
-              className="block rounded-2xl border-4 border-muted overflow-hidden shadow-lg hover:border-mnda/50 transition-colors"
+              className="group block rounded-2xl bg-white border border-border shadow-xl shadow-primary/10 p-6 md:p-8 hover:border-mnda/50 transition-colors"
             >
-              <img src={mndaPhoto.url} alt="Liberty MND Association charity welfare unit" loading="lazy" className="w-full h-64 md:h-80 object-cover" />
+              <div className="grid sm:grid-cols-[1.1fr_1fr] gap-6 items-center">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-2.5 w-2.5 rounded-full bg-secondary" aria-hidden="true" />
+                    <span className="text-secondary font-heading font-semibold text-xs uppercase tracking-[0.2em]">
+                      2021
+                    </span>
+                  </div>
+                  <h3 className="font-heading text-xl md:text-2xl font-black text-primary uppercase tracking-tight mt-2 mb-3">
+                    Our First Donation
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Back in September 2021 we made the decision to support the Motor Neurone
+                    Disease Association. This was an easy choice for us to make as the
+                    Association is extremely close to our hearts and forever will be. At Liberty
+                    we chose to support the Association in the only way we know how - with
+                    welfare! We chose a 12ft Mobi to be our dedicated charity unit and vowed each
+                    time this unit was out on hire, £125 per week would instantly go to the
+                    Association. We were delighted to send our first donation to the Association
+                    of £2125.00 in February 2022.
+                  </p>
+                </div>
+                <div className="aspect-[4/3] overflow-hidden rounded-xl">
+                  <img
+                    src={mndaPhoto.url}
+                    alt="Liberty MND Association charity welfare unit"
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </div>
             </Link>
           </div>
         </div>
