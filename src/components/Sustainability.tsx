@@ -37,10 +37,10 @@ const Sustainability = () => {
             <div className="grid grid-cols-2 gap-x-8 gap-y-10 max-w-xs mx-auto lg:mx-0 lg:ml-auto">
               {stats.map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 mb-3 rounded-full bg-yellow/20 border border-yellow/40 flex items-center justify-center">
-                    <stat.icon className="w-6 h-6 text-yellow" />
+                  <div className="w-20 h-20 md:w-24 md:h-24 mb-4 rounded-full bg-yellow/20 border-2 border-yellow/50 flex items-center justify-center">
+                    <stat.icon className="w-10 h-10 md:w-12 md:h-12 text-yellow" />
                   </div>
-                  <p className="text-primary-foreground font-heading font-semibold text-xs uppercase tracking-wider">
+                  <p className="text-primary-foreground font-heading font-bold text-sm md:text-base uppercase tracking-wider">
                     {stat.label}
                   </p>
                 </div>
