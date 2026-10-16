@@ -21,6 +21,8 @@ import hybridCard from "@/assets/hybrid-24ft-twin-card.jpg";
 import msExterior from "@/assets/ms-exterior.jpg";
 import portableHero from "@/assets/portable-buildings-hero.jpg";
 import { downloadFile } from "@/lib/downloadFile";
+import mndaLogo from "@/assets/mnda/mnda-logo.png.asset.json";
+import mndaPhoto from "@/assets/mnda/mnda-2026.jpg.asset.json";
 
 
 const showcase = [
@@ -183,20 +185,46 @@ const NationwideHire = () => {
         />
         <div className="absolute inset-0 bg-primary/85" />
         <div className="relative z-10 container mx-auto px-4 lg:px-8 max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
-              Nationwide <span className="text-secondary">Hire</span>
-            </h2>
-            <div className="w-20 h-1 bg-secondary mx-auto mt-4" />
-          </div>
           <div className="grid md:grid-cols-[0.6fr_1fr_0.8fr] gap-10 items-center">
             <div className="hidden md:block" />
             <div className="mx-auto w-full max-w-[320px] md:max-w-[400px]">
               <UKDepotMap depots={depots} />
             </div>
-            <p className="text-primary-foreground/80 text-lg leading-relaxed">
-              With 20 depot locations across the UK, Liberty offers nationwide delivery, competitive rates and a quality service. Our extensive fleet covers the complete product range in a variety of sizes, so whatever the scale or sector of your project, we have a unit to match.
-            </p>
+            <div>
+              <h2 className="font-heading text-3xl md:text-5xl font-black text-primary-foreground uppercase tracking-tight">
+                Nationwide <span className="text-secondary">Hire</span>
+              </h2>
+              <div className="w-20 h-1 bg-secondary mt-4 mb-6" />
+              <p className="text-primary-foreground/80 text-lg leading-relaxed">
+                With 20 depot locations across the UK, Liberty offers nationwide delivery, competitive rates and a quality service. Our extensive fleet covers the complete product range in a variety of sizes, so whatever the scale or sector of your project, we have a unit to match.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MND Association */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
+          <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-10 items-center">
+            <div>
+              <img src={mndaLogo.url} alt="MND Association" className="h-20 w-auto object-contain" loading="lazy" />
+              <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground mt-3">Partnership</h2>
+              <Link
+                to="/mnda"
+                onClick={() => window.scrollTo(0, 0)}
+                className="inline-flex mt-6 items-center justify-center bg-mnda text-primary-foreground font-heading font-bold text-sm uppercase tracking-wider px-6 py-3 rounded-lg hover:brightness-110 transition-all"
+              >
+                Read More Here
+              </Link>
+            </div>
+            <Link
+              to="/mnda"
+              onClick={() => window.scrollTo(0, 0)}
+              className="block rounded-2xl border-4 border-muted overflow-hidden shadow-lg hover:border-mnda/50 transition-colors"
+            >
+              <img src={mndaPhoto.url} alt="Liberty MND Association charity welfare unit" loading="lazy" className="w-full h-64 md:h-80 object-cover" />
+            </Link>
           </div>
         </div>
       </section>
