@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import HeroVideo from "@/components/HeroVideo";
 import Sustainability from "@/components/Sustainability";
+import NewsTeaser from "@/components/NewsTeaser";
 import ImageAccordion from "@/components/ImageAccordion";
 import nationwideHireBg from "@/assets/nationwide-hire-bg.jpg";
 import solarSavingsBg from "@/assets/solar-savings-bg.jpg";
