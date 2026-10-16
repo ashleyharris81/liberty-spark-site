@@ -209,12 +209,12 @@ const NationwideHire = () => {
         <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
           <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-10 items-center">
             <div>
-              <img src={mndaLogo.url} alt="MND Association" className="h-20 w-auto object-contain" loading="lazy" />
-              <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground mt-3">Partnership</h2>
+              <img src={mndaLogo.url} alt="MND Association" className="h-24 md:h-28 w-auto object-contain" loading="lazy" />
+              <h2 className="font-heading text-4xl md:text-5xl font-black text-foreground mt-4">Partnership</h2>
               <Link
                 to="/mnda"
                 onClick={() => window.scrollTo(0, 0)}
-                className="inline-flex mt-6 items-center justify-center bg-mnda text-mnda-foreground font-heading font-bold text-sm uppercase tracking-wider px-6 py-3 rounded-lg hover:brightness-110 transition-all"
+                className="inline-flex mt-7 items-center justify-center bg-mnda text-mnda-foreground font-heading font-bold text-base uppercase tracking-wider px-8 py-4 rounded-lg hover:brightness-110 transition-all"
               >
                 Read More Here
               </Link>
