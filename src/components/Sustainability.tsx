@@ -34,7 +34,7 @@ const Sustainability = () => {
           </div>
 
           <div className="lg:col-span-2">
-            <div className="grid grid-cols-2 gap-x-8 gap-y-10 max-w-xs mx-auto lg:mx-0 lg:ml-auto">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-10 max-w-sm mx-auto lg:mx-0 lg:ml-auto">
               {stats.map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center text-center">
                   <div className="w-20 h-20 md:w-24 md:h-24 mb-4 rounded-full bg-yellow/20 border-2 border-yellow/50 flex items-center justify-center">
