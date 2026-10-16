@@ -17,6 +17,7 @@ const Index = () => {
       <About />
       <Services />
       <Sustainability />
+      <NewsTeaser />
       <CO2Stat />
       <SolarSection />
       <Contact />
