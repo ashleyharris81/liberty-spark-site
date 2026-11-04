@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import zndExterior from "@/assets/case-study-znd-exterior-1.jpg.asset.json";
+import houseBuilderExterior from "@/assets/case-study-national-house-builder-exterior-front.jpg.asset.json";
 
 const CaseStudies = () => (
   <div className="min-h-screen bg-background">
@@ -21,6 +22,22 @@ const CaseStudies = () => (
         </p>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <Link
+            to="/case-studies/national-house-builder"
+            onClick={() => window.scrollTo(0, 0)}
+            className="group overflow-hidden rounded-lg border border-border bg-card shadow-sm transition-shadow hover:shadow-lg"
+          >
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <img src={houseBuilderExterior.url} alt="Blue two-storey modular building for a national house builder" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+              <p className="absolute bottom-4 left-4 font-heading text-xs font-bold uppercase text-primary-foreground">Modular Buildings</p>
+            </div>
+            <div className="p-6">
+              <h2 className="font-heading text-xl font-bold uppercase text-primary group-hover:text-secondary">Modular Build for a National House Builder</h2>
+              <p className="mt-2 text-sm text-muted-foreground">A bespoke 12-bay, two-storey modular build with five offices, an open-plan canteen, a dry room and toilet facilities.</p>
+              <span className="mt-4 inline-block font-heading text-sm font-bold uppercase text-secondary">Read the case study →</span>
+            </div>
+          </Link>
           <Link
             to="/case-studies/znd-uk"
             className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-lg"
