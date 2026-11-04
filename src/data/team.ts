@@ -84,6 +84,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Marie Brown",
       role: "Head of Customer Relations",
+      photo: marie.url,
       bio: [
         "I joined in April 2026 and my role encompasses overall responsibility for the Hire Coordinators, Customer Service, Toilet Services and the Field Engineers.",
         "I've enjoyed recruiting new team members to strengthen our team as we go on our journey of growth, and improving our ways of working with a customer-centric approach.",
@@ -95,6 +96,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Kate Fowler",
       role: "Off Hire Supervisor",
+      photo: kate.url,
       bio: [
         "I've worked at Liberty for 8 years, overseeing the smooth coordination of cabin hire and off-hire arrangements. I manage customer requests to ensure cabins are booked, scheduled and off-hired efficiently, from initial booking through to completion. I enjoy that no day is the same, the many great characters within our departments, and plenty of laughs.",
       ],
