@@ -39,7 +39,15 @@ export const teamRows: TeamMember[][] = [
         "No day is the same, no matter what the challenge is thrown at us, our team strive for a solution, we are customer first, always. Also it helps that we have a brewery and bar on site!",
       ],
     },
-    { name: "Ross Finnegan", role: "Director", photo: ross.url },
+    {
+      name: "Ross Finnegan",
+      role: "Director",
+      photo: ross.url,
+      bio: [
+        "I manage a talented sales team, I'm heavily involved in customer service and I manage all group operations. At Liberty I've had the pleasure of being included in some of the biggest infrastructure initiatives in the UK including projects such as HS2, Sizewell C and Hinckley Point.",
+        "I really enjoy being a part of significant projects such as these, as it's great to make a change in the construction industry. I do enjoy the customer interaction side of things too, hearing positive feedback is a win in my eyes.",
+      ],
+    },
   ],
   [
     {
