@@ -4,6 +4,20 @@ import hannahW from "@/assets/team/hannah-waud.jpg.asset.json";
 import farren from "@/assets/team/farren-buss.jpg.asset.json";
 import abbie from "@/assets/team/abbie-dobson.jpg.asset.json";
 import hannahH from "@/assets/team/hannah-hornsby.jpg.asset.json";
+import marie from "@/assets/team/marie-brown.jpg.asset.json";
+import kate from "@/assets/team/kate-fowler.jpg.asset.json";
+import rhoda from "@/assets/team/rhoda-oppong.jpg.asset.json";
+import jess from "@/assets/team/jess-worner.jpg.asset.json";
+import dawn from "@/assets/team/dawn-bruce.jpg.asset.json";
+import abi from "@/assets/team/abi-roberts.jpg.asset.json";
+import vanessa from "@/assets/team/vanessa-dickinson.jpg.asset.json";
+import khloe from "@/assets/team/khloe-wooldridge.jpg.asset.json";
+import karen from "@/assets/team/karen-beevers.jpg.asset.json";
+import megan from "@/assets/team/megan-evans.jpg.asset.json";
+import dan from "@/assets/team/dan-fenwick.jpg.asset.json";
+import carol from "@/assets/team/carol-black.jpg.asset.json";
+import marissa from "@/assets/team/marissa-barley.jpg.asset.json";
+import samuel from "@/assets/team/samuel-piggott.jpg.asset.json";
 
 export interface TeamMember {
   name: string;
