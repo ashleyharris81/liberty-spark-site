@@ -139,6 +139,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Vanessa Dickinson",
       role: "Aftersales Coordinator",
+      photo: vanessa.url,
       bio: [
         "No two days are ever the same - each day is a learning day. I enjoy chatting to customers and site personnel, and knowing I make a small difference in getting their faults rectified. My colleagues are a pleasure to work with and always on hand to support.",
       ],
@@ -146,6 +147,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Khloe Wooldridge",
       role: "Hire Fleet Service Assistant",
+      photo: khloe.url,
       bio: [
         "I'm part of the waste management team, supporting customers and external tankers by phone and email, raising purchase orders and invoices, and keeping legal certificates up to date. I love building relationships with our customers and helping their day run smoother behind the scenes.",
       ],
@@ -153,6 +155,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Karen Beevers",
       role: "Hire Fleet Services Assistant",
+      photo: karen.url,
       bio: [
         "I set up new toilet services for units, deal with customer service queries by phone and email, and liaise with external tanker companies. I enjoy our friendly team who make everyone feel welcome.",
       ],
@@ -160,6 +163,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Megan Evans",
       role: "Operations Assistant",
+      photo: megan.url,
       bio: [
         "I support a wide range of administrative and operational tasks, from updating service records across our welfare fleet to coordinating MOTs, servicing and vehicle repairs, and liaising with suppliers.",
         "I particularly enjoy the family feel of the company - a great mix of personalities makes every day different, fun and never quite predictable!",
