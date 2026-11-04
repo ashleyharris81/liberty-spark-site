@@ -174,6 +174,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Dan Fenwick",
       role: "Group Finance Manager",
+      photo: dan.url,
       bio: [
         "Responsible for the day to day running of the finance department, as well as being the unofficial first line response to IT issues. A project I enjoyed, as stressful as it was, was changing audit companies and getting the first year audit over the line. No two days are ever the same.",
       ],
@@ -181,6 +182,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Carol Black",
       role: "Accounts Assistant",
+      photo: carol.url,
       bio: [
         "Purchase ledger, payroll, supplier payments and guardian of the petty cash tin - people only speak to me when they want money! What I enjoy most: my wonderful managers (do I get a pay rise now?)",
       ],
@@ -188,6 +190,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Marissa Barley",
       role: "Accounts Assistant",
+      photo: marissa.url,
       bio: [
         "Credit control - generally I'm the annoying one! My favourite task is allocating payments when people pay on time, and I enjoy not working weekends so I can do my wedding photography.",
       ],
@@ -195,6 +198,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Samuel Piggott",
       role: "Accounts Assistant",
+      photo: samuel.url,
       bio: [
         "I process supplier invoices and raise purchase orders. I enjoy using my accounts knowledge to calculate how much money I've lost watching Chelsea lose each season.",
       ],
