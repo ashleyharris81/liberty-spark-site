@@ -104,6 +104,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Rhoda Oppong",
       role: "Hire Desk Coordinator",
+      photo: rhoda.url,
       bio: [
         "My role involves helping coordinate the transport of welfare units when they are coming off hire, making sure everything is organised and runs smoothly. I enjoy the variety of the role and the friendly, welcoming environment - there's a real sense of teamwork and helping each other out.",
       ],
@@ -111,6 +112,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Jess Worner",
       role: "On Hires Supervisor",
+      photo: jess.url,
       bio: [
         "I oversee the day-to-day coordination of deliveries for our mobile and static welfare units, as well as marketing suites, working closely with customers to ensure a smooth and efficient service.",
         "The best part about working at Liberty is definitely the people. Everyone is supportive, approachable, and always willing to help.",
@@ -119,6 +121,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Dawn Bruce",
       role: "Hire Desk Coordinator",
+      photo: dawn.url,
       bio: [
         "It is great to have joined a company that really cares about excellent customer service and equally values its staff highly. We are a friendly and supportive team, plus the Friday bacon sandwiches are a bonus!",
       ],
@@ -126,6 +129,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Abi Roberts",
       role: "Office Junior/Administrator",
+      photo: abi.url,
       bio: [
         "I work in the transport team, helping with ETAs for deliveries and collections, and the POCs and PODs. I enjoy working with other people in the office.",
       ],
