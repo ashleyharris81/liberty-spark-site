@@ -63,7 +63,7 @@ const MeetTheTeam = () => {
         </div>
       </div>
 
-      <Dialog open={!!active} onOpenChange={(open) => !open && setActive(null)}>
+      <Dialog open={!!active} onOpenChange={(open) => { console.log("dialog onOpenChange", open); if (!open) setActive(null); }}>
         <DialogContent className="max-w-3xl p-0 overflow-hidden rounded-tl-xl rounded-br-3xl border-2 border-secondary">
           {active && (
             <div className="grid md:grid-cols-[18rem_1fr] max-h-[85vh]">
