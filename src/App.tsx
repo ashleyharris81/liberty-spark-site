@@ -31,6 +31,7 @@ import DepotFinder from "./pages/DepotFinder";
 import MndaPartnership from "./pages/MndaPartnership";
 import CaseStudies from "./pages/CaseStudies";
 import CaseStudyZnd from "./pages/CaseStudyZnd";
+import CaseStudyNationalHouseBuilder from "./pages/CaseStudyNationalHouseBuilder";
 import Admin from "./pages/Admin";
 import CookieBanner from "./components/CookieBanner";
 import Seo from "./components/Seo";
@@ -87,6 +88,7 @@ const App = () => (
           {/* Hidden case studies section: not linked in nav, noindex, excluded from sitemap/prerender */}
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/znd-uk" element={<CaseStudyZnd />} />
+          <Route path="/case-studies/national-house-builder" element={<CaseStudyNationalHouseBuilder />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -140,10 +140,15 @@ const routeMeta: Record<string, Meta> = {
     description:
       "A 30m x 9.6m two-storey, 10-bay modular office building with 8 offices, meeting room, canteen and reception for ZND UK.",
   },
+  "/case-studies/national-house-builder": {
+    title: "National House Builder - Modular Building Case Study",
+    description:
+      "A bespoke 12-bay, two-storey modular building for a national house builder, with five offices, a large open-plan canteen, dry room and toilets.",
+  },
 };
 
 /** Routes that must not be indexed (duplicates, private tools, error pages). */
-const NOINDEX_PATHS = new Set(["/homepage2", "/admin", "/depotfinder", "/mnda", "/case-studies", "/case-studies/znd-uk"]);
+const NOINDEX_PATHS = new Set(["/homepage2", "/admin", "/depotfinder", "/mnda", "/case-studies", "/case-studies/znd-uk", "/case-studies/national-house-builder"]);
 
 /**
  * Canonical overrides. "/" and "/nationwide-hire" render the same page, and a
