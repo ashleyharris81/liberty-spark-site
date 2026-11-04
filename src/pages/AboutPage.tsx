@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import CloudflareVideo from "@/components/CloudflareVideo";
+import HeroVideo from "@/components/HeroVideo";
+import MeetTheTeam from "@/components/MeetTheTeam";
+import Sustainability from "@/components/Sustainability";
+import heroVideo from "@/assets/about/about-hero.mp4.asset.json";
+import heroPoster from "@/assets/about/about-poster.jpg.asset.json";
+import coreValuesBg from "@/assets/about/core-values-bg.jpg.asset.json";
 
 const AboutPage = () => {
   return (
@@ -12,7 +17,7 @@ const AboutPage = () => {
       {/* Hero */}
       <section className="relative pt-20">
         <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
-          <CloudflareVideo uid="a00d3e83fd24b5fe98b3334d4691b7a2" variant="hero" />
+          <HeroVideo src={heroVideo.url} poster={heroPoster.url} />
           <div className="absolute inset-0 bg-primary/60 z-[5]" />
           <div className="relative z-10 h-full flex items-center">
             <div className="container mx-auto px-4 lg:px-8">
@@ -38,14 +43,16 @@ const AboutPage = () => {
             Who are <span className="text-secondary">we?</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed text-lg">
-            Liberty was founded in 1981 and has grown to become a pillar in the welfare industry. We supply a variety of portable accommodation facilities, accessible to all sectors. Our trusted reputation is built on our consistency of quality and service.
+            Liberty was founded in 1981 and has grown to become a pillar in the welfare industry. We supply a variety of portable accommodation facilities, accessible to all sectors. Our trusted reputation is built on our consistency of quality and service. We are backed by our trusted depot partnerships and supply nationwide delivery. We are proud to be leading suppliers of solar welfare, and we are dedicated to providing the construction industry with sustainable options.
           </p>
         </div>
       </section>
 
       {/* Our Core Values */}
-      <section className="py-20 bg-primary">
-        <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${coreValuesBg.url})` }} />
+        <div className="absolute inset-0 bg-primary/60" />
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 max-w-4xl">
           <h2 className="font-heading text-3xl md:text-4xl font-black text-primary-foreground uppercase tracking-tight mb-8 text-center">
             Our Core <span className="text-secondary">Values</span>
           </h2>
@@ -59,17 +66,9 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Sustainability Pledge */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-          <h2 className="font-heading text-3xl md:text-4xl font-black text-foreground uppercase tracking-tight mb-8 text-center">
-            Sustainability <span className="text-secondary">Pledge</span>
-          </h2>
-          <p className="text-muted-foreground leading-relaxed text-lg">
-            At Liberty we are dedicated to reducing our environmental impact and helping our customers achieve the same. We continuously invest in the latest solar-powered technology delivering sustainable and low-emission solutions. Our goal is to help our customers save energy, cut costs, reduce emissions and protect the planet together. Over the next few years, we’re transforming our entire welfare fleet with cutting-edge solar technology. By regularly reviewing and upgrading our eco-efficient systems, we ensure our operations meet the highest environmental standards and lead the way in a sustainable future.
-          </p>
-        </div>
-      </section>
+      <MeetTheTeam />
+
+      <Sustainability />
 
       <Contact />
       <Footer />

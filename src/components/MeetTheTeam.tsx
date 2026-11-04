@@ -10,7 +10,7 @@ const MemberCard = ({ member }: { member: TeamMember }) => {
       type="button"
       onClick={() => hasBio && setOpen((o) => !o)}
       aria-expanded={hasBio ? open : undefined}
-      className={`group relative w-full text-left rounded-tl-xl rounded-br-3xl border-2 border-secondary bg-card overflow-hidden transition-shadow hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${hasBio ? "cursor-pointer" : "cursor-default"}`}
+      className={`group relative w-full h-full text-left rounded-tl-xl rounded-br-3xl border-2 border-secondary bg-card overflow-hidden transition-shadow hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${hasBio ? "cursor-pointer" : "cursor-default"}`}
     >
       {member.photo ? (
         <div className="aspect-square overflow-hidden rounded-br-3xl m-2 bg-muted">
@@ -62,7 +62,7 @@ const MeetTheTeam = () => (
           return (
             <div
               key={i}
-              className={`grid gap-6 grid-cols-2 ${withPhotos ? "md:grid-cols-4" : "md:grid-cols-3 lg:grid-cols-6"} ${withPhotos ? "min-h-[24rem]" : ""}`}
+              className={`grid gap-6 grid-cols-2 ${withPhotos ? "md:grid-cols-4" : "md:grid-cols-3 lg:grid-cols-6"}`}
             >
               {row.map((m) => (
                 <div key={m.name} className={withPhotos ? "min-h-[22rem]" : "min-h-[9rem]"}>
