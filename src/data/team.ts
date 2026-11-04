@@ -4,6 +4,20 @@ import hannahW from "@/assets/team/hannah-waud.jpg.asset.json";
 import farren from "@/assets/team/farren-buss.jpg.asset.json";
 import abbie from "@/assets/team/abbie-dobson.jpg.asset.json";
 import hannahH from "@/assets/team/hannah-hornsby.jpg.asset.json";
+import marie from "@/assets/team/marie-brown.jpg.asset.json";
+import kate from "@/assets/team/kate-fowler.jpg.asset.json";
+import rhoda from "@/assets/team/rhoda-oppong.jpg.asset.json";
+import jess from "@/assets/team/jess-worner.jpg.asset.json";
+import dawn from "@/assets/team/dawn-bruce.jpg.asset.json";
+import abi from "@/assets/team/abi-roberts.jpg.asset.json";
+import vanessa from "@/assets/team/vanessa-dickinson.jpg.asset.json";
+import khloe from "@/assets/team/khloe-wooldridge.jpg.asset.json";
+import karen from "@/assets/team/karen-beevers.jpg.asset.json";
+import megan from "@/assets/team/megan-evans.jpg.asset.json";
+import dan from "@/assets/team/dan-fenwick.jpg.asset.json";
+import carol from "@/assets/team/carol-black.jpg.asset.json";
+import marissa from "@/assets/team/marissa-barley.jpg.asset.json";
+import samuel from "@/assets/team/samuel-piggott.jpg.asset.json";
 
 export interface TeamMember {
   name: string;
@@ -70,6 +84,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Marie Brown",
       role: "Head of Customer Relations",
+      photo: marie.url,
       bio: [
         "I joined in April 2026 and my role encompasses overall responsibility for the Hire Coordinators, Customer Service, Toilet Services and the Field Engineers.",
         "I've enjoyed recruiting new team members to strengthen our team as we go on our journey of growth, and improving our ways of working with a customer-centric approach.",
@@ -81,6 +96,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Kate Fowler",
       role: "Off Hire Supervisor",
+      photo: kate.url,
       bio: [
         "I've worked at Liberty for 8 years, overseeing the smooth coordination of cabin hire and off-hire arrangements. I manage customer requests to ensure cabins are booked, scheduled and off-hired efficiently, from initial booking through to completion. I enjoy that no day is the same, the many great characters within our departments, and plenty of laughs.",
       ],
@@ -88,6 +104,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Rhoda Oppong",
       role: "Hire Desk Coordinator",
+      photo: rhoda.url,
       bio: [
         "My role involves helping coordinate the transport of welfare units when they are coming off hire, making sure everything is organised and runs smoothly. I enjoy the variety of the role and the friendly, welcoming environment - there's a real sense of teamwork and helping each other out.",
       ],
@@ -95,6 +112,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Jess Worner",
       role: "On Hires Supervisor",
+      photo: jess.url,
       bio: [
         "I oversee the day-to-day coordination of deliveries for our mobile and static welfare units, as well as marketing suites, working closely with customers to ensure a smooth and efficient service.",
         "The best part about working at Liberty is definitely the people. Everyone is supportive, approachable, and always willing to help.",
@@ -103,6 +121,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Dawn Bruce",
       role: "Hire Desk Coordinator",
+      photo: dawn.url,
       bio: [
         "It is great to have joined a company that really cares about excellent customer service and equally values its staff highly. We are a friendly and supportive team, plus the Friday bacon sandwiches are a bonus!",
       ],
@@ -110,6 +129,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Abi Roberts",
       role: "Office Junior/Administrator",
+      photo: abi.url,
       bio: [
         "I work in the transport team, helping with ETAs for deliveries and collections, and the POCs and PODs. I enjoy working with other people in the office.",
       ],
@@ -119,6 +139,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Vanessa Dickinson",
       role: "Aftersales Coordinator",
+      photo: vanessa.url,
       bio: [
         "No two days are ever the same - each day is a learning day. I enjoy chatting to customers and site personnel, and knowing I make a small difference in getting their faults rectified. My colleagues are a pleasure to work with and always on hand to support.",
       ],
@@ -126,6 +147,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Khloe Wooldridge",
       role: "Hire Fleet Service Assistant",
+      photo: khloe.url,
       bio: [
         "I'm part of the waste management team, supporting customers and external tankers by phone and email, raising purchase orders and invoices, and keeping legal certificates up to date. I love building relationships with our customers and helping their day run smoother behind the scenes.",
       ],
@@ -133,6 +155,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Karen Beevers",
       role: "Hire Fleet Services Assistant",
+      photo: karen.url,
       bio: [
         "I set up new toilet services for units, deal with customer service queries by phone and email, and liaise with external tanker companies. I enjoy our friendly team who make everyone feel welcome.",
       ],
@@ -140,6 +163,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Megan Evans",
       role: "Operations Assistant",
+      photo: megan.url,
       bio: [
         "I support a wide range of administrative and operational tasks, from updating service records across our welfare fleet to coordinating MOTs, servicing and vehicle repairs, and liaising with suppliers.",
         "I particularly enjoy the family feel of the company - a great mix of personalities makes every day different, fun and never quite predictable!",
@@ -150,6 +174,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Dan Fenwick",
       role: "Group Finance Manager",
+      photo: dan.url,
       bio: [
         "Responsible for the day to day running of the finance department, as well as being the unofficial first line response to IT issues. A project I enjoyed, as stressful as it was, was changing audit companies and getting the first year audit over the line. No two days are ever the same.",
       ],
@@ -157,6 +182,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Carol Black",
       role: "Accounts Assistant",
+      photo: carol.url,
       bio: [
         "Purchase ledger, payroll, supplier payments and guardian of the petty cash tin - people only speak to me when they want money! What I enjoy most: my wonderful managers (do I get a pay rise now?)",
       ],
@@ -164,6 +190,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Marissa Barley",
       role: "Accounts Assistant",
+      photo: marissa.url,
       bio: [
         "Credit control - generally I'm the annoying one! My favourite task is allocating payments when people pay on time, and I enjoy not working weekends so I can do my wedding photography.",
       ],
@@ -171,6 +198,7 @@ export const teamRows: TeamMember[][] = [
     {
       name: "Samuel Piggott",
       role: "Accounts Assistant",
+      photo: samuel.url,
       bio: [
         "I process supplier invoices and raise purchase orders. I enjoy using my accounts knowledge to calculate how much money I've lost watching Chelsea lose each season.",
       ],
