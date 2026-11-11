@@ -50,7 +50,7 @@ const MeetTheTeam = () => {
             return (
               <div
                 key={i}
-                className={`grid gap-6 grid-cols-2 ${withPhotos ? (row.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4") : "md:grid-cols-3 lg:grid-cols-6"}`}
+                className={`grid gap-6 grid-cols-2 ${withPhotos ? "md:grid-cols-4" : "md:grid-cols-3 lg:grid-cols-6"}`}
               >
                 {row.map((m) => (
                   <div key={m.name} className={withPhotos ? "min-h-[22rem]" : "min-h-[9rem]"}>
