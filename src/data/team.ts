@@ -154,7 +154,7 @@ export const teamRows: TeamMember[][] = [
     },
     {
       name: "Khloe Wooldridge",
-      role: "Hire Fleet Service Assistant",
+      role: "Hire Fleet Services Assistant",
       photo: khloe.url,
       bio: [
         "I'm part of the waste management team, supporting customers and external tankers by phone and email, raising purchase orders and invoices, and keeping legal certificates up to date. I love building relationships with our customers and helping their day run smoother behind the scenes.",
