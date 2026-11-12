@@ -2,6 +2,7 @@ import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 import { createClient } from 'npm:@supabase/supabase-js@2';
 import { z } from 'npm:zod@3.23.8';
 import { sendNotification } from './notification.ts';
+import { verifyHuman } from './verification.ts';
 
 
 const contactSchema = z.object({
@@ -12,6 +13,7 @@ const contactSchema = z.object({
   subject: z.string().trim().max(200).optional().default(''),
   message: z.string().trim().min(1).max(2000),
   source: z.string().trim().max(100).optional().default(''),
+  turnstileToken: z.string().min(1).max(2048),
 });
 
 const accountSchema = z.object({
@@ -65,6 +67,10 @@ Deno.serve(async (req) => {
     const parsed = bodySchema.safeParse(await req.json());
     if (!parsed.success) {
       return json({ error: 'Invalid submission', details: parsed.error.flatten().fieldErrors }, 400);
+    }
+
+    if (parsed.data.type === 'contact' && !await verifyHuman(parsed.data.turnstileToken, Deno.env.get('TURNSTILE_SECRET_KEY'))) {
+      return json({ error: 'Human verification failed. Please try again.' }, 400);
     }
 
     const supabaseUrl = Deno.env.get('SUPABASE_URL');

@@ -10,11 +10,15 @@ import UKDepotMap from "@/components/UKDepotMap";
 import { depots } from "@/data/depots";
 import { downloadFile } from "@/lib/downloadFile";
 import { submitForm } from "@/lib/submitForm";
+import HumanVerification from "@/components/HumanVerification";
+import { Button } from "@/components/ui/button";
 
 
 const ContactPage = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [verificationReset, setVerificationReset] = useState(0);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -25,9 +29,10 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!turnstileToken || isSubmitting) return;
     setIsSubmitting(true);
     try {
-      await submitForm({ type: "contact", ...formData, source: "Contact page" });
+      await submitForm({ type: "contact", ...formData, turnstileToken, source: "Contact page" });
       toast({
         title: "Message Sent",
         description: "Thank you for your enquiry! We will be in touch shortly.",
@@ -40,6 +45,8 @@ const ContactPage = () => {
         variant: "destructive",
       });
     } finally {
+      setTurnstileToken("");
+      setVerificationReset((value) => value + 1);
       setIsSubmitting(false);
     }
   };
@@ -219,13 +226,14 @@ const ContactPage = () => {
                   required
                   maxLength={2000}
                 />
-                <button
+                <HumanVerification onToken={setTurnstileToken} resetKey={verificationReset} />
+                <Button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !turnstileToken}
                   className="w-full bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider py-4 rounded-lg hover:brightness-110 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Sending..." : "Submit Form"}
-                </button>
+                </Button>
 
               </form>
             </div>

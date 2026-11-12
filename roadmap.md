@@ -1,5 +1,8 @@
 # Roadmap
 
+- [x] Add Turnstile to both contact forms; verify server rejection of invalid tokens and no saved spam
+- [ ] Verify a successful human submission on the published allowed hostname (local test host is not approved by Cloudflare)
+
 - [x] About Us page amendments + Meet the Team section
 - [x] Investigate missing account application from Lucy.simpson@fj-groundworks.com (4 Nov 2026 morning)
 - [x] Add National House Builder case study using the supplied PDF and six photos

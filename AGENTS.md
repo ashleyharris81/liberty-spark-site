@@ -1,5 +1,7 @@
 # Project rules
 
+- Both contact forms share a Turnstile widget; the submission function requires a verified contact-action token from an approved hostname before saving or emailing contact enquiries. Account applications remain unchanged.
+
 - Form notifications use server-side Microsoft Graph through the linked Azure Graph gateway connection; save submissions before sending so provider failures never lose leads.
 
 - Keep video manual metadata in `src/data/videoManuals.ts` and uploaded media in CDN asset pointers so the library can grow without bundling videos in the application.

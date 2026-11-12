@@ -5,10 +5,14 @@ import { useState } from "react";
 import { downloadFile } from "@/lib/downloadFile";
 import { submitForm } from "@/lib/submitForm";
 import { useToast } from "@/components/ui/use-toast";
+import HumanVerification from "@/components/HumanVerification";
+import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [verificationReset, setVerificationReset] = useState(0);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -19,9 +23,10 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!turnstileToken || isSubmitting) return;
     setIsSubmitting(true);
     try {
-      await submitForm({ type: "contact", ...formData, source: "Home page" });
+      await submitForm({ type: "contact", ...formData, turnstileToken, source: "Home page" });
       toast({
         title: "Message Sent",
         description: "Thank you for your enquiry! We will be in touch shortly.",
@@ -34,6 +39,8 @@ const Contact = () => {
         variant: "destructive",
       });
     } finally {
+      setTurnstileToken("");
+      setVerificationReset((value) => value + 1);
       setIsSubmitting(false);
     }
   };
@@ -180,13 +187,14 @@ const Contact = () => {
               className="w-full bg-navy-light border border-primary-foreground/10 rounded-lg px-4 py-3 text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-secondary transition-colors resize-none font-body"
               required
             />
-            <button
+            <HumanVerification onToken={setTurnstileToken} resetKey={verificationReset} />
+            <Button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || !turnstileToken}
               className="w-full bg-secondary text-secondary-foreground font-heading font-bold text-sm uppercase tracking-wider py-4 rounded-lg hover:brightness-110 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Sending..." : "Submit Form"}
-            </button>
+            </Button>
 
           </form>
         </div>
