@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/liberty-logo-white.png";
 
 const navLinks = [
+  { label: "ABOUT US", href: "/about", isRoute: true },
   { label: "MOBILE", href: "/mobile-welfare", isRoute: true },
   { label: "STATIC", href: "/static-welfare", isRoute: true },
   { label: "SOLAR", href: "/solar", isRoute: true },

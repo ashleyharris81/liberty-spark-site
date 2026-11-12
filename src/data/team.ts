@@ -55,7 +55,10 @@ export const teamRows: TeamMember[][] = [
       role: "Regional Sales Manager",
       photo: hannahW.url,
       bio: [
-        "There is never a dull day working at Liberty. The hire industry tends to be a chaotic environment to work in but the office banter, team player attitude of my colleagues and variety of customers we deal with always leaves me smiling at the end of the day.",
+        "As a Regional Sales Manager, I build strong customer partnerships with new and existing customers and ensuring customer satisfaction from start to finish through the hire process. I oversee our regional sales strategies and team to deliver compliant, and sustainable welfare solutions.",
+        "After 12+ years in construction and hire, I can confirm the rumours are true - you never really leave!",
+        "Known as the nerdy one, I was originally brought in to champion our solar range I demonstrate the benefits of using premium, greener equipment.",
+        "The best part of Liberty? No two days are ever the same. We're professional without the corporate fluff, and even on the busiest days, there's always time for a laugh.",
       ],
     },
     {
