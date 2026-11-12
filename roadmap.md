@@ -7,4 +7,5 @@
 - [x] Investigate missing account application from Lucy.simpson@fj-groundworks.com (4 Nov 2026 morning)
 - [x] Add National House Builder case study using the supplied PDF and six photos
 - [x] Switch contact and account notifications to Microsoft 365; deploy and test submission storage
-- [ ] Verify both notification sends after Microsoft 365 administrator grants application Mail.Send consent and mailbox access (current sends rejected with 403; no mail permissions granted)
+- [x] Verify both notification sends with the sales mailbox (Microsoft 365 accepted both test emails with HTTP 202 on 12 November 2026; inbox delivery awaits recipient confirmation)
+- [x] Change the notification sender to sales@libertyguard.co.uk and test both notifications to the same sales mailbox

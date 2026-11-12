@@ -1,4 +1,4 @@
-export const NOTIFY_FROM = 'noreply@libertyguard.co.uk';
+export const NOTIFY_FROM = 'sales@libertyguard.co.uk';
 export const NOTIFY_TO = 'sales@libertyguard.co.uk';
 const GATEWAY_URL = 'https://connector-gateway.lovable.dev/azure_graph';
 

@@ -13,7 +13,7 @@ Deno.test('notifications send from the nominated Microsoft 365 mailbox to sales'
     return new Response(null, { status: 202 });
   };
   const result = await sendNotification('Enquiry', '<p>Test</p>', 'visitor@example.com', { lovableKey: 'test', connectionKey: 'test' }, fetcher);
-  assert(url.endsWith('/users/noreply%40libertyguard.co.uk/sendMail'), 'Wrong sender');
+  assert(url.endsWith('/users/sales%40libertyguard.co.uk/sendMail'), 'Wrong sender');
   assert(body.message.toRecipients[0].emailAddress.address === 'sales@libertyguard.co.uk', 'Wrong recipient');
   assert(body.message.replyTo[0].emailAddress.address === 'visitor@example.com', 'Wrong reply-to');
   assert(body.saveToSentItems === true && result.sent, 'Acceptance or sent item missing');
