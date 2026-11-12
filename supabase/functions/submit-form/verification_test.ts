@@ -8,6 +8,7 @@ Deno.test('contact human verification rejects missing tokens without calling pro
 Deno.test('contact human verification requires provider success, approved hostname and contact action', async () => {
   for (const [success, hostname, action, expected] of [
     [true, 'www.libertyguard.co.uk', 'contact', true],
+    [true, 'fae4c660-3ce6-4acc-8e43-9e16aeed5346.lovableproject.com', 'contact', true],
     [false, 'www.libertyguard.co.uk', 'contact', false],
     [true, 'attacker.example', 'contact', false],
     [true, 'www.libertyguard.co.uk', 'other', false],
