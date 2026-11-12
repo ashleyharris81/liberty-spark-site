@@ -1,9 +1,7 @@
 import { corsHeaders } from 'npm:@supabase/supabase-js@2/cors';
 import { createClient } from 'npm:@supabase/supabase-js@2';
 import { z } from 'npm:zod@3.23.8';
-
-const NOTIFY_TO = 'sales@libertyguard.co.uk';
-const NOTIFY_FROM = Deno.env.get('SENDGRID_FROM') ?? 'sales@libertyguard.co.uk';
+import { sendNotification } from './notification.ts';
 
 
 const contactSchema = z.object({
@@ -42,42 +40,13 @@ const rows = (entries: [string, string][]) =>
 type NotifyResult = { sent: boolean; detail?: string };
 
 async function notify(subject: string, html: string, replyTo?: string): Promise<NotifyResult> {
-  const apiKey = Deno.env.get('SENDGRID_API_KEY');
-  if (!apiKey) {
-    console.error('SENDGRID_API_KEY is not configured — skipping notification email');
-    return { sent: false, detail: 'SENDGRID_API_KEY not configured' };
-  }
-
-  try {
-    const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        personalizations: [{ to: [{ email: NOTIFY_TO }] }],
-        from: { email: NOTIFY_FROM, name: 'Liberty Website' },
-        ...(replyTo ? { reply_to: { email: replyTo } } : {}),
-        subject,
-        content: [
-          { type: 'text/html', value: `<div style="font-family:Arial,sans-serif;font-size:14px">${html}</div>` },
-        ],
-      }),
-    });
-
-    if (!response.ok) {
-      const body = await response.text();
-      console.error(`SendGrid request failed [${response.status}]: ${body}`);
-      return { sent: false, detail: `SendGrid ${response.status}: ${body}` };
-    }
-
-    return { sent: true };
-  } catch (e) {
-    const detail = e instanceof Error ? e.message : String(e);
-    console.error('SendGrid request error:', detail);
-    return { sent: false, detail };
-  }
+  const result = await sendNotification(subject, html, replyTo, {
+    lovableKey: Deno.env.get('LOVABLE_API_KEY'),
+    connectionKey: Deno.env.get('AZURE_GRAPH_API_KEY'),
+  });
+  if (!result.sent) console.error('Notification failed:', result.detail);
+  else console.info('Microsoft 365 accepted notification');
+  return result;
 }
 
 
