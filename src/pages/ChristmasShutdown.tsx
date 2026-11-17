@@ -3,6 +3,17 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import { Link } from "react-router-dom";
 import { articles } from "@/data/newsArticles";
+import { CalendarClock, PhoneCall, PoundSterling, Ban, Truck, Wrench } from "lucide-react";
+
+const keyDates = [
+  { label: "Offices close", value: "2pm, Wed 23 Dec 2026" },
+  { label: "Offices reopen", value: "8.30am, Mon 4 Jan 2027" },
+  { label: "Welfare off-hire deadline", value: "2pm, Mon 7 Dec 2026" },
+  { label: "Marketing suite off-hire deadline", value: "Mon 16 Nov 2026" },
+];
+
+const sectionHeading = "font-heading text-xl md:text-2xl font-bold text-primary uppercase tracking-wide mb-4 flex items-center gap-3";
+const sectionIcon = "h-6 w-6 text-secondary flex-shrink-0";
 
 const ChristmasShutdown = () => (
   <div className="min-h-screen bg-background">
@@ -36,49 +47,64 @@ const ChristmasShutdown = () => (
                 </nav>
               </div>
             </aside>
-        <article className="flex-1 order-1 lg:order-2 min-w-0 space-y-6 text-foreground text-base md:text-lg leading-relaxed">
-          <div>
-            <p className="font-semibold text-primary mb-3">To all our valued customers,</p>
-            <p>We would like to inform you of our Christmas/New Year policies for off-hire, collection and suspension of hire. These policies will be effective from Wednesday 23 December 2026 to Monday 4 January 2027.</p>
-            <p className="mt-4">Please note, our offices will close at <strong className="font-semibold">2pm on Wednesday 23 December 2026</strong> and will reopen at <strong className="font-semibold">8.30am on Monday 4 January 2027</strong>.</p>
-          </div>
-          <section>
-            <h2 className="font-heading text-2xl font-semibold text-primary mb-3">Emergency Support</h2>
-            <p>A limited number of engineers will be on call to assist with urgent matters between <strong className="font-semibold">9am and 5pm</strong> over our Christmas shutdown period, excluding Christmas Day and New Year's Day.</p>
-            <p className="mt-4">If you require emergency support within these hours, please contact <a href="tel:07833771281" className="font-semibold text-primary underline decoration-secondary underline-offset-4 whitespace-nowrap">07833 771281</a>.</p>
-          </section>
-          <section>
-            <h2 className="font-heading text-2xl font-semibold text-primary mb-3">Festive Call-Out Charges</h2>
-            <ul className="list-disc space-y-2 pl-6">
-              <li>£165.00 call-out</li>
-              <li>£75.00 per hour - minimum 4 hours</li>
-              <li>£0.85ppm + materials</li>
-            </ul>
-          </section>
-          <section>
-            <h2 className="text-2xl font-semibold text-primary mb-3">No Suspension of Hires</h2>
-            <p>During our Christmas shutdown period, hires will not be suspended, and no credits will be issued. This is in keeping with our Terms &amp; Conditions Policy and aligns with industry standards for welfare facility requirements in the construction industry.</p>
-          </section>
-          <section>
-            <h2 className="text-2xl font-semibold text-primary mb-3">Off-Hire Policy</h2>
-            <p>If you require to off-hire a welfare unit before our Christmas shutdown period, please contact us <strong className="font-semibold">before 2pm on Monday 7 December 2026</strong>. If you request an off-hire after this date, we will endeavour to collect your welfare as soon as possible; however, we cannot guarantee collection before our Christmas shutdown period.</p>
-            <p className="mt-4">Please note, to off-hire a marketing suite, the deadline date is <strong className="font-semibold">Monday 16 November 2026</strong>.</p>
-          </section>
-          <section>
-            <h2 className="text-2xl font-semibold text-primary mb-3">Standard Collection Charges</h2>
-            <p>All products that are hired from Liberty Group during our Christmas shutdown period remain the sole responsibility of the hirer, for insurance and safekeeping purposes.</p>
-          </section>
-          <section>
-            <h2 className="text-2xl font-semibold text-primary mb-3">Servicing</h2>
-            <p>Our routine servicing shall be paused from Wednesday 23 December 2026 to Monday 4 January 2027 to save any unnecessary trips and to reduce wastage. Should you wish to book a service or fuel prior to the shutdown, please contact our toilet service department.</p>
-            <a href="mailto:toiletservice@libertyguard.co.uk" className="inline-block mt-3 text-primary underline decoration-secondary underline-offset-4 break-all">toiletservice@libertyguard.co.uk</a>
-          </section>
-          <div className="border-t border-border pt-8">
-            <p>From all the team here at Liberty, we would like to say a huge thank you for your continued support throughout 2026, and we greatly look forward to another successful year in 2027.</p>
-            <p className="mt-4 font-heading font-semibold text-primary">The Liberty Team</p>
-          </div>
-        </article>
 
+            <article className="flex-1 order-1 lg:order-2 min-w-0 space-y-10 text-foreground text-base md:text-lg leading-relaxed">
+              <div>
+                <p className="font-semibold text-primary mb-3">To all our valued customers,</p>
+                <p>We would like to inform you of our Christmas/New Year policies for off-hire, collection and suspension of hire. These policies will be effective from Wednesday 23 December 2026 to Monday 4 January 2027.</p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                {keyDates.map((item) => (
+                  <div key={item.label} className="rounded-xl border border-border bg-muted/40 p-5">
+                    <p className="text-xs uppercase tracking-wider text-muted-foreground font-heading font-semibold mb-1">{item.label}</p>
+                    <p className="font-heading font-bold text-primary text-lg">{item.value}</p>
+                  </div>
+                ))}
+              </div>
+
+              <section className="rounded-xl border-l-4 border-secondary bg-muted/40 p-6 md:p-8">
+                <h2 className={sectionHeading}><PhoneCall className={sectionIcon} />Emergency Support</h2>
+                <p>A limited number of engineers will be on call to assist with urgent matters between <strong className="font-semibold">9am and 5pm</strong> over our Christmas shutdown period, excluding Christmas Day and New Year's Day.</p>
+                <p className="mt-4">If you require emergency support within these hours, please contact <a href="tel:07833771281" className="font-semibold text-primary underline decoration-secondary underline-offset-4 whitespace-nowrap">07833 771281</a>.</p>
+              </section>
+
+              <section>
+                <h2 className={sectionHeading}><PoundSterling className={sectionIcon} />Festive Call-Out Charges</h2>
+                <ul className="grid sm:grid-cols-3 gap-3 list-none pl-0">
+                  <li className="rounded-lg border border-border p-4 text-center"><span className="block font-heading font-bold text-primary text-xl">£165.00</span><span className="text-sm text-muted-foreground">call-out</span></li>
+                  <li className="rounded-lg border border-border p-4 text-center"><span className="block font-heading font-bold text-primary text-xl">£75.00</span><span className="text-sm text-muted-foreground">per hour - minimum 4 hours</span></li>
+                  <li className="rounded-lg border border-border p-4 text-center"><span className="block font-heading font-bold text-primary text-xl">£0.85ppm</span><span className="text-sm text-muted-foreground">+ materials</span></li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className={sectionHeading}><Ban className={sectionIcon} />No Suspension of Hires</h2>
+                <p>During our Christmas shutdown period, hires will not be suspended, and no credits will be issued. This is in keeping with our Terms &amp; Conditions Policy and aligns with industry standards for welfare facility requirements in the construction industry.</p>
+              </section>
+
+              <section>
+                <h2 className={sectionHeading}><Truck className={sectionIcon} />Off-Hire Policy</h2>
+                <p>If you require to off-hire a welfare unit before our Christmas shutdown period, please contact us <strong className="font-semibold">before 2pm on Monday 7 December 2026</strong>. If you request an off-hire after this date, we will endeavour to collect your welfare as soon as possible; however, we cannot guarantee collection before our Christmas shutdown period.</p>
+                <p className="mt-4">Please note, to off-hire a marketing suite, the deadline date is <strong className="font-semibold">Monday 16 November 2026</strong>.</p>
+              </section>
+
+              <section>
+                <h2 className={sectionHeading}><CalendarClock className={sectionIcon} />Standard Collection Charges</h2>
+                <p>All products that are hired from Liberty Group during our Christmas shutdown period remain the sole responsibility of the hirer, for insurance and safekeeping purposes.</p>
+              </section>
+
+              <section>
+                <h2 className={sectionHeading}><Wrench className={sectionIcon} />Servicing</h2>
+                <p>Our routine servicing shall be paused from Wednesday 23 December 2026 to Monday 4 January 2027 to save any unnecessary trips and to reduce wastage. Should you wish to book a service or fuel prior to the shutdown, please contact our toilet service department.</p>
+                <a href="mailto:toiletservice@libertyguard.co.uk" className="inline-block mt-3 text-primary underline decoration-secondary underline-offset-4 break-all">toiletservice@libertyguard.co.uk</a>
+              </section>
+
+              <div className="rounded-xl bg-primary p-6 md:p-8 text-primary-foreground">
+                <p>From all the team here at Liberty, we would like to say a huge thank you for your continued support throughout 2026, and we greatly look forward to another successful year in 2027.</p>
+                <p className="mt-4 font-heading font-semibold text-secondary uppercase tracking-wide">The Liberty Team</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
