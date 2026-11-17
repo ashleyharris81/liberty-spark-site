@@ -37,6 +37,7 @@ import CookieBanner from "./components/CookieBanner";
 import Seo from "./components/Seo";
 import LegacyRedirect from "./components/LegacyRedirect";
 import VideoManuals from "./pages/VideoManuals";
+import ChristmasShutdown from "./pages/ChristmasShutdown";
 
 const queryClient = new QueryClient();
 
@@ -90,6 +91,8 @@ const App = () => (
           <Route path="/case-studies/znd-uk" element={<CaseStudyZnd />} />
           <Route path="/case-studies/national-house-builder" element={<CaseStudyNationalHouseBuilder />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          {/* Draft customer notice: unlinked, noindex, excluded from sitemap/prerender. */}
+          <Route path="/christmas-shutdown-2026-2027" element={<ChristmasShutdown />} />
           <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           {/* Legacy WordPress URLs redirect here; everything else renders NotFound. */}

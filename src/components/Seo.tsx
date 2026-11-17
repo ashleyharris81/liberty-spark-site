@@ -16,6 +16,10 @@ const OG_IMAGE = `${ORIGIN}/og-image.jpg`;
 type Meta = { title: string; description: string };
 
 const routeMeta: Record<string, Meta> = {
+  "/christmas-shutdown-2026-2027": {
+    title: "Christmas/New Year Shutdown 2026 - 2027",
+    description: "Liberty Guard Christmas shutdown dates, off-hire deadlines, emergency support and servicing arrangements for 2026-2027.",
+  },
   "/video-manuals": {
     title: "Mobile Welfare Video Manuals",
     description: "Liberty mobile welfare video manuals for towing, site setup, lifting, electrical systems, toilet operation and wheel changes.",
@@ -148,7 +152,7 @@ const routeMeta: Record<string, Meta> = {
 };
 
 /** Routes that must not be indexed (duplicates, private tools, error pages). */
-const NOINDEX_PATHS = new Set(["/homepage2", "/admin", "/depotfinder", "/mnda", "/case-studies", "/case-studies/znd-uk", "/case-studies/national-house-builder"]);
+const NOINDEX_PATHS = new Set(["/homepage2", "/admin", "/depotfinder", "/mnda", "/case-studies", "/case-studies/znd-uk", "/case-studies/national-house-builder", "/christmas-shutdown-2026-2027"]);
 
 /**
  * Canonical overrides. "/" and "/nationwide-hire" render the same page, and a

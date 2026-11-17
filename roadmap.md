@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Create the Christmas/New Year Shutdown 2026-2027 draft page, unlinked and noindex; verify desktop and mobile
+
 - [x] Add Turnstile to both contact forms; verify server rejection of invalid tokens and no saved spam
 - [ ] Verify a successful human submission on the published allowed hostname (local test host is not approved by Cloudflare)
 
