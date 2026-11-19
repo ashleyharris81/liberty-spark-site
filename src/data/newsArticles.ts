@@ -22,6 +22,9 @@ import newsVictronMonitor from "@/assets/news-victron-monitor.png.asset.json";
 import newsBackupGenerator from "@/assets/news-backup-generator.jpg.asset.json";
 import newsWelfareInWales from "@/assets/news-welfare-in-wales.png.asset.json";
 import newsAutumnSolar from "@/assets/news-autumn-solar.jpg.asset.json";
+import newsMarketingSuiteStatement from "@/assets/news-marketing-suite-statement.jpeg.asset.json";
+import newsMoreThanWelfareHire from "@/assets/news-more-than-welfare-hire.jpg.asset.json";
+import newsSolarDryWinter from "@/assets/news-solar-dry-winter.webp.asset.json";
 
 
 
@@ -36,6 +39,33 @@ export type NewsArticle = {
 };
 
 const rawArticles: NewsArticle[] = [
+  {
+    slug: "does-your-marketing-suite-make-a-statement",
+    image: newsMarketingSuiteStatement.url,
+    date: "November 2026",
+    title: "Does Your Marketing Suite Make a Statement?",
+    excerpt:
+      "For housebuilders and housing developers, a Marketing Suite is often the first face-to-face experience a potential buyer has with your business. From colour scheme and logo to bespoke interior finishes, every detail can be tailored to your brand.",
+    body: "At Liberty, we believe your Marketing Suite should be more than just a place to welcome potential customers. It's an opportunity to showcase your brand, communicate your company values and create a lasting impression from the moment someone walks through the door.\n\nFor housebuilders and housing developers, a Marketing Suite is often the first face-to-face experience a potential buyer has with your business. It should reflect the quality of your developments and create an environment that makes visitors feel welcome, comfortable and confident in their decision.\n\nThat's why personalisation is so important. With a Liberty Marketing Suite, you have the freedom to create a space that truly represents your brand identity. From choosing your own colour scheme and incorporating your company logo to selecting bespoke interior finishes, every detail can be tailored to complement your business.\n\nWhat do you want to portray with your brand? Something bold and eye-catching that captures attention? Or a contemporary, minimalist design that creates a clean and professional feel? Or maybe a luxurious and sophisticated interior that reflects the premium nature of your development? Whatever your vision, we can help bring it to life.\n\nCreating a strong and consistent brand identity does more than make your Marketing Suite look impressive. It helps build brand recognition, reinforces your company's reputation and gives potential customers confidence in the service and quality they can expect. It's all about giving a space that feels unmistakably yours, rather than any other sales office.\n\nYour Marketing Suite is an important part of your customer experience, so make sure it works just as hard as your brand does. Don't blend in with the competition. Make a statement, showcase your identity and create a space to remember.",
+  },
+  {
+    slug: "more-than-just-welfare-hire",
+    image: newsMoreThanWelfareHire.url,
+    date: "November 2026",
+    title: "More Than Just Welfare Hire",
+    excerpt:
+      "There's more to hiring a welfare unit than simply delivering it to site! With over 40 years of industry experience, 20 distribution depots nationwide and a fleet of more than 1,500 units, it's our people that make the difference.",
+    body: "There's more to hiring a welfare unit than simply delivering it to site! At Liberty, we believe excellent customer service is just as important as the product itself. From your initial enquiry through to delivery and ongoing aftercare, we're here to make your hire experience as straightforward as possible.\n\nWith over 40 years of industry experience, 20 distribution depots nationwide and a fleet of more than 1,500 units, we have the knowledge, expertise and resources to support projects of all sizes across the UK. But what really makes the difference is our people. Behind every hire is a dedicated team of experienced staff, supported by our specialist aftercare department and expert in-house engineers. We understand that keeping your project running smoothly is essential, which is why having the right support available when you need it matters.\n\nAt Liberty, we operate through one central hub, making communication simple and efficient. When you contact us, you won't be passed from department to department or left wondering who to speak to. Our aftercare team is on hand to deal with your enquiry, understand your requirements and arrange the appropriate support. If you experience a breakdown or technical issue, our in-house engineers can help diagnose the problem over the phone or, where necessary, arrange a visit to your welfare unit to investigate and resolve the issue on site.\n\nWe pride ourselves on being responsive, proactive and knowledgeable. Whether you need help choosing the right unit, have a technical question or require assistance during your hire, our team is here to help. For us, customer service doesn't stop once your unit arrives. It's about building lasting partnerships, providing dependable support and giving you confidence throughout your hire.\n\nReliable products, experienced people and customer service you can count on.",
+  },
+  {
+    slug: "beat-the-rain-dry-out-with-solar-dry",
+    image: newsSolarDryWinter.url,
+    date: "November 2026",
+    title: "Beat The Rain, Dry Out With Solar Dry",
+    excerpt:
+      "Wet British weather is part and parcel of working outdoors, but that doesn't mean your workforce should have to put up with wet clothing all day. Our 12ft Solar Dry towable drying and changing room is completely solar powered, so no generator is required.",
+    body: "Unfortunately, wet British weather is part and parcel of working outdoors, but that doesn't mean your workforce should have to put up with wet clothing all day! When the rain keeps coming, having somewhere warm, dry and comfortable to change and store wet workwear can make all the difference.\n\nOur 12ft Solar Dry, Towable Drying/Changing Room gives a practical, spacious and energy-efficient solution for construction sites and outdoor working environments. It's designed with the needs of your workforce in mind, this unit provides a dedicated space for drying wet clothing, storing workwear and changing throughout the working day. Whether it's rain-soaked jackets, muddy trousers or damp boots, your team has somewhere to leave their wet gear rather than taking it back into the workplace or wearing it for the rest of the day.\n\nWhat makes this unit even better? It's completely solar powered, meaning no generator is required! By utilising natural daylight, the solar panels provide a more sustainable way to power your drying room, reducing the reliance on traditional generator power, excessive fuel usage and associated fuel costs. With remote monitoring, intelligent telematics, silent running, solar power and 100% renewable energy, the 12ft Solar Dry has everything under one roof.\n\nPlus, with a convenient towable design it's ideal for projects where flexibility is needed, it can be easily positioned where your workforce needs it, it provides valuable welfare facilities without taking up unnecessary site space.\n\nAt Liberty, we understand that looking after your workforce goes beyond providing basic welfare facilities. Giving your team somewhere to get changed and dry off helps create a more comfortable working environment, whatever the weather brings.\n\nDon't let a little rain dampen the day! Choose the 12ft Solar Dry from Liberty and give your workforce a dry space this winter.",
+  },
   {
     slug: "monitor-and-track-with-liberty-solar",
     imageFit: "contain",

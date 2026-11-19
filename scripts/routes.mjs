@@ -68,6 +68,9 @@ const solarStaticSlugs = ["25ft-solar-static", "28ft-eco-hybrid"];
 const solarDrySlugs = ["12ft-solar-dry"];
 
 const newsArticleSlugs = [
+  "does-your-marketing-suite-make-a-statement",
+  "more-than-just-welfare-hire",
+  "beat-the-rain-dry-out-with-solar-dry",
   "monitor-and-track-with-liberty-solar",
   "back-me-up-i-have-a-backup-generator",
   "welfare-in-wales",

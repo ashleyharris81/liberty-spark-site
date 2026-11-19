@@ -11,3 +11,4 @@
 - [x] Switch contact and account notifications to Microsoft 365; deploy and test submission storage
 - [x] Verify both notification sends with the sales mailbox (Microsoft 365 accepted both test emails with HTTP 202 on 12 November 2026; inbox delivery awaits recipient confirmation)
 - [x] Change the notification sender to sales@libertyguard.co.uk and test both notifications to the same sales mailbox
+- [x] Add three November 2026 news articles (Marketing Suite statement, More than just welfare hire, Beat the rain with Solar Dry) with supplied photos; verify listing order and article pages
