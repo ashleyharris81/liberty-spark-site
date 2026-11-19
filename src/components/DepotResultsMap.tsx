@@ -120,6 +120,7 @@ const DepotResultsMap = ({ points }: { points: MapPoint[] }) => {
 
   useEffect(() => {
     let cancelled = false;
+    let dispose: (() => void) | undefined;
 
     loadMaps()
       .then(() => {
@@ -134,6 +135,15 @@ const DepotResultsMap = ({ points }: { points: MapPoint[] }) => {
 
         const bounds = new google.maps.LatLngBounds();
         const info = new google.maps.InfoWindow();
+        const overlays: { setMap: (map: null) => void }[] = [];
+        dispose = () => {
+          info.close();
+          overlays.forEach((overlay) => {
+            google.maps.event.clearInstanceListeners(overlay);
+            overlay.setMap(null);
+          });
+          google.maps.event.clearInstanceListeners(map);
+        };
         let routeIndex = 0;
 
         points.forEach((point) => {
@@ -144,13 +154,14 @@ const DepotResultsMap = ({ points }: { points: MapPoint[] }) => {
             const path = decoder
               ? decoder(point.polyline)
               : decodePolyline(point.polyline);
-            new google.maps.Polyline({
+            const route = new google.maps.Polyline({
               path,
               map,
               strokeColor: ROUTE_COLOURS[routeIndex % ROUTE_COLOURS.length],
               strokeOpacity: 0.85,
               strokeWeight: 4,
             });
+            overlays.push(route);
             (path as any[]).forEach((position) => bounds.extend(position));
             routeIndex += 1;
           }
@@ -173,6 +184,7 @@ const DepotResultsMap = ({ points }: { points: MapPoint[] }) => {
                 }
               : undefined,
           });
+          overlays.push(marker);
           marker.addListener("click", () => {
             info.setContent(`<strong>${point.title}</strong>`);
             info.open(map, marker);
@@ -187,6 +199,7 @@ const DepotResultsMap = ({ points }: { points: MapPoint[] }) => {
 
     return () => {
       cancelled = true;
+      dispose?.();
     };
   }, [points]);
 

@@ -1,5 +1,8 @@
 # Roadmap
 
+- [x] Review Oxford depot finding against the original instruction (both Oxford locations intentionally replaced by Banbury)
+- [x] Fix depot finder map rebuilding while editing the postcode; regression tests verify map stability and cleanup, and two real postcode searches succeed (live map display unavailable on localhost)
+
 - [x] Create the Christmas/New Year Shutdown 2026-2027 draft page, unlinked and noindex; verify desktop and mobile
 
 - [x] Add Turnstile to both contact forms; verify server rejection of invalid tokens and no saved spam

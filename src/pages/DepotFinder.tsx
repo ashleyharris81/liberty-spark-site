@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -26,6 +26,32 @@ const DepotFinder = () => {
   const [origin, setOrigin] = useState<string | null>(null);
   const [originCoords, setOriginCoords] = useState<{ lat: number; lng: number } | null>(null);
   const [results, setResults] = useState<Result[] | null>(null);
+
+  const mapPoints = useMemo(() => {
+    if (!originCoords || !results) return [];
+    return [
+      {
+        lat: originCoords.lat,
+        lng: originCoords.lng,
+        label: "",
+        title: origin ?? "Your postcode",
+        isOrigin: true,
+      },
+      ...results.flatMap((r, index) => {
+        const depot = depots.find((d) => d.code === r.code);
+        if (!depot) return [];
+        return [{
+          lat: depot.lat,
+          lng: depot.lng,
+          label: String(index + 1),
+          title: `${index + 1}. ${r.name} — ${
+            r.roadMiles !== null ? `${r.roadMiles} miles` : `${r.straightMiles} miles direct`
+          }`,
+          polyline: r.polyline ?? null,
+        }];
+      }),
+    ];
+  }, [originCoords, origin, results]);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -179,32 +205,7 @@ const DepotFinder = () => {
                 ))}
               </ol>
               {results.length > 0 && originCoords && (
-                <DepotResultsMap
-                  points={[
-                    {
-                      lat: originCoords.lat,
-                      lng: originCoords.lng,
-                      label: "",
-                      title: origin ?? "Your postcode",
-                      isOrigin: true,
-                    },
-                    ...results.flatMap((r, index) => {
-                      const depot = depots.find((d) => d.code === r.code);
-                      if (!depot) return [];
-                      return [
-                        {
-                          lat: depot.lat,
-                          lng: depot.lng,
-                          label: String(index + 1),
-                          title: `${index + 1}. ${r.name} — ${
-                            r.roadMiles !== null ? `${r.roadMiles} miles` : `${r.straightMiles} miles direct`
-                          }`,
-                          polyline: r.polyline ?? null,
-                        },
-                      ];
-                    }),
-                  ]}
-                />
+                <DepotResultsMap points={mapPoints} />
               )}
               {results.length > 0 && (
                 <p className="mt-6 text-xs text-muted-foreground">

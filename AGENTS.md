@@ -9,3 +9,4 @@
 - Register public pages in the shared canonical route list and Vercel static HTML rewrites so sitemap entries and prerendered delivery stay aligned.
 - Case study detail pages use the existing case study layout and CDN image pointers; register each in App and SEO while retaining the section's noindex status until publication is requested.
 - Draft customer notices are registered in App and SEO with noindex, but omitted from navigation, the public route list and prerender rewrites until publication is requested, to allow direct preview review without public promotion.
+- Memoize depot-result map points from submitted results and origin only, and detach map overlays/listeners on effect cleanup, so postcode edits preserve the viewport and replaced results release resources.
