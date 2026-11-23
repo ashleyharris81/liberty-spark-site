@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import { Link } from "react-router-dom";
 import { articles } from "@/data/newsArticles";
+import bannerAsset from "@/assets/christmas-shutdown-banner.png.asset.json";
 
 const ChristmasShutdown = () => (
   <div className="min-h-screen bg-background">
@@ -37,6 +38,7 @@ const ChristmasShutdown = () => (
               </div>
             </aside>
         <article className="flex-1 order-1 lg:order-2 min-w-0 space-y-6 text-foreground text-base md:text-lg leading-relaxed">
+          <img src={bannerAsset.url} alt="Liberty truck towing a solar welfare unit through snow - Delivering more than just Christmas cheer" className="w-full h-auto rounded-lg" />
           <div>
             <p className="font-semibold text-primary mb-3">To all our valued customers,</p>
             <p>We would like to inform you of our Christmas/New Year policies for off-hire, collection and suspension of hire. These policies will be effective from Wednesday 23 December 2026 to Monday 4 January 2027.</p>
