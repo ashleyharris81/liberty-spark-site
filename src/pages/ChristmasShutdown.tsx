@@ -9,8 +9,10 @@ const ChristmasShutdown = () => (
   <div className="min-h-screen bg-background">
     <Navbar />
     <main>
-      <header className="relative pt-20 bg-primary">
-        <div className="container mx-auto px-4 lg:px-8 py-16 md:py-20">
+      <header className="relative overflow-hidden bg-primary pt-20">
+        <img src={bannerAsset.url} alt="Liberty pickup truck towing a solar welfare trailer along a snow-covered country road" className="absolute inset-0 h-full w-full object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/75 to-primary/25" />
+        <div className="relative z-10 container mx-auto flex min-h-[300px] flex-col justify-end px-4 lg:px-8 pb-10 pt-24 md:min-h-[520px] md:pb-16 md:pt-32">
           <Link to="/news" onClick={() => window.scrollTo(0, 0)} className="inline-flex items-center text-primary-foreground/70 hover:text-primary-foreground font-heading text-sm uppercase tracking-wider mb-6">
             ← Back to News
           </Link>
@@ -38,7 +40,6 @@ const ChristmasShutdown = () => (
               </div>
             </aside>
         <article className="flex-1 order-1 lg:order-2 min-w-0 space-y-6 text-foreground text-base md:text-lg leading-relaxed">
-          <img src={bannerAsset.url} alt="Liberty pickup truck towing a solar welfare trailer along a snow-covered country road" className="w-full h-auto rounded-lg" />
           <div>
             <p className="font-semibold text-primary mb-3">To all our valued customers,</p>
             <p>We would like to inform you of our Christmas/New Year policies for off-hire, collection and suspension of hire. These policies will be effective from Wednesday 23 December 2026 to Monday 4 January 2027.</p>
