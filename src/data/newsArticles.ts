@@ -25,7 +25,6 @@ import newsAutumnSolar from "@/assets/news-autumn-solar.jpg.asset.json";
 import newsMarketingSuiteStatement from "@/assets/news-marketing-suite-statement.jpeg.asset.json";
 import newsMoreThanWelfareHire from "@/assets/news-more-than-welfare-hire.jpg.asset.json";
 import newsSolarDryWinter from "@/assets/news-solar-dry-winter.webp.asset.json";
-import newsChristmasShutdown2026 from "@/assets/news-christmas-shutdown-2026.png.asset.json";
 
 
 
@@ -40,15 +39,6 @@ export type NewsArticle = {
 };
 
 const rawArticles: NewsArticle[] = [
-  {
-    slug: "christmas-shutdown-2026",
-    image: newsChristmasShutdown2026.url,
-    date: "November 2026",
-    title: "Christmas Shutdown 2026",
-    excerpt:
-      "Liberty will be closed for Christmas from Wednesday 23rd December 2026 to Monday 4th January 2027. Please check the last off-hire dates below to make sure your collections are booked in time.",
-    body: "Liberty will be closed for our Christmas shutdown from 23rd December 2026 to 4th January 2027.\n\nTo make sure everything runs smoothly over the festive period, please take note of the following last off-hire dates:\n\n- Welfare Accommodation: the last off-hire date to guarantee collection prior to the festive season is Monday 7th December 2026.\n- Marketing Suites: the last off-hire date prior to the festive season is 16th November 2026.\n\nPlease note there is no suspension of hire rates throughout our Christmas shutdown.\n\nNo collections will be taking place on Wednesday 23rd December 2026.\n\nFor more information, please contact offhires@libertyguard.co.uk\n\nFrom all of us at Liberty, we wish you a very Merry Christmas and a Happy New Year!",
-  },
   {
     slug: "does-your-marketing-suite-make-a-statement",
     image: newsMarketingSuiteStatement.url,
