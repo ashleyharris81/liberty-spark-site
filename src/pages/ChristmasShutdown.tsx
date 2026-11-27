@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 import { Link } from "react-router-dom";
-import { articles } from "@/data/newsArticles";
+import { articles, articleHref } from "@/data/newsArticles";
 import bannerAsset from "@/assets/snowy-countryside-pickup-trailer.png.asset.json";
 
 const ChristmasShutdown = () => (
@@ -30,8 +30,10 @@ const ChristmasShutdown = () => (
               <div className="lg:sticky lg:top-24">
                 <h2 className="font-heading text-sm uppercase tracking-wider text-secondary font-bold mb-4 pb-3 border-b border-border">More News</h2>
                 <nav className="flex flex-col gap-1" aria-label="More news">
-                  {articles.map((article) => (
-                    <Link key={article.slug} to={`/news/${article.slug}`} onClick={() => window.scrollTo(0, 0)} className="block px-3 py-2 rounded-lg text-sm leading-snug transition-colors text-muted-foreground hover:text-foreground hover:bg-muted">
+                  {articles
+                    .filter((article) => article.slug !== "christmas-shutdown-2026")
+                    .map((article) => (
+                    <Link key={article.slug} to={articleHref(article)} onClick={() => window.scrollTo(0, 0)} className="block px-3 py-2 rounded-lg text-sm leading-snug transition-colors text-muted-foreground hover:text-foreground hover:bg-muted">
                       <span className="block text-[10px] uppercase tracking-wider opacity-70 mb-0.5">{article.date}</span>
                       {article.title}
                     </Link>

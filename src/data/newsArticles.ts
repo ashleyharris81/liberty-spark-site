@@ -25,6 +25,7 @@ import newsAutumnSolar from "@/assets/news-autumn-solar.jpg.asset.json";
 import newsMarketingSuiteStatement from "@/assets/news-marketing-suite-statement.jpeg.asset.json";
 import newsMoreThanWelfareHire from "@/assets/news-more-than-welfare-hire.jpg.asset.json";
 import newsSolarDryWinter from "@/assets/news-solar-dry-winter.webp.asset.json";
+import newsChristmasShutdown from "@/assets/news-christmas-shutdown-2026.png.asset.json";
 
 
 
@@ -36,9 +37,21 @@ export type NewsArticle = {
   title: string;
   excerpt: string;
   body: string;
+  /** When set, the card links straight to this page instead of /news/<slug>. */
+  link?: string;
 };
 
 const rawArticles: NewsArticle[] = [
+  {
+    slug: "christmas-shutdown-2026",
+    image: newsChristmasShutdown.url,
+    date: "November 2026",
+    title: "Christmas Shutdown 2026",
+    excerpt:
+      "Liberty will be closed for Christmas from Wednesday 23 December 2026 to Monday 4 January 2027. Please check the customer notice for off-hire deadlines, emergency support and festive call-out charges.",
+    body: "Liberty will be closed for Christmas from Wednesday 23 December 2026 to Monday 4 January 2027. Our offices close at 2pm on Wednesday 23 December 2026 and reopen at 8.30am on Monday 4 January 2027.\n\nThe full customer notice covers emergency support hours, festive call-out charges, the off-hire deadline of 2pm on Monday 7 December 2026, marketing suite collection deadlines, suspension of hire and servicing arrangements.",
+    link: "/christmas-shutdown-2026-2027",
+  },
   {
     slug: "does-your-marketing-suite-make-a-statement",
     image: newsMarketingSuiteStatement.url,
@@ -299,3 +312,7 @@ export const articles: NewsArticle[] = [...rawArticles].sort(
 
 export const getArticleBySlug = (slug: string) =>
   articles.find((a) => a.slug === slug);
+
+/** Where a news card should link: its own page, or the page it points at. */
+export const articleHref = (article: NewsArticle) =>
+  article.link ?? `/news/${article.slug}`;

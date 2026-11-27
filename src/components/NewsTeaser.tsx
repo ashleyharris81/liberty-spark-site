@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { articles } from "@/data/newsArticles";
+import { articles, articleHref } from "@/data/newsArticles";
 
 const NewsTeaser = () => {
   const latest = articles[0];
@@ -25,7 +25,7 @@ const NewsTeaser = () => {
           </div>
 
           <Link
-            to="/news"
+            to={articleHref(latest)}
             onClick={() => window.scrollTo(0, 0)}
             aria-label="View all news and updates"
             className="group block bg-card rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-lg hover:border-secondary/40 transition-all duration-300"

@@ -5,7 +5,7 @@ import Contact from "@/components/Contact";
 import { BreadcrumbJsonLd, NewsArticleJsonLd } from "@/components/JsonLd";
 import Seo from "@/components/Seo";
 import { useEffect } from "react";
-import { articles, getArticleBySlug } from "@/data/newsArticles";
+import { articles, getArticleBySlug, articleHref } from "@/data/newsArticles";
 
 const NewsArticle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -98,7 +98,7 @@ const NewsArticle = () => {
                     return (
                       <Link
                         key={a.slug}
-                        to={`/news/${a.slug}`}
+                        to={articleHref(a)}
                         className={`block px-3 py-2 rounded-lg text-sm leading-snug transition-colors ${
                           isActive
                             ? "bg-secondary/10 text-secondary font-semibold"
@@ -157,7 +157,7 @@ const NewsArticle = () => {
               {/* Prev / Next */}
               <div className="mt-16 pt-8 border-t border-border grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {prevArticle ? (
-                  <Link to={`/news/${prevArticle.slug}`} className="group block">
+                  <Link to={articleHref(prevArticle)} className="group block">
                     <span className="block text-xs uppercase tracking-wider text-muted-foreground font-heading mb-1">
                       ← Previous
                     </span>
@@ -169,7 +169,7 @@ const NewsArticle = () => {
                   <span />
                 )}
                 {nextArticle ? (
-                  <Link to={`/news/${nextArticle.slug}`} className="group block sm:text-right">
+                  <Link to={articleHref(nextArticle)} className="group block sm:text-right">
                     <span className="block text-xs uppercase tracking-wider text-muted-foreground font-heading mb-1">
                       Next →
                     </span>

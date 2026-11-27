@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import { BreadcrumbJsonLd, ArticleListJsonLd } from "@/components/JsonLd";
 import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
-import { articles } from "@/data/newsArticles";
+import { articles, articleHref } from "@/data/newsArticles";
 
 const News = () => {
   return (
@@ -31,7 +31,8 @@ const News = () => {
             {articles.map((article) => (
               <Link
                 key={article.title}
-                to={`/news/${article.slug}`}
+                to={articleHref(article)}
+                onClick={() => window.scrollTo(0, 0)}
                 className="group bg-card rounded-xl overflow-hidden border border-border transition-all duration-300 shadow-sm hover:shadow-lg hover:border-secondary/40 hover:-translate-y-2 flex flex-col"
               >
                 <div className="aspect-video overflow-hidden">
